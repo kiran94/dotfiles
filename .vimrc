@@ -59,6 +59,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'tpope/vim-commentary'
 Plug 'dstein64/vim-win'
 Plug 'farmergreg/vim-lastplace'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'davidhalter/jedi-vim'
 Plug 'jmcantrell/vim-virtualenv'
