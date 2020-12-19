@@ -4,6 +4,10 @@
         "bash/.bashrc": 
         {
             "Linux": "~/.bashrc"
+        },
+        "bash/aliases.sh": 
+        {
+            "Linux": "~/.config/bash/aliases.sh"
         }
    }
 }

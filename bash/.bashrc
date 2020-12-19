@@ -8,6 +8,8 @@ PS1='\[\e[0;2;38;5;75m\]\t\[\e[m\] \[\e[0;38;5;87m\]\u\[\e[m\] \[\e[0;2m\]\h\[\e
 # Exports
 export EDITOR=vim
 
+# Alias
+source $HOME/.config/bash/aliases.sh
 
-
-
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
