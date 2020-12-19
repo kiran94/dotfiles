@@ -1,0 +1,9 @@
+{
+    "config": 
+    {
+        "bash/.bashrc": 
+        {
+            "Linux": "~/.bashrc"
+        }
+   }
+}
