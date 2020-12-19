@@ -10,6 +10,4 @@ export EDITOR=vim
 
 # Alias
 source $HOME/.config/bash/aliases.sh
-
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+source $HOME/.config/bash/bindings.sh

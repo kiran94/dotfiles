@@ -8,6 +8,10 @@
         "bash/aliases.sh": 
         {
             "Linux": "~/.config/bash/aliases.sh"
+        },
+        "bash/bindings.sh": 
+        {
+            "Linux": "~/.config/bash/bindings.sh"
         }
    }
 }
