@@ -8,7 +8,7 @@ PS1='\[\e[0;2;38;5;75m\]\t\[\e[m\] \[\e[0;38;5;87m\]\u\[\e[m\] \[\e[0;2m\]\h\[\e
 # Exports
 export EDITOR=vim
 
-# Alias
+# Additional Configuration
 source $HOME/.config/bash/aliases.sh
 source $HOME/.config/bash/bindings.sh
 source $HOME/.config/bash/settings.sh

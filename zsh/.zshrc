@@ -85,7 +85,6 @@ plugins=(git gitignore zsh-autosuggestions dotnet python)
 cd $HOME
 
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -137,3 +136,4 @@ unset __conda_setup
 # Enable Vim Mode
 # bindkey -v
 
+source $HOME/.bashrc

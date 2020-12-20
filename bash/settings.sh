@@ -10,7 +10,7 @@ HISTCONTROL=ignoreboth
 #HISTTIMEFORMAT="%F %T "
 
 # Append to history instead of overwriting, useful for multiple sessions at the same time.
-shopt -s histappend
+[ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s histappend
 
 LESS=-JMQRSi
 
