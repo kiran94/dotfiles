@@ -1,0 +1,3 @@
+
+# ASP.NET
+export ASPNETCORE_ENVIRONMENT=Development

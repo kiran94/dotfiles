@@ -16,6 +16,14 @@
         "bash/settings.sh": 
         {
             "Linux": "~/.config/bash/settings.sh"
+        },
+        "bash/database.sh": 
+        {
+            "Linux": "~/.config/bash/database.sh"
+        },
+         "bash/database.sh": 
+        {
+            "Linux": "~/.config/bash/application.sh"
         }
    }
 }
