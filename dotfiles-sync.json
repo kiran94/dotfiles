@@ -41,6 +41,10 @@
         {
             "Linux": "~/.zshrc"
         },
+        "zsh/.p10k.zsh": 
+        {
+            "Linux": "~/.p10k.zsh"
+        },
         "git/.gitconfig": 
         {
             "Linux": "~/.gitconfig"
