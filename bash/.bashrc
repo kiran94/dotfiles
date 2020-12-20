@@ -14,3 +14,7 @@ source $HOME/.config/bash/bindings.sh
 source $HOME/.config/bash/settings.sh
 source $HOME/.config/bash/database.sh
 source $HOME/.config/bash/application.sh
+
+
+# Secrets
+[ -f ~/.config/secrets.sh ] && source ~/.config/secrets.sh
