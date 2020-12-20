@@ -6,6 +6,8 @@ HISTSIZE=5000
 HISTFILESIZE=10000
 # Ignore both spaces and duplicates
 HISTCONTROL=ignoreboth
+# Add DateTime in History
+#HISTTIMEFORMAT="%F %T "
 
 # Append to history instead of overwriting, useful for multiple sessions at the same time.
 shopt -s histappend
