@@ -1,57 +1,57 @@
 {
-    "config": 
-    {
-        "bash/.profile": 
-        {
-            "Linux": "~/.profile"
-        },
-        "bash/.bashrc": 
-        {
-            "Linux": "~/.bashrc"
-        },
-        "bash/aliases.sh": 
-        {
-            "Linux": "~/.config/bash/aliases.sh"
-        },
-        "bash/bindings.sh": 
-        {
-            "Linux": "~/.config/bash/bindings.sh"
-        },
-        "bash/settings.sh": 
-        {
-            "Linux": "~/.config/bash/settings.sh"
-        },
-        "bash/database.sh": 
-        {
-            "Linux": "~/.config/bash/database.sh"
-        },
-        "bash/application.sh": 
-        {
-            "Linux": "~/.config/bash/application.sh"
-        },
-        "bash/services.sh": 
-        {
-            "Linux": "~/.config/bash/services.sh"
-        },
-        "bash/conda.sh": 
-        {
-            "Linux": "~/.config/bash/conda.sh"
-        },
-        "zsh/.zshrc": 
-        {
-            "Linux": "~/.zshrc"
-        },
-        "zsh/.p10k.zsh": 
-        {
-            "Linux": "~/.p10k.zsh"
-        },
-        "git/.gitconfig": 
-        {
-            "Linux": "~/.gitconfig"
-        },
-        "pgcli/config": 
-        {
-            "Linux": "~/.config/pgcli/config"
-        }
-  }
+	"config": 
+	{
+		"bash/.profile": 
+		{
+			"Linux": "~/.profile"
+		},
+		"bash/.bashrc": 
+		{
+			"Linux": "~/.bashrc"
+		},
+		"bash/aliases.sh": 
+		{
+			"Linux": "~/.config/bash/aliases.sh"
+		},
+		"bash/bindings.sh": 
+		{
+			"Linux": "~/.config/bash/bindings.sh"
+		},
+		"bash/settings.sh": 
+		{
+			"Linux": "~/.config/bash/settings.sh"
+		},
+		"bash/database.sh": 
+		{
+			"Linux": "~/.config/bash/database.sh"
+		},
+		"bash/application.sh": 
+		{
+			"Linux": "~/.config/bash/application.sh"
+		},
+		"bash/services.sh": 
+		{
+			"Linux": "~/.config/bash/services.sh"
+		},
+		"bash/conda.sh": 
+		{
+			"Linux": "~/.config/bash/conda.sh"
+		},
+		"zsh/.zshrc": 
+		{
+			"Linux": "~/.zshrc"
+		},
+		"zsh/.p10k.zsh": 
+		{
+			"Linux": "~/.p10k.zsh"
+		},
+		"git/.gitconfig": 
+		{
+			"Linux": "~/.gitconfig"
+		},
+		"pgcli/config": 
+		{
+			"Linux": "~/.config/pgcli/config"
+		}
+	}
 }
