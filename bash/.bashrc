@@ -14,5 +14,8 @@ source $HOME/.config/bash/application.sh
 source $HOME/.config/bash/services.sh
 source $HOME/.config/bash/conda.sh
 
+# Work
+[ -f ~/.config/work.sh ] && source ~/.config/work.sh
+
 # Secrets
 [ -f ~/.config/secrets.sh ] && source ~/.config/secrets.sh
