@@ -10,3 +10,4 @@ HISTCONTROL=ignoreboth
 # Append to history instead of overwriting, useful for multiple sessions at the same time.
 shopt -s histappend
 
+LESS=-JMQRSi
