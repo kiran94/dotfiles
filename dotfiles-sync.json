@@ -60,6 +60,10 @@
                  "nvim":
                 {
                         "cross": "~/.config/nvim"
+                },
+                "vim/.vimrc":
+                {
+                        "cross": "~/.vimrc"
                 }
         }
 }
