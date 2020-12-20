@@ -14,7 +14,8 @@ source $HOME/.config/bash/bindings.sh
 source $HOME/.config/bash/settings.sh
 source $HOME/.config/bash/database.sh
 source $HOME/.config/bash/application.sh
-
+source $HOME/.config/bash/services.sh
+source $HOME/.config/bash/conda.sh
 
 # Secrets
 [ -f ~/.config/secrets.sh ] && source ~/.config/secrets.sh

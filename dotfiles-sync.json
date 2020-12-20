@@ -21,9 +21,21 @@
         {
             "Linux": "~/.config/bash/database.sh"
         },
-         "bash/database.sh": 
+        "bash/application.sh": 
         {
             "Linux": "~/.config/bash/application.sh"
+        },
+        "bash/services.sh": 
+        {
+            "Linux": "~/.config/bash/services.sh"
+        },
+        "bash/conda.sh": 
+        {
+            "Linux": "~/.config/bash/conda.sh"
+        },
+        "zsh/.zshrc": 
+        {
+            "Linux": "~/.zshrc"
         }
-   }
+  }
 }
