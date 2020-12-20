@@ -12,6 +12,10 @@
         "bash/bindings.sh": 
         {
             "Linux": "~/.config/bash/bindings.sh"
+        },
+        "bash/settings.sh": 
+        {
+            "Linux": "~/.config/bash/settings.sh"
         }
    }
 }

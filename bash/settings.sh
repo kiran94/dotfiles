@@ -1,0 +1,12 @@
+EDITOR=vim
+
+# Number of commands help in memory during bash session
+HISTSIZE=5000
+# History Size
+HISTFILESIZE=10000
+# Ignore both spaces and duplicates
+HISTCONTROL=ignoreboth
+
+# Append to history instead of overwriting, useful for multiple sessions at the same time.
+shopt -s histappend
+

@@ -11,3 +11,4 @@ export EDITOR=vim
 # Alias
 source $HOME/.config/bash/aliases.sh
 source $HOME/.config/bash/bindings.sh
+source $HOME/.config/bash/settings.sh
