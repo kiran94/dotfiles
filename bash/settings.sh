@@ -1,5 +1,7 @@
 export EDITOR=vim
 
+export PATH=$PATH:/home/kiran/.local/bin
+
 # XDG standard environment variables
 # https://github.com/adrg/xdg#default-locations
 export XDG_DATA_HOME=~/.local/share
