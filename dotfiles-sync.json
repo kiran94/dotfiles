@@ -3,55 +3,55 @@
 	{
 		"bash/.profile": 
 		{
-			"Linux": "~/.profile"
+			"linux": "~/.profile"
 		},
 		"bash/.bashrc": 
 		{
-			"Linux": "~/.bashrc"
+			"linux": "~/.bashrc"
 		},
 		"bash/aliases.sh": 
 		{
-			"Linux": "~/.config/bash/aliases.sh"
+			"linux": "~/.config/bash/aliases.sh"
 		},
 		"bash/bindings.sh": 
 		{
-			"Linux": "~/.config/bash/bindings.sh"
+			"linux": "~/.config/bash/bindings.sh"
 		},
 		"bash/settings.sh": 
 		{
-			"Linux": "~/.config/bash/settings.sh"
+			"linux": "~/.config/bash/settings.sh"
 		},
 		"bash/database.sh": 
 		{
-			"Linux": "~/.config/bash/database.sh"
+			"linux": "~/.config/bash/database.sh"
 		},
 		"bash/application.sh": 
 		{
-			"Linux": "~/.config/bash/application.sh"
+			"linux": "~/.config/bash/application.sh"
 		},
 		"bash/services.sh": 
 		{
-			"Linux": "~/.config/bash/services.sh"
+			"linux": "~/.config/bash/services.sh"
 		},
 		"bash/conda.sh": 
 		{
-			"Linux": "~/.config/bash/conda.sh"
+			"linux": "~/.config/bash/conda.sh"
 		},
 		"zsh/.zshrc": 
 		{
-			"Linux": "~/.zshrc"
+			"linux": "~/.zshrc"
 		},
 		"zsh/.p10k.zsh": 
 		{
-			"Linux": "~/.p10k.zsh"
+			"linux": "~/.p10k.zsh"
 		},
 		"git/.gitconfig": 
 		{
-			"Linux": "~/.gitconfig"
+			"linux": "~/.gitconfig"
 		},
 		"pgcli/config": 
 		{
-			"Linux": "~/.config/pgcli/config"
+			"linux": "~/.config/pgcli/config"
 		}
 	}
 }
