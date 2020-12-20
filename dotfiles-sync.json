@@ -48,6 +48,10 @@
         "git/.gitconfig": 
         {
             "Linux": "~/.gitconfig"
+        },
+        "pgcli/config": 
+        {
+            "Linux": "~/.config/pgcli/config"
         }
   }
 }
