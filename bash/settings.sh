@@ -1,4 +1,4 @@
-EDITOR=vim
+export EDITOR=vim
 
 # Number of commands help in memory during bash session
 HISTSIZE=5000
