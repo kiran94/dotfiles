@@ -1,6 +1,10 @@
 {
     "config": 
     {
+        "bash/.profile": 
+        {
+            "Linux": "~/.profile"
+        },
         "bash/.bashrc": 
         {
             "Linux": "~/.bashrc"
@@ -36,6 +40,10 @@
         "zsh/.zshrc": 
         {
             "Linux": "~/.zshrc"
+        },
+        "git/.gitconfig": 
+        {
+            "Linux": "~/.gitconfig"
         }
   }
 }
