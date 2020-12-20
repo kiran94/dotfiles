@@ -3,35 +3,35 @@
 	{
 		"bash/.profile": 
 		{
-			"linux": "~/.profile"
+			"cross": "~/.profile"
 		},
 		"bash/.bashrc": 
 		{
-			"linux": "~/.bashrc"
+			"cross": "~/.bashrc"
 		},
 		"bash/aliases.sh": 
 		{
-			"linux": "~/.config/bash/aliases.sh"
+			"cross": "~/.config/bash/aliases.sh"
 		},
 		"bash/bindings.sh": 
 		{
-			"linux": "~/.config/bash/bindings.sh"
+			"cross": "~/.config/bash/bindings.sh"
 		},
 		"bash/settings.sh": 
 		{
-			"linux": "~/.config/bash/settings.sh"
+			"cross": "~/.config/bash/settings.sh"
 		},
 		"bash/database.sh": 
 		{
-			"linux": "~/.config/bash/database.sh"
+			"cross": "~/.config/bash/database.sh"
 		},
 		"bash/application.sh": 
 		{
-			"linux": "~/.config/bash/application.sh"
+			"cross": "~/.config/bash/application.sh"
 		},
 		"bash/services.sh": 
 		{
-			"linux": "~/.config/bash/services.sh"
+			"cross": "~/.config/bash/services.sh"
 		},
 		"bash/conda.sh": 
 		{
@@ -47,7 +47,7 @@
 		},
 		"git/.gitconfig": 
 		{
-			"linux": "~/.gitconfig"
+			"cross": "~/.gitconfig"
 		},
 		"pgcli/config": 
 		{
