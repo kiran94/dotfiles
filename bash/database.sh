@@ -6,6 +6,7 @@ export PGPORT=5432
 export PGUSER=postgres
 export PGPASSWORD=password
 # export PGDATABASE=
+export PGPASSFILE=$HOME/.config/psql/.pgpass
 
 # Mongo
 export MONGO_USERNAME=root
