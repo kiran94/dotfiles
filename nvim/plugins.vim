@@ -7,6 +7,7 @@ Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 " Plug 'vim-trailing-whitespace'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'farmergreg/vim-lastplace'
 
