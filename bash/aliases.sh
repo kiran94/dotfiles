@@ -12,3 +12,4 @@ alias grep='grep --color=auto'
 alias ccat='highlight --out-format=ansi'
 alias vd='visidata'
 alias rediscli=iredis
+alias md='python -m rich.markdown'
