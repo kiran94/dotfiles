@@ -1,6 +1,4 @@
 " SETTINGS
-let mapleader = " " 
-
 set encoding=UTF-8
 set spell
 set spelllang=en_gb
