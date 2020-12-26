@@ -1,0 +1,5 @@
+" Update Colors for COC UI Elements
+hi Pmenu guibg=#4d71e3 gui=NONE
+hi PmenuSel guibg=#2c56de gui=NONE
+hi PmenuSbar guibg=#bcbcbc
+hi PmenuThumb guibg=#585858
