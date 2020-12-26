@@ -56,6 +56,8 @@
 				{ "command": "paste", "keys": "ctrl+v" },
 				{ "command": "find", "keys": "ctrl+shift+f" },
 				{ "command": "closePane", "keys": "alt+shift+w" },
-				{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+				{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+				{ "command": "nextTab", "keys": "ctrl+tab" },
+				{ "command": "prevTab", "keys": "ctrl+shift+tab" }
 		]
 }
