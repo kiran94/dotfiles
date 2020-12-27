@@ -64,6 +64,11 @@
                 "vim/.vimrc":
                 {
                         "cross": "~/.vimrc"
-                }
+                },
+				"vifm/vifmrc": 
+				{
+						"cross": "~/.config/vifm/vifmrc"
+				}
+
         }
 }
