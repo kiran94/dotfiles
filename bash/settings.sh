@@ -17,8 +17,8 @@ export XDG_VIDEOS_DIR=~/Videos
 export XDG_TEMPLATES_DIR=~/Templates
 export XDG_PUBLICSHARE_DIR=~/Public
 
-export DOTFILESSYNC_CONFIG=/home/kiran/.config/dotfiles/dotfiles-sync.json
-export DOTFILESSYNC_DIR=/home/kiran/.config/dotfiles
+export DOTFILESSYNC_CONFIG=/home/$USER/.config/dotfiles/dotfiles-sync.json
+export DOTFILESSYNC_DIR=/home/$USER/.config/dotfiles
 
 # Number of commands help in memory during bash session
 HISTSIZE=5000
