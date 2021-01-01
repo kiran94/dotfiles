@@ -13,3 +13,4 @@ alias ccat='highlight --out-format=ansi'
 alias vd='visidata'
 alias rediscli=iredis
 alias md='python -m rich.markdown'
+alias python='python3'
