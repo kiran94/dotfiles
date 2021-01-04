@@ -11,8 +11,8 @@ PS1='\[\e[0;2;38;5;75m\]\t\[\e[m\] \[\e[0;38;5;87m\]\u\[\e[m\] \[\e[0;2m\]\h\[\e
 [ -f $HOME/.config/bash/settings.sh ] && source $HOME/.config/bash/settings.sh
 [ -f $HOME/.config/bash/database.sh ] && source $HOME/.config/bash/database.sh
 [ -f $HOME/.config/bash/application.sh ] && source $HOME/.config/bash/application.sh
-[ -f $HOME/.config/bash/services.sh ] source $HOME/.config/bash/services.sh
-[ -f $HOME/.config/bash/conda.sh ] source $HOME/.config/bash/conda.sh
+[ -f $HOME/.config/bash/services.sh ] && source $HOME/.config/bash/services.sh
+[ -f $HOME/.config/bash/conda.sh ] %% source $HOME/.config/bash/conda.sh
 
 # Work
 [ -f ~/.config/work.sh ] && source ~/.config/work.sh
