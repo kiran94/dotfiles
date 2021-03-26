@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kien/ctrlp.vim'
 Plug 'farmergreg/vim-lastplace'
+Plug 'szw/vim-maximizer'
 
 call plug#end()
 
