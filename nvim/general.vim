@@ -64,3 +64,5 @@ set clipboard=unnamedplus
 set paste
 " always report the number of lines yanked
 set report=0
+" visual studio code dark color
+colorscheme codedark

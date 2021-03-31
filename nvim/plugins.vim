@@ -11,6 +11,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kien/ctrlp.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'szw/vim-maximizer'
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
