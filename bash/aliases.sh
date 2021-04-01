@@ -14,3 +14,4 @@ alias vd='visidata'
 alias rediscli=iredis
 alias md='python -m rich.markdown'
 alias python='python3'
+alias ds='dotfiles sync'
