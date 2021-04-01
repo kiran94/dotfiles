@@ -10,8 +10,8 @@ imap jj <esc>
 imap ii <esc>
 
 " create splits
-nnoremap <leader>w= :vsplit<CR>
-nnoremap <leader>w- :split<CR>
+nnoremap <leader>= :vsplit<CR>
+nnoremap <leader>- :split<CR>
 
 " navigate split screen panes
 nnoremap <C-Left> <C-W>h
