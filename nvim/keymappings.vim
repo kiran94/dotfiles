@@ -27,3 +27,8 @@ nnoremap <C-H> <C-W><C-H>
 
 " comment/Uncomment the current line
 map <C-c> :Commentary<CR>
+
+" working with tabs
+nnoremap <leader>t :tabnew<CR>
+nnoremap <S><TAB> :tabp<CR>
+nnoremap <TAB> :tabn<CR>
