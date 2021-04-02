@@ -1,6 +1,6 @@
 " SETTINGS
 set encoding=UTF-8
-set spell
+set nospell
 set spelllang=en_gb
 
 " add line numbers and enable relative
@@ -69,4 +69,4 @@ colorscheme codedark
 " don't word wrap
 set nowrap
 " stop auto comment when pasting
-set formatoptions-=cro
+" set formatoptions-=cro

@@ -59,8 +59,15 @@ let g:which_key_map['b'] = {
                   \ 't': [':tabnew', 'tab new'],
                   \ }
 
-
-
+let g:which_key_map['c'] = {
+                  \ 'name': 'code',
+                  \ 'a': [':CocAction', 'action'],
+                  \ 'd': ['<Plug>(coc-definition)', 'definition'],
+                  \ 't': ['<Plug>(coc-type-definition)', 'type definition'],
+                  \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
+                  \ 'r': ['<Plug>(coc-references)', 'references'],
+                  \ 'rn': ['<Plug>(coc-rename)', 'rename'],
+                  \ }
 
 
 call which_key#register('<Space>', "g:which_key_map")
