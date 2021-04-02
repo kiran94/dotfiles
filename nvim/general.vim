@@ -66,3 +66,7 @@ set paste
 set report=0
 " visual studio code dark color
 colorscheme codedark
+" don't word wrap
+set nowrap
+" stop auto comment when pasting
+set formatoptions-=cro

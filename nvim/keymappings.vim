@@ -1,17 +1,15 @@
 " KEYMAPPINGS
-let mapleader = " " 
+" See which key mappings for more
+let g:mapleader = " "
+let g:maplocalleader = ','
 
 " file
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <leader>ww :w<CR>
 
 " escape shortcuts
-imap jj <esc>
-imap ii <esc>
-
-" create splits
-nnoremap <leader>= :vsplit<CR>
-nnoremap <leader>- :split<CR>
+inoremap jk <esc>
+inoremap kj <esc>
+nnoremap <C-c> <Esc>
 
 " navigate split screen panes
 nnoremap <C-Left> <C-W>h
@@ -25,10 +23,27 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" comment/Uncomment the current line
-map <C-c> :Commentary<CR>
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -10<CR>
+nnoremap <M-k>    :resize +10<CR>
+nnoremap <M-l>    :vertical resize -10<CR>
+nnoremap <M-h>    :vertical resize +10<CR> 
+
+" comment/uncomment the current line
+map <C-c> gc<CR>
 
 " working with tabs
-nnoremap <leader>t :tabnew<CR>
-nnoremap <S><TAB> :tabp<CR>
+nnoremap <S-TAB> :tabp<CR>
 nnoremap <TAB> :tabn<CR>
+
+" Better nav for omnicomplete
+" inoremap <expr> <c-j> ("\<C-n>")
+" inoremap <expr> <c-k> ("\<C-p>")
+
+" <TAB>: completion.
+" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Better indent
+vnoremap < <gv
+vnoremap > >gv
+
