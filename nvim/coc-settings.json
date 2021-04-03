@@ -14,6 +14,7 @@
       "bpython",
       "dgraphpandas",
       "pformat",
+      "startify",
       "upserts"
     ]
 }
