@@ -2,7 +2,7 @@
 nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
-set timeoutlen=100
+set timeoutlen=500
 
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
@@ -22,15 +22,17 @@ let g:which_key_use_floating_win = 0
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer'  ] 
-" let g:which_key_map['\'] = [ ':Commentary', 'comment'  ] 
+" let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer'  ]
+let g:which_key_map['e'] = [ ':NERDTreeToggle', 'explorer'  ]
+" let g:which_key_map['\'] = [ ':Commentary', 'comment'  ]
 
 let g:which_key_map['q'] = {
                   \ 'name': '+close',
                   \ 'q': [':q', 'quit'],
                   \ 'w': [':wq!', 'write and quit'],
                   \ 'Q': [':q!', 'force quit'],
-                  \ } 
+                  \ 's': [':SSave', 'save session'],
+                  \ }
 
 let g:which_key_map['w'] = {
                   \ 'name' : '+windows' ,
@@ -67,8 +69,9 @@ let g:which_key_map['c'] = {
                   \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
                   \ 'r': ['<Plug>(coc-references)', 'references'],
                   \ 'rn': ['<Plug>(coc-rename)', 'rename'],
+                  \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
+                  \ 's': [':StripWhitespace', 'strip whitespace'],
                   \ }
-
 
 call which_key#register('<Space>', "g:which_key_map")
 

@@ -47,3 +47,9 @@ nnoremap <TAB> :tabn<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+" remap visual block mode to alt+v
+nnoremap <M-v> <C-v>
+
+
+
+

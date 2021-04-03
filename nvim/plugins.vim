@@ -19,8 +19,8 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf'
 Plug 'justinmk/vim-sneak'
-
-" Plug 'vim-trailing-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 

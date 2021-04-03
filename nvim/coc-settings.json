@@ -11,10 +11,20 @@
     "cSpell.userWords": [
       "DGRAPH",
       "Floaterm",
+      "PYPI",
+      "astype",
+      "bdist",
       "bpython",
       "dgraphpandas",
+      "dropna",
+      "fillna",
+      "inplace",
       "pformat",
+      "sdist",
+      "setuptools",
       "startify",
-      "upserts"
+      "tolist",
+      "upserts",
+      "vsplit"
     ]
 }
