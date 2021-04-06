@@ -1,3 +1,4 @@
+
 " SETTINGS
 set encoding=UTF-8
 set nospell
@@ -68,5 +69,9 @@ set report=0
 colorscheme codedark
 " don't word wrap
 set nowrap
+" allow wrapping for markdown files
+autocmd FileType markdown set wrap
 " stop auto comment when pasting
 " set formatoptions-=cro
+
+

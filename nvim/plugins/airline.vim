@@ -4,5 +4,5 @@ let g:airline_detect_spell = 0
 let g:airline#extensions#tabline#enabled = 1
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
-
+" enable theme
 let g:airline_theme = 'codedark'

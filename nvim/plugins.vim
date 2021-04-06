@@ -21,6 +21,11 @@ Plug 'junegunn/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
+" Plug 'plasticboy/vim-markdown'
+" Plug 'yuttie/comfortable-motion.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'puremourning/vimspector'
+Plug 'sakshamgupta05/vim-todo-highlight'
 
 call plug#end()
 

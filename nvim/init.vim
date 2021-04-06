@@ -13,6 +13,11 @@ source $XDG_CONFIG_HOME/nvim/plugins/fzf.vim
 source $XDG_CONFIG_HOME/nvim/plugins/floaterm.vim
 source $XDG_CONFIG_HOME/nvim/plugins/quickscope.vim
 source $XDG_CONFIG_HOME/nvim/plugins/sneak.vim
+source $XDG_CONFIG_HOME/nvim/plugins/vimspector.vim
 source $XDG_CONFIG_HOME/nvim/plugins/trailing_whitespace.vim
+source $XDG_CONFIG_HOME/nvim/plugins/easymotion.vim
+
+
+
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
 

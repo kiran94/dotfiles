@@ -27,7 +27,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <M-j>    :resize -10<CR>
 nnoremap <M-k>    :resize +10<CR>
 nnoremap <M-l>    :vertical resize -10<CR>
-nnoremap <M-h>    :vertical resize +10<CR> 
+nnoremap <M-h>    :vertical resize +10<CR>
 
 " comment/uncomment the current line
 map <C-c> gc<CR>
@@ -49,6 +49,21 @@ vnoremap > >gv
 
 " remap visual block mode to alt+v
 nnoremap <M-v> <C-v>
+
+" Change 2 split windows from vert to horiz or horiz to vert
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
+
+nmap <Leader>tp :new term://zsh<CR>
+
+" when in terminal node, esc to go from insert to normal mode
+tnoremap <Esc> <C-\><C-N>
+
+
+
+
+
+
 
 
 

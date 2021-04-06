@@ -12,13 +12,17 @@
       "DGRAPH",
       "Floaterm",
       "PYPI",
+      "Upsert",
       "astype",
       "bdist",
       "bpython",
+      "datetime",
       "dgraphpandas",
       "dropna",
+      "dtype",
       "fillna",
       "inplace",
+      "numpy",
       "pformat",
       "sdist",
       "setuptools",
@@ -26,5 +30,7 @@
       "tolist",
       "upserts",
       "vsplit"
-    ]
+    ],
+    "cSpell.showStatus": false,
+    "cSpell.maxNumberOfProblems": 100
 }

@@ -22,9 +22,14 @@ let g:which_key_use_floating_win = 0
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
+
+
 " let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer'  ]
 let g:which_key_map['e'] = [ ':NERDTreeToggle', 'explorer'  ]
+let g:which_key_map['f'] = [ '<Plug>(easymotion-w)', 'jump'  ]
 " let g:which_key_map['\'] = [ ':Commentary', 'comment'  ]
+
+
 
 let g:which_key_map['q'] = {
                   \ 'name': '+close',
@@ -44,11 +49,13 @@ let g:which_key_map['w'] = {
                   \ '+' : [':vsplit'    , 'vertical split'],
                   \ '-' : [':split'     , 'split'],
                   \ 'w' : [':w'         , 'write file'],
+                  \ 'H' : ['<C-w>t<C-w>H', 'horizontal rotate'],
+                  \ 'V' : ['<C-w>t<C-w>K', 'vertical rotate'],
                   \ }
 
 let g:which_key_map['t'] = {
                   \ 'name' : '+terminal' ,
-                  \ ';' : [':FloatermNew --height=0.6 --width=0.8 --wintype=float --name=floaterm1 --position=bottomright --autoclose=2', 'terminal'],
+                  \ ';' : [':new term://zsh', 'new terminal'],
                   \ 'f' : [':FloatermNew fzf', 'fzf'],
                   \ 'p' : [':FloatermNew --height=0.8 --width=0.8 bpython', 'bpython'],
                   \ 'pt' : [':FloatermNew --cwd=<root> --height=0.6 --width=0.8 --wintype=float --autoclose=0 python -m unittest', 'python test'],
@@ -74,4 +81,5 @@ let g:which_key_map['c'] = {
                   \ }
 
 call which_key#register('<Space>', "g:which_key_map")
+
 
