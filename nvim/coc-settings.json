@@ -1,4 +1,36 @@
 {
     "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true
+    "python.linting.flake8Enabled": true,
+    "python.jediEnabled": false,
+    "explorer.width": 30,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings.global": {
+        "<cr>": ["expandable?", "expand", "open"],
+        "v": "open:vsplit"
+    },
+    "cSpell.userWords": [
+      "DGRAPH",
+      "Floaterm",
+      "PYPI",
+      "Upsert",
+      "astype",
+      "bdist",
+      "bpython",
+      "datetime",
+      "dgraphpandas",
+      "dropna",
+      "dtype",
+      "fillna",
+      "inplace",
+      "numpy",
+      "pformat",
+      "sdist",
+      "setuptools",
+      "startify",
+      "tolist",
+      "upserts",
+      "vsplit"
+    ],
+    "cSpell.showStatus": false,
+    "cSpell.maxNumberOfProblems": 100
 }

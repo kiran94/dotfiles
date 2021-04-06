@@ -1,6 +1,7 @@
+
 " SETTINGS
 set encoding=UTF-8
-set spell
+set nospell
 set spelllang=en_gb
 
 " add line numbers and enable relative
@@ -66,3 +67,11 @@ set paste
 set report=0
 " visual studio code dark color
 colorscheme codedark
+" don't word wrap
+set nowrap
+" allow wrapping for markdown files
+autocmd FileType markdown set wrap
+" stop auto comment when pasting
+" set formatoptions-=cro
+
+
