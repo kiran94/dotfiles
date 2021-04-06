@@ -1,63 +1,157 @@
 {
-		"$schema": "https://aka.ms/terminal-profiles-schema",
-		"defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-		"copyOnSelect": false,
-		"copyFormatting": false,
-		"wordDelimiters": " ",
-		"profiles":
-		{
-				"defaults":
-				{
-						"fontFace": "Cascadia Code PL",
-						"fontSize": 12
-				},
-				"list":
-				[
-						{
-								"guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-								"hidden": false,
-								"name": "🎉 Code",
-								"source": "Windows.Terminal.Wsl",
-								"colorScheme": "Campbell"
-						},
-						{
-								"guid": "{6d953325-a939-475d-a151-940cbd0302fb}",
-								"name": "Cmder",
-								"commandline": "cmd.exe /k \"%CMDER_ROOT%\\vendor\\init.bat\" /f",
-								"startingDirectory": "%USERPROFILE%",
-								"icon": "%CMDER_ROOT%\\icons\\cmder_blue.ico",
-								"colorScheme": "Campbell"
-						},
-						{
-								"guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-								"name": "Command Prompt",
-								"commandline": "cmd.exe",
-								"hidden": true
-						},
-						{
-								"guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-								"name": "Windows PowerShell",
-								"commandline": "powershell.exe",
-								"hidden": true
-						},
-						{
-								"guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-								"hidden": true,
-								"name": "Azure Cloud Shell",
-								"source": "Windows.Terminal.Azure"
-						}
-				]
-		},
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{5b4ef9a8-4506-4ac9-930a-5eb1fd0ebf20}",
 
-		"schemes": [],
-		"actions":
-		[
-				{ "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-				{ "command": "paste", "keys": "ctrl+v" },
-				{ "command": "find", "keys": "ctrl+shift+f" },
-				{ "command": "closePane", "keys": "alt+shift+w" },
-				{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
-				{ "command": "nextTab", "keys": "ctrl+tab" },
-				{ "command": "prevTab", "keys": "ctrl+shift+tab" }
-		]
+    "copyOnSelect": false,
+    "copyFormatting": false,
+    "wordDelimiters": " ",
+
+    "profiles":
+    {
+        "defaults":
+        {
+            "fontFace": "Cascadia Code PL",
+            "fontSize": 12
+        },
+        "list":
+        [
+            {
+                "guid": "{5b4ef9a8-4506-4ac9-930a-5eb1fd0ebf20}",
+                "name": "Cmder",
+                "tabTitle": "Code 🎉",
+                "commandline": "cmd.exe /k C:/tools/cmder/vendor/init.bat /f /d",
+                "icon": "C:/tools/cmder/icons/cmder_blue.ico",
+                "hidden": false,
+                "startingDirectory": "%USERPROFILE%/Documents/Projects",
+                "colorScheme": "Tango Dark"
+            },
+            {
+                "guid": "{9eac307c-a1e1-4cb1-b09d-073bb3f605e3}",
+                "name": "Fonix",
+                "commandline": "C:/Windows/System32/OpenSSH/ssh.exe -i C:/Users/kpatel02/.ssh/fonix_openssh kpatel02@fx-devel",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/factset_1024.png",
+                "hidden": false
+            },
+            {
+                "guid": "{fff3ea29-ae15-4900-8da9-54475937a2c3}",
+                "name": "Fonix Production A",
+                "commandline": "C:/Windows/System32/OpenSSH/ssh.exe kpatel02@fx-devel1",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/factset_1024.png",
+                "background": "#49152a",
+                "hidden": false
+            },
+            {
+                "guid": "{23e8b6b7-38c2-4217-889d-166582a89812}",
+                "name": "Fonix Production B",
+                "commandline": "C:/Windows/System32/OpenSSH/ssh.exe kpatel02@fx-devel2",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/factset_1024.png",
+                "background": "#491549",
+                "hidden": false
+            },
+            {
+                // Make changes here to the powershell.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "tabTitle": "PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false,
+                "colorScheme": "One Half Dark"
+            },
+            {
+                "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
+                "hidden": true,
+                "name": "Ubuntu-16.04",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                // Make changes here to the cmd.exe profile.
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "hidden": true
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{01078797-8ae0-451e-890e-3fe1510481e7}",
+                "hidden": false,
+                "name": "Ubuntu-16.04",
+                "source": "Windows.Terminal.Wsl",
+                "colorScheme": "Ubuntu"
+            },
+            {
+                "guid": "{dccfa5b5-62ce-4800-9ab5-dc90568275f8}",
+                "name": "Postgres Local",
+                "commandline": "pgcli --dsn local",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
+                "colorScheme": "Solarized Dark",
+                "hidden": false
+            },
+            {
+                "guid": "{854ea224-2d6b-49b6-a8de-fd27bb5f0fcf}",
+                "name": "UnifiedSplits Dev",
+                "commandline": "pgcli --dsn splitsdev",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
+                "background": "#024e2b",
+                "foreground": "#FFFFFF",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "filledBox",
+                "colorScheme": "Campbell",
+                "hidden": false
+            },
+            {
+                "guid": "{1738b0c1-45ce-44f5-96b4-071fb37878dd}",
+                "name": "UFT Dev",
+                "commandline": "pgcli --dsn uftdev",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
+                "background": "#004D40",
+                "foreground": "#FFFFFF",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "filledBox",
+                "colorScheme": "One Half Light",
+                "hidden": false
+            },
+            {
+                "guid": "{1738b0c1-45ce-44f5-96b4-071fb37878dd}",
+                "name": "Antenna Dev",
+                "commandline": "pgcli --dsn antenna",
+                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
+                "cursorShape": "filledBox",
+                "colorScheme": "Solarized Dark",
+                "hidden": false
+            },
+            {
+                "guid": "{74adf914-7f15-49ff-bec7-79fd83d55578}",
+                "name": "Conda",
+                "commandline": "%windir%/System32/cmd.exe /K C:/Users/kpatel02/AppData/Local/Continuum/miniconda3/Scripts/activate.bat C:/Users/kpatel02/AppData/Local/Continuum/miniconda3"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+
+    "schemes": [],
+    "keybindings":
+    [
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+        { "command": "find", "keys": "ctrl+f" },
+
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+t" },
+        { "command": "closePane", "keys": "alt+shift+w" }
+    ]
 }
