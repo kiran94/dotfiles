@@ -73,5 +73,6 @@ set nowrap
 autocmd FileType markdown set wrap
 " stop auto comment when pasting
 " set formatoptions-=cro
-
+" scroll before you hit the bottom of the screen
+set scrolloff=8
 
