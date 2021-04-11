@@ -26,6 +26,7 @@ Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'puremourning/vimspector'
 Plug 'sakshamgupta05/vim-todo-highlight'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

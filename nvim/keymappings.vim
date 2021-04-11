@@ -59,8 +59,11 @@ nmap <Leader>tp :new term://zsh<CR>
 " when in terminal node, esc to go from insert to normal mode
 tnoremap <Esc> <C-\><C-N>
 
+" clear search highlight
+nnoremap // :noh<CR>
 
 
+nnoremap ; :
 
 
 
