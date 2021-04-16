@@ -30,7 +30,7 @@ nnoremap <M-l>    :vertical resize -10<CR>
 nnoremap <M-h>    :vertical resize +10<CR>
 
 " comment/uncomment the current line
-map <C-c> gc<CR>
+noremap <C-c> :Commentary<CR>
 
 " working with tabs
 nnoremap <S-TAB> :tabp<CR>

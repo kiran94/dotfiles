@@ -76,4 +76,7 @@ autocmd FileType markdown set wrap
 " scroll before you hit the bottom of the screen
 set scrolloff=8
 
-set GuiFont=Delugia Mono Nerd Font
+
+if has('gui_running')
+  set GuiFont=Delugia Mono Nerd Font
+endif

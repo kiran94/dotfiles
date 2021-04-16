@@ -9,8 +9,6 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
 Plug 'unblevable/quick-scope'
 Plug 'jiangmiao/auto-pairs'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kien/ctrlp.vim'
 Plug 'farmergreg/vim-lastplace'
@@ -27,6 +25,14 @@ Plug 'easymotion/vim-easymotion'
 Plug 'puremourning/vimspector'
 Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'ryanoasis/vim-devicons'
+
+
+Plug 'tpope/vim-commentary'
+" Plug 'preservim/nerdcommenter'
+
+if has("unix")
+  Plug 'sheerun/vim-polyglot'
+endif
 
 call plug#end()
 
