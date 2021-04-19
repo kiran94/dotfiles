@@ -8,6 +8,7 @@
         "<cr>": ["expandable?", "expand", "open"],
         "v": "open:vsplit"
     },
+    "omnisharp.trace.server": "information",
     "cSpell.userWords": [
       "DGRAPH",
       "Floaterm",
@@ -28,7 +29,9 @@
       "kwargs",
       "noqa",
       "numpy",
+      "omnisharp",
       "pformat",
+      "pydocstring",
       "pytest",
       "sdist",
       "setuptools",

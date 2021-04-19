@@ -4,6 +4,7 @@
 " hi PmenuSbar guibg=#bcbcbc
 " hi PmenuThumb guibg=#585858
 
+let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-python', 'coc-json', 'coc-sh', 'coc-sql', 'coc-pydocstring', 'coc-vimlsp', 'coc-yaml']
 
 " Following is copied from
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
