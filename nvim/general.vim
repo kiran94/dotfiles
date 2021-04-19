@@ -16,6 +16,8 @@ set confirm
 set backspace=indent,eol,start
 " tab completion on command
 set wildmenu
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,\.git,*/bin/*,*/obj/*     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,\.git,*/bin/*,*/obj/*  " Windows
 " the length of time vim waits after you stop typing to activate plugins
 " note in vim versions < pre-7.4.427 this can lead to visual glitches
 set updatetime=100
