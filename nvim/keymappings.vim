@@ -62,12 +62,4 @@ tnoremap <Esc> <C-\><C-N>
 " clear search highlight
 nnoremap // :noh<CR>
 
-
 nnoremap ; :
-
-
-
-
-
-
-
