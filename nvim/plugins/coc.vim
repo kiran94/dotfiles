@@ -6,6 +6,8 @@
 
 let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-python', 'coc-json', 'coc-sh', 'coc-sql', 'coc-pydocstring', 'coc-vimlsp', 'coc-yaml']
 
+nnoremap <M-c> :CocCommand<CR>
+
 " Following is copied from
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
