@@ -66,6 +66,8 @@ let g:which_key_map['t'] = {
 let g:which_key_map['b'] = {
                   \ 'name': '+buffer/tabs',
                   \ 't': [':tabnew', 'tab new'],
+                  \ 'r': [':reg', 'registers'],
+                  \ 'm': [':marks', 'marks'],
                   \ }
 
 let g:which_key_map['c'] = {
