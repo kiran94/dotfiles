@@ -1,6 +1,5 @@
 call plug#begin($XDG_DATA_HOME . '/nvim/plugins/')
 
-" editor
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
@@ -26,6 +25,13 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 
+" Requires Nvim Nightly
+if has('nvim-0.5.0')
+  " Plug 'gennaro-tedesco/nvim-peekup'
+  Plug 'tversteeg/registers.nvim'
+endif
+
+" Requires Unix
 if has("unix")
   Plug 'sheerun/vim-polyglot'
 endif
