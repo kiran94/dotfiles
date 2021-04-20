@@ -24,6 +24,7 @@ Plug 'puremourning/vimspector'
 Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
+Plug 'mbbill/undotree'
 
 if has("unix")
   Plug 'sheerun/vim-polyglot'

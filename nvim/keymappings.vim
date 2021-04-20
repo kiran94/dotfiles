@@ -63,3 +63,6 @@ tnoremap <Esc> <C-\><C-N>
 nnoremap // :noh<CR>
 
 nnoremap ; :
+
+" Toggle Undo Tree
+nnoremap U :UndotreeToggle<CR>
