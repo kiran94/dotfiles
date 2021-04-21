@@ -1,74 +1,55 @@
 {
-        "config": 
-        {
-                "bash/.profile": 
-                {
+        "config": {
+                "bash/.profile": {
                         "cross": "~/.profile"
                 },
-                "bash/.bashrc": 
-                {
+                "bash/.bashrc": {
                         "cross": "~/.bashrc"
                 },
-                "bash/aliases.sh": 
-                {
+                "bash/aliases.sh": {
                         "cross": "~/.config/bash/aliases.sh"
                 },
-                "bash/bindings.sh": 
-                {
+                "bash/bindings.sh": {
                         "cross": "~/.config/bash/bindings.sh"
                 },
-                "bash/settings.sh": 
-                {
+                "bash/settings.sh": {
                         "cross": "~/.config/bash/settings.sh"
                 },
-                "bash/database.sh": 
-                {
+                "bash/database.sh": {
                         "cross": "~/.config/bash/database.sh"
                 },
-                "bash/application.sh": 
-                {
+                "bash/application.sh": {
                         "cross": "~/.config/bash/application.sh"
                 },
-                "bash/services.sh": 
-                {
+                "bash/services.sh": {
                         "cross": "~/.config/bash/services.sh"
                 },
-                "bash/conda.sh": 
-                {
+                "bash/conda.sh": {
                         "linux": "~/.config/bash/conda.sh"
                 },
-                "zsh/.zshrc": 
-                {
+                "zsh/.zshrc": {
                         "linux": "~/.zshrc"
                 },
-                "zsh/.p10k.zsh": 
-                {
+                "zsh/.p10k.zsh": {
                         "linux": "~/.p10k.zsh"
                 },
-                "git/.gitconfig": 
-                {
+                "git/.gitconfig": {
                         "cross": "~/.gitconfig"
                 },
-                "pgcli/config": 
-                {
+                "pgcli/config": {
                         "linux": "~/.config/pgcli/config"
                 },
-                "windowsterminal/settings.json":
-                {
+                "windowsterminal/settings.json": {
                         "windows": "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
                 },
-                 "nvim":
-                {
+                "nvim": {
                         "cross": "~/.config/nvim"
                 },
-                "vim/.vimrc":
-                {
+                "vim/.vimrc": {
                         "cross": "~/.vimrc"
                 },
-				"vifm/vifmrc": 
-				{
-						"cross": "~/.config/vifm/vifmrc"
-				}
-
+                "vifm/vifmrc": {
+                        "cross": "~/.config/vifm/vifmrc"
+                }
         }
 }
