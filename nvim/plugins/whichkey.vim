@@ -68,6 +68,7 @@ let g:which_key_map['b'] = {
                   \ 't': [':tabnew', 'tab new'],
                   \ 'r': [':reg', 'registers'],
                   \ 'm': [':marks', 'marks'],
+                  \ 'i': [':CocDiagnostics', 'info'],
                   \ }
 
 let g:which_key_map['c'] = {
@@ -80,6 +81,7 @@ let g:which_key_map['c'] = {
                   \ 'rn': ['<Plug>(coc-rename)', 'rename'],
                   \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
                   \ 's': [':StripWhitespace', 'strip whitespace'],
+                  \ 'f': ['<Plug>(coc-format-selected)', 'format'],
                   \ }
 
 call which_key#register('<Space>', "g:which_key_map")

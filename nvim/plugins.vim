@@ -24,6 +24,10 @@ Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
+Plug 'inside/vim-search-pulse'
+
+Plug 'tpope/vim-fugitive'
+" Plug 'jmcantrell/vim-virtualenv'
 
 " Requires Nvim Nightly
 if has('nvim-0.5.0')

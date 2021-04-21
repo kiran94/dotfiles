@@ -20,6 +20,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,\.git,*/bin/*,*/obj/*     " MacOSX/Linu
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,\.git,*/bin/*,*/obj/*  " Windows
 " the length of time vim waits after you stop typing to activate plugins
 " note in vim versions < pre-7.4.427 this can lead to visual glitches
+" note required to be low for coc
 set updatetime=100
 " file line endings when trying to open, close files
 set ffs=unix,dos,mac
@@ -57,6 +58,7 @@ set expandtab
 set smarttab
 " no backup files
 set nobackup
+set nowritebackup
 " no swap files
 set noswapfile
 " set 24-bit colors
@@ -78,7 +80,3 @@ autocmd FileType markdown set wrap
 " scroll before you hit the bottom of the screen
 set scrolloff=8
 
-
-if has('gui_running')
-  set GuiFont=Delugia Mono Nerd Font
-endif
