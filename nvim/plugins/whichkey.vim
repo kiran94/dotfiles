@@ -50,16 +50,6 @@ let g:which_key_map['w'] = {
                   \ 'V' : ['<C-w>t<C-w>K', 'vertical rotate'],
                   \ }
 
-let g:which_key_map['t'] = {
-                  \ 'name' : '+terminal' ,
-                  \ ';' : [':new term://zsh', 'new terminal'],
-                  \ 'f' : [':FloatermNew fzf', 'fzf'],
-                  \ 'p' : [':FloatermNew --height=0.8 --width=0.8 bpython', 'bpython'],
-                  \ 'pt' : [':FloatermNew --cwd=<root> --height=0.6 --width=0.8 --wintype=float --autoclose=0 python -m unittest', 'python test'],
-                  \ 't' : [':FloatermNew --height=0.6 --width=0.8 --wintype=vsplit --name=floaterm2 --autoclose=2', 'toggle'],
-                  \ }
-
-
 let g:which_key_map['b'] = {
                   \ 'name': '+buffer/tabs',
                   \ 't': [':tabnew', 'tab new'],
@@ -82,6 +72,18 @@ let g:which_key_map['c'] = {
                   \ 'f': ['<Plug>(coc-format-selected)', 'format'],
                   \ }
 
+if has("unix")
+
+  let g:which_key_map['t'] = {
+                    \ 'name' : '+terminal' ,
+                    \ ';' : [':new term://zsh', 'new terminal'],
+                    \ }
+else
+  let g:which_key_map['t'] = {
+                    \ 'name' : '+terminal' ,
+                    \ ';' : [':new term://cmd', 'new terminal'],
+                    \ }
+endif
+
+
 call which_key#register('<Space>', "g:which_key_map")
-
-
