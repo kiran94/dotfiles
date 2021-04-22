@@ -28,6 +28,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'inside/vim-search-pulse'
+Plug 'kshenoy/vim-signature'
 
 Plug 'tpope/vim-fugitive'
 " Plug 'jmcantrell/vim-virtualenv'

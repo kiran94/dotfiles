@@ -27,9 +27,6 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler | autocmd BufLea
 " let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer'  ]
 let g:which_key_map['e'] = [ ':NERDTreeToggle', 'explorer'  ]
 let g:which_key_map['f'] = [ '<Plug>(easymotion-w)', 'jump'  ]
-" let g:which_key_map['\'] = [ ':Commentary', 'comment'  ]
-
-
 
 let g:which_key_map['q'] = {
                   \ 'name': '+close',
@@ -68,6 +65,7 @@ let g:which_key_map['b'] = {
                   \ 't': [':tabnew', 'tab new'],
                   \ 'r': [':reg', 'registers'],
                   \ 'm': [':marks', 'marks'],
+                  \ 'mt': [':SignatureToggleSigns', 'toggle marks'],
                   \ 'i': [':CocDiagnostics', 'info'],
                   \ }
 
