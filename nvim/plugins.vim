@@ -1,5 +1,9 @@
 call plug#begin($XDG_DATA_HOME . '/nvim/plugins/')
 
+" Color Schemes
+Plug 'tomasiser/vim-code-dark'
+Plug 'lighthaus-theme/vim-lighthaus'
+
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
@@ -12,7 +16,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kien/ctrlp.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'szw/vim-maximizer'
-Plug 'tomasiser/vim-code-dark'
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf'
 Plug 'justinmk/vim-sneak'

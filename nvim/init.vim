@@ -4,6 +4,9 @@ source $XDG_CONFIG_HOME/nvim/keymappings.vim
 source $XDG_CONFIG_HOME/nvim/colors.vim
 source $XDG_CONFIG_HOME/nvim/gui.vim
 
+" source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/codedark.vim
+source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/lighthaus.vim
+
 source $XDG_CONFIG_HOME/nvim/plugins/gitgutter.vim
 source $XDG_CONFIG_HOME/nvim/plugins/airline.vim
 source $XDG_CONFIG_HOME/nvim/plugins/nerdtree.vim
