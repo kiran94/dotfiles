@@ -6,6 +6,8 @@ Plug 'lighthaus-theme/vim-lighthaus'
 
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 Plug 'liuchengxu/vim-which-key'
