@@ -21,6 +21,7 @@
     "astype",
     "bdist",
     "bpython",
+    "capsys",
     "codecov",
     "ctrlp",
     "datetime",
