@@ -46,8 +46,8 @@ let g:which_key_map['w'] = {
                   \ '+' : [':vsplit'    , 'vertical split'],
                   \ '-' : [':split'     , 'split'],
                   \ 'w' : [':w'         , 'write file'],
-                  \ 'H' : ['<C-w>t<C-w>H', 'horizontal rotate'],
-                  \ 'V' : ['<C-w>t<C-w>K', 'vertical rotate'],
+                  \ 'H' : [':windo wincmd H', 'horizontal rotate'],
+                  \ 'V' : [':windo wincmd K', 'vertical rotate'],
                   \ }
 
 let g:which_key_map['b'] = {
@@ -89,6 +89,7 @@ else
   let g:which_key_map['t'] = {
                     \ 'name' : '+terminal' ,
                     \ ';' : [':new term://cmd', 'new terminal'],
+                    \ ',' : [':new term://cmd', 'new terminal'],
                     \ }
 endif
 
