@@ -1,8 +1,8 @@
-
 " SETTINGS
 set encoding=UTF-8
 set nospell
 set spelllang=en_gb
+set nocompatible
 
 " add line numbers and enable relative
 set number relativenumber
@@ -38,7 +38,7 @@ set tm=500
 set autoread
 " line number and column position shown in the bottom bar
 set ruler
-" when a hidden buffer is abondoned, drop it
+" when a hidden buffer is abandoned, drop it
 set hidden
 " history when searching through commands
 set history
@@ -77,4 +77,6 @@ autocmd FileType markdown set wrap
 " set formatoptions-=cro
 " scroll before you hit the bottom of the screen
 set scrolloff=8
+" path used when running certain commands like gf
+set path+=**
 
