@@ -5,13 +5,15 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'lighthaus-theme/vim-lighthaus'
 
 Plug 'vim-airline/vim-airline'
+" Plug 'itchyny/lightline.vim'
+
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 Plug 'liuchengxu/vim-which-key'
-Plug 'voldikss/vim-floaterm'
 Plug 'unblevable/quick-scope'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,9 +33,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'inside/vim-search-pulse'
 Plug 'kshenoy/vim-signature'
-
 Plug 'tpope/vim-fugitive'
-" Plug 'jmcantrell/vim-virtualenv'
 
 " Requires Nvim Nightly
 if has('nvim-0.5.0')
@@ -45,6 +45,10 @@ endif
 if has("unix")
   Plug 'sheerun/vim-polyglot'
 endif
+
+"Old
+" Plug 'voldikss/vim-floaterm'
+
 
 call plug#end()
 

@@ -7,8 +7,10 @@ source $XDG_CONFIG_HOME/nvim/gui.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/codedark.vim
 source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/lighthaus.vim
 
-source $XDG_CONFIG_HOME/nvim/plugins/gitgutter.vim
 source $XDG_CONFIG_HOME/nvim/plugins/airline.vim
+source $XDG_CONFIG_HOME/nvim/plugins/lightline.vim
+
+source $XDG_CONFIG_HOME/nvim/plugins/gitgutter.vim
 source $XDG_CONFIG_HOME/nvim/plugins/nerdtree.vim
 source $XDG_CONFIG_HOME/nvim/plugins/maximizer.vim
 source $XDG_CONFIG_HOME/nvim/plugins/coc.vim
