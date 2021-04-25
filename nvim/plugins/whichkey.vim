@@ -70,8 +70,17 @@ let g:which_key_map['c'] = {
                   \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
                   \ 's': [':StripWhitespace', 'strip whitespace'],
                   \ 'f': ['<Plug>(coc-format-selected)', 'format'],
+                  \ 'tn': [':TestNearest', 'test nearest'],
+                  \ 'tf': [':TestFile', 'test file'],
+                  \ 'ta': [':TestSuite', 'test suite'],
                   \ }
 
+let g:which_key_map['t'] = {
+                  \ 'name': '+test',
+                  \ 'n': [':TestNearest', 'test nearest'],
+                  \ 'f': [':TestFile', 'test file'],
+                  \ 'a': [':TestSuite', 'test suite'],
+                  \ }
 
 let g:which_key_map['d'] = {
                   \ 'name': '+debug',
@@ -102,13 +111,13 @@ let g:which_key_map['z'] = {
 
 if has("unix")
 
-let g:which_key_map['t'] = {
+let g:which_key_map['x'] = {
                   \ 'name' : '+terminal' ,
                   \ ';' : [':new term://zsh', 'new terminal'],
                   \ }
 else
 
-let g:which_key_map['t'] = {
+let g:which_key_map['x'] = {
                   \ 'name' : '+terminal' ,
                   \ ';' : [':new term://cmd', 'new terminal'],
                   \ ',' : [':new term://cmd', 'new terminal'],
