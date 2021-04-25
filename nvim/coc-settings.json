@@ -25,6 +25,7 @@
     "codecov",
     "ctrlp",
     "datetime",
+    "debugpy",
     "dgraphpandas",
     "dropna",
     "dtype",
