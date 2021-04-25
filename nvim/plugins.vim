@@ -4,8 +4,8 @@ call plug#begin($XDG_DATA_HOME . '/nvim/plugins/')
 Plug 'tomasiser/vim-code-dark'
 Plug 'lighthaus-theme/vim-lighthaus'
 
-" Plug 'vim-airline/vim-airline'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+" Plug 'itchyny/lightline.vim'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
