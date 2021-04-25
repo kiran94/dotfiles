@@ -72,6 +72,13 @@ let g:which_key_map['c'] = {
                   \ 'f': ['<Plug>(coc-format-selected)', 'format'],
                   \ }
 
+
+
+  let g:which_key_map['z'] = {
+                    \ 'name' : '+special' ,
+                    \ 'f' : [':FZF', 'fzf'],
+                    \ }
+
 if has("unix")
 
   let g:which_key_map['t'] = {
