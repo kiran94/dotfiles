@@ -60,7 +60,7 @@ let g:which_key_map['b'] = {
                   \ }
 
 let g:which_key_map['c'] = {
-                  \ 'name': 'code',
+                  \ 'name': '+code',
                   \ 'a': [':CocAction', 'action'],
                   \ 'd': ['<Plug>(coc-definition)', 'definition'],
                   \ 't': ['<Plug>(coc-type-definition)', 'type definition'],
@@ -73,25 +73,46 @@ let g:which_key_map['c'] = {
                   \ }
 
 
+let g:which_key_map['d'] = {
+                  \ 'name': '+debug',
+                  \ 'a': [':call vimspector#Launch()', 'launch debugger'],
+                  \ 'b': [':call vimspector#ToggleBreakpoint()', 'toggle breakpoint'],
+                  \ 'e': [':call vimspector#ToggleConditionalBreakpoint()', 'toggle conditional breakpoint'],
+                  \ 'C': [':call vimspector#ClearBreakpoints()', 'clear breakpoint'],
+                  \ 'w': [':call AddToWatch()', 'add watch'],
+                  \ 'r': [':call vimspector#Restart()', 'restart'],
+                  \ 'c': [':call vimspector#Continue()', 'continue'],
+                  \ 'so': [':call vimspector#StepOut()', 'step out'],
+                  \ 'si': [':call vimspector#StepInto()', 'step in'],
+                  \ 'sO': [':call vimspector#StepOver()', 'step over'],
+                  \ 'cc': [':call vimspector#RunToCursor()', 'run to cursor'],
+                  \ 'gc': [':call GotoWindow(g:vimspector_session_windows.code)', 'go to code'],
+                  \ 'gv': [':call GotoWindow(g:vimspector_session_windows.variables)', 'go to variables'],
+                  \ 'gw': [':call GotoWindow(g:vimspector_session_windows.watches)', 'go to watches'],
+                  \ 'gs': [':call GotoWindow(g:vimspector_session_windows.stack_trace)', 'go to stack_trace'],
+                  \ 'go': [':call GotoWindow(g:vimspector_session_windows.output)', 'go to output'],
+                  \ 'q': [':call vimspector#Reset()', 'quit'],
+                  \ }
 
-  let g:which_key_map['z'] = {
-                    \ 'name' : '+special' ,
-                    \ 'f' : [':FZF', 'fzf'],
-                    \ }
+
+let g:which_key_map['z'] = {
+                  \ 'name' : '+special' ,
+                  \ 'f' : [':FZF', 'fzf'],
+                  \ }
 
 if has("unix")
 
-  let g:which_key_map['t'] = {
-                    \ 'name' : '+terminal' ,
-                    \ ';' : [':new term://zsh', 'new terminal'],
-                    \ }
+let g:which_key_map['t'] = {
+                  \ 'name' : '+terminal' ,
+                  \ ';' : [':new term://zsh', 'new terminal'],
+                  \ }
 else
-  let g:which_key_map['t'] = {
-                    \ 'name' : '+terminal' ,
-                    \ ';' : [':new term://cmd', 'new terminal'],
-                    \ ',' : [':new term://cmd', 'new terminal'],
-                    \ }
-endif
 
+let g:which_key_map['t'] = {
+                  \ 'name' : '+terminal' ,
+                  \ ';' : [':new term://cmd', 'new terminal'],
+                  \ ',' : [':new term://cmd', 'new terminal'],
+                  \ }
+endif
 
 call which_key#register('<Space>', "g:which_key_map")
