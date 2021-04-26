@@ -24,6 +24,7 @@ source $XDG_CONFIG_HOME/nvim/plugins/trailing_whitespace.vim
 source $XDG_CONFIG_HOME/nvim/plugins/easymotion.vim
 source $XDG_CONFIG_HOME/nvim/plugins/autopairs.vim
 source $XDG_CONFIG_HOME/nvim/plugins/ctrlp.vim
+source $XDG_CONFIG_HOME/nvim/plugins/todo_highlight.vim
 
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
 
