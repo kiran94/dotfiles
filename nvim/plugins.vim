@@ -37,7 +37,7 @@ Plug 'inside/vim-search-pulse'
 Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-test/vim-test'
-Plug 'chauncey-garrett/vim-colorizer'
+Plug 'chrisbra/Colorizer'
 
 " Requires Nvim Nightly
 if has('nvim-0.5.0')
