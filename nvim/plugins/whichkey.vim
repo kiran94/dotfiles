@@ -55,6 +55,7 @@ let g:which_key_map['b'] = {
                   \ 't': [':tabnew', 'tab new'],
                   \ 'r': [':reg', 'registers'],
                   \ 'm': [':marks', 'marks'],
+                  \ 'b': [':ls', 'buffers'],
                   \ 'mt': [':SignatureToggleSigns', 'toggle marks'],
                   \ 'i': [':CocDiagnostics', 'info'],
                   \ }
