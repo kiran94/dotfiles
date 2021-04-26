@@ -109,6 +109,8 @@ let g:which_key_map['z'] = {
                   \ 'name' : '+special' ,
                   \ 'f' : [':FZF', 'fzf'],
                   \ '#' : [':ColorToggle', 'color toggle'],
+                  \ 'pi' : [':PlugInstall', 'plug install'],
+                  \ 'pc' : [':PlugClean', 'plug clean'],
                   \ }
 
 if has("unix")
