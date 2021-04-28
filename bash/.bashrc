@@ -19,3 +19,6 @@ PS1='\[\e[0;2;38;5;75m\]\t\[\e[m\] \[\e[0;38;5;87m\]\u\[\e[m\] \[\e[0;2m\]\h\[\e
 
 # Secrets
 [ -f ~/.config/secrets.sh ] && source ~/.config/secrets.sh
+
+# Attach to a tmux session else create it
+tmux attach || tmux new-session -s main
