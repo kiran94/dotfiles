@@ -1,16 +1,16 @@
-" let g:vimspector_enable_mappings = 'HUMAN'
-"
-"
-" fun! GotoWindow(id)
-"   :call win_gotoid(a:id)
-" endfun
-" func! AddToWatch()
-"   let word = expand("<cexpr>")
-"   call vimspector#AddWatch(word)
-" endfunction
-" let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')
-" let g:vimspector_sidebar_width = 60
-"
+let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_install_gadgets = [ 'debugpy' ]
+let g:vimspector_base_dir = expand('$HOME/.config/vimspector-config')
+let g:vimspector_sidebar_width = 60
+
+fun! GotoWindow(id)
+      :call win_gotoid(a:id)
+endfun
+func! AddToWatch()
+      let word = expand("<cexpr>")
+      call vimspector#AddWatch(word)
+endfunction
+
 " nnoremap <leader>da :call vimspector#Launch()<CR>
 " nnoremap <leader>dc :call GotoWindow(g:vimspector_session_windows.code)<CR>
 " nnoremap <leader>dv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
@@ -28,10 +28,10 @@
 " nnoremap <leader>drc :call vimspector#RunToCursor()<CR>
 " nnoremap <leader>dh :call vimspector#ToggleBreakpoint()<CR>
 " nnoremap <leader>de :call vimspector#ToggleConditionalBreakpoint()<CR>
-"
-" let g:vimspector_sign_priority = {
-"       \    'vimspectorBP':         998,
-"       \    'vimspectorBPCond':     997,
-"       \    'vimspectorBPDisabled': 996,
-"       \    'vimspectorPC': 999,
-      \ }
+
+let g:vimspector_sign_priority = {
+                  \    'vimspectorBP':         998,
+                  \    'vimspectorBPCond':     997,
+                  \    'vimspectorBPDisabled': 996,
+                  \    'vimspectorPC': 999,
+                  \ }

@@ -1,8 +1,8 @@
-
 " SETTINGS
 set encoding=UTF-8
 set nospell
 set spelllang=en_gb
+set nocompatible
 
 " add line numbers and enable relative
 set number relativenumber
@@ -16,10 +16,11 @@ set confirm
 set backspace=indent,eol,start
 " tab completion on command
 set wildmenu
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,\.git,*/bin/*,*/obj/*     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,\.git,*/bin/*,*/obj/*  " Windows
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,\.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/* " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,\.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/*  " Windows
 " the length of time vim waits after you stop typing to activate plugins
 " note in vim versions < pre-7.4.427 this can lead to visual glitches
+" note required to be low for coc
 set updatetime=100
 " file line endings when trying to open, close files
 set ffs=unix,dos,mac
@@ -37,7 +38,7 @@ set tm=500
 set autoread
 " line number and column position shown in the bottom bar
 set ruler
-" when a hidden buffer is abondoned, drop it
+" when a hidden buffer is abandoned, drop it
 set hidden
 " history when searching through commands
 set history
@@ -57,6 +58,7 @@ set expandtab
 set smarttab
 " no backup files
 set nobackup
+set nowritebackup
 " no swap files
 set noswapfile
 " set 24-bit colors
@@ -67,8 +69,6 @@ set clipboard=unnamedplus
 set paste
 " always report the number of lines yanked
 set report=0
-" visual studio code dark color
-colorscheme codedark
 " don't word wrap
 set nowrap
 " allow wrapping for markdown files
@@ -77,8 +77,6 @@ autocmd FileType markdown set wrap
 " set formatoptions-=cro
 " scroll before you hit the bottom of the screen
 set scrolloff=8
+" path used when running certain commands like gf
+set path+=**
 
-
-if has('gui_running')
-  set GuiFont=Delugia Mono Nerd Font
-endif

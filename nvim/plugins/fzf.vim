@@ -1,3 +1,5 @@
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -45,6 +47,8 @@ let g:fzf_colors =
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
 
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']}, <bang>0)
 
 " Get text in files with Rg
 command! -bang -nargs=* Rg

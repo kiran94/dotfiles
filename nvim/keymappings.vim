@@ -36,8 +36,8 @@ noremap <C-c> :Commentary<CR>
 nnoremap <S-TAB> :tabp<CR>
 nnoremap <TAB> :tabn<CR>
 
-" Better nav for omnicomplete
-" inoremap <expr> <c-j> ("\<C-n>")
+" better nav for omnicomplete
+" inoremap <expr> <c-j> ("\<c-n>")
 " inoremap <expr> <c-k> ("\<C-p>")
 
 " <TAB>: completion.
@@ -66,3 +66,7 @@ nnoremap ; :
 
 " Toggle Undo Tree
 nnoremap U :UndotreeToggle<CR>
+
+
+
+
