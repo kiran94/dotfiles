@@ -47,6 +47,9 @@
                 },
                 "vifm/vifmrc": {
                         "cross": "~/.config/vifm/vifmrc"
+                },
+                "tmux/.tmux.conf": {
+                        "cross": "~/.tmux/.tmux.conf"
                 }
         }
 }
