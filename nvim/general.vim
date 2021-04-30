@@ -72,7 +72,7 @@ set report=0
 " don't word wrap
 set nowrap
 " allow wrapping for markdown files
-autocmd FileType markdown set wrap
+" autocmd FileType markdown set wrap
 " stop auto comment when pasting
 " set formatoptions-=cro
 " scroll before you hit the bottom of the screen
