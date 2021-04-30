@@ -38,6 +38,11 @@ Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-test/vim-test'
 Plug 'chrisbra/Colorizer'
+" Plug 'tmux-plugins/vim-tmux'
+" Plug 'tommcdo/vim-lion'
+
+Plug 'preservim/tagbar'
+Plug 'junegunn/vim-easy-align'
 
 " Requires Nvim Nightly
 if has('nvim-0.5.0')

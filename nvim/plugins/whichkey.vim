@@ -71,9 +71,7 @@ let g:which_key_map['c'] = {
                   \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
                   \ 's': [':StripWhitespace', 'strip whitespace'],
                   \ 'f': ['<Plug>(coc-format-selected)', 'format'],
-                  \ 'tn': [':TestNearest', 'test nearest'],
-                  \ 'tf': [':TestFile', 'test file'],
-                  \ 'ta': [':TestSuite', 'test suite'],
+                  \ 'c': [':TagbarToggle', 'class definition'],
                   \ }
 
 let g:which_key_map['t'] = {
