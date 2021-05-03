@@ -26,29 +26,6 @@
                 "colorScheme": "Tango Dark"
             },
             {
-                "guid": "{9eac307c-a1e1-4cb1-b09d-073bb3f605e3}",
-                "name": "Fonix",
-                "commandline": "C:/Windows/System32/OpenSSH/ssh.exe -i C:/Users/kpatel02/.ssh/fonix_openssh kpatel02@fx-devel",
-                "icon": "C:/Users/kpatel02/Documents/terminal/icons/factset_1024.png",
-                "hidden": false
-            },
-            {
-                "guid": "{fff3ea29-ae15-4900-8da9-54475937a2c3}",
-                "name": "Fonix Production A",
-                "commandline": "C:/Windows/System32/OpenSSH/ssh.exe kpatel02@fx-devel1",
-                "icon": "C:/Users/kpatel02/Documents/terminal/icons/factset_1024.png",
-                "background": "#49152a",
-                "hidden": false
-            },
-            {
-                "guid": "{23e8b6b7-38c2-4217-889d-166582a89812}",
-                "name": "Fonix Production B",
-                "commandline": "C:/Windows/System32/OpenSSH/ssh.exe kpatel02@fx-devel2",
-                "icon": "C:/Users/kpatel02/Documents/terminal/icons/factset_1024.png",
-                "background": "#491549",
-                "hidden": false
-            },
-            {
                 // Make changes here to the powershell.exe profile.
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
@@ -78,7 +55,7 @@
             },
             {
                 "guid": "{01078797-8ae0-451e-890e-3fe1510481e7}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Ubuntu-16.04",
                 "source": "Windows.Terminal.Wsl",
                 "colorScheme": "Ubuntu"
@@ -88,39 +65,6 @@
                 "name": "Postgres Local",
                 "commandline": "pgcli --dsn local",
                 "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
-                "colorScheme": "Solarized Dark",
-                "hidden": false
-            },
-            {
-                "guid": "{854ea224-2d6b-49b6-a8de-fd27bb5f0fcf}",
-                "name": "UnifiedSplits Dev",
-                "commandline": "pgcli --dsn splitsdev",
-                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
-                "background": "#024e2b",
-                "foreground": "#FFFFFF",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "filledBox",
-                "colorScheme": "Campbell",
-                "hidden": false
-            },
-            {
-                "guid": "{1738b0c1-45ce-44f5-96b4-071fb37878dd}",
-                "name": "UFT Dev",
-                "commandline": "pgcli --dsn uftdev",
-                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
-                "background": "#004D40",
-                "foreground": "#FFFFFF",
-                "cursorColor": "#FFFFFF",
-                "cursorShape": "filledBox",
-                "colorScheme": "One Half Light",
-                "hidden": false
-            },
-            {
-                "guid": "{1738b0c1-45ce-44f5-96b4-071fb37878dd}",
-                "name": "Antenna Dev",
-                "commandline": "pgcli --dsn antenna",
-                "icon": "C:/Users/kpatel02/Documents/terminal/icons/postgres.png",
-                "cursorShape": "filledBox",
                 "colorScheme": "Solarized Dark",
                 "hidden": false
             },
@@ -150,7 +94,6 @@
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
         { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
-
         { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+t" },
         { "command": "closePane", "keys": "alt+shift+w" }
     ]
