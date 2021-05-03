@@ -32,7 +32,7 @@ cd $HOME
 source $ZSH/oh-my-zsh.sh
 
 # Enable Vim Mode
-bindkey -v
+# bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 HIST_IGNORE_DUPS=true
