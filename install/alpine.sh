@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apk update
+apk upgrade
+
 # Install Packages
 apk add bash
 apk add neovim
