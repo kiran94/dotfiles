@@ -16,6 +16,7 @@
   "cSpell.userWords": [
     "DGRAPH",
     "Floaterm",
+    "NOTSET",
     "PYPI",
     "Upsert",
     "astype",
@@ -23,6 +24,7 @@
     "bpython",
     "capsys",
     "codecov",
+    "coloredlogs",
     "ctrlp",
     "datetime",
     "debugpy",
