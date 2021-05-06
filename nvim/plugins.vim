@@ -43,6 +43,7 @@ Plug 'chrisbra/Colorizer'
 
 Plug 'preservim/tagbar'
 Plug 'junegunn/vim-easy-align'
+Plug 'danishprakash/vim-docker'
 
 " Requires Nvim Nightly
 if has('nvim-0.5.0')

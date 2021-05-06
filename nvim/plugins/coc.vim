@@ -1,7 +1,7 @@
 " Original Coc Configuration
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
-let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-python', 'coc-json', 'coc-sh', 'coc-sql', 'coc-pydocstring', 'coc-vimlsp', 'coc-yaml']
+let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-python', 'coc-json', 'coc-sh', 'coc-sql', 'coc-pydocstring', 'coc-vimlsp', 'coc-yaml', 'coc-docker']
 
 nnoremap <M-c> :CocCommand<CR>
 
