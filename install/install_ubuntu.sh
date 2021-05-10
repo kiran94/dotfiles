@@ -15,6 +15,8 @@ sudo apt install git
 sudo apt install apt-transport-https
 sudo apt install nodejs npm
 sudo apt install net-tools
+sudo apt-get install fzf
+sudo apt-get install ripgrep
 
 ############################# Additional Extras
 
@@ -47,6 +49,50 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Nvim Plugins
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 	       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# .NET
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0
+
+rm packages-microsoft-prod.deb
+
+
+# Github Cli
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+sudo apt update
+sudo apt install gh
+
+# Miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+
+# Docker
+sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+# Add your user to the docker group
+# to allow running commands
+# without sudo
+sudo gpasswd -a $USER docker
+sudo newgrp docker
+
+# Docker Compose
+# Note the version is hardcoded
+# and there might be a new one
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 #############################
 
@@ -73,6 +119,11 @@ dpkg --install expressvpn_3.7.0.29-1_amd64.deb
 rm expressvpn_3.7.0.29-1_amd64.deb
 
 #############################
+
+# Trust bluetooth headset for autoconnect
+# https://techwiser.com/fix-bluetooth-device-doesnt-auto-connect-in-linux/
+# bluetoothctl trust <mac_address>
+
 #############################
 
 # CLEAN UP
