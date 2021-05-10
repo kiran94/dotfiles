@@ -1,3 +1,4 @@
 secrets.sh
 nvim/.sessions/
 nvim/.netrwhist
+*.deb
