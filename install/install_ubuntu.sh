@@ -14,6 +14,7 @@ sudo apt install python3-pip
 sudo apt install git
 sudo apt install apt-transport-https
 sudo apt install nodejs npm
+sudo apt install net-tools
 
 ############################# Additional Extras
 
