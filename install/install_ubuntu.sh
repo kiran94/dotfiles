@@ -66,13 +66,11 @@ sudo add-apt-repository ppa:system76/pop
 sudo apt install pop-desktop
 
 
+############################# VPN
 
-
-
-
-
-
-
+curl https://www.expressvpn.works/clients/linux/expressvpn_3.7.0.29-1_amd64.deb -O
+dpkg --install expressvpn_3.7.0.29-1_amd64.deb
+rm expressvpn_3.7.0.29-1_amd64.deb
 
 #############################
 #############################
