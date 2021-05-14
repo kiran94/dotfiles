@@ -15,8 +15,12 @@ sudo apt install git
 sudo apt install apt-transport-https
 sudo apt install nodejs npm
 sudo apt install net-tools
-sudo apt-get install fzf
-sudo apt-get install ripgrep
+sudo apt install fzf
+sudo apt install ripgrep
+sudo apt install transmission-cli
+sudo apt install vlc
+sudo apt install xclip
+sudo apt install flameshot
 
 ############################# Additional Extras
 
@@ -111,7 +115,6 @@ sudo snap install unsplashed-wallpapers
 sudo add-apt-repository ppa:system76/pop
 sudo apt install pop-desktop
 
-
 ############################# VPN
 
 curl https://www.expressvpn.works/clients/linux/expressvpn_3.7.0.29-1_amd64.deb -O
@@ -123,6 +126,13 @@ rm expressvpn_3.7.0.29-1_amd64.deb
 # Trust bluetooth headset for autoconnect
 # https://techwiser.com/fix-bluetooth-device-doesnt-auto-connect-in-linux/
 # bluetoothctl trust <mac_address>
+
+#############################
+
+sudo add-apt-repository ppa:fingerprint/fingerprint-gui
+sudo apt update
+sudo apt upgrade
+sudo apt-get install libbsapi policykit-1-fingerprint-gui fingerprint-gui
 
 #############################
 
@@ -147,5 +157,6 @@ sudo apt purge preview*
 sudo apt purge Mahjongg
 sudo apt purge onboard*
 sudo apt purge drawing*
+sudo apt purge gnome-screenshot
 
 sudo apt autoremove
