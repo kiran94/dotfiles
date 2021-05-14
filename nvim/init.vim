@@ -1,7 +1,6 @@
 source $XDG_CONFIG_HOME/nvim/plugins.vim
 source $XDG_CONFIG_HOME/nvim/general.vim
 source $XDG_CONFIG_HOME/nvim/keymappings.vim
-source $XDG_CONFIG_HOME/nvim/colors.vim
 source $XDG_CONFIG_HOME/nvim/gui.vim
 
 " source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/codedark.vim
@@ -30,4 +29,4 @@ source $XDG_CONFIG_HOME/nvim/plugins/easyalign.vim
 
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
 
-
+source $XDG_CONFIG_HOME/nvim/colors.vim

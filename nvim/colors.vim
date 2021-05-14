@@ -2,3 +2,5 @@
 " hi PmenuSel guibg=#2c56de gui=NONE
 " hi PmenuSbar guibg=#bcbcbc
 " hi PmenuThumb guibg=#585858
+
+hi Visual guifg=Black guibg=Orange gui=none
