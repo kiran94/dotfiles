@@ -146,7 +146,9 @@ xbindkeys --multikey
 sudo gem install neovim
 sudo npm install -g neovim
 sudo apt install ruby-dev
+sudo apt install cpanminus
 
+sudo cpanm -n Neovim::Ext
 
 #############################
 # CLEAN UP
