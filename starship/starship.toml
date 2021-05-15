@@ -1,0 +1,129 @@
+add_newline = true
+
+format = """
+$shlvl\
+$kubernetes\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$env_var\
+$crystal\
+$lua\
+
+$line_break\
+$aws\
+$gcloud\
+$openstack\
+$terraform\
+
+$line_break\
+$time\
+$username\
+$hostname\
+$directory\
+$battery\
+$status\
+$cmd_duration\
+$shell\
+
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$jobs\
+
+$custom\
+
+$line_break\
+$character
+"""
+
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = "%T"
+
+[username]
+disabled = false
+style_user = "cyan"
+style_root = "red bold"
+format = "[$user]($style) "
+show_always = true
+
+[hostname]
+disabled = false
+ssh_only = false
+format =  "on [$hostname](bold red) "
+trim_at = ""
+
+[jobs]
+disabled = false
+format = "([\\[$number\\]]($style)) "
+threshold = 0
+style = "bold orange"
+
+[git_branch]
+# symbol = "🌱 "
+truncation_length = 100
+truncation_symbol = "..."
+style = "bold cyan"
+format = "[$symbol$branch]($style) "
+
+[git_commit]
+commit_hash_length = 6
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[conda]
+disabled = false
+format = "[$symbol$environment](dimmed green) "
+
+[aws]
+format = '[$symbol ($profile )(\($region\) )]($style)'
+style = "bright-yellow"
+symbol = "☁️"
+# [aws.region_aliases]
+# ap-southeast-2 = "au"
+# us-east-1 = "va"
+
+[python]
+symbol = "🐍 "
+pyenv_version_name = false
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+# [custom.expressvpn]
+# shell = ["expressvpn", "status", "|", "head", "-1"]

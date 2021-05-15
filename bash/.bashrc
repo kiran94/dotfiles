@@ -28,3 +28,10 @@ fi
 
 # Budgie added this
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
+
+################################
+
+# Starship Prompt
+# https://starship.rs/
+[ -f /usr/local/bin/starship ] && [ $SHELL = "/usr/bin/bash" ] && eval "$(starship init bash)"
+

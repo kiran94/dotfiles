@@ -134,7 +134,9 @@ sudo apt update
 sudo apt upgrade
 sudo apt-get install libbsapi policykit-1-fingerprint-gui fingerprint-gui
 
-#############################
+############################# Starship Prompt
+
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 # CLEAN UP
 # Some of these technologies come from desktop managers
