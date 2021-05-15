@@ -138,6 +138,12 @@ sudo apt-get install libbsapi policykit-1-fingerprint-gui fingerprint-gui
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
+############################# Find Keys 
+sudo apt install xbindkeys
+xbindkeys --defaults > /home/kiran/.xbindkeysrc
+xbindkeys --multikey
+
+#############################
 # CLEAN UP
 # Some of these technologies come from desktop managers
 # and I don't need
