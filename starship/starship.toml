@@ -49,10 +49,6 @@ $time\
 $username\
 $hostname\
 $directory\
-$battery\
-$status\
-$cmd_duration\
-$shell\
 
 $vcsh\
 $git_branch\
@@ -61,6 +57,10 @@ $git_state\
 $git_status\
 $hg_branch\
 $jobs\
+$battery\
+$status\
+$cmd_duration\
+$shell\
 
 $custom\
 
