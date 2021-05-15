@@ -138,10 +138,15 @@ sudo apt-get install libbsapi policykit-1-fingerprint-gui fingerprint-gui
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
-############################# Find Keys 
+############################# Find Keys
 sudo apt install xbindkeys
 xbindkeys --defaults > /home/kiran/.xbindkeysrc
 xbindkeys --multikey
+
+sudo gem install neovim
+sudo npm install -g neovim
+sudo apt install ruby-dev
+
 
 #############################
 # CLEAN UP
