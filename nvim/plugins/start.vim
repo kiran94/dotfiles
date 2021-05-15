@@ -19,7 +19,7 @@ let g:startify_bookmarks = [
       \ { 'c': '~/.config'  },
       \ { 'i': '~/.config/nvim/init.vim'  },
       \ { 'p': '~/Documents/projects'  },
-      \ { 'p': '~/Downloads'  },
+      \ { 'd': '~/Downloads'  },
       \]
 
 " let g:startify_custom_header = [
