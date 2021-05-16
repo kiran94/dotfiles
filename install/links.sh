@@ -14,3 +14,5 @@ ln -vns $DOTFILESSYNC_DIR/zsh/.p10k.zsh ~/.p10k.zsh
 ln -vns $DOTFILESSYNC_DIR/git/.gitconfig ~/.gitconfig
 ln -vns $DOTFILESSYNC_DIR/tmux/.tmux.conf ~/.tmux.conf
 ln -vns $DOTFILESSYNC_DIR/starship/starship.toml ~/.config/starship.toml
+ln -vns $DOTFILESSYNC_DIR/pgcli/config ~/.config/pgcli/config
+ln -vns ~/.config/dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
