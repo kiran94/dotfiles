@@ -37,19 +37,15 @@ $memory_usage\
 $env_var\
 $crystal\
 $lua\
-
-$line_break\
 $aws\
 $gcloud\
 $openstack\
 $terraform\
-
 $line_break\
 $time\
 $username\
 $hostname\
 $directory\
-
 $vcsh\
 $git_branch\
 $git_commit\
@@ -83,7 +79,7 @@ show_always = true
 
 [hostname]
 disabled = false
-ssh_only = false
+ssh_only = true
 format =  "on [$hostname](bold red) "
 trim_at = ""
 
