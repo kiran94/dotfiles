@@ -12,10 +12,16 @@ export ZSH="/home/$USER/.oh-my-zsh"
 
 # Themes
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
+
+# Starship
+# ZSH_THEME="robbyrussell"
+eval "$(starship init zsh)"
+
+# Powerlevel
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
