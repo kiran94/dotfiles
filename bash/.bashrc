@@ -35,12 +35,8 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 # https://starship.rs/
 [ -f /usr/local/bin/starship ] && [ $SHELL = "/usr/bin/bash" ] && eval "$(starship init bash)"
 
-
-[ -f /usr/bin/neofetch ] && neofetch 
-
-
-
-
+# Neofetch
+[ -f /usr/bin/neofetch ] && neofetch
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -56,4 +52,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
