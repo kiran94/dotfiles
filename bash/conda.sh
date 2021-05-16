@@ -1,3 +1,4 @@
+PATH=$PATH:$HOME/miniconda3/bin/
 PATH=$PATH:$HOME/.miniconda3/bin/
 
 # >>> conda initialize >>>
