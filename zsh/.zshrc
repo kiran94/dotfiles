@@ -49,4 +49,3 @@ HIST_IGNORE_SPACE=true
 export UPDATE_ZSH_DAYS=7
 
 
-

@@ -41,6 +41,8 @@ $aws\
 $gcloud\
 $openstack\
 $terraform\
+${custom.expressvpn}\
+
 $line_break\
 $time\
 $username\
@@ -58,17 +60,15 @@ $status\
 $cmd_duration\
 $shell\
 
-$custom\
-
 $line_break\
 $character
 """
-
 
 [time]
 disabled = false
 format = '[$time]($style) '
 time_format = "%T"
+style = "bold blue"
 
 [username]
 disabled = false
@@ -106,11 +106,12 @@ cherry_pick = "[🍒 PICKING](bold red)"
 
 [conda]
 disabled = false
-format = "[$symbol$environment](dimmed green) "
+format = "[$symbol $environment]($style) "
+style = "dimmed green"
 
 [aws]
 format = '[$symbol ($profile )(\($region\) )]($style)'
-style = "bright-yellow"
+style = "dimmed yellow"
 symbol = "☁️"
 # [aws.region_aliases]
 # ap-southeast-2 = "au"
@@ -120,6 +121,10 @@ symbol = "☁️"
 symbol = "🐍 "
 pyenv_version_name = false
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = 'dimmed purple'
 
-# [custom.expressvpn]
-# shell = ["expressvpn", "status", "|", "head", "-1"]
+[custom.expressvpn]
+command = "expressvpn status | head -1"
+when = """ test "$HOME" = "$PWD" """
+style = "dimmed red"
+format = "[$output]($style)"
