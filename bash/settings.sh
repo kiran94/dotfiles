@@ -23,7 +23,7 @@ export DOTFILESSYNC_DIR=$HOME/.config/dotfiles
 # Number of commands help in memory during bash session
 HISTSIZE=5000
 # History Size
-HISTFILESIZE=10000
+HISTFILESIZE=1000000
 # Ignore both spaces and duplicates
 HISTCONTROL=ignoreboth
 # Add DateTime in History
