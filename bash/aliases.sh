@@ -7,8 +7,8 @@ alias v="vim"
 alias ..="cd .."
 alias g="git"
 
-alias ls='ls -ha --color=auto --group-directories-first'
-alias ls='ll --color=auto'
+alias ls='ls -h --color=auto --group-directories-first'
+alias ll='ls --color=auto'
 alias grep='grep --color=auto'
 alias ccat='highlight --out-format=ansi'
 alias vd='visidata'
