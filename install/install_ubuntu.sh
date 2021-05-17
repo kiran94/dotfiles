@@ -21,6 +21,7 @@ sudo apt install transmission-cli
 sudo apt install vlc
 sudo apt install xclip
 sudo apt install flameshot
+sudo apt install jq
 
 ############################# Additional Extras
 
