@@ -127,4 +127,4 @@ style = 'dimmed purple'
 command = "expressvpn status | head -1"
 when = """ test "$HOME" = "$PWD" """
 style = "dimmed red"
-format = "[$output]($style)"
+format = "🏮 [$output]($style)"
