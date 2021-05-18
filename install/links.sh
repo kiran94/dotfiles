@@ -16,3 +16,4 @@ ln -vns $DOTFILESSYNC_DIR/tmux/.tmux.conf ~/.tmux.conf
 ln -vns $DOTFILESSYNC_DIR/starship/starship.toml ~/.config/starship.toml
 ln -vns $DOTFILESSYNC_DIR/pgcli/config ~/.config/pgcli/config
 ln -vns ~/.config/dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
+ln -vns ~/.config/dotfiles/conda/.condarc ~/.condarc
