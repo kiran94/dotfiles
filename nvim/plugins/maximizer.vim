@@ -1,1 +1,5 @@
-nnoremap <C-m> :MaximizerToggle<CR>
+let g:maximizer_set_default_mapping = 1
+let g:maximizer_default_mapping_key = '<F3>'
+
+" nnoremap <C-M> :MaximizerToggle<CR>
+
