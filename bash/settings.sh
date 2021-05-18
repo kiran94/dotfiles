@@ -32,9 +32,16 @@ HISTCONTROL=ignoreboth
 # Append to history instead of overwriting, useful for multiple sessions at the same time.
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s histappend
 
+# Case insensitive tab completion
+bind 'set completion-ignore-case on'
+
+shopt -s cdspell
+complete -d cd
+
 LESS=-JMQRSi
 
 # SSH
 eval "$(ssh-agent -s)" > /dev/null
-ssh-add ~/.ssh/*id_rsa 2> /dev/null
+[ -f ~/.ssh/*id_rsa ] && ssh-add ~/.ssh/*id_rsa 2> /dev/null
+
 
