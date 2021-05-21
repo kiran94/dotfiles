@@ -22,6 +22,8 @@ sudo apt install vlc
 sudo apt install xclip
 sudo apt install flameshot
 sudo apt install jq
+sudo apt install maim
+sudo apt install codium
 
 ############################# Additional Extras
 
