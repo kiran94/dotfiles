@@ -25,7 +25,9 @@ fi
 [ -f ~/.config/secrets.sh ] && source ~/.config/secrets.sh
 
 # Attach to a tmux session else create it
-[ -z "${TMUX}" ] && (tmux attach || tmux new-session -s main)
+# Don't if already in Tmux
+# DOn't if inside a program like vscode
+[ -z "${TMUX}" ] && [ -z "${TERM_PROGRAM}" ] && (tmux attach || tmux new-session -s main)
 
 # Budgie added this
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # Ubuntu Budgie END
@@ -37,7 +39,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 [ -f /usr/local/bin/starship ] && [ $SHELL = "/usr/bin/bash" ] && eval "$(starship init bash)"
 
 # Neofetch
-[ -f /usr/bin/neofetch ] && neofetch
+[ -z "${TERM_PROGRAM}" ] && [ -f /usr/bin/neofetch ] && neofetch
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
