@@ -42,7 +42,5 @@ complete -d cd
 LESS=-JMQRSi
 
 # SSH
-eval "$(ssh-agent -s)" > /dev/null
-[ -f ~/.ssh/*id_rsa ] && ssh-add ~/.ssh/*id_rsa 2> /dev/null
-
-
+# eval "$(ssh-agent -s)" > /dev/null
+# [ -f ~/.ssh/*id_rsa ] && ssh-add ~/.ssh/*id_rsa 2> /dev/null
