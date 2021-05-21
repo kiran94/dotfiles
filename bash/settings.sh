@@ -34,10 +34,9 @@ HISTCONTROL=ignoreboth
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s histappend
 
 # Case insensitive tab completion
-bind 'set completion-ignore-case on'
-
-shopt -s cdspell
-complete -d cd
+[ "${BASH_VERSINFO:-0}" -ge 4 ] && bind 'set completion-ignore-case on'
+[ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s cdspell
+[ "${BASH_VERSINFO:-0}" -ge 4 ] && complete -d cd
 
 LESS=-JMQRSi
 
