@@ -1,4 +1,5 @@
 export EDITOR=vim
+export BROWSER=brave-browser
 
 # XDG standard environment variables
 # https://github.com/adrg/xdg#default-locations
