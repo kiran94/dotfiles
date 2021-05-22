@@ -2,28 +2,26 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install vim
-sudo apt install neovim
-sudo apt install tmux
+sudo apt install vim tmux
 sudo apt install curl
 sudo apt install tree
 sudo apt install htop
 sudo apt install openssh-client
-sudo apt install python3
-sudo apt install python3-pip
+sudo apt install python3 python3-pip
 sudo apt install git
 sudo apt install apt-transport-https
 sudo apt install nodejs npm
 sudo apt install net-tools
-sudo apt install fzf
-sudo apt install ripgrep
+sudo apt install fzf ripgrep
 sudo apt install transmission-cli
 sudo apt install vlc
 sudo apt install xclip
-sudo apt install flameshot
+# sudo apt install flameshot
 sudo apt install jq
 sudo apt install maim
-sudo apt install codium
+# sudo apt install codium
+sudo apt install ruby
+sudo apt install zsh
 
 ############################# Additional Extras
 
@@ -46,13 +44,13 @@ sudo apt purge firefox
 
 ############################# Developer Tools
 
-sudo add-apt-repository ppa:aslatter/ppa
 sudo apt install alacritty
 sudo npm install -g tldr
 sudo npm install -g gitignore.cli
 # Tmux Plugins
 mkdir -p ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Nvim Plugins
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 	       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -78,6 +76,7 @@ sudo apt install gh
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ./Miniconda3-latest-Linux-x86_64.sh
+rm Miniconda3-latest-Linux-x86_64.sh
 
 # Docker
 sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release
@@ -109,14 +108,15 @@ sudo fc-cache -f -v
 
 #############################
 
+sudo apt install snapd
 sudo snap install spotify
 sudo snap install unsplashed-wallpapers
 
 #############################
 
 # Pop OS Desktop Manager
-sudo add-apt-repository ppa:system76/pop
-sudo apt install pop-desktop
+[ "${XDG_SESSION_DESKTOP}" == pop ] && sudo add-apt-repository ppa:system76/pop
+[ "${XDG_SESSION_DESKTOP}" == pop ] && sudo apt install pop-desktop
 
 ############################# VPN
 
