@@ -146,12 +146,24 @@ sudo apt install xbindkeys
 xbindkeys --defaults > /home/kiran/.xbindkeysrc
 xbindkeys --multikey
 
+sudo apt install ruby-dev
 sudo gem install neovim
 sudo npm install -g neovim
-sudo apt install ruby-dev
 sudo apt install cpanminus
-
 sudo cpanm -n Neovim::Ext
+
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+
+
+# Configure Grub (Boot Loader)
+# sudo apt install os-prober
+# sudo apt install grub2-common
+# sudo update-grub
+
+
+sudo apt install gnome-tweaks
 
 #############################
 # CLEAN UP
