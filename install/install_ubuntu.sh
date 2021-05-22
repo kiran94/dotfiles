@@ -21,7 +21,6 @@ sudo apt install jq
 sudo apt install maim
 # sudo apt install codium
 sudo apt install ruby
-sudo apt install zsh
 
 ############################# Additional Extras
 
@@ -162,8 +161,17 @@ sudo apt-get install neovim
 # sudo apt install grub2-common
 # sudo update-grub
 
-
 sudo apt install gnome-tweaks
+
+#############################
+
+sudo apt install zsh
+
+# Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 #############################
 # CLEAN UP
