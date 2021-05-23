@@ -22,6 +22,7 @@ sudo apt install maim
 # sudo apt install codium
 sudo apt install ruby
 sudo apt install awscli
+sudo apt install highlight
 
 ############################# Additional Extras
 
