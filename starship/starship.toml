@@ -1,3 +1,8 @@
+# Docs:
+# https://starship.rs/config
+# Style:
+# https://starship.rs/advanced-config/#style-strings
+
 add_newline = true
 
 format = """
@@ -72,7 +77,7 @@ style = "bold blue"
 
 [username]
 disabled = false
-style_user = "cyan"
+style_user = "dimmed cyan"
 style_root = "red bold"
 format = "[$user]($style) "
 show_always = true
@@ -93,7 +98,7 @@ style = "bold orange"
 # symbol = "🌱 "
 truncation_length = 100
 truncation_symbol = "..."
-style = "bold cyan"
+style = "bright-green"
 format = "[$symbol$branch]($style) "
 
 [git_commit]
@@ -125,6 +130,16 @@ style = 'dimmed purple'
 
 [custom.expressvpn]
 command = "expressvpn status | head -1"
-when = """ test "$HOME" = "$PWD" """
+when = """ test "$HOME" = "$PWD" && which expressvpn """
 style = "dimmed red"
 format = "🏮 [$output]($style)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+home_symbol = "~"
+fish_style_pwd_dir_length = 1
+style = "bright-cyan"
+
+[dotnet]
+style = "dimmed purple"
