@@ -1,5 +1,6 @@
 ipython
 iredis
 wharfee
-# saws
+saws
 neovim
+grip
