@@ -5,7 +5,7 @@ set spelllang=en_gb
 set nocompatible
 
 " add line numbers and enable relative
-set number relativenumber
+set nonumber relativenumber
 " split down with :split
 set splitbelow
 "split right with :vsplit
