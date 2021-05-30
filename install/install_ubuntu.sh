@@ -23,6 +23,8 @@ sudo apt install maim
 sudo apt install ruby
 sudo apt install awscli
 sudo apt install highlight
+sudo apt install default-jre
+sudo apt install scala
 
 ############################# Additional Extras
 
