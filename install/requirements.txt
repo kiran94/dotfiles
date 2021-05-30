@@ -4,3 +4,4 @@ wharfee
 saws
 neovim
 grip
+ptpython
