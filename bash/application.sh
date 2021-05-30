@@ -3,6 +3,7 @@ export PATH=$PATH:$HOME/.dotnet/tools/
 export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin # macOS
+export PATH=$PATH:/usr/local/bin/spark/bin/
 
 # ASP.NET
 export ASPNETCORE_ENVIRONMENT=Development
