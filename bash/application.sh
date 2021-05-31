@@ -1,3 +1,8 @@
+#!/bin/bash
+
+[ -n "$BASH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && `echo $BASH_SOURCE`
+[ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
+
 # Path
 export PATH=$PATH:$HOME/.dotnet/tools/
 export PATH=$PATH:$HOME/go/bin/
