@@ -1,5 +1,6 @@
 export EDITOR=vim
 export BROWSER=brave-browser
+export LESS=-JMQRSi
 
 # XDG standard environment variables
 # https://github.com/adrg/xdg#default-locations
@@ -37,9 +38,18 @@ HISTCONTROL=ignoreboth
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && bind 'set completion-ignore-case on'
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s cdspell
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && complete -d cd
+[ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s checkwinsize
 
-LESS=-JMQRSi
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# # make less more friendly for non-text input files, see lesspipe(1)
+# [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # SSH
 # eval "$(ssh-agent -s)" > /dev/null
 # [ -f ~/.ssh/*id_rsa ] && ssh-add ~/.ssh/*id_rsa 2> /dev/null
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
