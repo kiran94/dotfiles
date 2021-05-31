@@ -115,6 +115,7 @@ format = "[$symbol $environment]($style) "
 style = "dimmed green"
 
 [aws]
+disabled = true
 format = '[$symbol ($profile )(\($region\) )]($style)'
 style = "dimmed yellow"
 symbol = "☁️"
