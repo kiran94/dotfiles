@@ -12,10 +12,9 @@ export ZSH="/home/$USER/.oh-my-zsh"
 
 # Themes
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
+# ZSH_THEME="robbyrussell"
 
 # Starship
-# ZSH_THEME="robbyrussell"
 eval "$(starship init zsh)"
 
 # Powerlevel
