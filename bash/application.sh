@@ -10,3 +10,5 @@ export ASPNETCORE_ENVIRONMENT=Development
 [ -f /mnt/c/Users/$USER/.aspnet/https/aspnetapp.pfx ]; export ASPNETCORE_Kestrel__Certificates__Default__Path=/mnt/c/Users/$USER/.aspnet/https/aspnetapp.pfx
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+export PYSPARK_DRIVER_PYTHON=ptpython

@@ -17,3 +17,4 @@ ln -vns $DOTFILESSYNC_DIR/starship/starship.toml ~/.config/starship.toml
 ln -vns $DOTFILESSYNC_DIR/pgcli/config ~/.config/pgcli/config
 ln -vns ~/.config/dotfiles/neofetch/config.conf ~/.config/neofetch/config.conf
 ln -vns ~/.config/dotfiles/conda/.condarc ~/.condarc
+ln -vns ~/.config/dotfiles/ptpython/config.py ~/.config/ptpython/config.py

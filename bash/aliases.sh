@@ -16,3 +16,4 @@ alias rediscli=iredis
 alias md='python -m rich.markdown'
 alias python='python3'
 alias ds='dotfiles sync'
+alias py='ptpython'
