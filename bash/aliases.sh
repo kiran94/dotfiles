@@ -5,8 +5,7 @@
 
 alias cls=clear
 alias log="git log --format=oneline --graph"
-alias debug="cgdb"
-alias v="vim"
+alias v="nvim"
 alias ..="cd .."
 alias g="git"
 
@@ -25,6 +24,7 @@ alias md='python -m rich.markdown'
 alias python='python3'
 alias ds='dotfiles sync'
 alias py='ptpython'
+alias debug="cgdb"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
