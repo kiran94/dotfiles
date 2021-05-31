@@ -14,9 +14,12 @@
   },
   "omnisharp.trace.server": "information",
   "cSpell.userWords": [
+    "Ambari",
     "DGRAPH",
     "Floaterm",
+    "HDFS",
     "NOTSET",
+    "Namenode",
     "PYPI",
     "Upsert",
     "astype",
