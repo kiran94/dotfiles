@@ -12,6 +12,7 @@ CERT_FILE=$BASE/localhost.crt
 PFX_FILE=$BASE/localhost.pfx
 
 mkdir -p $BASE
+mkdir -p $HOME/.pki/nssdb
 
 # These two need to be added to bashrc afterwards so they are loaded
 # in login
