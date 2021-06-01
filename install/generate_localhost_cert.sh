@@ -1,3 +1,8 @@
+# For Windows and Mac
+# You should be able to just run
+# dotnet dev-certs https --trust
+
+# On Linux, it's a big more complicated:
 # https://www.humankode.com/asp-net-core/develop-locally-with-https-self-signed-certificates-and-asp-net-core
 
 BASE=~/.certificates/
