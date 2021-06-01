@@ -49,7 +49,6 @@ DNS.1   = localhost
 DNS.2   = 127.0.0.1
 EOL
 
-
 # Generate and Apply the Certificate
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout $KEY_FILE -out $CERT_FILE -config $CONFIG -passin pass:$ASPNETCORE_Kestrel__Certificates__Default__Password
 sudo openssl pkcs12 -export -out $PFX_FILE -inkey $KEY_FILE -in $CERT_FILE
@@ -65,7 +64,7 @@ sudo certutil -d sql:$HOME/.pki/nssdb -A -t "P,," -n "localhost" -i $CERT_FILE
 # https://github.com/dotnet/runtime/issues/24051
 sudo chmod 777 $PFX_FILE
 
-
-
-
+# Copy the certificate into the local store
+sudo cp $CERT_FILE /usr/local/share/ca-certificates
+sudo update-ca-certificates
 
