@@ -12,8 +12,8 @@ export PATH=$PATH:/usr/local/bin/spark/bin/
 
 # ASP.NET
 export ASPNETCORE_ENVIRONMENT=Development
-[ -f /mnt/c/Users/$USER/.aspnet/https/aspnetapp.pfx ]; export ASPNETCORE_Kestrel__Certificates__Default__Path=/mnt/c/Users/$USER/.aspnet/https/aspnetapp.pfx
-
+export ASPNETCORE_Kestrel__Certificates__Default__Path=~/.certificates/localhost.pfx
+export ASPNETCORE_Kestrel__Certificates__Default__Password=Password123
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export PYSPARK_DRIVER_PYTHON=ptpython
