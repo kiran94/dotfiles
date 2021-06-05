@@ -79,4 +79,6 @@ set nowrap
 set scrolloff=8
 " path used when running certain commands like gf
 set path+=**
-
+" set python path
+let g:python_host_prog='/usr/bin/python2'
+let g:python3_host_prog='/usr/bin/python3'
