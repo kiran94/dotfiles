@@ -1,5 +1,5 @@
 " SETTINGS
-set encoding=UTF-8
+set encoding=utf-8
 set nospell
 set spelllang=en_gb
 set nocompatible
@@ -21,7 +21,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,\.git,*/bin/*,*/obj/*,*egg-info*,htm
 " the length of time vim waits after you stop typing to activate plugins
 " note in vim versions < pre-7.4.427 this can lead to visual glitches
 " note required to be low for coc
-set updatetime=100
+set updatetime=300
 " file line endings when trying to open, close files
 set ffs=unix,dos,mac
 " search with no casing when casing in the search string is detected
