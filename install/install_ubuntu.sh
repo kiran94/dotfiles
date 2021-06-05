@@ -25,6 +25,7 @@ sudo apt install awscli
 sudo apt install highlight
 sudo apt install default-jre
 sudo apt install scala
+sudo apt install speedtest-cli
 
 ############################# Additional Extras
 
