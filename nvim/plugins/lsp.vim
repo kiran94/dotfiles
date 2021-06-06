@@ -16,3 +16,8 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
 " autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
 " autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+
+" Enter will select the current entry when in completion
+inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>"
+                \ :ncm2_ultisnips#expand_or("\<C-y>",'n')):"\<Tab>")
+
