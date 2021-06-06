@@ -1,3 +1,5 @@
+let g:native_lsp=1
+
 source $XDG_CONFIG_HOME/nvim/plugins.vim
 source $XDG_CONFIG_HOME/nvim/general.vim
 source $XDG_CONFIG_HOME/nvim/keymappings.vim
@@ -12,7 +14,6 @@ source $XDG_CONFIG_HOME/nvim/plugins/lightline.vim
 source $XDG_CONFIG_HOME/nvim/plugins/gitgutter.vim
 source $XDG_CONFIG_HOME/nvim/plugins/nerdtree.vim
 source $XDG_CONFIG_HOME/nvim/plugins/maximizer.vim
-source $XDG_CONFIG_HOME/nvim/plugins/coc.vim
 source $XDG_CONFIG_HOME/nvim/plugins/start.vim
 source $XDG_CONFIG_HOME/nvim/plugins/fzf.vim
 source $XDG_CONFIG_HOME/nvim/plugins/floaterm.vim
@@ -27,6 +28,14 @@ source $XDG_CONFIG_HOME/nvim/plugins/todo_highlight.vim
 source $XDG_CONFIG_HOME/nvim/plugins/tagbar.vim
 source $XDG_CONFIG_HOME/nvim/plugins/easyalign.vim
 source $XDG_CONFIG_HOME/nvim/plugins/markdown_toc.vim
+
+if g:native_lsp
+  source $XDG_CONFIG_HOME/nvim/plugins/lsp.vim
+  luafile $XDG_CONFIG_HOME/nvim/plugins/lsp.lua
+else
+  source $XDG_CONFIG_HOME/nvim/plugins/coc.vim
+endif
+
 
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
 

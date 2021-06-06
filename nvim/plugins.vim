@@ -19,7 +19,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'liuchengxu/vim-which-key'
 Plug 'unblevable/quick-scope'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kien/ctrlp.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'szw/vim-maximizer'
@@ -28,7 +27,6 @@ Plug 'junegunn/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
-Plug 'easymotion/vim-easymotion'
 Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
@@ -40,6 +38,14 @@ Plug 'vim-test/vim-test'
 Plug 'chrisbra/Colorizer'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'tommcdo/vim-lion'
+
+if g:native_lsp 
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'ray-x/lsp_signature.nvim'
+else
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 
 Plug 'preservim/tagbar'
 Plug 'junegunn/vim-easy-align'
@@ -59,7 +65,7 @@ endif
 
 "Old
 " Plug 'voldikss/vim-floaterm'
-
+" Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
