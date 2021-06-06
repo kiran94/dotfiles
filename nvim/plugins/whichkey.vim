@@ -63,17 +63,12 @@ let g:which_key_map['b'] = {
 
 if g:native_lsp
 
+" other keymappings for lsp in lsp file
   let g:which_key_map['c'] = {
                     \ 'name': '+code',
-                    \ 'a': ['<cmd>lua vim.lsp.buf.code_action()', 'action'],
-                    \ 'd': ['<cmd>lua vim.lsp.buf.definition()', 'definition'],
-                    \ 't': ['<cmd>lua vim.lsp.buf.declaration()', 'type definition'],
-                    \ 'i': ['<cmd>lua vim.lsp.buf.implementation()', 'implementation'],
-                    \ 'r': ['<cmd>lua vim.lsp.buf.references()', 'references'],
                     \ 'rn': ['', 'rename'],
                     \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
                     \ 's': [':StripWhitespace', 'strip whitespace'],
-                    \ 'f': ['<cmd>lua vim.lsp.buf.formatting_sync(nil, 100)', 'format'],
                     \ 'c': [':TagbarToggle', 'class definition'],
                     \ }
 
