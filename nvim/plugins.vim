@@ -39,10 +39,12 @@ Plug 'chrisbra/Colorizer'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'tommcdo/vim-lion'
 
-if g:native_lsp 
+if g:native_lsp
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
   Plug 'ray-x/lsp_signature.nvim'
+  Plug 'nvim-lua/lsp-status.nvim'
+  Plug 'hrsh7th/vim-vsnip'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
