@@ -5,6 +5,7 @@ require'lspconfig'.bashls.setup{}
 require'lspconfig'.vimls.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.html.setup{}
+require'lspconfig'.cssls.setup{}
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.sqlls.setup{}
 require'lspconfig'.tflint.setup{}
@@ -16,5 +17,3 @@ require'lspconfig'.omnisharp.setup{
 
 -- Signature Completion
 require'lsp_signature'.on_attach()
-
-
