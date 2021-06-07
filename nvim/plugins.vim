@@ -38,8 +38,17 @@ Plug 'vim-test/vim-test'
 Plug 'chrisbra/Colorizer'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'tommcdo/vim-lion'
+Plug 'preservim/tagbar'
+Plug 'junegunn/vim-easy-align'
+Plug 'danishprakash/vim-docker'
+Plug 'mzlogin/vim-markdown-toc'
 
-if g:native_lsp
+if has('nvim-0.5.0')
+  " Plug 'gennaro-tedesco/nvim-peekup'
+  Plug 'tversteeg/registers.nvim'
+endif
+
+if g:native_lsp && has('nvim-0.5.0')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
   Plug 'ray-x/lsp_signature.nvim'
@@ -47,17 +56,6 @@ if g:native_lsp
   Plug 'hrsh7th/vim-vsnip'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
-
-Plug 'preservim/tagbar'
-Plug 'junegunn/vim-easy-align'
-Plug 'danishprakash/vim-docker'
-Plug 'mzlogin/vim-markdown-toc'
-
-" Requires Nvim Nightly
-if has('nvim-0.5.0')
-  " Plug 'gennaro-tedesco/nvim-peekup'
-  Plug 'tversteeg/registers.nvim'
 endif
 
 " Requires Unix
@@ -70,5 +68,3 @@ endif
 " Plug 'easymotion/vim-easymotion'
 
 call plug#end()
-
-
