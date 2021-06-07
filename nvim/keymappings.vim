@@ -68,5 +68,8 @@ nnoremap ; :
 nnoremap U :UndotreeToggle<CR>
 
 
-
-
+lua	<< EOF
+-- move up and down a visually selected block
+vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', {noremap = true, silent = true})
+EOF
