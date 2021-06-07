@@ -14,6 +14,15 @@ require'lspconfig'.omnisharp.setup{
     cmd = { "/usr/local/bin/omnisharp/run", "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) };
 }
 
+require'lspconfig'.jsonls.setup {
+    commands = {
+      Format = {
+        function()
+          vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
+        end
+      }
+    }
+}
 
 -- Signature Completion
 require'lsp_signature'.on_attach()
