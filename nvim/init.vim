@@ -32,6 +32,7 @@ source $XDG_CONFIG_HOME/nvim/plugins/markdown_toc.vim
 if g:native_lsp
   source $XDG_CONFIG_HOME/nvim/plugins/lsp.vim
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugins/lsp-compe.lua
 else
   source $XDG_CONFIG_HOME/nvim/plugins/coc.vim
 endif

@@ -8,8 +8,8 @@ nnoremap <silent> <leader>cr <cmd>lua vim.lsp.buf.references()<CR>
 
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+" nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+" nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 
 " auto-format
@@ -18,6 +18,11 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 
 " Enter will select the current entry when in completion
-inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>"
-                \ :ncm2_ultisnips#expand_or("\<C-y>",'n')):"\<Tab>")
+" inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>"
+"                 \ :ncm2_ultisnips#expand_or("\<C-y>",'n')):"\<Tab>")
 
+" inoremap <silent><expr> <C-Space> compe#complete()
+" inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+" " inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+" inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+" inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
