@@ -28,6 +28,7 @@ source $XDG_CONFIG_HOME/nvim/plugins/todo_highlight.vim
 source $XDG_CONFIG_HOME/nvim/plugins/tagbar.vim
 source $XDG_CONFIG_HOME/nvim/plugins/easyalign.vim
 source $XDG_CONFIG_HOME/nvim/plugins/markdown_toc.vim
+source $XDG_CONFIG_HOME/nvim/colors.vim
 
 if g:native_lsp
   source $XDG_CONFIG_HOME/nvim/plugins/lsp.vim
@@ -37,7 +38,5 @@ else
   source $XDG_CONFIG_HOME/nvim/plugins/coc.vim
 endif
 
-
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
 
-source $XDG_CONFIG_HOME/nvim/colors.vim
