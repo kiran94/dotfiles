@@ -10,6 +10,7 @@ require'lspconfig'.gopls.setup{}
 require'lspconfig'.sqlls.setup{}
 require'lspconfig'.tflint.setup{}
 require'lspconfig'.tsserver.setup{}
+require'lspconfig'.vuels.setup{}
 require'lspconfig'.omnisharp.setup{
     cmd = { "/usr/local/bin/omnisharp/run", "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) };
 }

@@ -9,6 +9,7 @@ npm i -g typescript typescript-language-server
 npm i -g dockerfile-language-server-nodejs
 npm i -g vscode-css-languageserver-bin
 npm i -g vscode-json-languageserver
+npm i -g vls
 
 # Terraform
 curl https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
