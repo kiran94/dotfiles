@@ -4,12 +4,12 @@ Configuration example for ``ptpython``.
 Copy this file to $XDG_CONFIG_HOME/ptpython/config.py
 On Linux, this is: ~/.config/ptpython/config.py
 """
-from prompt_toolkit.filters import ViInsertMode
-from prompt_toolkit.key_binding.key_processor import KeyPress
-from prompt_toolkit.keys import Keys
-from prompt_toolkit.styles import Style
+# from prompt_toolkit.filters import ViInsertMode
+# from prompt_toolkit.key_binding.key_processor import KeyPress  #type: ignore
+# from prompt_toolkit.keys import Keys
+# from prompt_toolkit.styles import Style
 
-from ptpython.layout import CompletionVisualisation
+from ptpython.layout import CompletionVisualisation  #type: ignore
 
 __all__ = ["configure"]
 
@@ -190,9 +190,9 @@ def configure(repl):
 
 # Custom colorscheme for the UI. See `ptpython/layout.py` and
 # `ptpython/style.py` for all possible tokens.
-_custom_ui_colorscheme = {
-    # Blue prompt.
-    "prompt": "bg:#eeeeff #000000 bold",
-    # Make the status toolbar red.
-    "status-toolbar": "bg:#ff0000 #000000",
-}
+# _custom_ui_colorscheme = {
+#     # Blue prompt.
+#     "prompt": "bg:#eeeeff #000000 bold",
+#     # Make the status toolbar red.
+#     "status-toolbar": "bg:#ff0000 #000000",
+# }
