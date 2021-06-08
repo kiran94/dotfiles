@@ -29,6 +29,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'inside/vim-search-pulse'
@@ -56,6 +57,7 @@ if g:native_lsp && has('nvim-0.5.0')
   Plug 'hrsh7th/vim-vsnip'
   Plug 'kosayoda/nvim-lightbulb'
   Plug 'onsails/lspkind-nvim'
+  Plug 'folke/trouble.nvim'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif

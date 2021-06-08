@@ -70,6 +70,7 @@ if g:native_lsp
                     \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
                     \ 's': [':StripWhitespace', 'strip whitespace'],
                     \ 'c': [':TagbarToggle', 'class definition'],
+                    \ 'j': [':TroubleToggle', 'code diagnostics'],
                     \ }
 
 else
