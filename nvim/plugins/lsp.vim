@@ -26,3 +26,6 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 " " inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 " inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 " inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
