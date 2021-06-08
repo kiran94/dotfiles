@@ -60,19 +60,34 @@ let g:which_key_map['b'] = {
                   \ 'i': [':CocDiagnostics', 'info'],
                   \ }
 
-let g:which_key_map['c'] = {
-                  \ 'name': '+code',
-                  \ 'a': [':CocAction', 'action'],
-                  \ 'd': ['<Plug>(coc-definition)', 'definition'],
-                  \ 't': ['<Plug>(coc-type-definition)', 'type definition'],
-                  \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
-                  \ 'r': ['<Plug>(coc-references)', 'references'],
-                  \ 'rn': ['<Plug>(coc-rename)', 'rename'],
-                  \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
-                  \ 's': [':StripWhitespace', 'strip whitespace'],
-                  \ 'f': ['<Plug>(coc-format-selected)', 'format'],
-                  \ 'c': [':TagbarToggle', 'class definition'],
-                  \ }
+
+if g:native_lsp
+
+" other keymappings for lsp in lsp file
+  let g:which_key_map['c'] = {
+                    \ 'name': '+code',
+                    \ 'rn': ['', 'rename'],
+                    \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
+                    \ 's': [':StripWhitespace', 'strip whitespace'],
+                    \ 'c': [':TagbarToggle', 'class definition'],
+                    \ 'j': [':TroubleToggle', 'code diagnostics'],
+                    \ }
+
+else
+  let g:which_key_map['c'] = {
+                    \ 'name': '+code',
+                    \ 'a': [':CocAction', 'action'],
+                    \ 'd': ['<Plug>(coc-definition)', 'definition'],
+                    \ 't': ['<Plug>(coc-type-definition)', 'type definition'],
+                    \ 'i': ['<Plug>(coc-implementation)', 'implementation'],
+                    \ 'r': ['<Plug>(coc-references)', 'references'],
+                    \ 'rn': ['<Plug>(coc-rename)', 'rename'],
+                    \ 'w': [':ToggleWhitespace', 'whitespace toggle'],
+                    \ 's': [':StripWhitespace', 'strip whitespace'],
+                    \ 'f': ['<Plug>(coc-format-selected)', 'format'],
+                    \ 'c': [':TagbarToggle', 'class definition'],
+                    \ }
+endif
 
 let g:which_key_map['t'] = {
                   \ 'name': '+test',

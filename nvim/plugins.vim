@@ -19,7 +19,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'liuchengxu/vim-which-key'
 Plug 'unblevable/quick-scope'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kien/ctrlp.vim'
 Plug 'farmergreg/vim-lastplace'
 Plug 'szw/vim-maximizer'
@@ -28,9 +27,9 @@ Plug 'junegunn/fzf'
 Plug 'justinmk/vim-sneak'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
-Plug 'easymotion/vim-easymotion'
 Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'inside/vim-search-pulse'
@@ -40,16 +39,27 @@ Plug 'vim-test/vim-test'
 Plug 'chrisbra/Colorizer'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'tommcdo/vim-lion'
-
 Plug 'preservim/tagbar'
 Plug 'junegunn/vim-easy-align'
 Plug 'danishprakash/vim-docker'
 Plug 'mzlogin/vim-markdown-toc'
 
-" Requires Nvim Nightly
 if has('nvim-0.5.0')
   " Plug 'gennaro-tedesco/nvim-peekup'
   Plug 'tversteeg/registers.nvim'
+endif
+
+if g:native_lsp && has('nvim-0.5.0')
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'ray-x/lsp_signature.nvim'
+  Plug 'nvim-lua/lsp-status.nvim'
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'kosayoda/nvim-lightbulb'
+  Plug 'onsails/lspkind-nvim'
+  Plug 'folke/trouble.nvim'
+else
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
 " Requires Unix
@@ -59,8 +69,6 @@ endif
 
 "Old
 " Plug 'voldikss/vim-floaterm'
-
+" Plug 'easymotion/vim-easymotion'
 
 call plug#end()
-
-

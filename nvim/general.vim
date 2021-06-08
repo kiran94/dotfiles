@@ -66,7 +66,8 @@ set termguicolors
 " allow pasting from external programs
 set clipboard=unnamedplus
 " stop auto-indent in pasting from external
-set paste
+" this breaks compe completion
+" set paste
 " always report the number of lines yanked
 set report=0
 " don't word wrap
