@@ -32,9 +32,11 @@ nnoremap <M-h>    :vertical resize +10<CR>
 " comment/uncomment the current line
 noremap <C-c> :Commentary<CR>
 
-" working with tabs
-nnoremap <S-TAB> :tabp<CR>
-nnoremap <TAB> :tabn<CR>
+" working with tabs/buffers
+" nnoremap <S-TAB> :tabp<CR>
+" nnoremap <TAB> :tabn<CR>
+nnoremap <S-TAB> :bprevious<CR>
+nnoremap <TAB> :bnext<CR>
 
 " better nav for omnicomplete
 " inoremap <expr> <c-j> ("\<c-n>")

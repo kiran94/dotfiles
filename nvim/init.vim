@@ -2,6 +2,7 @@ let g:native_lsp    = 1
 let g:telescope_all = 1
 let g:statusline    = 'airline'
 let g:colorscheme   = 'codedark'
+let g:bufferline    = 1
 
 source $XDG_CONFIG_HOME/nvim/plugins.vim
 source $XDG_CONFIG_HOME/nvim/general.vim
@@ -52,6 +53,10 @@ if g:statusline == 'airline'
   source $XDG_CONFIG_HOME/nvim/plugins/airline.vim
 elseif g:statusline == 'lightline'
   source $XDG_CONFIG_HOME/nvim/plugins/lightline.vim
+endif
+
+if g:bufferline
+  luafile $XDG_CONFIG_HOME/nvim/plugins/bufferline.lua
 endif
 
 " Color Scheme

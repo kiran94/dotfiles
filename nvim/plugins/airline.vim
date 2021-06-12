@@ -1,8 +1,10 @@
 " disable spelling status
 let g:airline_detect_spell = 0
 
-" enable top tab bar
-let g:airline#extensions#tabline#enabled = 1
+if !g:bufferline
+  " enable top tab bar
+  let g:airline#extensions#tabline#enabled = 1
+endif
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1

@@ -68,6 +68,10 @@ elseif g:statusline == 'lightline'
   Plug 'itchyny/lightline.vim'
 endif
 
+if g:bufferline
+  Plug 'akinsho/nvim-bufferline.lua'
+endif
+
 if has('nvim-0.5.0')
   " Plug 'gennaro-tedesco/nvim-peekup'
   Plug 'tversteeg/registers.nvim'
