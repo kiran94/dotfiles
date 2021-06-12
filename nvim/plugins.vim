@@ -21,8 +21,6 @@ Plug 'preservim/tagbar'
 Plug 'junegunn/vim-easy-align'
 Plug 'danishprakash/vim-docker'
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'puremourning/vimspector'
 " Plug 'sagi-z/vimspectorpy'
 
@@ -70,6 +68,12 @@ endif
 
 if g:bufferline
   Plug 'akinsho/nvim-bufferline.lua'
+endif
+
+if has('nvim')
+  Plug 'kyazdani42/nvim-web-devicons'
+else
+  Plug 'ryanoasis/vim-devicons'
 endif
 
 if has('nvim-0.5.0')
