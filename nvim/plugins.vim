@@ -64,6 +64,10 @@ if g:statusline == 'airline'
   Plug 'vim-airline/vim-airline'
 elseif g:statusline == 'lightline'
   Plug 'itchyny/lightline.vim'
+elseif g:statusline == 'galaxyline'
+  Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+elseif g:statusline == 'lualine'
+  Plug 'hoob3rt/lualine.nvim'
 endif
 
 if g:bufferline

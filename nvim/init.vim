@@ -53,6 +53,10 @@ if g:statusline == 'airline'
   source $XDG_CONFIG_HOME/nvim/plugins/airline.vim
 elseif g:statusline == 'lightline'
   source $XDG_CONFIG_HOME/nvim/plugins/lightline.vim
+elseif g:statusline == 'galaxyline'
+  luafile $XDG_CONFIG_HOME/nvim/plugins/galaxyline.lua
+elseif g:statusline == 'lualine'
+  luafile $XDG_CONFIG_HOME/nvim/plugins/lualine-statusline.lua
 endif
 
 if g:bufferline

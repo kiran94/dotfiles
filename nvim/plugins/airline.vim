@@ -13,4 +13,3 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 let airline#extensions#nvimlsp#error_symbol = 'E:'
 let airline#extensions#nvimlsp#warning_symbol = 'W:'
-
