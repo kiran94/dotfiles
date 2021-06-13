@@ -42,12 +42,13 @@ endif
 " Quit
 let g:which_key_map['q'] = {
                   \ 'name': '+close',
-                  \ 'q':    [':q', 'quit'],
+                  \ 'q':    [':bd', 'quit'],
                   \ 'a':    [':qa', 'quit all'],
                   \ 'w':    [':wq!', 'write and quit'],
                   \ 'Q':    [':q!', 'force quit'],
                   \ 's':    [':SSave', 'save session'],
                   \ }
+
 
 " Window Management
 let g:which_key_map['w'] = {
