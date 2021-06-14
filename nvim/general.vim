@@ -3,7 +3,7 @@ set encoding=utf-8
 set nospell                    " no spelling, use lsp for this
 set spelllang=en_gb            " spelling language
 set nocompatible               " dont try and be compatible with vi
-set nonumber relativenumber    " add line numbers and enable relative
+set number relativenumber    " add line numbers and enable relative
 set splitbelow                 " split down with :split
 set splitright                 " split right with :vsplit
 set confirm                    " confirm option when saving without changes

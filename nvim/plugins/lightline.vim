@@ -29,7 +29,6 @@ let g:lightline = {
             \     'readonly': 'LightlineReadonly',
             \     'modified': 'LightlineModified',
             \     'filetype': 'LightlineFiletype',
-            \     'cocstatus': 'LightlineCoc',
             \   },
             \   'component_expand': {
             \     'buffers': 'lightline#bufferline#buffers',
