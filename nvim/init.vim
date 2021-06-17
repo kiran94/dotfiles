@@ -37,7 +37,6 @@ endif
 
 " Language Server
 if g:native_lsp
-  source $XDG_CONFIG_HOME/nvim/plugins/lsp.vim
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp.lua
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp-compe.lua
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp-lightbulb.lua
