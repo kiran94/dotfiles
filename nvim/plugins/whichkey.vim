@@ -100,6 +100,7 @@ if g:native_lsp
                     \ 's':    [':StripWhitespace', 'strip whitespace'],
                     \ 'c':    [':TagbarToggle', 'class definition'],
                     \ 'j':    [':TroubleToggle', 'code diagnostics'],
+                    \ 'f':    [':Neoformat', 'format'],
                     \ }
 
   nnoremap <silent> <leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>

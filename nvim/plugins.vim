@@ -42,6 +42,7 @@ if g:native_lsp && has('nvim-0.5.0')
   Plug 'kosayoda/nvim-lightbulb'
   Plug 'onsails/lspkind-nvim'
   Plug 'folke/trouble.nvim'
+  Plug 'sbdchd/neoformat'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
