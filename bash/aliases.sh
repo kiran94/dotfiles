@@ -7,7 +7,10 @@ alias cls=clear
 alias log="git log --format=oneline --graph"
 alias v="nvim"
 alias ..="cd .."
+
 alias g="git"
+alias gs='git status'
+alias gpull='git pull'
 
 alias ls='ls -h --color=auto --group-directories-first'
 alias ll='ls --color=auto'
