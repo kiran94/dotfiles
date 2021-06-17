@@ -27,11 +27,12 @@ if g:telescope_all
   " let g:which_key_map['e'] = [ ':Telescope file_browser', 'explorer' ]
 
   nnoremap <leader>e <cmd>lua require('telescope.builtin').file_browser(require('telescope.themes').get_ivy({}))<cr>
-  nnoremap <M-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <M-p> <cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-/> <cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-g> <cmd>lua require('telescope.builtin').git_commits(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-b> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
-  nnoremap <M-x> <cmd>lua require('telescope.builtin').commands(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <S-p> <cmd>lua require('telescope.builtin').commands(require('telescope.themes').get_ivy({}))<cr>
 
 else
   nnoremap <M-p> :CtrlPMixed<CR>
