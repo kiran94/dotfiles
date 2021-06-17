@@ -25,7 +25,6 @@ source $XDG_CONFIG_HOME/nvim/plugins/markdown_toc.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/floaterm.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/quickscope.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/sneak.vim
-source $XDG_CONFIG_HOME/nvim/colors.vim
 
 " Searching
 if g:telescope_all
@@ -71,5 +70,5 @@ elseif g:colorscheme == 'lighthaus'
 endif
 
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
-
+source $XDG_CONFIG_HOME/nvim/colors.vim
 
