@@ -42,6 +42,7 @@ if g:native_lsp
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp-lightbulb.lua
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp-kind.lua
   luafile $XDG_CONFIG_HOME/nvim/plugins/lsp-trouble.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugins/treesitter.lua
 else
   source $XDG_CONFIG_HOME/nvim/plugins/coc.vim
 endif

@@ -43,6 +43,7 @@ if g:native_lsp && has('nvim-0.5.0')
   Plug 'onsails/lspkind-nvim'
   Plug 'folke/trouble.nvim'
   Plug 'sbdchd/neoformat'
+  Plug 'nvim-treesitter/nvim-treesitter'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
@@ -88,7 +89,7 @@ endif
 
 " Requires Unix
 if has("unix")
-  Plug 'sheerun/vim-polyglot'
+  " Plug 'sheerun/vim-polyglot'
 endif
 
 "Old
