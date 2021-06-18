@@ -27,12 +27,12 @@ if g:telescope_all
   " let g:which_key_map['e'] = [ ':Telescope file_browser', 'explorer' ]
 
   nnoremap <leader>e <cmd>lua require('telescope.builtin').file_browser(require('telescope.themes').get_ivy({}))<cr>
-  nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
-  nnoremap <M-p> <cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <M-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <M-o> <cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-/> <cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-g> <cmd>lua require('telescope.builtin').git_commits(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-b> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
-  nnoremap <S-p> <cmd>lua require('telescope.builtin').commands(require('telescope.themes').get_ivy({}))<cr>
+  " nnoremap <S-p> <cmd>lua require('telescope.builtin').commands(require('telescope.themes').get_ivy({}))<cr>
 
 else
   nnoremap <M-p> :CtrlPMixed<CR>
@@ -96,7 +96,6 @@ let g:which_key_map['z'] = {
 if g:native_lsp
   let g:which_key_map['c'] = {
                     \ 'name': '+code',
-                    \ 'rn':   ['', 'rename'],
                     \ 'w':    [':ToggleWhitespace', 'whitespace toggle'],
                     \ 's':    [':StripWhitespace', 'strip whitespace'],
                     \ 'c':    [':TagbarToggle', 'class definition'],
@@ -108,6 +107,7 @@ if g:native_lsp
   nnoremap <silent> <leader>ci <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <silent> <leader>cd <cmd>lua vim.lsp.buf.declaration()<CR>
   nnoremap <silent> <leader>cr <cmd>lua vim.lsp.buf.references()<CR>
+  nnoremap <silent> <leader>crn <cmd>lua vim.lsp.buf.rename()<CR>
   nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
