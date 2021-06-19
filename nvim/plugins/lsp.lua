@@ -1,18 +1,3 @@
--- vim.g.symbols_outline = {
---     highlight_hovered_item = true,
---     show_guides = true,
---     auto_preview = false, -- experimental
---     position = 'right',
---     keymaps = {
---         close = "<esc>",
---         goto_location = "<cr>",
---         focus_location = "o",
---         hover_symbol = "<c-space>",
---         rename_symbol = "r",
---         code_actions = "a"
---     },
---     lsp_blacklist = {}
--- }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -21,6 +6,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         signs = true,
         update_in_insert = false
     })
+
+vim.cmd [[ sign define LspDiagnosticsSignError text= texthl=LspDiagnosticsSignError linehl= numhl= ]]
+vim.cmd [[ sign define LspDiagnosticsSignWarning text= texthl=LspDiagnosticsSignWarning linehl= numhl= ]]
+vim.cmd [[ sign define LspDiagnosticsSignInformation text= texthl=LspDiagnosticsSignInformation linehl= numhl= ]]
+vim.cmd [[ sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSignHint linehl= numhl= ]]
 
 local nvim_lsp = require('lspconfig')
 local servers = {"pyls", "bashls", "vimls", "dockerls", "html", "cssls", "gopls", "sqlls", "tflint", "tsserver", "vuels"}
@@ -65,3 +55,5 @@ require'lspconfig'.jsonls.setup {
       }
     }
 }
+
+
