@@ -20,6 +20,7 @@ source $XDG_CONFIG_HOME/nvim/plugins/maximizer.vim
 source $XDG_CONFIG_HOME/nvim/plugins/tagbar.vim
 source $XDG_CONFIG_HOME/nvim/plugins/easyalign.vim
 source $XDG_CONFIG_HOME/nvim/plugins/markdown_toc.vim
+source $XDG_CONFIG_HOME/nvim/plugins/git_blame.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/easymotion.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/vimspector.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/floaterm.vim

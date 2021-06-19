@@ -96,11 +96,12 @@ let g:which_key_map['z'] = {
 if g:native_lsp
   let g:which_key_map['c'] = {
                     \ 'name': '+code',
-                    \ 'w':    [':ToggleWhitespace', 'whitespace toggle'],
-                    \ 's':    [':StripWhitespace', 'strip whitespace'],
-                    \ 'c':    [':TagbarToggle', 'class definition'],
-                    \ 'j':    [':TroubleToggle', 'code diagnostics'],
-                    \ 'f':    [':Neoformat', 'format'],
+                    \ 'w':       [':ToggleWhitespace', 'whitespace toggle'],
+                    \ 's':       [':StripWhitespace', 'strip whitespace'],
+                    \ 'c':       [':TagbarToggle', 'class definition'],
+                    \ 'j':       [':TroubleToggle', 'code diagnostics'],
+                    \ 'f':       [':Neoformat', 'format'],
+                    \ 'b':       [':GitBlameToggle', 'git blame']
                     \ }
 
   nnoremap <silent> <leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>
