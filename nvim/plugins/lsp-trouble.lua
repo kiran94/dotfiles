@@ -33,7 +33,7 @@ require("trouble").setup
     auto_open                = false, -- automatically open the list when you have diagnostics
     auto_close               = false, -- automatically close the list when you have no diagnostics
     auto_preview             = false, -- automatyically preview the location of the diagnostic. <esc> to close preview and go back to last window
-    auto_fold                = true, -- automatically fold a file trouble list at creation
+    auto_fold                = false, -- automatically fold a file trouble list at creation
     signs                    = {
         -- icons / text used for a diagnostic
         error                = "",
@@ -42,5 +42,5 @@ require("trouble").setup
         information          = "",
         other                = "﫠"
     },
-    use_lsp_diagnostic_signs = true -- enabling this will use the signs defined in your lsp client
+    use_lsp_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
 }
