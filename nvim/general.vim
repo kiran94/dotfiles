@@ -59,7 +59,8 @@ set updatetime=300
 " set paste
 
 " allow wrapping for markdown files
-" autocmd FileType markdown set wrap
+autocmd FileType markdown set wrap
+
 " stop auto comment when pasting
 " set formatoptions-=cro
 
