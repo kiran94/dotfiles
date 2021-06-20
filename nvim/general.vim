@@ -34,7 +34,11 @@ set scrolloff=8                " scroll before you hit the bottom of the screen
 set path+=**                   " path used when running certain commands like gf
 set report=0                   " always report the number of lines yanked
 highlight clear SignColumn     " don't add a background color to the sign column
-
+set foldcolumn=auto
+set foldnestmax=1
+set foldmethod=indent
+set foldignore=#
+set nofoldenable
 
 " the length of time vim waits after you stop typing to activate plugins
 " note in vim versions < pre-7.4.427 this can lead to visual glitches
