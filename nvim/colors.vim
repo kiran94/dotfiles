@@ -3,4 +3,5 @@
 " hi PmenuSbar guibg=#bcbcbc
 " hi PmenuThumb guibg=#585858
 
-hi Visual guifg=Black guibg=Orange gui=none
+highlight Visual guifg=Black guibg=Orange gui=none
+highlight TelescopeMatching guifg=#8b0000

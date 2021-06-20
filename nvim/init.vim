@@ -72,4 +72,3 @@ endif
 
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
 source $XDG_CONFIG_HOME/nvim/colors.vim
-
