@@ -32,6 +32,8 @@ if g:telescope_all
   nnoremap <M-o> <cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-/> <cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-g> <cmd>lua require('telescope.builtin').git_commits(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <M-r> <cmd>lua require('telescope.builtin').command_history(require('telescope.themes').get_ivy({}))<cr>
+  nnoremap <M-j> <cmd>lua require('telescope.builtin').lsp_document_diagnostics(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-b> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({ignore_current_buffer=true, sort_lastused=true}))<cr>
   " nnoremap <S-p> <cmd>lua require('telescope.builtin').commands(require('telescope.themes').get_ivy({}))<cr>
 
