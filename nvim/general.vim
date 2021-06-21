@@ -49,6 +49,9 @@ augroup remember_folds
   autocmd BufWinEnter ?* silent! loadview
 augroup END
 
+" filetype plugin indent on
+autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
+
 " the length of time vim waits after you stop typing to activate plugins
 " note in vim versions < pre-7.4.427 this can lead to visual glitches
 " note required to be low for coc

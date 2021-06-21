@@ -24,6 +24,7 @@ Plug 'danishprakash/vim-docker'
 Plug 'mzlogin/vim-markdown-toc'
 " Plug 'puremourning/vimspector'
 " Plug 'sagi-z/vimspectorpy'
+Plug 'masukomi/vim-markdown-folding'
 
 " Color Scheme
 if g:colorscheme == 'codedark'
