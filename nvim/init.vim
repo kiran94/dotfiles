@@ -1,6 +1,6 @@
 let g:native_lsp    = 1
 let g:telescope_all = 1
-let g:statusline    = 'airline'
+let g:statusline    = 'lualine'
 let g:colorscheme   = 'codedark'
 let g:bufferline    = 1
 
