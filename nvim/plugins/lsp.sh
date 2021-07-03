@@ -20,3 +20,7 @@ curl https://raw.githubusercontent.com/terraform-linters/tflint/master/install_l
 curl https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.37.10/omnisharp-linux-x64.tar.gz -O --location
 tar xvf omnisharp-linux-x64.tar.gz
 sudo mv omnisharp /usr/local/bin
+
+# Go Lang
+GO111MODULE=on go get golang.org/x/tools/gopls@latest
+

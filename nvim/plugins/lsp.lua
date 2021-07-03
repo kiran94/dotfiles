@@ -13,7 +13,7 @@ vim.cmd [[ sign define LspDiagnosticsSignInformation text= texthl=LspDiagnost
 vim.cmd [[ sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSignHint linehl= numhl= ]]
 
 local nvim_lsp = require('lspconfig')
-local servers = {"pyls", "bashls", "vimls", "dockerls", "html", "cssls", "gopls", "sqlls", "tflint", "tsserver", "vuels"}
+local servers = {"pyls", "bashls", "vimls", "dockerls", "html", "cssls", "gopls", "sqlls", "tflint", "tsserver", "vuels", "gopls"}
 
 -- Configure Capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
