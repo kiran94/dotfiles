@@ -170,6 +170,8 @@ sudo apt install gnome-tweaks
 
 #############################
 
+# NOTE: Unsure if this one works
+# curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
 sudo apt install zsh
 
 # Oh My Zsh
