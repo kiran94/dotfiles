@@ -14,6 +14,25 @@ local lsp_active = function()
     return msg
 end
 
+-- Get Python Environment
+local python_env = function()
+
+    if vim.bo.filetype ~= "python" then
+        return ""
+    end
+
+    local virtual_env = os.getenv("VIRTUAL_ENV")
+    local conda_env = os.getenv("CONDA_DEFAULT_ENV")
+
+    if virtual_env ~= nil then
+        return virtual_env
+    elseif conda_env ~= nil and conda_env ~= "base" then
+        return conda_env
+    end
+
+    return ""
+end
+
 ----------------------------------
 require'lualine'.setup {
   options = {
@@ -31,7 +50,7 @@ require'lualine'.setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff'},
     lualine_c = {'filename', 'diagnostics'},
-    lualine_x = {'encoding', 'fileformat', 'filetype', lsp_active},
+    lualine_x = {python_env, 'encoding', 'fileformat', 'filetype', lsp_active},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
