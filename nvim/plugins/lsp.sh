@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# npm i -g pyright
+npm i -g pyright
 npm i -g bash-language-server
 npm i -g vim-language-server
 npm i -g vscode-html-languageserver-bin
@@ -10,6 +10,7 @@ npm i -g dockerfile-language-server-nodejs
 npm i -g vscode-css-languageserver-bin
 npm i -g vscode-json-languageserver
 npm i -g vls
+npm i -g yaml-language-server
 
 python -m pip install 'python-language-server[all]'
 python -m pip install pyls-mypy
@@ -29,3 +30,5 @@ go get golang.org/x/tools/cmd/goimports
 
 # JavaScript / TypeScript / Json / GraphQL / YAML / Markdown
 npm i -g prettier
+
+
