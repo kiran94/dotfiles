@@ -8,7 +8,9 @@ require('telescope').setup{
                   ".terraform/",
                   "node_modules/",
                   "bin/",
-                  "obj/"
+                  "obj/",
+                  "**/*.png",
+                  "**/*.jpeg"
           }
   }
 }
