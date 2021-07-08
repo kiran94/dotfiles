@@ -1,58 +1,58 @@
 {
-		"config": {
-				"bash/.profile": {
-						"cross": "~/.profile"
-				},
-				"bash/.bashrc": {
-						"cross": "~/.bashrc"
-				},
-				"bash/aliases.sh": {
-						"cross": "~/.config/bash/aliases.sh"
-				},
-				"bash/bindings.sh": {
-						"cross": "~/.config/bash/bindings.sh"
-				},
-				"bash/settings.sh": {
-						"cross": "~/.config/bash/settings.sh"
-				},
-				"bash/database.sh": {
-						"cross": "~/.config/bash/database.sh"
-				},
-				"bash/application.sh": {
-						"cross": "~/.config/bash/application.sh"
-				},
-				"bash/services.sh": {
-						"cross": "~/.config/bash/services.sh"
-				},
-				"bash/conda.sh": {
-						"linux": "~/.config/bash/conda.sh"
-				},
-				"zsh/.zshrc": {
-						"linux": "~/.zshrc"
-				},
-				"zsh/.p10k.zsh": {
-						"linux": "~/.p10k.zsh"
-				},
-				"git/.gitconfig": {
-						"cross": "~/.gitconfig"
-				},
-				"pgcli/config": {
-						"linux": "~/.config/pgcli/config"
-				},
-				"nvim": {
-						"cross": "~/.config/nvim"
-				},
-				"vim/.vimrc": {
-						"cross": "~/.vimrc"
-				},
-				"vifm/vifmrc": {
-						"cross": "~/.config/vifm/vifmrc"
-				},
-				"tmux/.tmux.conf": {
-						"cross": "~/.tmux/.tmux.conf"
-				},
-				"alacritty/alacritty.yml": {
-						"windows": "~/AppData/Roaming/alacritty/alacritty.yml"	
-				}
-		}
+  "config": {
+    "bash/.profile": {
+      "cross": "~/.profile"
+    },
+    "bash/.bashrc": {
+      "cross": "~/.bashrc"
+    },
+    "bash/aliases.sh": {
+      "cross": "~/.config/bash/aliases.sh"
+    },
+    "bash/bindings.sh": {
+      "cross": "~/.config/bash/bindings.sh"
+    },
+    "bash/settings.sh": {
+      "cross": "~/.config/bash/settings.sh"
+    },
+    "bash/database.sh": {
+      "cross": "~/.config/bash/database.sh"
+    },
+    "bash/application.sh": {
+      "cross": "~/.config/bash/application.sh"
+    },
+    "bash/services.sh": {
+      "cross": "~/.config/bash/services.sh"
+    },
+    "bash/conda.sh": {
+      "linux": "~/.config/bash/conda.sh"
+    },
+    "zsh/.zshrc": {
+      "linux": "~/.zshrc"
+    },
+    "zsh/.p10k.zsh": {
+      "linux": "~/.p10k.zsh"
+    },
+    "git/.gitconfig": {
+      "cross": "~/.gitconfig"
+    },
+    "pgcli/config": {
+      "linux": "~/.config/pgcli/config"
+    },
+    "nvim": {
+      "cross": "~/.config/nvim"
+    },
+    "vim/.vimrc": {
+      "cross": "~/.vimrc"
+    },
+    "vifm/vifmrc": {
+      "cross": "~/.config/vifm/vifmrc"
+    },
+    "tmux/.tmux.conf": {
+      "cross": "~/.tmux/.tmux.conf"
+    },
+    "alacritty/alacritty.yml": {
+      "windows": "~/AppData/Roaming/alacritty/alacritty.yml"
+    }
+  }
 }
