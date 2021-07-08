@@ -1,6 +1,6 @@
 #!/bin/bash
 
-npm i -g pyright
+# npm i -g pyright
 npm i -g bash-language-server
 npm i -g vim-language-server
 npm i -g vscode-html-languageserver-bin
@@ -12,6 +12,8 @@ npm i -g vscode-json-languageserver
 npm i -g vls
 
 python -m pip install 'python-language-server[all]'
+python -m pip install pyls-mypy
+python -m pip install pyls-isort
 
 # Terraform
 curl https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash

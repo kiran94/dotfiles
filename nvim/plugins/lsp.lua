@@ -13,7 +13,7 @@ vim.cmd [[ sign define LspDiagnosticsSignInformation text= texthl=LspDiagnost
 vim.cmd [[ sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSignHint linehl= numhl= ]]
 
 local nvim_lsp = require('lspconfig')
-local servers = {"pyls", "bashls", "vimls", "dockerls", "html", "cssls", "gopls", "sqlls", "tflint", "tsserver", "vuels", "gopls"}
+local servers = {"pyright", "bashls", "vimls", "dockerls", "html", "cssls", "gopls", "sqlls", "tflint", "tsserver", "vuels", "gopls"}
 
 -- Configure Capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -42,10 +42,12 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { capabilities = capabilities, on_attach = on_attach }
 end
 
+-- Omnisharp
 require'lspconfig'.omnisharp.setup{
     cmd = { "/usr/local/bin/omnisharp/run", "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) };
 }
 
+-- Json
 require'lspconfig'.jsonls.setup {
     commands = {
       Format = {
@@ -56,4 +58,19 @@ require'lspconfig'.jsonls.setup {
     }
 }
 
-
+-- Python
+nvim_lsp.pyls.setup {
+    settings = {
+        pyls = {
+            plugins = {
+                pycodestyle = { enabled = true; };
+                pyflakes = { enabled = true; };
+                pyls_mypy = { enabled = true; live_mode = false; };
+                yapf = { enabled = false; };
+                pylint = { enabled = false; };
+            };
+        };
+    };
+    on_attach = on_attach;
+    capabilities = capabilities;
+}
