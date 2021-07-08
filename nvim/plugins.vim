@@ -25,6 +25,7 @@ Plug 'mzlogin/vim-markdown-toc'
 " Plug 'puremourning/vimspector'
 " Plug 'sagi-z/vimspectorpy'
 Plug 'masukomi/vim-markdown-folding'
+Plug 'hashivim/vim-terraform'
 
 " Color Scheme
 if g:colorscheme == 'codedark'

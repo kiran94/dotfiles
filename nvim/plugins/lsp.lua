@@ -22,11 +22,12 @@ local servers = {
     "cssls",
     "gopls",
     "sqlls",
-    "tflint",
     "tsserver",
     "vuels",
     "gopls",
-    "yamlls"
+    "yamlls",
+    "tflint",
+    "terraformls"
 }
 
 -- Configure Capabilities
@@ -88,3 +89,4 @@ nvim_lsp.pyls.setup {
     on_attach = on_attach;
     capabilities = capabilities;
 }
+
