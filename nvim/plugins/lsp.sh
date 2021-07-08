@@ -25,4 +25,7 @@ sudo mv omnisharp /usr/local/bin
 
 # Go Lang
 GO111MODULE=on go get golang.org/x/tools/gopls@latest
+go get golang.org/x/tools/cmd/goimports
 
+# JavaScript / TypeScript / Json / GraphQL / YAML / Markdown
+npm i -g prettier
