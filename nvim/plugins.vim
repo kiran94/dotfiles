@@ -1,3 +1,6 @@
+
+let g:plug_window = "vertical rightbelow new"
+
 call plug#begin($XDG_DATA_HOME . '/nvim/plugins/')
 
 Plug 'mhinz/vim-startify'
