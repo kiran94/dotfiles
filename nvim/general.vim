@@ -45,11 +45,11 @@ set foldmethod=indent
 " set foldexpr=GetFoldLevel(v:lnum)
 set foldignore=#
 set nofoldenable
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave ?* silent! mkview
-  autocmd BufWinEnter ?* silent! loadview
-augroup END
+" augroup remember_folds
+"   autocmd!
+"   autocmd BufWinLeave ?* silent! mkview
+"   autocmd BufWinEnter ?* silent! loadview
+" augroup END
 
 " filetype plugin indent on
 autocmd FileType markdown set foldexpr=NestedMarkdownFolds()

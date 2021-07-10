@@ -27,6 +27,7 @@ source $XDG_CONFIG_HOME/nvim/plugins/git_blame.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/quickscope.vim
 " source $XDG_CONFIG_HOME/nvim/plugins/sneak.vim
 source $XDG_CONFIG_HOME/nvim/plugins/neoformatter.vim
+source $XDG_CONFIG_HOME/nvim/plugins/nvim-tree.vim
 
 " Searching
 if g:telescope_all

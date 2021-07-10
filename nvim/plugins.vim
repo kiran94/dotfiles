@@ -29,6 +29,7 @@ Plug 'mzlogin/vim-markdown-toc'
 " Plug 'sagi-z/vimspectorpy'
 Plug 'masukomi/vim-markdown-folding'
 Plug 'hashivim/vim-terraform'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Color Scheme
 if g:colorscheme == 'codedark'

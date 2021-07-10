@@ -26,7 +26,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler | autocmd BufLea
 if g:telescope_all
   " let g:which_key_map['e'] = [ ':Telescope file_browser', 'explorer' ]
 
-  nnoremap <leader>e <cmd>lua require('telescope.builtin').file_browser(require('telescope.themes').get_ivy({}))<cr>
+  " nnoremap <leader>e <cmd>lua require('telescope.builtin').file_browser(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({hidden=true}))<cr>
   " nnoremap <M-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({}))<cr>
   nnoremap <M-o> <cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({}))<cr>
@@ -42,6 +42,8 @@ else
   let g:which_key_map['e'] = [ ':NERDTreeToggle', 'explorer'  ]
   " let g:which_key_map['e'] = [ ':CocCommand explorer', 'explorer'  ]
 endif
+
+nnoremap <leader>e :NvimTreeToggle<CR>
 
 " Quit
 let g:which_key_map['q'] = {
