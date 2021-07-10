@@ -45,7 +45,7 @@ if g:native_lsp && has('nvim-0.5.0')
   Plug 'ray-x/lsp_signature.nvim'
   Plug 'nvim-lua/lsp-status.nvim'
   Plug 'hrsh7th/vim-vsnip'
-  Plug 'kosayoda/nvim-lightbulb'
+  " Plug 'kosayoda/nvim-lightbulb'
   Plug 'onsails/lspkind-nvim'
   Plug 'folke/trouble.nvim'
   Plug 'sbdchd/neoformat'
