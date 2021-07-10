@@ -50,6 +50,7 @@ if g:native_lsp && has('nvim-0.5.0')
   Plug 'folke/trouble.nvim'
   Plug 'sbdchd/neoformat'
   Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'rafamadriz/friendly-snippets'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
