@@ -35,6 +35,7 @@ set scrolloff=8                " scroll before you hit the bottom of the screen
 set path+=**                   " path used when running certain commands like gf
 set report=0                   " always report the number of lines yanked
 highlight clear SignColumn     " don't add a background color to the sign column
+set shortmess=a
 
 " Fold Settings
 set foldcolumn=auto
