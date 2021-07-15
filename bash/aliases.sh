@@ -28,7 +28,7 @@ alias python='python3'
 alias ds='dotfiles sync'
 alias py='ptpython'
 alias debug="cgdb"
-alias cs='csharprepl'
+alias csharp='csharprepl'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
