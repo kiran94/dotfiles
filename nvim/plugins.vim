@@ -56,6 +56,14 @@ else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 
+" Debugging
+" if g:dap
+"   Plug 'mfussenegger/nvim-dap'
+"   Plug 'Pocco81/DAPInstall.nvim'
+"   Plug 'rcarriga/nvim-dap-ui'
+"   Plug 'mfussenegger/nvim-dap-python'
+" endif
+
 " Searching
 if g:telescope_all && has('nvim-0.5.0')
   Plug 'nvim-lua/popup.nvim'

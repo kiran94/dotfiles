@@ -10,7 +10,8 @@ require('telescope').setup{
                   "bin/",
                   "obj/",
                   "**/*.png",
-                  "**/*.jpeg"
+                  "**/*.jpeg",
+                  "mypy_cache/*"
           }
   }
 }

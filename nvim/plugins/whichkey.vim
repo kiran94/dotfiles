@@ -137,12 +137,10 @@ endif
 let g:which_key_map['d'] = {
                   \ 'name': '+debug',
                   \ 'a':    [':call vimspector#Launch()', 'launch debugger'],
-                  \ 'b':    [':call vimspector#ToggleBreakpoint()', 'toggle breakpoint'],
                   \ 'e':    [':call vimspector#ToggleConditionalBreakpoint()', 'toggle conditional breakpoint'],
                   \ 'C':    [':call vimspector#ClearBreakpoints()', 'clear breakpoint'],
                   \ 'w':    [':call AddToWatch()', 'add watch'],
                   \ 'r':    [':call vimspector#Restart()', 'restart'],
-                  \ 'c':    [':call vimspector#Continue()', 'continue'],
                   \ 'so':   [':call vimspector#StepOut()', 'step out'],
                   \ 'si':   [':call vimspector#StepInto()', 'step in'],
                   \ 'sO':   [':call vimspector#StepOver()', 'step over'],
@@ -155,5 +153,7 @@ let g:which_key_map['d'] = {
                   \ 'q':    [':call vimspector#Reset()', 'quit'],
                   \ }
 
+nnoremap <silent> <leader>db :lua require'dap'.toggle_breakpoint()<cr>
+nnoremap <silent> <leader>dc :lua require'dap'.continue()<cr>
 
 call which_key#register('<Space>', "g:which_key_map")
