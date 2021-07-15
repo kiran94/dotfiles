@@ -3,6 +3,7 @@ let g:telescope_all = 1
 let g:statusline    = 'lualine'
 let g:colorscheme   = 'codedark'
 let g:bufferline    = 1
+let g:dap           = 1
 
 source $XDG_CONFIG_HOME/nvim/plugins.vim
 source $XDG_CONFIG_HOME/nvim/general.vim
