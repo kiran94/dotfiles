@@ -29,6 +29,18 @@ alias ds='dotfiles sync'
 alias py='ptpython'
 alias debug="cgdb"
 alias csharp='csharprepl'
+alias tf='terraform'
+
+export SPARK_HOME=/opt/spark
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+export PYSPARK_PYTHON=/usr/bin/python3
+alias spark_master_start=/opt/spark/sbin/start-master.sh
+alias spark_master_stop=/opt/spark/sbin/stop-master.sh
+alias spark_worker_start="/opt/spark/sbin/start-worker.sh spark://pop-os.localdomain:7077"
+alias spark_worker_stop=/opt/spark/sbin/stop-worker.sh
+
+
+
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
