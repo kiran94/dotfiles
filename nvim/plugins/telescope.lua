@@ -11,7 +11,7 @@ require('telescope').setup{
                   "obj/",
                   "**/*.png",
                   "**/*.jpeg",
-                  "mypy_cache/*"
+                  "**/.mypy_cache/*"
           }
   }
 }
