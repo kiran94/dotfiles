@@ -36,7 +36,7 @@ export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 export PYSPARK_PYTHON=/usr/bin/python3
 alias spark_master_start=/opt/spark/sbin/start-master.sh
 alias spark_master_stop=/opt/spark/sbin/stop-master.sh
-alias spark_worker_start="/opt/spark/sbin/start-worker.sh spark://pop-os.localdomain:7077"
+alias spark_worker_start="/opt/spark/sbin/start-worker.sh spark://pop-os.localdomain:7077 --cores 2 --memory 2G"
 alias spark_worker_stop=/opt/spark/sbin/stop-worker.sh
 
 
