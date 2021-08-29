@@ -14,7 +14,7 @@ vim.cmd [[ sign define LspDiagnosticsSignHint text= texthl=LspDiagnosticsSign
 
 local nvim_lsp = require('lspconfig')
 local servers = {
-    "pyright",
+    -- "pyright",
     "bashls",
     "vimls",
     "dockerls",
@@ -74,7 +74,7 @@ require'lspconfig'.jsonls.setup {
 }
 
 -- Python
-nvim_lsp.pyls.setup {
+nvim_lsp.pylsp.setup {
     settings = {
         pyls = {
             plugins = {
