@@ -19,5 +19,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 export PYSPARK_DRIVER_PYTHON=ptpython
 
-
-
+export GOBIN=$HOME/go/bin
