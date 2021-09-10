@@ -57,6 +57,15 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup { capabilities = capabilities, on_attach = on_attach }
 end
 
+require'lspinstall'.setup() -- important
+
+local servers = require'lspinstall'.installed_servers()
+for _, server in pairs(servers) do
+  require'lspconfig'[server].setup{}
+end
+
+
+
 -- Omnisharp
 require'lspconfig'.omnisharp.setup{
     cmd = { "/usr/local/bin/omnisharp/run", "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) };

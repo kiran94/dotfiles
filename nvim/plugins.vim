@@ -52,6 +52,8 @@ if g:native_lsp && has('nvim-0.5.0')
   Plug 'sbdchd/neoformat'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'rafamadriz/friendly-snippets'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'kabouzeid/nvim-lspinstall'
 else
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
