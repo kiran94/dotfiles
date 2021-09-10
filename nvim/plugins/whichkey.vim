@@ -115,9 +115,11 @@ if g:native_lsp
   nnoremap <silent> <leader>cr <cmd>lua vim.lsp.buf.references()<CR>
   nnoremap <silent> <leader>crn <cmd>lua vim.lsp.buf.rename()<CR>
   nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+  nnoremap <silent> L <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
   nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+
 
 else
   let g:which_key_map['c'] = {
