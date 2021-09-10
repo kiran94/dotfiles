@@ -11,6 +11,8 @@ export PATH=$PATH:$HOME/.yarn/bin
 export PATH=$PATH:/usr/local/bin/spark/bin/
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin # macOS
 
+export PATH=$HOME/dotnet-previews:$PATH
+
 # ASP.NET
 export ASPNETCORE_ENVIRONMENT=Development
 export ASPNETCORE_Kestrel__Certificates__Default__Path=~/.certificates/localhost.pfx
