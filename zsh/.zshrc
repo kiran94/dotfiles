@@ -43,6 +43,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^R' history-incremental-search-backward
 
 HIST_IGNORE_DUPS=true
+HIST_IGNORE_ALL_DUPS=true
 HIST_IGNORE_SPACE=true
 
 export UPDATE_ZSH_DAYS=7
