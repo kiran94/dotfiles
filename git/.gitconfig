@@ -5,3 +5,5 @@
 	editor = vim
 [log]
     date = relative
+[pager]
+	stash = false
