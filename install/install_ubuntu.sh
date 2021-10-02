@@ -26,6 +26,7 @@ sudo apt install highlight
 sudo apt install default-jre
 sudo apt install scala
 sudo apt install speedtest-cli
+sudo apt install ncdu
 
 ############################# Additional Extras
 
