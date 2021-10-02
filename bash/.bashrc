@@ -20,6 +20,7 @@ fi
 [ -f $HOME/.config/bash/services.sh ] && source $HOME/.config/bash/services.sh
 [ -f $HOME/.config/bash/conda.sh ] && source $HOME/.config/bash/conda.sh
 [ -f $HOME/.config/bash/completions.sh ] && source $HOME/.config/bash/completions.sh
+[ -f $HOME/.config/bash/utilities.sh ] && source $HOME/.config/bash/utilities.sh
 
 # Work
 [ -f ~/.config/work.sh ] && source ~/.config/work.sh
