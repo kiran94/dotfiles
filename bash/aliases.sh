@@ -4,7 +4,12 @@
 [ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
 
 alias cls=clear
-alias log="git log --format=oneline --graph"
+
+# alias log="git log --format=oneline --graph"
+# https://stackoverflow.com/a/9463536/2558542
+# https://stackoverflow.com/questions/7736781/how-to-make-git-log-not-prompt-to-continue
+alias log='git --no-pager log --pretty=format:"%C(yellow)%h %C(red)%an %C(magenta)%ad %C(blue)%s" --date=relative --graph'
+
 alias v="nvim"
 alias ..="cd .."
 

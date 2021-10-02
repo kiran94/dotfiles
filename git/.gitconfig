@@ -3,3 +3,5 @@
 	name = kiran94
 [core]
 	editor = vim
+[log]
+    date = relative
