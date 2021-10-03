@@ -27,6 +27,7 @@ sudo apt install default-jre
 sudo apt install scala
 sudo apt install speedtest-cli
 sudo apt install ncdu
+sudo apt install gparted
 
 ############################# Additional Extras
 
