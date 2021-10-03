@@ -6,4 +6,5 @@
 [log]
     date = relative
 [pager]
-	stash = false
+    stash = false
+    branch = false
