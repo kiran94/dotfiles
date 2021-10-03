@@ -35,7 +35,7 @@ alias py='ptpython'
 alias debug="cgdb"
 alias csharp='csharprepl'
 alias tf='terraform'
-alias his='history | fzf'
+alias fhistory='history | fzf'
 alias f='fzf'
 
 export SPARK_HOME=/opt/spark
