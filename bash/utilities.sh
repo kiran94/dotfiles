@@ -46,3 +46,19 @@ BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:,
 or appends a ! after the type/scope
 EOF
 }
+
+# Traverses to the Root Directory of a Git Repository.
+# If a repository cannot be found then stop at the $HOME directory
+function githome
+{
+    CURRENT=$(pwd)
+    while [[ "$CURRENT" != "$HOME" ]]
+    do
+        if [ -d .git ]; then
+            break
+        fi
+
+        cd ..
+        CURRENT=$(pwd)
+    done
+}
