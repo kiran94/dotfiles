@@ -8,7 +8,10 @@ alias cls=clear
 # alias log="git log --format=oneline --graph"
 # https://stackoverflow.com/a/9463536/2558542
 # https://stackoverflow.com/questions/7736781/how-to-make-git-log-not-prompt-to-continue
-alias log='git --no-pager log --pretty=format:"%C(yellow)%h %C(red)%an %C(magenta)%ad %C(blue)%s %C(red)%d" --date=relative --graph'
+# https://stackoverflow.com/a/39249439/2558542
+# alias log='git --no-pager log --graph --pretty=format:"%C(yellow)%h %C(red)%an %C(magenta)%ad %C(blue)%s %C(red)%d" --date=relative'
+alias log='git --no-pager log --graph --pretty=format:"%C(yellow)%h %<(10,trunc) %C(red)%an %<(15,trunc) %ad %C(blue)%s %C(yellow)%d" --date=relative'
+
 
 alias v="nvim"
 alias ..="cd .."
