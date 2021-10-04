@@ -3,7 +3,12 @@
 [ -n "$BASH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && `echo $BASH_SOURCE`
 [ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
 
-export EDITOR=vim
+if which nvim >/dev/null; then
+    export EDITOR=nvim
+else
+    export EDITOR=vim
+fi
+
 export BROWSER=brave-browser
 export LESS=-JMQRSi
 
