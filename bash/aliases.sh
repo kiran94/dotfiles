@@ -38,8 +38,11 @@ alias py='ptpython'
 alias debug="cgdb"
 alias csharp='csharprepl'
 alias tf='terraform'
-alias fhistory='history | fzf'
+
+# Fuzzy
 alias f='fzf'
+alias fhistory='history | fzf'
+alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf | xargs nvim"
 
 export SPARK_HOME=/opt/spark
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
