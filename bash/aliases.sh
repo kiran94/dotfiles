@@ -11,7 +11,7 @@ alias cls=clear
 # https://stackoverflow.com/a/39249439/2558542
 # alias log='git --no-pager log --graph --pretty=format:"%C(yellow)%h %C(red)%an %C(magenta)%ad %C(blue)%s %C(red)%d" --date=relative'
 alias log='git --no-pager log --graph --pretty=format:"%C(yellow)%h %<(10,trunc) %C(red)%an %<(15,trunc) %ad %C(blue)%s %C(yellow)%d" --date=relative'
-
+alias flog='log | fzf'
 
 alias v="nvim"
 alias ..="cd .."
