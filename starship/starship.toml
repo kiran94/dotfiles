@@ -91,7 +91,7 @@ trim_at = ""
 [jobs]
 disabled = false
 format = "([\\[$number\\]]($style)) "
-threshold = 0
+number_threshold = 0
 style = "bold orange"
 
 [git_branch]
