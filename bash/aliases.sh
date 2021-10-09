@@ -40,8 +40,9 @@ alias csharp='csharprepl'
 alias tf='terraform'
 
 # Fuzzy
-alias f='fzf'
+alias f='fzf | xargs nvim'
 alias fhistory='history | fzf'
+alias fenv='env | fzf'
 alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf | xargs nvim"
 
 export SPARK_HOME=/opt/spark
