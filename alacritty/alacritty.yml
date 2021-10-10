@@ -64,7 +64,7 @@ cursor:
   #thickness: 0.15
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
-background_opacity: 0.97
+background_opacity: 0.99
 colors:
 
   # Colors (Tomorrow Night)
