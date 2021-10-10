@@ -34,9 +34,6 @@ font:
   normal:
     family: JetBrains Mono
     style: Regular
-  # cascadia:
-  #   family: Cascadia Code PL
-  #   style: Regular
   bold:
     family: JetBrains Mono
     style: Bold
