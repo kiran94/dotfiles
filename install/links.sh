@@ -9,6 +9,7 @@ ln -vnsf $DOTFILESSYNC_DIR/alacritty ~/.config/alacritty
 ln -vnsf $DOTFILESSYNC_DIR/nvim ~/.config/nvim
 ln -vnsf $DOTFILESSYNC_DIR/bash ~/.config/bash
 ln -vnsf $DOTFILESSYNC_DIR/bash/.bashrc ~/.bashrc
+ln -vnsf $DOTFILESSYNC_DIR/bash/.dir_colors ~/.dir_colors
 ln -vnsf $DOTFILESSYNC_DIR/zsh/.zshrc ~/.zshrc
 ln -vnsf $DOTFILESSYNC_DIR/zsh/.p10k.zsh ~/.p10k.zsh
 ln -vnsf $DOTFILESSYNC_DIR/git/.gitconfig ~/.gitconfig
