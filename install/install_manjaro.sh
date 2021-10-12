@@ -28,3 +28,9 @@ yarn global add gitignore.cli
 # Zsh Plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Docker
+sudo pacman -S docker
+sudo systemctl enable docker
+sudo systemctl start docker
+usermod --append --groups docker kiran # Require Log in/out
