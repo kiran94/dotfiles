@@ -8,6 +8,7 @@ sudo pacman -S fzf ripgrep jq
 sudo pacman -S npm yarn
 sudo pacman -S alacritty
 sudo pacman -S github-cli
+sudo pacman -S python-pip
 
 sudo yay -S gnome-shell-extension-pop-shell-git
 sudo yay -S brave-browser
