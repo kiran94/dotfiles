@@ -9,6 +9,7 @@ sudo pacman -S npm yarn
 sudo pacman -S alacritty
 sudo pacman -S github-cli
 sudo pacman -S python-pip
+sudo pacman -S redis
 
 sudo yay -S gnome-shell-extension-pop-shell-git
 sudo yay -S brave-browser
@@ -36,3 +37,7 @@ sudo pacman -S docker
 sudo systemctl enable docker
 sudo systemctl start docker
 usermod --append --groups docker kiran # Require Log in/out
+
+# Services
+systemctl enable redis
+systemctl status redis
