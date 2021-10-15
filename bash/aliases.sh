@@ -38,6 +38,7 @@ alias py='ptpython'
 alias debug="cgdb"
 alias csharp='csharprepl'
 alias tf='terraform'
+alias vpn='expressvpn status'
 
 # Fuzzy
 alias f='fzf | xargs nvim'

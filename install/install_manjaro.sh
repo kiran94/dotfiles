@@ -11,6 +11,7 @@ sudo pacman -S github-cli
 
 sudo yay -S gnome-shell-extension-pop-shell-git
 sudo yay -S brave-browser
+sudo yay -S expressvpn
 sudo yay -S neofetch
 sudo yay -S pgcli
 
