@@ -10,6 +10,7 @@ sudo pacman -S alacritty
 sudo pacman -S github-cli
 sudo pacman -S python-pip
 sudo pacman -S redis
+sudo pacman -S mpv
 
 sudo yay -S gnome-shell-extension-pop-shell-git
 sudo yay -S brave-browser
@@ -41,3 +42,11 @@ usermod --append --groups docker kiran # Require Log in/out
 # Services
 systemctl enable redis
 systemctl status redis
+
+# Sound
+# Worked out the box but in order to get 
+# it working with mpv player
+# had to upate the following
+# https://forums.debian.net//viewtopic.php?t=123902
+echo "options snd_hda_intel index=1" >> /etc/modprobe.d/default.conf
+
