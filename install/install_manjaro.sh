@@ -37,16 +37,16 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 sudo pacman -S docker
 sudo systemctl enable docker
 sudo systemctl start docker
-usermod --append --groups docker kiran # Require Log in/out
+usermod --append --groups docker kiran # requires log in/out
 
 # Services
 systemctl enable redis
 systemctl status redis
 
 # Sound
-# Worked out the box but in order to get 
-# it working with mpv player
-# had to upate the following
+# generatel sound worked out the box
+# but this step was required to get it
+# working with mpv player
 # https://forums.debian.net//viewtopic.php?t=123902
 echo "options snd_hda_intel index=1" >> /etc/modprobe.d/default.conf
 
