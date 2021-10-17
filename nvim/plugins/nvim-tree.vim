@@ -79,9 +79,13 @@ require'nvim-tree'.setup {
     auto_open = false, -- allow to open the tree if it was previously closed
   },
 
-  hijack_cursor       = true, -- hijack the cursor in the tree to put it at the start of the filename
-  update_cwd          = true, -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
-  lsp_diagnostics     = true, -- show lsp diagnostics in the signcolumn
+  hijack_cursor = true, -- hijack the cursor in the tree to put it at the start of the filename
+  update_cwd    = true, -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
+
+  -- LSP diagnostics
+  diagnostics   = {
+      enable    = true
+  },
 
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
   update_focused_file = {
