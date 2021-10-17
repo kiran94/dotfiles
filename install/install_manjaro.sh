@@ -50,3 +50,14 @@ systemctl status redis
 # https://forums.debian.net//viewtopic.php?t=123902
 echo "options snd_hda_intel index=1" >> /etc/modprobe.d/default.conf
 
+# Postgres
+# https://wiki.archlinux.org/title/PostgreSQL#Installation
+sudo pacman -S postgresql
+sudo -iu postgres initdb -D /var/lib/postgres/data/
+sudo -iu postgres createuser --createdb --login --createrole --superuser kiran # or createuser --interactive
+sudo systemctl start postgresql
+sudo -u postgres psql -c "ALTER USER kiran PASSWORD 'your-password';"
+
+# Give root admin as password on both db and os
+sudo passwd postgres
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'your-password';"
