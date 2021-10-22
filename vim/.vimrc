@@ -33,3 +33,57 @@ set nowrap                     " don't word wrap
 set scrolloff=8                " scroll before you hit the bottom of the screen
 set path+=**                   " path used when running certain commands like gf
 set shortmess=a
+syntax on
+
+" KEYMAPPING
+let g:mapleader = " "
+let g:maplocalleader = ','
+nnoremap <leader>ww :w<CR>
+
+" file
+nnoremap <leader>ww :w<CR>
+
+" escape shortcuts
+inoremap jk <esc>
+inoremap kj <esc>
+nnoremap <C-c> <Esc>
+
+" navigate split screen panes
+nnoremap <C-Left> <C-W>h
+nnoremap <C-Down> <C-W>j
+nnoremap <C-Up> <C-W>k
+nnoremap <C-Right> <C-W>l
+
+" navigate split screen panes 2
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -10<CR>
+nnoremap <M-k>    :resize +10<CR>
+nnoremap <M-l>    :vertical resize -10<CR>
+nnoremap <M-h>    :vertical resize +10<CR>
+
+" working with tabs/buffers
+nnoremap <S-TAB> :bprevious<CR>
+nnoremap <TAB> :bnext<CR>
+
+" Better indent
+vnoremap < <gv
+vnoremap > >gv
+
+" remap visual block mode to alt+v
+nnoremap <M-v> <C-v>
+
+" clear search highlight
+nnoremap // :noh<CR>
+
+" Window navigation
+nnoremap <leader>w+ :vsplit<CR>
+nnoremap <leader>w- :split<CR>
+nnoremap <leader>wh <C-W>h<CR>
+nnoremap <leader>wj <C-W>j<CR>
+nnoremap <leader>wl <C-W>l<CR>
+nnoremap <leader>wk <C-W>k<CR>
