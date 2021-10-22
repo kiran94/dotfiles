@@ -14,6 +14,7 @@ sudo pacman -S mpv
 sudo pacman -S net-tools
 sudo pacman -S terraform
 sudo pacman -S starship
+sudo pacman -S bluez-utils
 
 sudo yay -S gnome-shell-extension-pop-shell-git
 sudo yay -S brave-browser
