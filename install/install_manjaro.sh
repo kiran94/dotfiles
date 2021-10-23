@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo pacman -Sy
 sudo pacman -S vim tmux git
 sudo pacman -S neovim
 sudo pacman -S tree
@@ -17,6 +18,7 @@ sudo pacman -S starship
 sudo pacman -S bluez-utils
 sudo pacman -S ranger
 
+sudo yay -Sy
 sudo yay -S gnome-shell-extension-pop-shell-git
 sudo yay -S brave-browser
 sudo yay -S expressvpn
