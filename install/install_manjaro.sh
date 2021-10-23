@@ -73,3 +73,8 @@ sudo -u postgres psql -c "ALTER USER kiran PASSWORD 'your-password';"
 # Give root admin as password on both db and os
 sudo passwd postgres
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'your-password';"
+
+# Remove Gnome Packages
+ sudo pacman -R lollypop
+ sudo pacman -R geary
+ sudo pacman -R gnome-maps
