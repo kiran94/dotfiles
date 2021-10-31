@@ -19,18 +19,21 @@ sudo pacman -S starship
 sudo pacman -S bluez-utils
 sudo pacman -S ranger
 
-sudo yay -Sy
-sudo yay -S gnome-shell-extension-pop-shell-git
-sudo yay -S brave-browser
-sudo yay -S expressvpn
-sudo yay -S neofetch
-sudo yay -S pgcli
-sudo yay -S ani-cli-git
-sudo yay -S ptpython
+yay -Sy
+yay -S gnome-shell-extension-pop-shell-git
+yay -S brave-browser
+yay -S expressvpn
+yay -S neofetch
+yay -S pgcli
+yay -S ani-cli-git
+yay -S ptpython
 
 # https://wiki.manjaro.org/index.php/Power_Management
 sudo yay -S tlp
 sudo yay -S tlpui
+# OR
+sudo yay -S laptop-mode-tools
+sudo systemctl enable --now laptop-mode.service
 
 # Vim Plugins
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\n       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'\n
