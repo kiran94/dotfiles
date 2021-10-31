@@ -10,6 +10,7 @@ sudo pacman -S npm yarn
 sudo pacman -S alacritty
 sudo pacman -S github-cli
 sudo pacman -S python-pip
+sudo pacman -S python-pipenv
 sudo pacman -S redis
 sudo pacman -S mpv
 sudo pacman -S net-tools
