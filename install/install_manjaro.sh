@@ -18,6 +18,7 @@ sudo pacman -S terraform
 sudo pacman -S starship
 sudo pacman -S bluez-utils
 sudo pacman -S ranger
+sudo pacman -S speedtest-cli
 
 yay -Sy
 yay -S gnome-shell-extension-pop-shell-git
@@ -27,6 +28,7 @@ yay -S neofetch
 yay -S pgcli
 yay -S ani-cli-git
 yay -S ptpython
+yay -S visidata
 
 # https://wiki.manjaro.org/index.php/Power_Management
 sudo yay -S tlp
