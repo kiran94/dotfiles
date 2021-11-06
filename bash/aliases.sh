@@ -39,6 +39,7 @@ alias debug="cgdb"
 alias csharp='csharprepl'
 alias tf='terraform'
 alias vpn='expressvpn status'
+alias system='inxi -Fxzc0'
 
 # Fuzzy
 alias f='fzf | xargs nvim'
