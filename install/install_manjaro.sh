@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -Sy
+sudo pacman -Syu
 sudo pacman -S vim tmux git
 sudo pacman -S neovim
 sudo pacman -S tree
@@ -20,7 +20,7 @@ sudo pacman -S bluez-utils
 sudo pacman -S ranger
 sudo pacman -S speedtest-cli
 
-yay -Sy
+yay -Syu
 yay -S gnome-shell-extension-pop-shell-git
 yay -S brave-browser
 yay -S expressvpn
