@@ -28,7 +28,6 @@ yay -S neofetch
 yay -S pgcli
 yay -S ani-cli-git
 yay -S ptpython
-yay -S visidata
 
 # https://wiki.manjaro.org/index.php/Power_Management
 sudo yay -S tlp
@@ -81,6 +80,13 @@ sudo passwd postgres
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'your-password';"
 
 # Remove Gnome Packages
- sudo pacman -R lollypop
- sudo pacman -R geary
- sudo pacman -R gnome-maps
+sudo pacman -R lollypop
+sudo pacman -R geary
+sudo pacman -R gnome-maps
+
+# Visidata
+yay -S visidata
+# for parquet support
+# these need to be installed globally
+python -m pip install pandas
+python -m pip install pyarrow
