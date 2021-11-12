@@ -1,0 +1,30 @@
+set prompt \033[31mgdb$ \033[0m
+set print pretty on
+set print null-stop on
+set verbose off
+
+add-auto-load-safe-path /usr/lib/go/src/runtime/runtime-gdb.py
+
+# ------------ SHORTCUTS -------------------
+
+# _____________list breakpoints_____________
+define bl
+    info breakpoints
+end
+document bl
+List all breakpoints.
+end
+
+# _____________clear breakpoints_____________
+define bd
+    if $argc != 1
+        help bpc
+    else
+        clear $arg0
+    end
+end
+document bd
+Clear breakpoint.
+Usage: bpc LOCATION
+LOCATION may be a line number, function name, or "*" and an address.
+end

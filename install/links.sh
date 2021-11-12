@@ -20,4 +20,4 @@ ln -vnsf $DOTFILESSYNC_DIR/neofetch/config.conf ~/.config/neofetch/config.conf
 ln -vnsf $DOTFILESSYNC_DIR/conda/.condarc ~/.condarc
 ln -vnsf $DOTFILESSYNC_DIR/ptpython/config.py ~/.config/ptpython/config.py
 ln -vnsf $DOTFILESSYNC_DIR/vim/.vimrc ~/.vimrc
-
+ln -vnsf $DOTFILESSYNC_DIR/gdb/gdbinit ~/.config/gdb/gdbinit
