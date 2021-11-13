@@ -42,6 +42,7 @@ alias csharp='csharprepl'
 alias tf='terraform'
 alias vpn='expressvpn status'
 alias system='inxi -Fxzc0'
+alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
 
 # Fuzzy
 alias f='fzf | xargs nvim'
