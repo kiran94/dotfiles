@@ -1,4 +1,4 @@
-set prompt \033[31mgdb$ \033[0m
+set prompt \033[31mgdb $ \033[0m
 set print pretty on
 set print null-stop on
 set verbose off
