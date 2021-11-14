@@ -37,8 +37,11 @@ if g:colorscheme == 'codedark'
   Plug 'tomasiser/vim-code-dark'
 elseif g:colorscheme == 'lighthaus'
   Plug 'lighthaus-theme/vim-lighthaus'
+elseif g:colorscheme == 'github'
+  Plug 'projekt0n/github-nvim-theme'
+elseif g:colorscheme == 'tokyo'
+  Plug 'folke/tokyonight.nvim'
 endif
-
 
 " Language Server
 if g:native_lsp && has('nvim-0.5.0')

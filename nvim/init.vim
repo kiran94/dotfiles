@@ -71,6 +71,10 @@ if g:colorscheme == 'codedark'
   source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/codedark.vim
 elseif g:colorscheme == 'lighthaus'
   source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/lighthaus.vim
+elseif g:colorscheme == 'github'
+  source $XDG_CONFIG_HOME/nvim/plugins/colorscheme/github.vim
+elseif g:colorscheme == 'tokyo'
+    colorscheme tokyonight
 endif
 
 source $XDG_CONFIG_HOME/nvim/plugins/whichkey.vim
