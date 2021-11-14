@@ -22,10 +22,10 @@ curl https://raw.githubusercontent.com/terraform-linters/tflint/master/install_l
 curl https://github.com/hashicorp/terraform-ls/releases/download/v0.19.0/terraform-ls_0.19.0_linux_amd64.zip -O --location
 unzip terraform-ls_0.19.0_linux_amd64.zip
 sudo mv terraform-ls /usr/local/bin
-rm terraform-ls_0.19.0_linux_amd64.zip 
+rm terraform-ls_0.19.0_linux_amd64.zip
 
 # OmniSharp
-curl https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.37.10/omnisharp-linux-x64.tar.gz -O --location
+curl https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.37.17/omnisharp-linux-x64.tar.gz -O --location
 tar xvf omnisharp-linux-x64.tar.gz
 sudo mv omnisharp /usr/local/bin
 
