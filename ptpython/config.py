@@ -4,12 +4,12 @@ Configuration example for ``ptpython``.
 Copy this file to $XDG_CONFIG_HOME/ptpython/config.py
 On Linux, this is: ~/.config/ptpython/config.py
 """
-# from prompt_toolkit.filters import ViInsertMode
-# from prompt_toolkit.key_binding.key_processor import KeyPress  #type: ignore
-# from prompt_toolkit.keys import Keys
-# from prompt_toolkit.styles import Style
+from prompt_toolkit.filters import ViInsertMode
+from prompt_toolkit.key_binding.key_processor import KeyPress
+from prompt_toolkit.keys import Keys
+from prompt_toolkit.styles import Style
 
-from ptpython.layout import CompletionVisualisation  #type: ignore
+from ptpython.layout import CompletionVisualisation
 
 __all__ = ["configure"]
 
@@ -38,7 +38,7 @@ def configure(repl):
     repl.completion_menu_scroll_offset = 0
 
     # Show line numbers (when the input contains multiple lines.)
-    repl.show_line_numbers = True
+    repl.show_line_numbers = False
 
     # Show status bar.
     repl.show_status_bar = True
@@ -106,15 +106,15 @@ def configure(repl):
     repl.enable_input_validation = True
 
     # Use this colorscheme for the code.
-    repl.use_code_colorscheme("default")
+    repl.use_code_colorscheme("pastie")
     # repl.use_code_colorscheme("pastie")
 
     # Set color depth (keep in mind that not all terminals support true color).
 
     # repl.color_depth = "DEPTH_1_BIT"  # Monochrome.
     # repl.color_depth = "DEPTH_4_BIT"  # ANSI colors only.
-    # repl.color_depth = "DEPTH_8_BIT"  # The default, 256 colors.
-    repl.color_depth = "DEPTH_24_BIT"  # True color.
+    repl.color_depth = "DEPTH_8_BIT"  # The default, 256 colors.
+    # repl.color_depth = "DEPTH_24_BIT"  # True color.
 
     # Min/max brightness
     repl.min_brightness = 0.0  # Increase for dark terminal backgrounds.
@@ -190,9 +190,9 @@ def configure(repl):
 
 # Custom colorscheme for the UI. See `ptpython/layout.py` and
 # `ptpython/style.py` for all possible tokens.
-# _custom_ui_colorscheme = {
-#     # Blue prompt.
-#     "prompt": "bg:#eeeeff #000000 bold",
-#     # Make the status toolbar red.
-#     "status-toolbar": "bg:#ff0000 #000000",
-# }
+_custom_ui_colorscheme = {
+    # Blue prompt.
+    "prompt": "bg:#eeeeff #000000 bold",
+    # Make the status toolbar red.
+    "status-toolbar": "bg:#ff0000 #000000",
+}
