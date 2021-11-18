@@ -90,3 +90,26 @@ yay -S visidata
 # these need to be installed globally
 python -m pip install pandas
 python -m pip install pyarrow
+
+# Apache Spark
+sudo pacman -S jre11-openjdk-headless jdk11-openjdk
+
+cd ~/Downloads
+curl https://dlcdn.apache.org/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz -o ~/Downloads/
+mkdir spark
+tar xvf spark-3.2.0-bin-hadoop3.2.tgz --directory spark
+cd spark
+sudo mv spark-3.2.0-bin-hadoop3.2 /opt/spark
+
+# my alias to start
+# get hostname from ui
+# http://localhost:8080
+spark_master_start
+spark_worker_start
+jps
+
+cp $SPARK_HOME/conf/log4j.properties.template $SPARK_HOME/conf/log4j.properties
+sed -i 's/INFO/WARN/' $SPARK_HOME/conf/log4j.properties
+
+# Run Spark client and attach to host
+pyspark --master $SPARK_HOST

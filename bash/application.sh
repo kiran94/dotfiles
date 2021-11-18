@@ -19,3 +19,17 @@ export ASPNETCORE_Kestrel__Certificates__Default__Password=Password123
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export DOTNET_NOLOGO=1
 export PYSPARK_DRIVER_PYTHON=ptpython
+
+function spark_start
+{
+    spark_master_start
+    spark_worker_start
+    jps
+}
+
+function spark_top
+{
+    spark_master_stop
+    spark_worker_stop
+    jps
+}

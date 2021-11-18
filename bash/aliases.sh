@@ -51,13 +51,13 @@ alias fenv='env | fzf'
 alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf | xargs nvim"
 
 export SPARK_HOME=/opt/spark
+export SPARK_HOST="spark://$(hostname):7077"
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 export PYSPARK_PYTHON=/usr/bin/python3
 alias spark_master_start=/opt/spark/sbin/start-master.sh
 alias spark_master_stop=/opt/spark/sbin/stop-master.sh
-alias spark_worker_start="/opt/spark/sbin/start-worker.sh spark://pop-os.localdomain:7077 --cores 2 --memory 2G"
+alias spark_worker_start="/opt/spark/sbin/start-worker.sh $SPARK_HOST --cores 2 --memory 2G"
 alias spark_worker_stop=/opt/spark/sbin/stop-worker.sh
-
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
