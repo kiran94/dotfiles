@@ -27,7 +27,7 @@ set smarttab                   " when a tab is inserted, use spaces?
 set nobackup                   " no backup files
 set nowritebackup              " no write backup
 set noswapfile                 " no swap files
-set termguicolors              " set 24-bit colors
+" set termguicolors              " set 24-bit colors
 set clipboard=unnamedplus      " allow pasting from external programs
 set nowrap                     " don't word wrap
 set scrolloff=8                " scroll before you hit the bottom of the screen
@@ -87,3 +87,9 @@ nnoremap <leader>wh <C-W>h<CR>
 nnoremap <leader>wj <C-W>j<CR>
 nnoremap <leader>wl <C-W>l<CR>
 nnoremap <leader>wk <C-W>k<CR>
+
+syntax=on
+
+hi Search ctermbg=yellow ctermfg=black
+hi IncSearch ctermbg=black ctermfg=white
+hi Visual ctermbg=yellow ctermfg=black
