@@ -102,3 +102,5 @@ nvim_lsp.pylsp.setup {
     capabilities = capabilities;
 }
 
+
+vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
