@@ -22,3 +22,4 @@ ln -vnsf $DOTFILESSYNC_DIR/ptpython/config.py ~/.config/ptpython/config.py
 ln -vnsf $DOTFILESSYNC_DIR/vim/.vimrc ~/.vimrc
 ln -vnsf $DOTFILESSYNC_DIR/gdb/gdbinit ~/.config/gdb/gdbinit
 ln -vnsf $DOTFILESSYNC_DIR/ptpython/config.py ~/.config/ptpython/config.py
+ln -vnsf $DOTFILESSYNC_DIR/vim/.vimrc ~/.vimrc
