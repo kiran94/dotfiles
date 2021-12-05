@@ -14,7 +14,8 @@ options.config = function()
                 "obj/",
                 "**/*.png",
                 "**/*.jpeg",
-                "**/.mypy_cache/*"
+                "**/.mypy_cache/*",
+                "viml_legacy/"
             }
         }
     }
