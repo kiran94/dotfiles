@@ -58,3 +58,11 @@ end)
 
 require'plugins/lsp/lsp-installer'.config()
 require'plugins/lsp/treesitter'.config()
+
+-- Automatically Compile Packer when this file changes
+vim.cmd[[
+augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost myplugins.lua source <afile> | PackerCompile
+augroup end
+]]
