@@ -40,8 +40,8 @@ set.report         = 0                   -- always report the number of lines ya
 set.shortmess      = "a"
 set.cmdheight      = 2
 set.updatetime     = 300
-set.spell = false
-set.spelllang = { 'en_gb' }
+set.spell          = false
+set.spelllang      = { 'en_gb' }
 
 --------------------------
 -- FOLD SETTINGS
@@ -55,9 +55,9 @@ set.foldenable  = false
 vim.cmd[[ highlight clear SignColumn ]]
 vim.api.nvim_command('autocmd FileType markdown set wrap')
 
-vim.g.python_host_prog="/usr/bin/python2"
-vim.g.python3_host_prog="/usr/bin/python3"
+vim.g.python_host_prog  = "/usr/bin/python2"
+vim.g.python3_host_prog = "/usr/bin/python3"
 
-set.wildmenu = true
-set.wildignore = "*/tmp/*,*.so,*.swp,*.zip,/.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/*,*/node_modules/*" -- MacOSX/Linux
+set.wildmenu            = true
+set.wildignore          = "*/tmp/*,*.so,*.swp,*.zip,/.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/*,*/node_modules/*" -- MacOSX/Linux
 -- set.wildignore = vim.opt.wildignore .. "*\\tmp\\*,*.swp,*.zip,*.exe,\\.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/*,*/node_modules/*" -- Windows

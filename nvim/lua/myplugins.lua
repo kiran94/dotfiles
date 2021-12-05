@@ -18,17 +18,20 @@ packer.startup(function()
     use { 'hoob3rt/lualine.nvim',            config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'akinsho/nvim-bufferline.lua',     config = require'plugins/misc/bufferline'.config }
     use { 'mhartington/formatter.nvim',      config = require'plugins/editor/formatter'.config }
+    use { 'danymat/neogen',                  config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    use "ntpeters/vim-better-whitespace"
-    use "inside/vim-search-pulse"
+    use 'ntpeters/vim-better-whitespace'
+    use 'inside/vim-search-pulse'
     use 'junegunn/vim-easy-align'
     use 'mzlogin/vim-markdown-toc'
     use 'gpanders/editorconfig.nvim'
 
-    -- Lua
+    -- LSP
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
+    use 'ray-x/lsp_signature.nvim'
+    use 'williamboman/nvim-lsp-installer'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lua'
@@ -41,13 +44,11 @@ packer.startup(function()
     use 'hrsh7th/cmp-emoji'
     use 'davidsierradz/cmp-conventionalcommits'
     use 'rafamadriz/friendly-snippets'
-    use 'ray-x/lsp_signature.nvim'
-    use 'williamboman/nvim-lsp-installer'
     use 'folke/lsp-colors.nvim'
     use 'b0o/SchemaStore.nvim'
-    -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
 
-    use { "danymat/neogen", config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
+    -- WARN: Needs with Neovim 0.6 dependency
+    -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
 
     -- Color Schemes
     use 'tomasiser/vim-code-dark'

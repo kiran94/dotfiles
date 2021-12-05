@@ -1,7 +1,7 @@
 --------------------------
 -- KEYMAPPINGS
 --------------------------
-vim.g.mapleader = " "
+vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
 vim.api.nvim_set_keymap("x", "K", ":move '<-2<CR>gv-gv", {noremap = true, silent = true})
