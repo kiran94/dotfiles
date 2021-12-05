@@ -116,6 +116,18 @@ options.config = function()
                     schemas = schemastore.json.schemas()
                 }
             }
+        elseif server.name == "pylsp" then
+            opts.settings = {
+                pylsp = {
+                    plugins = {
+                        flake8      = { enabled = true },
+                        pycodestyle = { enabled = false },
+                        pyflakes    = { enabled = false },
+                        yapf        = { enabled = false },
+                        pylint      = { enabled = false },
+                    }
+                }
+            }
         end
 
         server:setup(opts)
