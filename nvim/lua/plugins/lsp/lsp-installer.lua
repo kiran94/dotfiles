@@ -88,7 +88,7 @@ options.config = function()
             opts.settings = {
                 Lua = {
                     runtime = {
-                        verson = "LuaJIT",
+                        version = "LuaJIT",
                         path = runtime_path
                     },
                     diagnostics = {
@@ -119,6 +119,7 @@ options.config = function()
             { name = 'path' },
             { name = 'spell' },
             { name = 'calc' },
+            { name = 'emoji' },
         }),
         snippet = {
             expand = function(args)
@@ -183,12 +184,6 @@ options.config = function()
 
    -- Cmd Completion (Search)
     cmp.setup.cmdline('/', {
-     sources = {
-          { name = 'buffer' }
-        }
-    })
-
-    cmp.setup.cmdline(':s/', {
      sources = {
           { name = 'buffer' }
         }

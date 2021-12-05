@@ -1,7 +1,7 @@
 local options = {}
 
 options.config = function()
-    require'nvim-lastplace'.setup{}
+    require "nvim-lastplace".setup {}
 end
 
 return options

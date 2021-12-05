@@ -2,8 +2,8 @@ local options = {}
 
 options.config = function()
     -- local theme = require('alpha.themes.dashboard')
-    local theme = require('alpha.themes.startify')
-    local alpha = require('alpha')
+    local theme = require("alpha.themes.startify")
+    local alpha = require("alpha")
 
     theme.section.header.val = {
         "                                                     ",
@@ -13,7 +13,7 @@ options.config = function()
         "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
         "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
         "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-        "                                                     ",
+        "                                                     "
     }
 
     alpha.setup(theme.opts)

@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 options.config = function()
-    local whichkey = require('which-key')
+    local whichkey = require("which-key")
     local function cmd(command)
         return "<cmd>" .. command .. "<CR>"
     end
@@ -12,12 +12,12 @@ options.config = function()
     local setupOpts = {
         plugins = {
             marks = true,
-            registers = true,
+            registers = true
         },
         icons = {
             breadcrumb = "»",
             separator = "➜",
-            group = "+",
+            group = "+"
         }
     }
 
@@ -30,68 +30,69 @@ options.config = function()
         -- Quit
         q = {
             name = "+close",
-            q = { ':bd<CR>', 'quit' },
-            a = { ':qa<CR>', 'quit all' },
-            w = { ':wq!<CR>', 'write and quit' },
-            Q = { ':q!<CR>', 'force quit' },
-            s = { ':SSave<CR>', 'save session' },
+            q = {":bd<CR>", "quit"},
+            a = {":qa<CR>", "quit all"},
+            w = {":wq!<CR>", "write and quit"},
+            Q = {":q!<CR>", "force quit"},
+            s = {":SSave<CR>", "save session"}
         },
         -- Window Management
         w = {
-           name = "+windows",
-           h     = {'<C-W>h',              'left'},
-           j     = {'<C-W>j',              'below'},
-           l     = {'<C-W>l',              'right'},
-           k     = {'<C-W>k',              'up'},
-           w     = {':w<cr>',              'write file'},
-           H     = { cmd('windo wincmd H'), 'horizontal rotate'},
-           V     = { cmd('windo wincmd K'), 'vertical rotate'},
-           ['+'] = { cmd("vsplit"),        "vertical split"},
-           ['-'] = { cmd("split"),         "split"},
-           ['='] = { "<C-W>=",             "balance"},
+            name = "+windows",
+            h = {"<C-W>h", "left"},
+            j = {"<C-W>j", "below"},
+            l = {"<C-W>l", "right"},
+            k = {"<C-W>k", "up"},
+            w = {":w<cr>", "write file"},
+            H = {cmd("windo wincmd H"), "horizontal rotate"},
+            V = {cmd("windo wincmd K"), "vertical rotate"},
+            ["+"] = {cmd("vsplit"), "vertical split"},
+            ["-"] = {cmd("split"), "split"},
+            ["="] = {"<C-W>=", "balance"}
         },
         -- Buffer Management
         b = {
             name = "+buffer",
-            t    = {cmd('tabnew'),               'tab new'},
-            r    = {cmd('reg'),                  'registers'},
-            m    = {cmd('marks'),                'marks'},
-            mt   = {cmd('SignatureToggleSigns'), 'toggle marks'},
+            t = {cmd("tabnew"), "tab new"},
+            r = {cmd("reg"), "registers"},
+            m = {cmd("marks"), "marks"},
+            mt = {cmd("SignatureToggleSigns"), "toggle marks"}
         },
         -- Special
         z = {
             name = "+special",
-            ['#'] = { cmd('ColorizerToggle'), 'color toggle' },
+            ["#"] = {cmd("ColorizerToggle"), "color toggle"},
             p = {
                 name = "+packer",
-                i    = { cmd('PackerSync'), 'packer sync' },
-                c    = { cmd('PackerCompile'), 'packer compile' },
-                r    = { cmd('PackerClean'), 'packer clean' },
-            },
+                i = {cmd("PackerSync"), "packer sync"},
+                c = {cmd("PackerCompile"), "packer compile"},
+                r = {cmd("PackerClean"), "packer clean"}
+            }
         },
         -- Code
         c = {
-            name = '+code',
+            name = "+code",
             w = {
-                name = '+whitespace',
-                s    = { cmd('StripWhitespace'), 'strip whitespace' },
-                w    = { cmd('ToggleWhitespace'), 'whitespace toggle' },
+                name = "+whitespace",
+                s = {cmd("StripWhitespace"), "strip whitespace"},
+                w = {cmd("ToggleWhitespace"), "whitespace toggle"}
             },
-            a  = { cmd("lua vim.lsp.buf.code_action()") , "action" },
+            a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
+            f = {cmd("Format"), "format"},
             r = {
-                r = { cmd("lua vim.lsp.buf.references()") , "references" },
-                n = { cmd("lua vim.lsp.buf.rename()") , "rename" },
+                r = {cmd("lua vim.lsp.buf.references()"), "references"},
+                n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
             }
         },
         -- Explorer
         e = {
-            e = {":NvimTreeToggle<CR>", 'explorer'}
+            e = {":NvimTreeToggle<CR>", "explorer"}
         },
         -- Go
         g = {
-            name = '+go',
-            d    = { cmd("lua vim.lsp.buf.definition()") , "definition" },
-            D    = { cmd("lua vim.lsp.buf.declaration()") , "declaration" },
+            name = "+go",
+            d = {cmd("lua vim.lsp.buf.definition()"), "definition"},
+            D = {cmd("lua vim.lsp.buf.declaration()"), "declaration"}
         }
     }
 
@@ -100,7 +101,7 @@ options.config = function()
 end
 
 -- Lsp Mappings
-vim.cmd[[
+vim.cmd [[
   nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
   nnoremap <silent> L <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>

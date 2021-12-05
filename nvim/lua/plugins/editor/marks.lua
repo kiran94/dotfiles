@@ -1,7 +1,7 @@
 local options = {}
 
 options.config = function()
-    require('marks').setup{}
+    require("marks").setup {}
 end
 
 return options
