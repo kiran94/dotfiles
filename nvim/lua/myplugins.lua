@@ -44,7 +44,10 @@ packer.startup(function()
     use 'ray-x/lsp_signature.nvim'
     use 'williamboman/nvim-lsp-installer'
     use 'folke/lsp-colors.nvim'
+    use 'b0o/SchemaStore.nvim'
     -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
+
+    use { "danymat/neogen", config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
 
     -- Color Schemes
     use 'tomasiser/vim-code-dark'

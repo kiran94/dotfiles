@@ -4,6 +4,9 @@ options.config = function()
     require("formatter").setup(
         {
             filetype = {
+                ------------------
+                -- LUA
+                ------------------
                 lua = {
                     function()
                         -- https://www.npmjs.com/package/lua-fmt
@@ -14,6 +17,9 @@ options.config = function()
                         }
                     end
                 },
+                ------------------
+                -- TERRAFORM
+                ------------------
                 terraform = {
                     function()
                         return {
@@ -23,6 +29,9 @@ options.config = function()
                         }
                     end
                 },
+                ------------------
+                -- PYTHON
+                ------------------
                 python = {
                     function()
                         return {
@@ -31,6 +40,43 @@ options.config = function()
                                 "--in-place --aggressive --aggressive",
                                 vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))
                             },
+                            stdin = false
+                        }
+                    end
+                },
+                ------------------
+                -- JSON
+                ------------------
+                json = {
+                    function()
+                        return {
+                            exe = "jq",
+                            stdin = true
+                        }
+                    end
+                },
+                ------------------
+                -- GO
+                ------------------
+                go = {
+                    function()
+                        return {
+                            exec = "gofmt",
+                            args = {
+                                "-w",
+                                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))
+                            },
+                            stdin = false
+                        }
+                    end
+                },
+                ------------------
+                -- YAML
+                ------------------
+                yaml = {
+                    function()
+                        return {
+                            exec = "yq",
                             stdin = false
                         }
                     end

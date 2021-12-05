@@ -7,6 +7,7 @@ local cmp           = require('cmp')
 local cmp_nvim_lsp  = require('cmp_nvim_lsp')
 local lsp_kind      = require('lspkind')
 local lsp_colors    = require("lsp-colors")
+local schemastore   = require('schemastore')
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
@@ -74,6 +75,15 @@ local on_attach = function(client, _)
     lsp_signature.on_attach(client)
 end
 
+local t = function(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col '.' - 1
+    return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s' ~= nil
+end
+
 options.config = function()
     --------------------------------
     -- LSP
@@ -97,6 +107,13 @@ options.config = function()
                     workspace = {
                         library = vim.api.nvim_get_runtime_file("", true)
                     }
+                }
+            }
+        elseif server.name == "jsonls" then
+            opts.settings = {
+                json = {
+                    -- Catalog: https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json
+                    schemas = schemastore.json.schemas()
                 }
             }
         end
@@ -135,7 +152,20 @@ options.config = function()
           ['<C-f>']     = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-e>']     = cmp.mapping.close(),
-          ['<CR>']      = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
+          ['<CR>']      = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+          ['<TAB>'] = cmp.mapping(function(fallback)
+              -- If the pop up menu is open then map to next item in the list
+              if vim.fn.pumvisible() == 1 then
+                  vim.fn.feedkeys(t("<C-n>"), "n")
+              -- If we are in the middle of neogen generation then hump to next
+              elseif neogen.jumpable() then
+                  vim.fn.feedkeys(t("<cmd>lua require('neogen').jump_next()<CR>"), "")
+              elseif check_back_space() then
+                  vim.fn.feedkeys(t("<tab>"), "n")
+              else
+                  fallback()
+              end
+          end, { 'i', 's' })
         },
         formatting = {
             format = function (entry, vim_item)
