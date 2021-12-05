@@ -215,7 +215,7 @@ options.config = function()
    -- Cmd Completion (Search)
     cmp.setup.cmdline('/', {
      sources = {
-          { name = 'buffer' }
+          { name = 'buffer', max_item_count = 5 }
         }
     })
 
