@@ -76,6 +76,7 @@ options.config = function()
             },
             a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
             f = {cmd("Format"), "format"},
+            d = {cmd("Neogen"), "generate docs"},
             r = {
                 r = {cmd("lua vim.lsp.buf.references()"), "references"},
                 n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
