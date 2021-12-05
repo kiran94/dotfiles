@@ -1,8 +1,5 @@
 local options = {}
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
-
 options.config = function()
     local whichkey = require("which-key")
     local function cmd(command)
@@ -11,18 +8,18 @@ options.config = function()
 
     local setupOpts = {
         plugins = {
-            marks = true,
+            marks     = true,
             registers = true
         },
         icons = {
             breadcrumb = "»",
-            separator = "➜",
-            group = "+"
+            separator  = "➜",
+            group      = "+"
         }
     }
 
     local opts = {
-        mode = "n",
+        mode   = "n",
         prefix = "<leader>"
     }
 
@@ -38,35 +35,35 @@ options.config = function()
         },
         -- Window Management
         w = {
-            name = "+windows",
-            h = {"<C-W>h", "left"},
-            j = {"<C-W>j", "below"},
-            l = {"<C-W>l", "right"},
-            k = {"<C-W>k", "up"},
-            w = {":w<cr>", "write file"},
-            H = {cmd("windo wincmd H"), "horizontal rotate"},
-            V = {cmd("windo wincmd K"), "vertical rotate"},
+            name  = "+windows",
+            h     = {"<C-W>h", "left"},
+            j     = {"<C-W>j", "below"},
+            l     = {"<C-W>l", "right"},
+            k     = {"<C-W>k", "up"},
+            w     = {":w<cr>", "write file"},
+            H     = {cmd("windo wincmd H"), "horizontal rotate"}, -- or <C-w>t<C-w>H
+            V     = {cmd("windo wincmd K"), "vertical rotate"}, -- or <C-w>t<C-w>K
             ["+"] = {cmd("vsplit"), "vertical split"},
             ["-"] = {cmd("split"), "split"},
-            ["="] = {"<C-W>=", "balance"}
+            ["    = "] = {"<C-W>=", "balance"}
         },
         -- Buffer Management
         b = {
             name = "+buffer",
-            t = {cmd("tabnew"), "tab new"},
-            r = {cmd("reg"), "registers"},
-            m = {cmd("marks"), "marks"},
-            mt = {cmd("SignatureToggleSigns"), "toggle marks"}
+            t    = {cmd("tabnew"), "tab new"},
+            r    = {cmd("reg"), "registers"},
+            m    = {cmd("marks"), "marks"},
+            mt   = {cmd("SignatureToggleSigns"), "toggle marks"}
         },
         -- Special
         z = {
-            name = "+special",
+            name  = "+special",
             ["#"] = {cmd("ColorizerToggle"), "color toggle"},
             p = {
                 name = "+packer",
-                i = {cmd("PackerSync"), "packer sync"},
-                c = {cmd("PackerCompile"), "packer compile"},
-                r = {cmd("PackerClean"), "packer clean"}
+                i    = {cmd("PackerSync"), "packer sync"},
+                c    = {cmd("PackerCompile"), "packer compile"},
+                r    = {cmd("PackerClean"), "packer clean"}
             }
         },
         -- Code
@@ -74,8 +71,8 @@ options.config = function()
             name = "+code",
             w = {
                 name = "+whitespace",
-                s = {cmd("StripWhitespace"), "strip whitespace"},
-                w = {cmd("ToggleWhitespace"), "whitespace toggle"}
+                s    = {cmd("StripWhitespace"), "strip whitespace"},
+                w    = {cmd("ToggleWhitespace"), "whitespace toggle"}
             },
             a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
             f = {cmd("Format"), "format"},
@@ -91,8 +88,12 @@ options.config = function()
         -- Go
         g = {
             name = "+go",
-            d = {cmd("lua vim.lsp.buf.definition()"), "definition"},
-            D = {cmd("lua vim.lsp.buf.declaration()"), "declaration"}
+            d    = {cmd("lua vim.lsp.buf.definition()"), "definition"},
+            D    = {cmd("lua vim.lsp.buf.declaration()"), "declaration"}
+        },
+        t = {
+            name = "+terminal",
+            z    = { cmd(":new term://zsh"), 'zsh' }
         }
     }
 
@@ -107,7 +108,6 @@ vim.cmd [[
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
   nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-
 ]]
 
 return options

@@ -4,9 +4,6 @@
 vim.g.mapleader      = " "
 vim.g.maplocalleader = ","
 
--- file
-vim.cmd [[nnoremap <leader>ww :w<CR>]]
-
 -- escape shortcuts
 vim.cmd [[inoremap jk <esc>]]
 vim.cmd [[inoremap kj <esc>]]
@@ -58,16 +55,9 @@ vim.cmd [[nnoremap <M-k>    :resize +10<CR>]]
 vim.cmd [[nnoremap <M-l>    :vertical resize -10<CR>]]
 vim.cmd [[nnoremap <M-h>    :vertical resize +10<CR>]]
 
--- change 2 split windows from vert to horiz or horiz to vert
-vim.cmd [[map <Leader>th <C-w>t<C-w>H]]
-vim.cmd [[map <Leader>tk <C-w>t<C-w>K]]
-
 --------------------------
 -- TERMINAL
 --------------------------
-
--- open new terminal
-vim.cmd [[nmap <Leader>tp :new term://zsh<CR>]]
 
 -- when in terminal node, esc to go from insert to normal mode
 vim.cmd [[tnoremap <Esc> <C-\><C-N>]]
