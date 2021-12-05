@@ -16,10 +16,10 @@ table.insert(runtime_path, "~/.local/share/nvim/site/pack/packer/start/packer.nv
 
 vim.cmd[[hi Pmenu guibg=Black guifg=White gui=NONE]]
 vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
-vim.fn.sign_define("DiagnosticSignError", { text = "", texthl="DiagnosticSignError"  })
-vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl="DiagnosticSignWarn"  })
+vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="DiagnosticSignError"  })
+vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
 vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="DiagnosticSignInformation"  })
-vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl="DiagnosticSignHint"  })
+vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
         virtual_text = false,
@@ -48,26 +48,26 @@ cmp_nvim_lsp.update_capabilities(capabilities)
 lsp_kind.init{
     with_text = true,
     symbol_map = {
-        Text = "",
-        Method = "ƒ",
-        Function = "ﬦ",
+        Text        = "",
+        Method      = "ƒ",
+        Function    = "ﬦ",
         Constructor = "",
-        Variable = "",
-        Class = "",
-        Interface = "ﰮ",
-        Module = "",
-        Property = "",
-        Unit = "",
-        Value = "",
-        Enum = "了",
-        Keyword = "",
-        Snippet = "﬌",
-        Color = "",
-        File = "",
-        Folder = "",
-        EnumMember = "",
-        Constant = "",
-        Struct = "",
+        Variable    = "",
+        Class       = "",
+        Interface   = "ﰮ",
+        Module      = "",
+        Property    = "",
+        Unit        = "",
+        Value       = "",
+        Enum        = "了",
+        Keyword     = "",
+        Snippet     = "﬌",
+        Color       = "",
+        File        = "",
+        Folder      = "",
+        EnumMember  = "",
+        Constant    = "",
+        Struct      = "",
     }
 }
 
@@ -128,15 +128,15 @@ options.config = function()
     -- Editor Completion
     cmp.setup({
         sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'nvmi_lua' },
-            { name = 'buffer' },
-            { name = 'treesitter' },
-            { name = 'vsnip' },
-            { name = 'path' },
-            { name = 'spell' },
-            { name = 'calc' },
-            { name = 'emoji' },
+            { name = 'nvim_lsp',   max_item_count = 10},
+            { name = 'nvim_lua',   max_item_count = 5},
+            { name = 'buffer',     max_item_count = 5},
+            { name = 'treesitter', max_item_count = 5},
+            { name = 'vsnip',      max_item_count = 5},
+            { name = 'path',       max_item_count = 5},
+            { name = 'spell',      max_item_count = 5},
+            { name = 'calc',       max_item_count = 5},
+            { name = 'emoji',      max_item_count = 5},
         }),
         snippet = {
             expand = function(args)
@@ -221,10 +221,10 @@ options.config = function()
 
     -- Colors
     lsp_colors.setup({
-      Error = "#db4b4b",
-      Warning = "#e0af68",
+      Error       = "#db4b4b",
+      Warning     = "#e0af68",
       Information = "#0db9d7",
-      Hint = "#10B981"
+      Hint        = "#10B981"
     })
 end
 
