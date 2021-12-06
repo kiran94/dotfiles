@@ -38,15 +38,15 @@ options.config = function()
 
     require "lualine".setup {
         options = {
-            icons_enabled = true,
-            theme = "material",
+            icons_enabled        = true,
+            theme                = "material",
             component_separators = {"", ""},
-            section_separators = {"", ""},
-            disabled_filetypes = {},
-            sources = {"nvim_lsp"},
-            color_error = "#ec5f67",
-            color_warn = "#FF8800",
-            color_info = "#008080"
+            section_separators   = {"", ""},
+            disabled_filetypes   = {},
+            sources              = {"nvim_lsp"},
+            color_error          = "#ec5f67",
+            color_warn           = "#FF8800",
+            color_info           = "#008080"
         },
         sections = {
             lualine_a = {"mode"},
