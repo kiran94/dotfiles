@@ -2,7 +2,7 @@
 	email = kiran_patel94@hotmail.com
 	name = kiran94
 [core]
-	editor = vim
+	editor = nvim
 [log]
     date = relative
 [pager]

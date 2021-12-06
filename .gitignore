@@ -2,3 +2,5 @@ secrets.sh
 nvim/.sessions/
 nvim/.netrwhist
 *.deb
+STARTUP_TIME*
+nvim/plugin/packer_compiled.lua

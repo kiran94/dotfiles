@@ -11,7 +11,9 @@ require('telescope').setup{
                   "obj/",
                   "**/*.png",
                   "**/*.jpeg",
-                  "**/.mypy_cache/*"
+                  "**/.mypy_cache/*",
+                  "nvim/zlegacy/*",
+                  "zlegacy/*"
           }
   }
 }
