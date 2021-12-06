@@ -18,8 +18,9 @@ packer.startup(function()
     use { 'hoob3rt/lualine.nvim',            config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'akinsho/nvim-bufferline.lua',     config = require'plugins/misc/bufferline'.config }
     use { 'mhartington/formatter.nvim',      config = require'plugins/editor/formatter'.config }
-    use { 'danymat/neogen',                  config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/playground',      requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
+    use { 'danymat/neogen',                  config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
 
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'
