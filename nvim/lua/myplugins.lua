@@ -52,14 +52,15 @@ packer.startup(function()
     -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
 
     -- Color Schemes
-    use 'tomasiser/vim-code-dark'
-    use 'lighthaus-theme/vim-lighthaus'
-    use 'projekt0n/github-nvim-theme'
-    use 'folke/tokyonight.nvim'
+    use {'tomasiser/vim-code-dark',       config = 'vim.cmd [[colorscheme codedark]]'}
+    -- use {'rose-pine/neovim',              config = 'vim.cmd [[colorscheme rose-pine]]'}
+    -- use {'lighthaus-theme/vim-lighthaus', config = 'vim.cmd [[colorscheme lighthaus]]'}
+    -- use {'projekt0n/github-nvim-theme',   config = 'vim.cmd [[colorscheme github_dark_default]]'}
+    -- use {'folke/tokyonight.nvim',         config = 'vim.cmd [[colorscheme tokyonight]]'}
 end)
 
 require'plugins/lsp/lsp-installer'.config()
-require'plugins/lsp/treesitter'.config()
+
 
 -- Automatically Compile Packer when this file changes
 vim.cmd[[
