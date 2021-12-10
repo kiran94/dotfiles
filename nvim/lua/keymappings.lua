@@ -7,7 +7,7 @@ vim.g.maplocalleader = ","
 -- escape shortcuts
 vim.cmd [[inoremap jk <esc>]]
 vim.cmd [[inoremap kj <esc>]]
-vim.cmd [[nnoremap <C-c> <Esc>]]
+vim.cmd [[inoremap <C-c> <Esc>]]
 
 -- comment/uncomment the current line
 vim.cmd [[nnoremap <C-c> gc<CR>]]
