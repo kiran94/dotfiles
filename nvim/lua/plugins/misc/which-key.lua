@@ -72,7 +72,8 @@ options.config = function()
             w = {
                 name = "+whitespace",
                 s    = {cmd("StripWhitespace"), "strip whitespace"},
-                w    = {cmd("ToggleWhitespace"), "whitespace toggle"}
+                w    = {cmd("ToggleWhitespace"), "whitespace toggle"},
+                i    = {cmd("set list!"), "indentation toggle"},
             },
             a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
             f = {cmd("Format"), "format"},

@@ -21,6 +21,7 @@ packer.startup(function()
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',      requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
     use { 'danymat/neogen',                  config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
+    use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
 
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'
