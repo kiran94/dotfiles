@@ -27,6 +27,7 @@ packer.startup(function()
     use 'junegunn/vim-easy-align'
     use 'mzlogin/vim-markdown-toc'
     use 'gpanders/editorconfig.nvim'
+    use 'tweekmonster/startuptime.vim'
 
     -- LSP
     use 'neovim/nvim-lspconfig'
