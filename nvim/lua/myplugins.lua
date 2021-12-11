@@ -21,9 +21,10 @@ packer.startup(function()
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
     use { "rcarriga/vim-ultest",                 config = require'plugins/editor//ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    use { "beauwilliams/focus.nvim",             config = require'plugins/editor/focus'.config }
+    use { 'weilbith/nvim-code-action-menu',      config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
-    use { "beauwilliams/focus.nvim",             config = require'plugins/editor/focus'.config }
     use { 'folke/zen-mode.nvim' }
 
     use 'ntpeters/vim-better-whitespace'

@@ -77,7 +77,8 @@ options.config = function()
                 w    = {cmd("ToggleWhitespace"), "whitespace toggle"},
                 i    = {cmd("set list!"), "indentation toggle"},
             },
-            a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
+            -- a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
+            a = {cmd("CodeActionMenu"), "action"},
             f = {cmd("Format"), "format"},
             d = {cmd("Neogen"), "generate docs"},
             r = {
