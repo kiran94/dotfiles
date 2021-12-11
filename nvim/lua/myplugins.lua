@@ -54,7 +54,7 @@ packer.startup(function()
     -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
 
     -- Color Schemes
-    use {'tomasiser/vim-code-dark',       config = 'vim.cmd [[colorscheme codedark]]'}
+    use {'tomasiser/vim-code-dark' }
     -- use {'rose-pine/neovim',              config = 'vim.cmd [[colorscheme rose-pine]]'}
     -- use {'lighthaus-theme/vim-lighthaus', config = 'vim.cmd [[colorscheme lighthaus]]'}
     -- use {'projekt0n/github-nvim-theme',   config = 'vim.cmd [[colorscheme github_dark_default]]'}
