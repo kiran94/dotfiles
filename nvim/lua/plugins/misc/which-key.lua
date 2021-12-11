@@ -64,7 +64,9 @@ options.config = function()
                 i    = {cmd("PackerSync"), "packer sync"},
                 c    = {cmd("PackerCompile"), "packer compile"},
                 r    = {cmd("PackerClean"), "packer clean"}
-            }
+            },
+            z  = {cmd("ZenMode"), "zen mode"},
+            td = {cmd("Gitsigns toggle_linehl"), "toggle diffs"}
         },
         -- Code
         c = {

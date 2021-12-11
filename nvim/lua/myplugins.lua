@@ -3,25 +3,26 @@ local packer = require('packer')
 packer.startup(function()
     use 'wbthomason/packer.nvim'
 
-    use { 'goolord/alpha-nvim',              config = require'plugins/misc/dashboard'.config, requires = { 'kyazdani42/nvim-web-devicons' } }
-    use { 'lewis6991/gitsigns.nvim',         config = require'plugins/editor/gitsigns'.config, requires = { 'nvim-lua/plenary.nvim' } }
-    use { 'folke/which-key.nvim',            config = require'plugins/misc/which-key'.config }
-    use { 'windwp/nvim-autopairs',           config = require'plugins/editor/nvim-autopairs'.config }
-    use { 'ethanholz/nvim-lastplace',        config = require'plugins/misc/nvim-lastplace'.config}
-    use { 'ahmedkhalf/project.nvim',         config = require'plugins/misc/project'.config }
-    use { 'folke/todo-comments.nvim',        config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }}
-    use { 'numToStr/Comment.nvim',           config = require'plugins/editor/comment'.config }
-    use { 'chentau/marks.nvim',              config = require'plugins/editor/marks'.config }
-    use { 'norcalli/nvim-colorizer.lua',     config = require'plugins/editor/colorizer'.config }
-    use { 'kyazdani42/nvim-tree.lua',        config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'} }
-    use { 'nvim-telescope/telescope.nvim',   config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} } }
-    use { 'hoob3rt/lualine.nvim',            config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-    use { 'akinsho/nvim-bufferline.lua',     config = require'plugins/misc/bufferline'.config }
-    use { 'mhartington/formatter.nvim',      config = require'plugins/editor/formatter'.config }
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use { 'nvim-treesitter/playground',      requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
-    use { 'danymat/neogen',                  config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
+    use { 'goolord/alpha-nvim',                  config = require'plugins/misc/dashboard'.config, requires = { 'kyazdani42/nvim-web-devicons' } }
+    use { 'lewis6991/gitsigns.nvim',             config = require'plugins/editor/gitsigns'.config, requires = { 'nvim-lua/plenary.nvim' } }
+    use { 'folke/which-key.nvim',                config = require'plugins/misc/which-key'.config }
+    use { 'windwp/nvim-autopairs',               config = require'plugins/editor/nvim-autopairs'.config }
+    use { 'ethanholz/nvim-lastplace',            config = require'plugins/misc/nvim-lastplace'.config}
+    use { 'ahmedkhalf/project.nvim',             config = require'plugins/misc/project'.config }
+    use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }}
+    use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config }
+    use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config }
+    use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config }
+    use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'} }
+    use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} } }
+    use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+    use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config }
+    use { 'mhartington/formatter.nvim',          config = require'plugins/editor/formatter'.config }
+    use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
+    use { 'folke/zen-mode.nvim' }
+    use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
+    use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
 
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'
