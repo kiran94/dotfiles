@@ -11,7 +11,7 @@ options.config = function()
         show_current_context_start = false,
         show_current_context = false,
         buftype_exclude = {"terminal", "nofile"},
-        filetype_exclude = {"alpha", "NvimTree", "packer"}
+        filetype_exclude = {"alpha", "NvimTree", "packer", "help"}
     }
 end
 
