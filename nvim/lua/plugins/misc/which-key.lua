@@ -53,7 +53,7 @@ options.config = function()
             t    = {cmd("tabnew"), "tab new"},
             r    = {cmd("reg"), "registers"},
             m    = {cmd("marks"), "marks"},
-            mt   = {cmd("SignatureToggleSigns"), "toggle marks"}
+            mt   = {cmd("SignatureToggleSigns"), "toggle marks"},
         },
         -- Special
         z = {
@@ -65,8 +65,7 @@ options.config = function()
                 c    = {cmd("PackerCompile"), "packer compile"},
                 r    = {cmd("PackerClean"), "packer clean"}
             },
-            z  = {cmd("ZenMode"), "zen mode"},
-            td = {cmd("Gitsigns toggle_linehl"), "toggle diffs"}
+            z  = {cmd("ZenMode"), "zen mode"}
         },
         -- Code
         c = {
@@ -83,10 +82,16 @@ options.config = function()
             r = {
                 r = {cmd("lua vim.lsp.buf.references()"), "references"},
                 n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
+            },
+            g = {
+                name = "+git",
+                d = {cmd("Gitsigns toggle_linehl"), "toggle diff"},
+                b = {cmd("Gitsigns blame_line"), "blame line"},
             }
         },
         -- Explorer
         e = {
+            name = "+explorer",
             e = {":NvimTreeToggle<CR>", "explorer"}
         },
         -- Go
