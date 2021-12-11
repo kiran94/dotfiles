@@ -58,10 +58,10 @@ packer.startup(function()
 
     -- Color Schemes
     use {'tomasiser/vim-code-dark' }
-    -- use {'rose-pine/neovim',              config = 'vim.cmd [[colorscheme rose-pine]]'}
-    -- use {'lighthaus-theme/vim-lighthaus', config = 'vim.cmd [[colorscheme lighthaus]]'}
-    -- use {'projekt0n/github-nvim-theme',   config = 'vim.cmd [[colorscheme github_dark_default]]'}
-    -- use {'folke/tokyonight.nvim',         config = 'vim.cmd [[colorscheme tokyonight]]'}
+    -- use {'rose-pine/neovim',}
+    -- use {'lighthaus-theme/vim-lighthaus'}
+    -- use {'projekt0n/github-nvim-theme'}
+    -- use {'folke/tokyonight.nvim'}
 end)
 
 require'plugins/lsp/lsp-installer'.config()
