@@ -23,6 +23,7 @@ packer.startup(function()
     use { 'folke/zen-mode.nvim' }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
+    use { "beauwilliams/focus.nvim",             config = require'plugins/editor/focus'.config }
 
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'

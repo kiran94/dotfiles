@@ -42,10 +42,11 @@ options.config = function()
             k     = {"<C-W>k", "up"},
             w     = {":w<cr>", "write file"},
             H     = {cmd("windo wincmd H"), "horizontal rotate"}, -- or <C-w>t<C-w>H
-            V     = {cmd("windo wincmd K"), "vertical rotate"}, -- or <C-w>t<C-w>K
+            V     = {cmd("windo wincmd K"), "vertical rotate"},   -- or <C-w>t<C-w>K
             ["+"] = {cmd("vsplit"), "vertical split"},
             ["-"] = {cmd("split"), "split"},
-            ["    = "] = {"<C-W>=", "balance"}
+            ["m"] = {cmd("FocusMaximise"), "maximize"},
+            ["="] = {"<C-W>=", "balance"}
         },
         -- Buffer Management
         b = {
