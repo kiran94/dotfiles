@@ -88,12 +88,21 @@ options.config = function()
                 name = "+git",
                 d = {cmd("Gitsigns toggle_linehl"), "toggle diff"},
                 b = {cmd("Gitsigns blame_line"), "blame line"},
+            },
+            t = {
+                name = "+test",
+                n    = {cmd('UltestNearest'), "test nearest"},
+                l    = {cmd('UltestLast'), "test last"},
+                d    = {cmd('UltestDebugNearest'), "debug nearest test"},
+                a    = {cmd('Ultest'), "all tests"},
+                o    = {cmd('UltestOutput'), "test output"},
             }
         },
         -- Explorer
         e = {
             name = "+explorer",
-            e = {":NvimTreeToggle<CR>", "explorer"}
+            e    = {":NvimTreeToggle<CR>", "file explorer"},
+            t    = {cmd('UltestSummary'), "test explorer"},
         },
         -- Go
         g = {
