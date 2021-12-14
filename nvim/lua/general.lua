@@ -46,11 +46,10 @@ set.spelllang      = { 'en_gb' }
 --------------------------
 -- FOLD SETTINGS
 --------------------------
-set.foldcolumn  = "auto"
-set.foldnestmax = 1
-set.foldmethod  = "indent"
-set.foldignore  = "#"
-set.foldenable  = false
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldenable  = false
+vim.opt.foldnestmax = 1
 
 vim.cmd[[ highlight clear SignColumn ]]
 vim.api.nvim_command('autocmd FileType markdown set wrap')
