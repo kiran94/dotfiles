@@ -25,6 +25,7 @@ packer.startup(function()
     use { 'weilbith/nvim-code-action-menu',      config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
+    use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
     use { 'folke/zen-mode.nvim' }
 
     use 'ntpeters/vim-better-whitespace'
