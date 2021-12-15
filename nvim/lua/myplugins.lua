@@ -20,6 +20,7 @@ packer.startup(function()
     use { 'mhartington/formatter.nvim',          config = require'plugins/editor/formatter'.config }
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
+    use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config}
     use { "rcarriga/vim-ultest",                 config = require'plugins/editor//ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
     use { "beauwilliams/focus.nvim",             config = require'plugins/editor/focus'.config }
     use { 'weilbith/nvim-code-action-menu',      config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
@@ -28,10 +29,10 @@ packer.startup(function()
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
     use { 'folke/zen-mode.nvim' }
 
+
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'
     use 'junegunn/vim-easy-align'
-    use 'mzlogin/vim-markdown-toc'
     use 'gpanders/editorconfig.nvim'
     use 'tweekmonster/startuptime.vim'
 

@@ -165,7 +165,7 @@ options.config = function()
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-e>']     = cmp.mapping.close(),
           ['<CR>']      = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-          ['<TAB>'] = cmp.mapping(function(fallback)
+          ['<TAB>']     = cmp.mapping(function(fallback)
               -- If the pop up menu is open then map to next item in the list
               if vim.fn.pumvisible() == 1 then
                   vim.fn.feedkeys(t("<C-n>"), "n")

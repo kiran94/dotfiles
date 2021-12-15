@@ -66,7 +66,13 @@ options.config = function()
                 c    = {cmd("PackerCompile"), "packer compile"},
                 r    = {cmd("PackerClean"), "packer clean"}
             },
-            z  = {cmd("ZenMode"), "zen mode"}
+            m = {
+                name = '+markdown',
+                t = {cmd('EasyAlign*<Bar>'), "format markdown table"},
+                g = {cmd('GenTocGFM'), "create markdown toc"},
+
+            },
+            z  = {cmd("ZenMode"), "zen mode"},
         },
         -- Code
         c = {
