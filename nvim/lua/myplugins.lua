@@ -18,18 +18,15 @@ packer.startup(function()
     use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config }
     -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
-    use {'jose-elias-alvarez/null-ls.nvim',      config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config}
     use { "rcarriga/vim-ultest",                 config = require'plugins/editor//ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
     use { "beauwilliams/focus.nvim",             config = require'plugins/editor/focus'.config }
-    use { 'weilbith/nvim-code-action-menu',      config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
     use { 'folke/zen-mode.nvim' }
-
 
 
     use 'ntpeters/vim-better-whitespace'
@@ -57,11 +54,14 @@ packer.startup(function()
     use 'rafamadriz/friendly-snippets'
     use 'folke/lsp-colors.nvim'
     use 'b0o/SchemaStore.nvim'
+    -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
+    use { 'jose-elias-alvarez/null-ls.nvim',   config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
+    use { 'tami5/lspsaga.nvim',                config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig'}
 
     -- WARN: Needs with Neovim 0.6 dependency
     -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
 
-    -- Color Schemes
+    -- COLOR SCHEMES
     use {'tomasiser/vim-code-dark' }
     -- use {'rose-pine/neovim',}
     -- use {'lighthaus-theme/vim-lighthaus'}

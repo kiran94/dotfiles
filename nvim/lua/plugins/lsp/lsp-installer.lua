@@ -71,6 +71,12 @@ lsp_kind.init{
     }
 }
 
+lsp_signature.setup({
+    hint_prefix = "",
+    use_lspaga = true,
+    hint_enable = false
+})
+
 local on_attach = function(client, _)
     lsp_signature.on_attach(client)
 

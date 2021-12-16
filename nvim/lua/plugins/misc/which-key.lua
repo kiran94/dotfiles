@@ -84,13 +84,16 @@ options.config = function()
                 i    = {cmd("set list!"), "indentation toggle"},
             },
             -- a = {cmd("lua vim.lsp.buf.code_action()"), "action"},
-            a = {cmd("CodeActionMenu"), "action"},
+            -- a = {cmd("CodeActionMenu"), "action"},
+            a = {cmd("Lspsaga code_action"), "action"},
+            -- a = {cmd("lua require('lspsaga.codeaction').code_action()"), "action"},
             -- f = {cmd("Format"), "format"},
             f = {cmd("lua vim.lsp.buf.formatting()"), "format"},
             d = {cmd("Neogen"), "generate docs"},
             r = {
                 r = {cmd("lua vim.lsp.buf.references()"), "references"},
-                n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
+                -- n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
+                n = {cmd("Lspsaga rename"), "rename"}
             },
             g = {
                 name = "+git",
@@ -129,9 +132,12 @@ options.config = function()
 end
 
 -- Lsp Mappings
+-- nnoremap <silent> L <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+-- nnoremap <silent> K <cmd>Lspsaga hover_doc<CR>
 vim.cmd [[
   nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-  nnoremap <silent> L <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+
+  nnoremap <silent> L <cmd>Lspsaga show_line_diagnostics<CR>
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
   nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
