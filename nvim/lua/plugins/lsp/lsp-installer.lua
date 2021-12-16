@@ -73,6 +73,13 @@ lsp_kind.init{
 
 local on_attach = function(client, _)
     lsp_signature.on_attach(client)
+
+    -- NOTE: This is being disabled
+    -- because null-ls is handling the formatting
+    -- If you decide to switch back then comment these lines
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+
 end
 
 local t = function(str)

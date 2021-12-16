@@ -17,7 +17,8 @@ packer.startup(function()
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} } }
     use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config }
-    use { 'mhartington/formatter.nvim',          config = require'plugins/editor/formatter'.config }
+    -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
+    use {'jose-elias-alvarez/null-ls.nvim',      config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config}
@@ -28,6 +29,7 @@ packer.startup(function()
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
     use { 'folke/zen-mode.nvim' }
+
 
 
     use 'ntpeters/vim-better-whitespace'
