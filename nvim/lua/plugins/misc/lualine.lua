@@ -6,15 +6,30 @@ options.config = function()
         local msg = "🔌"
         local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
         local clients = vim.lsp.get_active_clients()
+
+        -- If there are no clients then just return
         if next(clients) == nil then
             return msg
         end
+
+        -- Find all the clients attached to Buffer
+        local found_clients = {}
+        local found_client_count = 0
+
         for _, client in ipairs(clients) do
+
             local filetypes = client.config.filetypes
-            if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                return client.name
+            if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 and client.name ~= "null-ls" then
+                table.insert(found_clients, client.name)
+                found_client_count = found_client_count + 1
             end
         end
+
+        -- For any found then concat them together and return
+        if found_client_count > 0 then
+            return table.concat(found_clients, " | ")
+        end
+
         return msg
     end
 
