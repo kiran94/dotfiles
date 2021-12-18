@@ -28,11 +28,10 @@ packer.startup(function()
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
     use { 'folke/zen-mode.nvim' }
 
-
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'
     use 'junegunn/vim-easy-align'
-    use 'gpanders/editorconfig.nvim'
+    -- use 'gpanders/editorconfig.nvim'
     use 'tweekmonster/startuptime.vim'
 
     -- LSP
