@@ -141,6 +141,8 @@ vim.cmd [[
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
   nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+
+  vnoremap <silent> <leader>zmt :EasyAlign*<Bar><CR>
 ]]
 
 return options
