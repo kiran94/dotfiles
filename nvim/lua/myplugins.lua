@@ -12,7 +12,7 @@ packer.startup(function()
     use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }}
     use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config }
     use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config }
-    use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config }
+    use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'} }
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} } }
     use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
@@ -20,11 +20,11 @@ packer.startup(function()
     -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter" }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
-    use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config}
+    use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
     use { "rcarriga/vim-ultest",                 config = require'plugins/editor//ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
     use { "beauwilliams/focus.nvim",             config = require'plugins/editor/focus'.config }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
-    use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
+    use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false, cmd = {"TSPlaygroundToggle"} }
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
     use {'jbyuki/venn.nvim',                     cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
     use {"ellisonleao/glow.nvim",                cmd = {'Glow', 'GlowInstall'} }
@@ -32,7 +32,7 @@ packer.startup(function()
 
     use 'ntpeters/vim-better-whitespace'
     use 'inside/vim-search-pulse'
-    use 'junegunn/vim-easy-align'
+    use {'junegunn/vim-easy-align', cmd = { "EasyAlign" } }
     -- use 'gpanders/editorconfig.nvim'
     use 'tweekmonster/startuptime.vim'
     use 'gyim/vim-boxdraw'
