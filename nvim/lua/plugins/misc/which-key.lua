@@ -62,7 +62,8 @@ options.config = function()
             ["#"] = {cmd("ColorizerToggle"), "color toggle"},
             p = {
                 name = "+packer",
-                i    = {cmd("PackerSync"), "packer sync"},
+                s    = {cmd("PackerSync"), "packer sync"},
+                i    = {cmd("PackerInstall"), "packer install"},
                 c    = {cmd("PackerCompile"), "packer compile"},
                 r    = {cmd("PackerClean"), "packer clean"}
             },
