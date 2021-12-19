@@ -72,6 +72,7 @@ options.config = function()
                 t = {cmd('EasyAlign*<Bar>'), "format markdown table"},
                 g = {cmd('GenTocGFM'), "create markdown toc"},
                 b = {cmd('VBox'), "create box or line"},
+                p = {cmd('Glow'), "preview"},
             },
             z  = {cmd("ZenMode"), "zen mode"},
         },

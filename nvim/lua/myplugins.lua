@@ -26,6 +26,8 @@ packer.startup(function()
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, disabled = false }
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
+    use {'jbyuki/venn.nvim',                     cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
+    use {"ellisonleao/glow.nvim",                cmd = {'Glow', 'GlowInstall'} }
     use { 'folke/zen-mode.nvim' }
 
     use 'ntpeters/vim-better-whitespace'
@@ -34,7 +36,6 @@ packer.startup(function()
     -- use 'gpanders/editorconfig.nvim'
     use 'tweekmonster/startuptime.vim'
     use 'gyim/vim-boxdraw'
-    use {'jbyuki/venn.nvim', cmd = 'VBox'}
 
     -- LSP
     use 'neovim/nvim-lspconfig'
