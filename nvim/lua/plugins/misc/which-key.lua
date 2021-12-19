@@ -70,7 +70,7 @@ options.config = function()
                 name = '+markdown',
                 t = {cmd('EasyAlign*<Bar>'), "format markdown table"},
                 g = {cmd('GenTocGFM'), "create markdown toc"},
-
+                b = {cmd('VBox'), "create box or line"},
             },
             z  = {cmd("ZenMode"), "zen mode"},
         },
@@ -142,6 +142,7 @@ vim.cmd [[
   nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 
   vnoremap <silent> <leader>zmt :EasyAlign*<Bar><CR>
+  vnoremap <silent> <leader>zmb :VBox<CR>
 ]]
 
 return options

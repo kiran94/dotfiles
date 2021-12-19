@@ -33,6 +33,8 @@ packer.startup(function()
     use 'junegunn/vim-easy-align'
     -- use 'gpanders/editorconfig.nvim'
     use 'tweekmonster/startuptime.vim'
+    use 'gyim/vim-boxdraw'
+    use {'jbyuki/venn.nvim', cmd = 'VBox'}
 
     -- LSP
     use 'neovim/nvim-lspconfig'

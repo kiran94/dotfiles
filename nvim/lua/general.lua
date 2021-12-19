@@ -42,6 +42,9 @@ set.cmdheight      = 2
 set.updatetime     = 300
 set.spell          = false
 set.spelllang      = { 'en_gb' }
+set.virtualedit    = "block"
+
+
 
 --------------------------
 -- FOLD SETTINGS
