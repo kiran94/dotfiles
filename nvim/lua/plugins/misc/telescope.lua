@@ -1,7 +1,10 @@
 local options = {}
 
 options.config = function()
-    require("telescope").setup {
+
+    local telescope = require("telescope")
+
+    telescope.setup {
         prompt_position = "bottom",
         defaults = {
             file_ignore_patterns = {
@@ -19,6 +22,12 @@ options.config = function()
             }
         }
     }
+
+    -- EXTENSIONS
+    local ok, _ = pcall(require, "project_nvim")
+    if ok then
+        telescope.load_extension('projects')
+    end
 end
 
 return options
