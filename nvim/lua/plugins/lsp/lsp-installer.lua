@@ -183,8 +183,8 @@ options.config = function()
               if vim.fn.pumvisible() == 1 then
                   vim.fn.feedkeys(t("<C-n>"), "n")
               -- If we are in the middle of neogen generation then hump to next
-              elseif neogen.jumpable() then
-                  vim.fn.feedkeys(t("<cmd>lua require('neogen').jump_next()<CR>"), "")
+              -- elseif neogen ~= nil and neogen.jumpable() then
+              --     vim.fn.feedkeys(t("<cmd>lua require('neogen').jump_next()<CR>"), "")
               elseif check_back_space() then
                   vim.fn.feedkeys(t("<tab>"), "n")
               else
