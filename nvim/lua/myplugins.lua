@@ -8,13 +8,13 @@ packer.startup(function()
     use { 'folke/which-key.nvim',                config = require'plugins/misc/which-key'.config, keys = '<leader>' }
     use { 'windwp/nvim-autopairs',               config = require'plugins/editor/nvim-autopairs'.config, event = "BufWinEnter" }
     use { 'ethanholz/nvim-lastplace',            config = require'plugins/misc/nvim-lastplace'.config }
-    use { 'ahmedkhalf/project.nvim',             config = require'plugins/misc/project'.config }
+    use { 'ahmedkhalf/project.nvim',             config = require'plugins/misc/project'.config, event = "BufWinEnter" }
     use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
     use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config, event = "BufWinEnter" }
     use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
     use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
-    use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} } }
+    use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
     use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
     -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
@@ -22,7 +22,7 @@ packer.startup(function()
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
     use { 'rcarriga/vim-ultest',                 config = require'plugins/editor/ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
-    use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config }
+    use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
