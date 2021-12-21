@@ -1,4 +1,5 @@
-local colorscheme = "codedark"
+vim.g.vscode_style = "dark"
+local colorscheme = "vscode"
 
 -- Safely attempt to set the colorscheme
 -- if not installed then just notify

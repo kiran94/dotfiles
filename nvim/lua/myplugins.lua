@@ -64,7 +64,8 @@ packer.startup(function()
     -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
 
     -- COLOR SCHEMES
-    use {'tomasiser/vim-code-dark' }
+    use 'Mofiqul/vscode.nvim'
+    -- use {'tomasiser/vim-code-dark' }
     -- use {'rose-pine/neovim',}
     -- use {'lighthaus-theme/vim-lighthaus'}
     -- use {'projekt0n/github-nvim-theme'}

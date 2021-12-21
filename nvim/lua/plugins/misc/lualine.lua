@@ -54,7 +54,7 @@ options.config = function()
     require "lualine".setup {
         options = {
             icons_enabled        = true,
-            theme                = "material",
+            theme                = "vscode", -- material
             component_separators = {"", ""},
             section_separators   = {"", ""},
             disabled_filetypes   = {},
