@@ -12,7 +12,7 @@ options.config = function()
 
       -- hijacks new directory buffers when they are opened.
       update_to_buf_dir   = {
-        enable    = true, -- enable the feature
+        enable    = true,  -- enable the feature
         auto_open = false, -- allow to open the tree if it was previously closed
       },
 
@@ -38,10 +38,10 @@ options.config = function()
       },
 
       view = {
-        width       = 40, -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
-        -- height      = 30, -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
-        side        = 'right', -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
-        auto_resize = false, -- if true the tree will resize itself after opening a file
+        width       = 40,        -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
+        -- height      = 30,     -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
+        side        = 'right',   -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
+        auto_resize = false,     -- if true the tree will resize itself after opening a file
         mappings = {
           -- custom only false will merge the list with the default mappings
           -- if true, it will only use your list to set the mappings
