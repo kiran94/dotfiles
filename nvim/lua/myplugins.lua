@@ -24,6 +24,7 @@ packer.startup(function()
     use { 'rcarriga/vim-ultest',                 config = require'plugins/editor/ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
+    use { "blackCauldron7/surround.nvim",        config = require'plugins/editor/surround'.config }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
     use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
