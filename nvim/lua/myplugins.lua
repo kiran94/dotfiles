@@ -27,6 +27,7 @@ packer.startup(function()
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
     use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
+    use { 'sindrets/diffview.nvim',              requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
     use { 'ellisonleao/glow.nvim',               cmd = {'Glow', 'GlowInstall'} }
     use { 'folke/zen-mode.nvim',                 cmd = { "ZenMode" } }
     use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
