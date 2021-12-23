@@ -9,9 +9,6 @@ vim.cmd [[inoremap jk <esc>]]
 vim.cmd [[inoremap kj <esc>]]
 vim.cmd [[inoremap <C-c> <Esc>]]
 
--- comment/uncomment the current line
-vim.cmd [[nnoremap <C-c> gc<CR>]]
-
 -- working with tabs/buffers
 -- nnoremap <S-TAB> :tabp<CR>
 -- nnoremap <TAB> :tabn<CR>
