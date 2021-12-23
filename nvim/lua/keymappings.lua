@@ -12,12 +12,12 @@ vim.cmd [[inoremap <C-c> <Esc>]]
 -- working with tabs/buffers
 -- nnoremap <S-TAB> :tabp<CR>
 -- nnoremap <TAB> :tabn<CR>
-vim.cmd [[nnoremap <S-TAB> :bprevious<CR>]]
-vim.cmd [[nnoremap <TAB> :bnext<CR>]]
+vim.cmd [[nnoremap <silent> <S-TAB> :bprevious<CR>]]
+vim.cmd [[nnoremap <silent> <TAB> :bnext<CR>]]
 
 -- Better indent
-vim.cmd [[vnoremap < <gv]]
-vim.cmd [[vnoremap > >gv]]
+vim.cmd [[vnoremap <silent> < <gv]]
+vim.cmd [[vnoremap <silent> > >gv]]
 
 -- remap visual block mode to alt+v
 vim.cmd [[nnoremap <M-v> <C-v>]]
