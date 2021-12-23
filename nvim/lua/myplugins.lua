@@ -14,6 +14,7 @@ packer.startup(function()
     use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
     use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
+    use { "AckslD/nvim-neoclip.lua",             config = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
     use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }

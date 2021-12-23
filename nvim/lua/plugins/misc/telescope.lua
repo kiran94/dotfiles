@@ -24,9 +24,14 @@ options.config = function()
     }
 
     -- EXTENSIONS
-    local ok, _ = pcall(require, "project_nvim")
-    if ok then
+    local projectInstalled, _ = pcall(require, "project_nvim")
+    if projectInstalled then
         telescope.load_extension('projects')
+    end
+
+    local neoclipInstalled, _ = pcall(require, "neoclip")
+    if neoclipInstalled then
+        telescope.load_extension('neoclip')
     end
 end
 
