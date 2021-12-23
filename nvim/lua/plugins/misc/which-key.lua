@@ -74,7 +74,8 @@ options.config = function()
                 b = {cmd('VBox'), "create box or line"},
                 p = {cmd('Glow'), "preview"},
             },
-            z  = {cmd("ZenMode"), "zen mode"},
+            z = {cmd("ZenMode"), "zen mode"},
+            t = {cmd(":new term://zsh"), 'terminal' },
         },
         -- Code
         c = {
@@ -122,10 +123,6 @@ options.config = function()
             name = "+go",
             d    = {cmd("lua vim.lsp.buf.definition()"), "definition"},
             D    = {cmd("lua vim.lsp.buf.declaration()"), "declaration"}
-        },
-        t = {
-            name = "+terminal",
-            z    = { cmd(":new term://zsh"), 'zsh' }
         }
     }
 
