@@ -141,6 +141,14 @@ options.config = function()
                     }
                 }
             }
+        elseif server.name == "pyright" then
+            opts.settings = {
+                python = {
+                    analysis = {
+                        typeCheckingMode = "off"
+                    }
+                }
+            }
         end
 
         server:setup(opts)
