@@ -36,10 +36,15 @@ packer.startup(function()
     use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
     use { 'tweekmonster/startuptime.vim',        cmd = {"StartupTime"} }
     use { 'gyim/vim-boxdraw',                    ft = 'markdown'}
-    use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol'}}
-    use 'ntpeters/vim-better-whitespace'
-    use 'inside/vim-search-pulse'
+    use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol' }}
+    use {'ntpeters/vim-better-whitespace',       event = "BufWinEnter" }
+    use {'inside/vim-search-pulse',              event = "BufWinEnter" }
+
+
+
+    use {'dstein64/nvim-scrollview',             event = "BufWinEnter" }
     -- use 'gpanders/editorconfig.nvim'
+    -- use { 'folke/twilight.nvim'}
 
     -- LSP
     use 'neovim/nvim-lspconfig'
