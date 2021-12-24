@@ -110,6 +110,10 @@ options.config = function()
                 d    = {cmd('UltestDebugNearest'), "debug nearest test"},
                 a    = {cmd('Ultest'), "all tests"},
                 o    = {cmd('UltestOutput'), "test output"},
+            },
+            m = {
+                name = "+modify",
+                s    = { cmd("ISwap"), "swap" }
             }
         },
         -- Explorer

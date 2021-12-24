@@ -37,12 +37,11 @@ packer.startup(function()
     use { 'tweekmonster/startuptime.vim',        cmd = {"StartupTime"} }
     use { 'gyim/vim-boxdraw',                    ft = 'markdown'}
     use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol' }}
-    use {'ntpeters/vim-better-whitespace',       event = "BufWinEnter" }
-    use {'inside/vim-search-pulse',              event = "BufWinEnter" }
+    use { 'ntpeters/vim-better-whitespace',      event = "BufWinEnter" }
+    use { 'inside/vim-search-pulse',             event = "BufWinEnter" }
+    use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
+    use { 'mizlan/iswap.nvim',                   event = "BufWinEnter" }
 
-
-
-    use {'dstein64/nvim-scrollview',             event = "BufWinEnter" }
     -- use 'gpanders/editorconfig.nvim'
     -- use { 'folke/twilight.nvim'}
 
