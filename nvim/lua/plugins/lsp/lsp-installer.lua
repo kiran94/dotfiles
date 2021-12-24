@@ -22,9 +22,9 @@ vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="Diagnost
 vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false,
-        underline = true,
-        signs = true,
+        virtual_text     = false,
+        underline        = true,
+        signs            = true,
         update_in_insert = false
     })
 
