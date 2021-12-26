@@ -15,8 +15,8 @@ options.config = function ()
             -- null_ls.builtins.formatting.golines,
 
             -- Lua
-            null_ls.builtins.formatting.lua_format,
-            -- null_ls.builtins.formatting.stylua,
+            -- null_ls.builtins.formatting.lua_format,
+            null_ls.builtins.formatting.stylua,
 
             -- Others
             null_ls.builtins.formatting.terraform_fmt,
