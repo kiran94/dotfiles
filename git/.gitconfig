@@ -10,3 +10,5 @@
     branch = false
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
