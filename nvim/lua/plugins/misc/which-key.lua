@@ -73,6 +73,7 @@ options.config = function()
                 g = {cmd('GenTocGFM'), "create markdown toc"},
                 b = {cmd('VBox'), "create box or line"},
                 p = {cmd('Glow'), "preview"},
+                s = {':MaimMarkdown<space>', "screenshot"},
             },
             z = {cmd("ZenMode"), "zen mode"},
             t = {cmd(":new term://zsh"), 'terminal' },

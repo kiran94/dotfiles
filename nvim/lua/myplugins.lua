@@ -23,6 +23,7 @@ packer.startup(function()
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
     use { 'rcarriga/vim-ultest',                 config = require'plugins/editor/ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    use { 'kiran94/maim.nvim',                   config = function() require('maim').setup() end }
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { "blackCauldron7/surround.nvim",        config = require'plugins/editor/surround'.config }
