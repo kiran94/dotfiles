@@ -61,3 +61,7 @@ vim.g.python3_host_prog = "/usr/bin/python3"
 set.wildmenu            = true
 set.wildignore          = "*/tmp/*,*.so,*.swp,*.zip,/.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/*,*/node_modules/*" -- MacOSX/Linux
 -- set.wildignore = vim.opt.wildignore .. "*\\tmp\\*,*.swp,*.zip,*.exe,\\.git,*/bin/*,*/obj/*,*egg-info*,htmlcov/*,*/node_modules/*" -- Windows
+
+vim.cmd[[ autocmd BufNewFile,BufRead .eslintrc set ft=json ]]
+vim.cmd[[ autocmd BufNewFile,BufRead .babelrc set ft=json ]]
+-- vim.cmd[[ autocmd BufNewFile,BufRead requirements*.txt set syntax=python ]]
