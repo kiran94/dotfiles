@@ -115,7 +115,7 @@ options.config = function()
                         path = runtime_path
                     },
                     diagnostics = {
-                        globals = {'vim', 'use'},
+                        globals = {'vim', 'use', 'use_rocks'},
                     },
                     workspace = {
                         library = vim.api.nvim_get_runtime_file("", true)
