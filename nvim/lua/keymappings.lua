@@ -69,6 +69,7 @@ vim.cmd [[nnoremap <M-g> <cmd>lua require('telescope.builtin').git_commits(requi
 vim.cmd [[nnoremap <M-r> <cmd>lua require('telescope.builtin').command_history(require('telescope.themes').get_ivy({}))<cr>]]
 vim.cmd [[nnoremap <M-b> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({ignore_current_buffer=true, sort_lastused=true}))<cr>]]
 vim.cmd [[nnoremap <M-q> <cmd>lua require('telescope').extensions.neoclip.default()<cr>]]
+vim.cmd [[nnoremap <M-h> <cmd>lua require('telescope.builtin').help_tags()<cr>]]
 
 --------------------------
 -- SNIPPETS
