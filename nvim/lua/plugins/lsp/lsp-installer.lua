@@ -162,7 +162,7 @@ options.config = function()
     cmp.setup({
         sources = cmp.config.sources({
             { name = 'nvim_lsp',   max_item_count = 10},
-            { name = 'nvim_lua',   max_item_count = 10},
+            { name = 'nvim_lua',   max_item_count = 25},
             { name = 'buffer',     max_item_count = 5},
             { name = 'vsnip',      max_item_count = 10},
             { name = 'treesitter', max_item_count = 5},
