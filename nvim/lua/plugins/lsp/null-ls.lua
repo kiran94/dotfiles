@@ -2,29 +2,33 @@ local options = {}
 
 options.config = function()
 	local null_ls = require("null-ls")
+	local formatting = null_ls.builtins.formatting
+	local diagnostics = null_ls.builtins.diagnostics
+
 	null_ls.setup({
 		sources = {
 			-- Python
-			null_ls.builtins.formatting.autopep8,
-			null_ls.builtins.formatting.isort,
+			formatting.autopep8,
+			formatting.isort,
+			diagnostics.flake8,
 
 			-- Go
-			null_ls.builtins.formatting.gofmt,
-			null_ls.builtins.formatting.goimports,
-			-- null_ls.builtins.formatting.golines,
+			formatting.gofmt,
+			formatting.goimports,
+			-- formatting.golines,
 
 			-- Lua
-			-- null_ls.builtins.formatting.lua_format,
-			null_ls.builtins.formatting.stylua,
+			-- formatting.lua_format,
+			formatting.stylua,
 
 			-- Others
-			null_ls.builtins.formatting.terraform_fmt,
-			null_ls.builtins.formatting.clang_format,
+			formatting.terraform_fmt,
+			formatting.clang_format,
 
 			-- JavaScript
-			-- null_ls.builtins.diagnostics.eslint,
-			-- null_ls.builtins.diagnostics.prettier,
-			null_ls.builtins.formatting.json_tool,
+			-- formatting.eslint,
+			-- formatting.prettier,
+			formatting.json_tool,
 		},
 	})
 end

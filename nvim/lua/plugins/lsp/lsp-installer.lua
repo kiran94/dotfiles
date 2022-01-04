@@ -140,7 +140,8 @@ options.config = function()
             opts.settings = {
                 pylsp = {
                     plugins = {
-                        flake8      = { enabled = true },
+                        -- NOTE: these are now managed in ./null-ls.lua
+                        flake8      = { enabled = false },
                         pycodestyle = { enabled = false },
                         pyflakes    = { enabled = false },
                         yapf        = { enabled = false },
