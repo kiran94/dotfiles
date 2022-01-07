@@ -78,9 +78,11 @@ lsp_kind.init{
     }
 }
 
+
+local lspsaga_installed, _ = pcall(require, 'lspsaga')
 lsp_signature.setup({
     hint_prefix = "",
-    use_lspaga = true,
+    use_lspaga  = lspsaga_installed,
     hint_enable = false
 })
 
