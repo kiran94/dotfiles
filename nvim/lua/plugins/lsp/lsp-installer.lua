@@ -14,7 +14,6 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 table.insert(runtime_path, "~/.local/share/nvim/site/pack/packer/start/packer.nvim/lua")
 
-vim.cmd[[hi Pmenu guibg=Black guifg=White gui=NONE]]
 vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
 vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="DiagnosticSignError"  })
 vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
@@ -27,6 +26,14 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         signs            = true,
         update_in_insert = false
     })
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded"
+})
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    border = "rounded"
+})
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = false;
@@ -71,9 +78,11 @@ lsp_kind.init{
     }
 }
 
+
+local lspsaga_installed, _ = pcall(require, 'lspsaga')
 lsp_signature.setup({
     hint_prefix = "",
-    use_lspaga = true,
+    use_lspaga  = lspsaga_installed,
     hint_enable = false
 })
 
@@ -133,7 +142,8 @@ options.config = function()
             opts.settings = {
                 pylsp = {
                     plugins = {
-                        flake8      = { enabled = true },
+                        -- NOTE: these are now managed in ./null-ls.lua
+                        flake8      = { enabled = false },
                         pycodestyle = { enabled = false },
                         pyflakes    = { enabled = false },
                         yapf        = { enabled = false },
