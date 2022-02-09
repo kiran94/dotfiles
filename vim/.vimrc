@@ -17,12 +17,11 @@ set autoread                   " when the file has been changed outside of vim, 
 set ruler                      " line number and column position shown in the bottom bar
 set hidden                     " when a hidden buffer is abandoned, drop it
 set history                    " history when searching through commands
-set signcolumn=yes             " show the sign column on the left, for git changes for example
+set signcolumn=no             " show the sign column on the left, for git changes for example
 set lazyredraw                 " when executing macros, don't redraw the screen
 set mouse=nv                   " enable mouse
 set tabstop=4                  " one tab = 4 spaces
-set shiftwidth=4               " shift tab = 4
-set expandtab                  " when a tab is inserted, use spaces
+set shiftwidth=4               " shift tab = 4 set expandtab                  " when a tab is inserted, use spaces
 set smarttab                   " when a tab is inserted, use spaces?
 set nobackup                   " no backup files
 set nowritebackup              " no write backup
@@ -42,6 +41,7 @@ nnoremap <leader>ww :w<CR>
 
 " file
 nnoremap <leader>ww :w<CR>
+nnoremap <leader>qq :q<CR>
 
 " escape shortcuts
 inoremap jk <esc>
@@ -49,22 +49,16 @@ inoremap kj <esc>
 nnoremap <C-c> <Esc>
 
 " navigate split screen panes
-nnoremap <C-Left> <C-W>h
-nnoremap <C-Down> <C-W>j
-nnoremap <C-Up> <C-W>k
-nnoremap <C-Right> <C-W>l
-
-" navigate split screen panes 2
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Use alt + hjkl to resize windows
-nnoremap <M-j>    :resize -10<CR>
-nnoremap <M-k>    :resize +10<CR>
-nnoremap <M-l>    :vertical resize -10<CR>
-nnoremap <M-h>    :vertical resize +10<CR>
+nnoremap <M-j> :resize -10<CR>
+nnoremap <M-k> :resize +10<CR>
+nnoremap <M-l> :vertical resize -10<CR>
+nnoremap <M-h> :vertical resize +10<CR>
 
 " working with tabs/buffers
 nnoremap <S-TAB> :bprevious<CR>
@@ -88,8 +82,40 @@ nnoremap <leader>wj <C-W>j<CR>
 nnoremap <leader>wl <C-W>l<CR>
 nnoremap <leader>wk <C-W>k<CR>
 
-syntax=on
+" mock block selections
+xnoremap K :move '<-2<CR>gv-gv 
+xnoremap J :move '>+1<CR>gv-gv 
 
+" Required for ALT key mapping to work
+" in some terminals 
+" https://stackoverflow.com/a/10216459 
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+" PLUGINS
+call plug#begin()
+Plug 'itchyny/lightline.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
+
+" PLUGIN SETTINGS
+colorscheme codedark
+nnoremap <M-p> :CtrlP<CR>
+set laststatus=2
+set timeout ttimeoutlen=50
+let g:lightline = { 'colorscheme': 'wombat'}
+let g:ctrlp_working_path_mode = 'ra'
+
+" Colors
+" must come after colorscheme
 hi Search ctermbg=yellow ctermfg=black
 hi IncSearch ctermbg=black ctermfg=white
 hi Visual ctermbg=yellow ctermfg=black
+hi SignColumn ctermbg=black
+hi Title ctermbg=black
