@@ -2,8 +2,9 @@ local options = {}
 
 options.config = function ()
     require('neoclip').setup({
+
         history = 50,
-        enable_persistant_history = false,
+        enable_persistent_history = false,
         preview = false,
         -- keys = {
            -- telescope = {
