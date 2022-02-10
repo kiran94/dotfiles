@@ -86,6 +86,9 @@ nnoremap <leader>wk <C-W>k<CR>
 xnoremap K :move '<-2<CR>gv-gv 
 xnoremap J :move '>+1<CR>gv-gv 
 
+" explorer
+nnoremap <leader>ee :Lexplore<CR>
+
 " Required for ALT key mapping to work
 " in some terminals 
 " https://stackoverflow.com/a/10216459 
