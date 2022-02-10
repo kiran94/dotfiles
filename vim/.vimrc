@@ -17,16 +17,16 @@ set autoread                   " when the file has been changed outside of vim, 
 set ruler                      " line number and column position shown in the bottom bar
 set hidden                     " when a hidden buffer is abandoned, drop it
 set history                    " history when searching through commands
-set signcolumn=no             " show the sign column on the left, for git changes for example
+set signcolumn=no              " show the sign column on the left, for git changes for example
 set lazyredraw                 " when executing macros, don't redraw the screen
 set mouse=nv                   " enable mouse
 set tabstop=4                  " one tab = 4 spaces
-set shiftwidth=4               " shift tab = 4 set expandtab                  " when a tab is inserted, use spaces
+set shiftwidth=4               " shift tab = 4 set expandtab when a tab is inserted, use spaces
 set smarttab                   " when a tab is inserted, use spaces?
 set nobackup                   " no backup files
 set nowritebackup              " no write backup
 set noswapfile                 " no swap files
-" set termguicolors              " set 24-bit colors
+" set termguicolors            " set 24-bit colors
 set clipboard=unnamedplus      " allow pasting from external programs
 set nowrap                     " don't word wrap
 set scrolloff=8                " scroll before you hit the bottom of the screen
