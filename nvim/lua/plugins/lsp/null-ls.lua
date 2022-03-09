@@ -16,6 +16,7 @@ options.config = function()
 			formatting.gofmt,
 			formatting.goimports,
 			-- formatting.golines,
+			diagnostics.staticcheck,
 
 			-- Lua
 			-- formatting.lua_format,

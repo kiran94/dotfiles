@@ -64,4 +64,5 @@ set.wildignore          = "*/tmp/*,*.so,*.swp,*.zip,/.git,*/bin/*,*/obj/*,*egg-i
 
 vim.cmd[[ autocmd BufNewFile,BufRead .eslintrc set ft=json ]]
 vim.cmd[[ autocmd BufNewFile,BufRead .babelrc set ft=json ]]
+vim.cmd[[ autocmd BufNewFile,BufRead .releaserc set ft=json ]]
 -- vim.cmd[[ autocmd BufNewFile,BufRead requirements*.txt set syntax=python ]]

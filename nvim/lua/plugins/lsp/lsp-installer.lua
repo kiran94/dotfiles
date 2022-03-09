@@ -49,11 +49,10 @@ capabilities.textDocument.codeAction = {
         }
     }
 }
-
 cmp_nvim_lsp.update_capabilities(capabilities)
 
 lsp_kind.init{
-    with_text = true,
+    mode = 'symbol_text',
     symbol_map = {
         Text        = "",
         Method      = "ƒ",
