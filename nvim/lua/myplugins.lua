@@ -66,8 +66,13 @@ packer.startup(function()
     use 'folke/lsp-colors.nvim'
     use 'b0o/SchemaStore.nvim'
     -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
-    use { 'jose-elias-alvarez/null-ls.nvim',   config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
-    use { 'tami5/lspsaga.nvim',                config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig' }
+    use { 'jose-elias-alvarez/null-ls.nvim', config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
+    use { 'tami5/lspsaga.nvim',              config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig' }
+
+    -- :call mkdp#util#install()
+    use { 'iamcco/markdown-preview.nvim',    config   = require'plugins/misc/markdown-preview'.config, ft = 'markdown', run = 'cd app && yarn install'}
+
+
 
     -- WARN: Needs with Neovim 0.6 dependency
     -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
