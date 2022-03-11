@@ -28,6 +28,7 @@ packer.startup(function()
     use { 'rcarriga/nvim-notify',                config   = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { "blackCauldron7/surround.nvim",        config   = require'plugins/editor/surround'.config }
     use { 'kevinhwang91/nvim-hlslens',           config   = require'plugins/editor/hlslens'.config }
+    use { 'iamcco/markdown-preview.nvim',        config   = require'plugins/misc/markdown-preview'.config, ft = 'markdown', run = 'cd app && yarn install'}
     use { 'nvim-treesitter/nvim-treesitter',     run      = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
     use { 'jbyuki/venn.nvim',                    cmd      = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
@@ -43,7 +44,7 @@ packer.startup(function()
     use { 'mizlan/iswap.nvim',                   event    = "BufWinEnter" }
     use {'ray-x/go.nvim',                        config = require'plugins/misc/rayxgo'.config, ft = {"go", "gomod", "gotmpl"}}
 
-    -- LSP
+    -- LSP:
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
     use 'ray-x/lsp_signature.nvim'
@@ -62,18 +63,10 @@ packer.startup(function()
     use 'rafamadriz/friendly-snippets'
     use 'folke/lsp-colors.nvim'
     use 'b0o/SchemaStore.nvim'
-    -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
     use { 'jose-elias-alvarez/null-ls.nvim', config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
     use { 'tami5/lspsaga.nvim',              config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig' }
 
-    -- :call mkdp#util#install()
-    use { 'iamcco/markdown-preview.nvim',    config   = require'plugins/misc/markdown-preview'.config, ft = 'markdown', run = 'cd app && yarn install'}
-    -- use 'gpanders/editorconfig.nvim'
-
-    -- WARN: Needs with Neovim 0.6 dependency
-    -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
-
-    -- COLOR SCHEMES
+    -- COLORSCHEMES:
     use 'Mofiqul/vscode.nvim'
     -- use {'tomasiser/vim-code-dark' }
     -- use {'rose-pine/neovim',}
@@ -81,7 +74,11 @@ packer.startup(function()
     -- use {'projekt0n/github-nvim-theme'}
     -- use {'folke/tokyonight.nvim'}
 
+    -- PENDING:
+    -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }  WARN: Needs Neovim 0.6
+    -- use 'gpanders/editorconfig.nvim'
     -- use { 'ChristianChiarulli/vim-solidity',     ft       = {'solidity', 'sol' }}
+    -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 end)
 
 require'plugins/lsp/lsp-installer'.config()
