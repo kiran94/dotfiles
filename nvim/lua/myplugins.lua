@@ -3,50 +3,48 @@ local packer = require('packer')
 packer.startup(function()
     use 'wbthomason/packer.nvim'
 
-    use { 'goolord/alpha-nvim',                  config = require'plugins/misc/dashboard'.config, requires = { 'kyazdani42/nvim-web-devicons' } }
-    use { 'lewis6991/gitsigns.nvim',             config = require'plugins/editor/gitsigns'.config, requires = { 'nvim-lua/plenary.nvim' }, event = "BufWinEnter" }
-    use { 'folke/which-key.nvim',                config = require'plugins/misc/which-key'.config, keys = '<leader>' }
-    use { 'windwp/nvim-autopairs',               config = require'plugins/editor/nvim-autopairs'.config, event = "BufWinEnter" }
-    use { 'ethanholz/nvim-lastplace',            config = require'plugins/misc/nvim-lastplace'.config }
-    use { 'ahmedkhalf/project.nvim',             config = require'plugins/misc/project'.config, event = "BufWinEnter" }
-    use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
-    use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config, event = "BufWinEnter" }
-    use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
-    use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
-    use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
-    use { "AckslD/nvim-neoclip.lua",             config = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
-    use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
-    use { 'hoob3rt/lualine.nvim',                config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-    use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
-    -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
-    use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter", cmd = {"Neogen"} }
-    use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
-    use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
-    use { 'rcarriga/vim-ultest',                 config = require'plugins/editor/ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
-    use { 'kiran94/maim.nvim',                   config = function() require('maim').setup() end }
-    use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
-    use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
-    use { "blackCauldron7/surround.nvim",        config = require'plugins/editor/surround'.config }
-    use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
-    use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
+    use { 'goolord/alpha-nvim',                  config   = require'plugins/misc/dashboard'.config, requires = { 'kyazdani42/nvim-web-devicons' } }
+    use { 'lewis6991/gitsigns.nvim',             config   = require'plugins/editor/gitsigns'.config, requires = { 'nvim-lua/plenary.nvim' }, event = "BufWinEnter" }
+    use { 'folke/which-key.nvim',                config   = require'plugins/misc/which-key'.config, keys = '<leader>' }
+    use { 'windwp/nvim-autopairs',               config   = require'plugins/editor/nvim-autopairs'.config, event = "BufWinEnter" }
+    use { 'ethanholz/nvim-lastplace',            config   = require'plugins/misc/nvim-lastplace'.config }
+    use { 'ahmedkhalf/project.nvim',             config   = require'plugins/misc/project'.config, event = "BufWinEnter" }
+    use { 'folke/todo-comments.nvim',            config   = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
+    use { 'numToStr/Comment.nvim',               config   = require'plugins/editor/comment'.config, event = "BufWinEnter" }
+    use { 'chentau/marks.nvim',                  config   = require'plugins/editor/marks'.config, event = "BufWinEnter"}
+    use { 'norcalli/nvim-colorizer.lua',         config   = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
+    use { 'kyazdani42/nvim-tree.lua',            config   = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
+    use { "AckslD/nvim-neoclip.lua",             config   = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
+    use { 'nvim-telescope/telescope.nvim',       config   = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
+    use { 'hoob3rt/lualine.nvim',                config   = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+    use { 'akinsho/nvim-bufferline.lua',         config   = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
+    -- use { 'mhartington/formatter.nvim',       config   = require'plugins/editor/formatter'.config }
+    use { 'danymat/neogen',                      config   = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter", cmd = {"Neogen"} }
+    use { 'lukas-reineke/indent-blankline.nvim', config   = require'plugins/editor/indent-blankline'.config }
+    use { 'mzlogin/vim-markdown-toc',            config   = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
+    use { 'rcarriga/vim-ultest',                 config   = require'plugins/editor/ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    use { 'kiran94/maim.nvim',                   config   = function() require('maim').setup() end }
+    use { 'beauwilliams/focus.nvim',             config   = require'plugins/editor/focus'.config, event = "BufWinEnter" }
+    use { 'rcarriga/nvim-notify',                config   = require'plugins/misc/notify'.config, event = "BufWinEnter" }
+    use { "blackCauldron7/surround.nvim",        config   = require'plugins/editor/surround'.config }
+    use { 'kevinhwang91/nvim-hlslens',           config   = require'plugins/editor/hlslens'.config }
+    use { 'iamcco/markdown-preview.nvim',        config   = require'plugins/misc/markdown-preview'.config, ft = 'markdown', run = 'cd app && yarn install'}
+    use { 'nvim-treesitter/nvim-treesitter',     run      = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
-    use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
+    use { 'jbyuki/venn.nvim',                    cmd      = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
     use { 'sindrets/diffview.nvim',              requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
-    use { 'ellisonleao/glow.nvim',               cmd = {'Glow', 'GlowInstall'} }
-    use { 'folke/zen-mode.nvim',                 cmd = { "ZenMode" } }
-    use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
-    use { 'tweekmonster/startuptime.vim',        cmd = {"StartupTime"} }
-    use { 'gyim/vim-boxdraw',                    ft = 'markdown'}
-    use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol' }}
-    use { 'ntpeters/vim-better-whitespace',      event = "BufWinEnter" }
-    use { 'inside/vim-search-pulse',             event = "BufWinEnter" }
-    use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
-    use { 'mizlan/iswap.nvim',                   event = "BufWinEnter" }
+    use { 'ellisonleao/glow.nvim',               cmd      = {'Glow', 'GlowInstall'} }
+    use { 'folke/zen-mode.nvim',                 cmd      = { "ZenMode" } }
+    use { 'junegunn/vim-easy-align',             cmd      = { "EasyAlign" } }
+    use { 'tweekmonster/startuptime.vim',        cmd      = {"StartupTime"} }
+    use { 'gyim/vim-boxdraw',                    ft       = 'markdown'}
+    use { 'ntpeters/vim-better-whitespace',      event    = "BufWinEnter" }
+    use { 'inside/vim-search-pulse',             event    = "BufWinEnter" }
+    use { 'dstein64/nvim-scrollview',            event    = "BufWinEnter" }
+    use { 'mizlan/iswap.nvim',                   event    = "BufWinEnter" }
+    use {'ray-x/go.nvim',                        config = require'plugins/misc/rayxgo'.config, ft = {"go", "gomod", "gotmpl"}}
 
-    -- use 'gpanders/editorconfig.nvim'
-    -- use { 'folke/twilight.nvim'}
-
-    -- LSP
+    -- LSP:
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
     use 'ray-x/lsp_signature.nvim'
@@ -65,20 +63,22 @@ packer.startup(function()
     use 'rafamadriz/friendly-snippets'
     use 'folke/lsp-colors.nvim'
     use 'b0o/SchemaStore.nvim'
-    -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
-    use { 'jose-elias-alvarez/null-ls.nvim',   config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
-    use { 'tami5/lspsaga.nvim',                config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig' }
+    use { 'jose-elias-alvarez/null-ls.nvim', config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
+    use { 'tami5/lspsaga.nvim',              config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig' }
 
-    -- WARN: Needs with Neovim 0.6 dependency
-    -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
-
-    -- COLOR SCHEMES
+    -- COLORSCHEMES:
     use 'Mofiqul/vscode.nvim'
     -- use {'tomasiser/vim-code-dark' }
     -- use {'rose-pine/neovim',}
     -- use {'lighthaus-theme/vim-lighthaus'}
     -- use {'projekt0n/github-nvim-theme'}
     -- use {'folke/tokyonight.nvim'}
+
+    -- PENDING:
+    -- use { "folke/trouble.nvim", config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }  WARN: Needs Neovim 0.6
+    -- use 'gpanders/editorconfig.nvim'
+    -- use { 'ChristianChiarulli/vim-solidity',     ft       = {'solidity', 'sol' }}
+    -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 end)
 
 require'plugins/lsp/lsp-installer'.config()
