@@ -77,6 +77,7 @@ options.config = function()
             },
             z = {cmd("ZenMode"), "zen mode"},
             t = {cmd(":new term://zsh"), 'terminal' },
+            d = {cmd("TroubleToggle"), 'diagnostics' }
         },
         -- Code
         c = {
