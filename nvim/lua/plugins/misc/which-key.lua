@@ -64,7 +64,7 @@ options.config = function()
                 name = "+packer",
                 s    = {cmd("PackerSync"), "packer sync"},
                 i    = {cmd("PackerInstall"), "packer install"},
-                c    = {cmd("PackerCompile"), "packer compile"},
+                c    = {cmd("PackerCompile") .. cmd("echo 'compiled!'"), "packer compile"},
                 r    = {cmd("PackerClean"), "packer clean"}
             },
             m = {
