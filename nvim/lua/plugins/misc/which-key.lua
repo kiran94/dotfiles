@@ -95,9 +95,10 @@ options.config = function()
             f = {cmd("lua vim.lsp.buf.formatting()"), "format"},
             d = {cmd("Neogen"), "generate docs"},
             r = {
-                r = {cmd("lua vim.lsp.buf.references()"), "references"},
+                name = '+refactor',
                 -- n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
-                n = {cmd("Lspsaga rename"), "rename"}
+                n = {cmd("Lspsaga rename"), "rename"},
+                r = {cmd("lua vim.lsp.buf.references()"), "references"},
             },
             g = {
                 name = "+git",
