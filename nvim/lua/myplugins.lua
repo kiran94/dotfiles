@@ -15,7 +15,6 @@ packer.startup(function()
     use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
     use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
-    -- use { "AckslD/nvim-neoclip.lua",             config = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
     -- use { 'akinsho/nvim-bufferline.lua',         config = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
     -- -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
@@ -26,7 +25,6 @@ packer.startup(function()
     use { 'kiran94/maim.nvim',                   config = function() require('maim').setup() end }
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
-    -- use { "blackCauldron7/surround.nvim",        config = require'plugins/editor/surround'.config }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
@@ -37,13 +35,11 @@ packer.startup(function()
     use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
     use { 'tweekmonster/startuptime.vim',        cmd = {"StartupTime"} }
     use { 'gyim/vim-boxdraw',                    ft = 'markdown'}
-    -- use { 'ChristianChiarulli/vim-solidity',     ft = {'solidity', 'sol' }}
     use { 'ntpeters/vim-better-whitespace',      event = "BufWinEnter" }
     use { 'inside/vim-search-pulse',             event = "BufWinEnter" }
     use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
     use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
     use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
-
     use 'gpanders/editorconfig.nvim'
 
     -- LSP
@@ -65,18 +61,24 @@ packer.startup(function()
     use 'rafamadriz/friendly-snippets'
     use 'folke/lsp-colors.nvim'
     use 'b0o/SchemaStore.nvim'
-    -- use { 'weilbith/nvim-code-action-menu', config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
     use { 'jose-elias-alvarez/null-ls.nvim', config = require'plugins/lsp/null-ls'.config, requires = 'nvim-lua/plenary.nvim'}
-    use { 'tami5/lspsaga.nvim',              config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig' }
-    use { "folke/trouble.nvim",              config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons" }
+    use { 'tami5/lspsaga.nvim',              config = require'plugins/lsp/lspsaga'.config, requires = 'neovim/nvim-lspconfig', cmd = 'Lspsaga' }
+    use { "folke/trouble.nvim",              config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" }
+    use { "ThePrimeagen/refactoring.nvim",   config = require'plugins/lsp/refactoring'.config, requires = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" }
+    -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
-    use {'tomasiser/vim-code-dark' }
-    use {'rose-pine/neovim',}
-    use {'lighthaus-theme/vim-lighthaus'}
-    use {'projekt0n/github-nvim-theme'}
-    use {'folke/tokyonight.nvim'}
+    -- use {'tomasiser/vim-code-dark' }
+    -- use {'rose-pine/neovim',}
+    -- use {'lighthaus-theme/vim-lighthaus'}
+    -- use {'projekt0n/github-nvim-theme'}
+    -- use {'folke/tokyonight.nvim'}
+
+    -- OLD
+    -- use { "AckslD/nvim-neoclip.lua",          config = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
+    -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
+    -- use { 'ChristianChiarulli/vim-solidity',  ft = {'solidity', 'sol' }}
 end)
 
 require'plugins/lsp/lsp-installer'.config()
