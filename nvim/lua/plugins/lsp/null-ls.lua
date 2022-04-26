@@ -29,7 +29,8 @@ options.config = function()
 			-- JavaScript
 			-- formatting.eslint,
 			-- formatting.prettier,
-			formatting.json_tool,
+			-- formatting.json_tool,
+			formatting.jq,
 		},
 	})
 end
