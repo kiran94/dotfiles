@@ -17,8 +17,10 @@ options.config = function()
                 "obj/",
                 "**/*.png",
                 "**/*.jpeg",
+                "viml_legacy/",
                 "**/.mypy_cache/*",
-                "viml_legacy/"
+                "__pycache__/*",
+                ".pytest_cache/*"
             }
         }
     }
