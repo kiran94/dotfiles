@@ -237,7 +237,7 @@ options.config = function()
                 }
 
                 vim_item.kind = string.format("%s %s", lsp_kind.presets.default[vim_item.kind], vim_item.kind)
-                vim_item.menu = string.format("%s %s", menu_dict[entry.source.name], menu_literal[entry.source.name])
+                vim_item.menu = string.format("%s %s", menu_dict[entry.source.name] or '', menu_literal[entry.source.name] or '')
                 return vim_item
             end
         },
