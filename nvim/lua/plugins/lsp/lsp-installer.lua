@@ -19,16 +19,7 @@ vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="Diagnost
 vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
 vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="DiagnosticSignInformation"  })
 vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
--- vim.lsp.handlers["textDocument/publishDiagnostics"] =
---     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
---         virtual_text     = false,
---         underline        = true,
---         signs            = true,
---         update_in_insert = false
--- })
 
-
--- NOTE: New from 0.6
 vim.diagnostic.config({
 	virtual_text     = false,
 	underline        = false,
