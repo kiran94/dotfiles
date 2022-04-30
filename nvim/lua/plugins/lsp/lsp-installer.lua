@@ -94,8 +94,8 @@ lsp_signature.setup({
     hint_enable = false
 })
 
-local on_attach = function(client, _)
-    lsp_signature.on_attach(client)
+local on_attach = function(client, bufnr)
+    lsp_signature.on_attach(client, bufnr)
 
     -- NOTE: This is being disabled
     -- because null-ls is handling the formatting
