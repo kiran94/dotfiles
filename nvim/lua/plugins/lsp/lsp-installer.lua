@@ -163,6 +163,7 @@ options.config = function()
                         pyflakes    = { enabled = false },
                         yapf        = { enabled = false },
                         pylint      = { enabled = false },
+                        mccabe      = { enabled = false },
                     }
                 }
             }
