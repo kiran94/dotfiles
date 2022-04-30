@@ -64,8 +64,9 @@ options.config = function()
                 name = "+packer",
                 s    = {cmd("PackerSync"), "packer sync"},
                 i    = {cmd("PackerInstall"), "packer install"},
-                c    = {cmd("PackerCompile"), "packer compile"},
-                r    = {cmd("PackerClean"), "packer clean"}
+                c    = {cmd("PackerCompile") .. cmd("echo 'compiled!'"), "packer compile"},
+                r    = {cmd("PackerClean"), "packer clean"},
+                x    = {cmd("lua require('packer').snapshot()"), "packer snapshot"}
             },
             m = {
                 name = '+markdown',
@@ -77,6 +78,7 @@ options.config = function()
             },
             z = {cmd("ZenMode"), "zen mode"},
             t = {cmd(":new term://zsh"), 'terminal' },
+            d = {cmd("TroubleToggle"), 'diagnostics' }
         },
         -- Code
         c = {
@@ -94,9 +96,10 @@ options.config = function()
             f = {cmd("lua vim.lsp.buf.formatting()"), "format"},
             d = {cmd("Neogen"), "generate docs"},
             r = {
-                r = {cmd("lua vim.lsp.buf.references()"), "references"},
+                name = '+refactor',
                 -- n = {cmd("lua vim.lsp.buf.rename()"), "rename"}
-                n = {cmd("Lspsaga rename"), "rename"}
+                n = {cmd("Lspsaga rename"), "rename"},
+                r = {cmd("lua vim.lsp.buf.references()"), "references"},
             },
             g = {
                 name = "+git",

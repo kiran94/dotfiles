@@ -7,7 +7,6 @@ options.config = function()
       hijack_netrw        = true,  -- hijack netrw window on startup
       open_on_setup       = false, -- open the tree when running this setup function
       ignore_ft_on_setup  = {},    -- will not open on setup if the filetype is in this list
-      auto_close          = true,  -- closes neovim automatically when the tree is the last **WINDOW** in the view
       open_on_tab         = true,  -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
 
       -- hijacks new directory buffers when they are opened.
@@ -51,6 +50,10 @@ options.config = function()
         }
       }
     }
+
+    -- Automatically close nvim when nvim-tree is the last window
+    vim.cmd[[ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif ]]
 end
+
 
 return options

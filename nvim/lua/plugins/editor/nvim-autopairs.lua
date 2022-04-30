@@ -5,7 +5,11 @@ options.config = function()
     autopairs.setup()
 
     -- If you want insert `(` after select function or method item
-    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+    local ok, cmp_autopairs = pcall(require, 'nvim-autopairs.completion.cmp')
+	if not ok then
+		return
+	end
+
     local ok, cmp = pcall(require, 'cmp')
     if not ok then
         return

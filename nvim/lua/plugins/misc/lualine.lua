@@ -54,6 +54,7 @@ options.config = function()
     require "lualine".setup {
         options = {
             icons_enabled        = true,
+            globalstatus         = true,
             theme                = "vscode", -- material
             component_separators = {"", ""},
             section_separators   = {"", ""},
@@ -61,7 +62,7 @@ options.config = function()
             sources              = {"nvim_diagnostic"},
             color_error          = "#ec5f67",
             color_warn           = "#FF8800",
-            color_info           = "#008080"
+            color_info           = "#008080",
         },
         sections = {
             lualine_a = {"mode"},
