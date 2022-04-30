@@ -20,11 +20,11 @@ options.config = function ()
         enable        = true,
         sign          = true,
         sign_priority = 1,
-        virtual_text  = true,
+        virtual_text  = false,
       },
       finder_definition_icon = "  ",
       finder_reference_icon  = "  ",
-      max_preview_lines      = 10,
+      max_preview_lines      = 100,
       finder_action_keys = {
         open        = "o",
         vsplit      = "s",
