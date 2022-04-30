@@ -91,7 +91,11 @@ local lspsaga_installed, _ = pcall(require, 'lspsaga')
 lsp_signature.setup({
     hint_prefix = "",
     use_lspaga  = lspsaga_installed,
-    hint_enable = false
+    hint_enable = false,
+    bind = true,
+    handler_opts = {
+        border = "rounded"
+    }
 })
 
 local on_attach = function(client, bufnr)
