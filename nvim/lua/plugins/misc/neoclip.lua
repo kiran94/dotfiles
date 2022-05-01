@@ -17,6 +17,9 @@ options.config = function()
 		--  },
 		-- }
 	})
+
+
+    vim.keymap.set('n', '<M-q>', function() telescope().extensions.neoclip.default() end)
 end
 
 return options
