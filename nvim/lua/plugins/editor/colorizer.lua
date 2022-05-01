@@ -1,7 +1,7 @@
 local options = {}
 
 options.config = function()
-    require("colorizer").setup()
+	require("colorizer").setup()
 end
 
 return options
