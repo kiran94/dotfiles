@@ -6,5 +6,4 @@ options.twilight_config = function()
 	})
 end
 
-
 return options
