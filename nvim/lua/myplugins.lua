@@ -26,6 +26,7 @@ packer.startup(function()
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
+    use { 'nkakouros-original/numbers.nvim',     config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
     use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
@@ -66,6 +67,7 @@ packer.startup(function()
     use { "folke/trouble.nvim",              config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" }
     use { "ThePrimeagen/refactoring.nvim",   config = require'plugins/lsp/refactoring'.config, requires = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
+
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
