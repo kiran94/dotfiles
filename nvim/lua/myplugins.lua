@@ -40,7 +40,7 @@ packer.startup(function()
     use { 'inside/vim-search-pulse',             event = "BufWinEnter" }
     use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
     use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
-    use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
+    use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
     use 'gpanders/editorconfig.nvim'
 
     -- LSP
