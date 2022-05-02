@@ -27,10 +27,11 @@ packer.startup(function()
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
     use { 'nkakouros-original/numbers.nvim',     config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
+    use { 'akinsho/git-conflict.nvim',           config = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
-    use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
     use { 'sindrets/diffview.nvim',              requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
+    use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
     use { 'ellisonleao/glow.nvim',               cmd = {'Glow', 'GlowInstall'} }
     use { 'folke/zen-mode.nvim',                 cmd = { "ZenMode" } }
     use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
