@@ -78,7 +78,7 @@ lsp_signature.setup({
     hint_prefix = "",
     use_lspaga  = lspsaga_installed,
     hint_enable = false,
-    bind = true,
+    -- bind = true,
     handler_opts = {
         border = "rounded"
     }
