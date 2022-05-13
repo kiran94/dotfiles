@@ -23,3 +23,6 @@ ln -vnsf $DOTFILESSYNC_DIR/vim/.vimrc ~/.vimrc
 ln -vnsf $DOTFILESSYNC_DIR/gdb/gdbinit ~/.config/gdb/gdbinit
 ln -vnsf $DOTFILESSYNC_DIR/ptpython/config.py ~/.config/ptpython/config.py
 ln -vnsf $DOTFILESSYNC_DIR/vim/.vimrc ~/.vimrc
+ln -vnsf $DOTFILESSYNC_DIR/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
+ln -vnsf $DOTFILESSYNC_DIR/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
+ln -vnsf $DOTFILESSYNC_DIR/picom/picom.conf ~/.config/picom/picom.conf
