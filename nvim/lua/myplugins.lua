@@ -26,10 +26,12 @@ packer.startup(function()
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
+    use { 'nkakouros-original/numbers.nvim',     config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
+    use { 'akinsho/git-conflict.nvim',           config = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
-    use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
     use { 'sindrets/diffview.nvim',              requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
+    use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
     use { 'ellisonleao/glow.nvim',               cmd = {'Glow', 'GlowInstall'} }
     use { 'folke/zen-mode.nvim',                 cmd = { "ZenMode" } }
     use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
@@ -39,7 +41,7 @@ packer.startup(function()
     use { 'inside/vim-search-pulse',             event = "BufWinEnter" }
     use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
     use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
-    use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
+    use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
     use 'gpanders/editorconfig.nvim'
 
     -- LSP
@@ -66,6 +68,7 @@ packer.startup(function()
     use { "folke/trouble.nvim",              config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" }
     use { "ThePrimeagen/refactoring.nvim",   config = require'plugins/lsp/refactoring'.config, requires = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
+
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}

@@ -62,14 +62,16 @@ vim.cmd [[tnoremap <Esc> <C-\><C-N>]]
 --------------------------
 -- TELESCOPE
 --------------------------
-vim.cmd [[nnoremap <M-p> <cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_ivy({hidden=true}))<cr>]]
-vim.cmd [[nnoremap <M-o> <cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({}))<cr>]]
-vim.cmd [[nnoremap <M-/> <cmd>lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({}))<cr>]]
-vim.cmd [[nnoremap <M-g> <cmd>lua require('telescope.builtin').git_commits(require('telescope.themes').get_ivy({}))<cr>]]
-vim.cmd [[nnoremap <M-r> <cmd>lua require('telescope.builtin').command_history(require('telescope.themes').get_ivy({}))<cr>]]
-vim.cmd [[nnoremap <M-b> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({ignore_current_buffer=true, sort_lastused=true}))<cr>]]
-vim.cmd [[nnoremap <M-q> <cmd>lua require('telescope').extensions.neoclip.default()<cr>]]
-vim.cmd [[nnoremap <M-H> <cmd>lua require('telescope.builtin').help_tags()<cr>]]
+local function telescope() return require('telescope.builtin') end
+local function telescope_theme() return require('telescope.themes').get_ivy({hidden=true}) end
+
+vim.keymap.set('n', '<M-p>', function() telescope().find_files(telescope_theme()) end)
+vim.keymap.set('n', '<M-o>', function() telescope().treesitter(telescope_theme()) end)
+vim.keymap.set('n', '<M-/>', function() telescope().live_grep(telescope_theme()) end)
+vim.keymap.set('n', '<M-g>', function() telescope().git_commits(telescope_theme()) end)
+vim.keymap.set('n', '<M-r>', function() telescope().command_history(telescope_theme()) end)
+vim.keymap.set('n', '<M-b>', function() telescope().buffers(telescope_theme()) end)
+vim.keymap.set('n', '<M-H>', function() telescope().help_tags(telescope_theme()) end)
 
 --------------------------
 -- SNIPPETS

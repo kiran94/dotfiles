@@ -19,16 +19,7 @@ vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="Diagnost
 vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
 vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="DiagnosticSignInformation"  })
 vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
--- vim.lsp.handlers["textDocument/publishDiagnostics"] =
---     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
---         virtual_text     = false,
---         underline        = true,
---         signs            = true,
---         update_in_insert = false
--- })
 
-
--- NOTE: New from 0.6
 vim.diagnostic.config({
 	virtual_text     = false,
 	underline        = false,
@@ -36,13 +27,8 @@ vim.diagnostic.config({
 	update_in_insert = true,
 })
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded"
-})
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-    border = "rounded"
-})
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = false;
@@ -91,11 +77,15 @@ local lspsaga_installed, _ = pcall(require, 'lspsaga')
 lsp_signature.setup({
     hint_prefix = "",
     use_lspaga  = lspsaga_installed,
-    hint_enable = false
+    hint_enable = false,
+    -- bind = true,
+    handler_opts = {
+        border = "rounded"
+    }
 })
 
-local on_attach = function(client, _)
-    lsp_signature.on_attach(client)
+local on_attach = function(client, bufnr)
+    lsp_signature.on_attach(client, bufnr)
 
     -- NOTE: This is being disabled
     -- because null-ls is handling the formatting
@@ -136,6 +126,9 @@ options.config = function()
                     },
                     workspace = {
                         library = vim.api.nvim_get_runtime_file("", true)
+                    },
+                    telemetry = {
+                        enable = false,
                     }
                 }
             }
@@ -156,6 +149,7 @@ options.config = function()
                         pyflakes    = { enabled = false },
                         yapf        = { enabled = false },
                         pylint      = { enabled = false },
+                        mccabe      = { enabled = false },
                     }
                 }
             }
@@ -243,7 +237,7 @@ options.config = function()
                 }
 
                 vim_item.kind = string.format("%s %s", lsp_kind.presets.default[vim_item.kind], vim_item.kind)
-                vim_item.menu = string.format("%s %s", menu_dict[entry.source.name], menu_literal[entry.source.name])
+                vim_item.menu = string.format("%s %s", menu_dict[entry.source.name] or '', menu_literal[entry.source.name] or '')
                 return vim_item
             end
         },
@@ -254,14 +248,12 @@ options.config = function()
 
     -- Cmd Completion
     -- NOTE: This breaks tab completion in command
-  --   cmp.setup.cmdline(':', {
-  --     sources = cmp.config.sources({
-  --         { name = 'path' }
-  --     },
-  --     {
-  --         { name = 'cmdline' }
-  --     })
-  -- })
+    cmp.setup.cmdline(':', {
+      sources = cmp.config.sources(
+          { { name = 'path',    max_item_count = 5 } },
+          { { name = 'cmdline', max_item_count = 20 } }
+      )
+  })
 
    -- Cmd Completion (Search)
     cmp.setup.cmdline('/', {

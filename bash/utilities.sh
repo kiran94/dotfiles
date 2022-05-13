@@ -62,3 +62,10 @@ function githome
         CURRENT=$(pwd)
     done
 }
+
+function speed_test
+{
+    SAVE_LOC=$HOME/Dropbox/Data/Broadband/data.jsonl
+    echo "Running Speed Test and saving in" $SAVE_LOC
+    speedtest --json >> $SAVE_LOC
+}

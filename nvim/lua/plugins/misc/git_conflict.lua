@@ -1,7 +1,7 @@
 local options = {}
 
 options.config = function()
-	require("todo-comments").setup({})
+	require("git-conflict").setup()
 end
 
 return options
