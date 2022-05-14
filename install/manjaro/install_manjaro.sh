@@ -71,3 +71,9 @@ sudo systemctl enable mpd
 # https://bbs.archlinux.org/viewtopic.php?id=240023
 yay -S xss-lock
 sudo pacman -S slock
+
+
+sudo pacman -S lxsession
+
+
+
