@@ -9,6 +9,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 feh --bg-scale --randomize ~/.config/wallpapers/wallpapers/* &
 picom --experimental-backends &
 lxsession &
+redshift &
 
 $HOME/.config/polybar/launch.sh --colorblocks &
 
