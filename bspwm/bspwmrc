@@ -6,10 +6,9 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 # feh --bg-scale ~/Pictures/325083.jpg &
-feh --bg-scale --randomize ~/.config/wallpapers/wallpapers/* &
-picom --experimental-backends &
-
-$HOME/.config/polybar/launch.sh --colorblocks &
+# feh --bg-scale --randomize ~/.config/wallpapers/wallpapers/* &
+# picom --experimental-backends &
+# $HOME/.config/polybar/launch.sh --colorblocks &
 
 ####################################
 # CONFIGURATION
