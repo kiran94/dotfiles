@@ -59,6 +59,9 @@ alias spark_master_stop=/opt/spark/sbin/stop-master.sh
 alias spark_worker_start="/opt/spark/sbin/start-worker.sh $SPARK_HOST --cores 2 --memory 2G"
 alias spark_worker_stop=/opt/spark/sbin/stop-worker.sh
 
+alias bluetooth=blueberry
+alias wifi=nm-connection-editor
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi

@@ -60,3 +60,23 @@ sed -i 's/INFO/WARN/' $SPARK_HOME/conf/log4j.properties
 
 # Run Spark client and attach to host
 pyspark --master $SPARK_HOST
+
+# Music Player Daemon
+sudo pacman -Ss extra/mpd
+sudo systemctl status mpd
+sudo systemctl enable mpd
+
+
+# https://unix.stackexchange.com/a/149883
+# https://bbs.archlinux.org/viewtopic.php?id=240023
+yay -S xss-lock
+sudo pacman -S slock
+
+
+sudo pacman -S lxsession
+sudo pacman -S redshift
+sudo pacman -S pulseaudio-bluetooth
+
+
+
+
