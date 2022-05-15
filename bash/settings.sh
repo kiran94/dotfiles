@@ -3,7 +3,7 @@
 [ -n "$BASH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && `echo $BASH_SOURCE`
 [ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
 
-if which nvim >/dev/null; then
+if which nvim 2>/dev/null; then
     export EDITOR=nvim
 else
     export EDITOR=vim
