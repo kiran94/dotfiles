@@ -18,7 +18,7 @@ ln -vnsf $DOTFILESSYNC_DIR/git/.gitconfig ~/.gitconfig
 ln -vnsf $DOTFILESSYNC_DIR/gdb/gdbinit ~/.config/gdb/gdbinit
 
 # TERMINAL / PROMPT
-ln -vnsf $DOTFILESSYNC_DIR/alacritty ~/.config/alacritty
+ln -vnsf $DOTFILESSYNC_DIR/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -vnsf $DOTFILESSYNC_DIR/tmux/.tmux.conf ~/.tmux.conf
 ln -vnsf $DOTFILESSYNC_DIR/starship/starship.toml ~/.config/starship.toml
 
