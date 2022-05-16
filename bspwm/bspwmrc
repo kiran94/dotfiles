@@ -1,0 +1,24 @@
+#! /bin/sh
+
+####################################
+# START BACKGROUND PROCESSES
+####################################
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+# feh --bg-scale --randomize ~/.config/wallpapers/wallpapers/* &
+# picom --experimental-backends &
+# $HOME/.config/polybar/launch.sh --colorblocks &
+
+####################################
+# CONFIGURATION
+####################################o
+
+# Find Monitor Name: bspc query -M --names
+# bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor eDP-1 -d 1 2 3 4 5
+
+bspc config border_width        2     # Border (active window) width
+bspc config window_gap          10    # Gap between tiled windows
+bspc config split_ratio          0.52 # The ratio of the current window that a new split is made
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true

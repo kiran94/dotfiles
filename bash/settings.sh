@@ -3,7 +3,7 @@
 [ -n "$BASH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && `echo $BASH_SOURCE`
 [ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
 
-if which nvim >/dev/null; then
+if which nvim 2>/dev/null; then
     export EDITOR=nvim
 else
     export EDITOR=vim
@@ -15,7 +15,7 @@ export LESS=-JMQRSi
 # XDG standard environment variables
 # https://github.com/adrg/xdg#default-locations
 export XDG_DATA_HOME=~/.local/share
-export XDG_DATA_DIRS=/usr/local/share
+export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
 export XDG_CONFIG_HOME=~/.config
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=~/.cache

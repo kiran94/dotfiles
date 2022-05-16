@@ -12,7 +12,7 @@ packer.startup(function()
     use { 'nvim-lualine/lualine.nvim',           config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
     use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config, event = "BufWinEnter" }
-    use { 'chentau/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
+    use { 'chentoast/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
     use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }

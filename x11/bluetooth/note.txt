@@ -1,0 +1,4 @@
+
+You probably should copy this over to /etc/bluetooth/main.conf
+I was having some issues with the bluetooth service starting 
+when this was a symbolic link
