@@ -48,3 +48,5 @@ HIST_IGNORE_ALL_DUPS=true
 HIST_IGNORE_SPACE=true
 
 export UPDATE_ZSH_DAYS=7
+
+if [ -e /home/kiran/.nix-profile/etc/profile.d/nix.sh ]; then . /home/kiran/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
