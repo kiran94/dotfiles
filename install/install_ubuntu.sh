@@ -28,6 +28,7 @@ sudo apt install scala
 sudo apt install speedtest-cli
 sudo apt install ncdu
 sudo apt install gparted
+sudo apt install bat
 
 ############################# Additional Extras
 

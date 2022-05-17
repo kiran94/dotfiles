@@ -43,6 +43,7 @@ alias tf='terraform'
 alias vpn='expressvpn status'
 alias system='inxi -Fxzc0'
 alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
+alias bb='batcat'
 
 # Fuzzy
 alias f='fzf | xargs nvim'
