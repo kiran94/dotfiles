@@ -29,7 +29,7 @@ function spark_start
     jps
 }
 
-function spark_top
+function spark_stop
 {
     spark_master_stop
     spark_worker_stop
