@@ -32,11 +32,16 @@ ln -vnsf $DOTFILESSYNC_DIR/ptpython/config.py ~/.config/ptpython/config.py
 ln -vnsf $DOTFILESSYNC_DIR/x11/.xinitrc ~/.xinitrc
 ln -vnsf $DOTFILESSYNC_DIR/x11/.Xauthority ~/.Xauthority
 ln -vnsf $DOTFILESSYNC_DIR/x11/.Xresources ~/.Xresources
+ln -vnsf $DOTFILESSYNC_DIR/x11/.xbindkeysrc ~/.xbindkeysrc
+ln -vs $DOTFILESSYNC_DIR/fonts ~/.local/share/fonts
 
 # WINDOW MANAGER
 ln -vnsf $DOTFILESSYNC_DIR/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 ln -vnsf $DOTFILESSYNC_DIR/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 ln -vnsf $DOTFILESSYNC_DIR/picom/picom.conf ~/.config/picom/picom.conf
 ln -vs $DOTFILESSYNC_DIR/polybar ~/.config/polybar
+
+
+
 
 git clone git@github.com:kiran94/wallpapers.git ~/.config/wallpapers
