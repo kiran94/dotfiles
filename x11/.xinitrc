@@ -46,7 +46,19 @@ feh --bg-scale --randomize ~/.config/wallpapers/wallpapers/* &
 picom --experimental-backends &
 
 # Load Status Bar
-$HOME/.config/polybar/launch.sh --colorblocks &
+$HOME/.config/polybar/launch.sh --cuts &
+
+# Load Session Manager
+lxsession &
+
+# Load Night Light
+redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &
+
+# Bind Keymappings
+xbindkeys &
+
+# Set Mouse Cursor
+xsetroot -cursor_name left_ptr &
 
 # Load Window Manager
 exec bspwm
