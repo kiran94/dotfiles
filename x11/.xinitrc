@@ -33,6 +33,12 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+
+# Load Sound
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/pipewire-media-session &
+
 # Load Wallpapers
 feh --bg-scale --randomize ~/.config/wallpapers/wallpapers/* &
 
