@@ -42,3 +42,4 @@ sudo pacman -S nautilus
 sudo pacman -S pipewire pipewire-pulse
 yay -S bluetooth-autoconnect
 sudo pacman -S pamixer
+sudo pacman -S rofi
