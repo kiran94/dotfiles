@@ -15,7 +15,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Find Monitor Name: bspc query -M --names
 # bspc monitor -d I II III IV V VI VII VIII IX X
-bspc monitor eDP-1 -d 1 2 3 4 5
+# bspc monitor eDP1 -d 1 2 3 4 5
+bspc monitor $(bspc query -M --names | head -1) -d 1 2 3 4 5
+
 
 bspc config border_width        2     # Border (active window) width
 bspc config window_gap          10    # Gap between tiled windows
