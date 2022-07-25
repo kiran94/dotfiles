@@ -43,6 +43,7 @@ packer.startup(function()
     use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
     use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
     use 'gpanders/editorconfig.nvim'
+--   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
 
     -- LSP
     use 'neovim/nvim-lspconfig'
