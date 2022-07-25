@@ -3,13 +3,15 @@
 [ -n "$BASH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && `echo $BASH_SOURCE`
 [ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
 
-if which nvim 2>/dev/null; then
-    export EDITOR=nvim
-else
-    export EDITOR=vim
-fi
 
-export BROWSER=brave-browser
+# Default Apps
+export EDITOR=nvim
+export VISUAL=nvim
+export BROWSER=brave
+export TERMINAL=alacritty
+export VIDEO=vlc
+export PAGER=less
+export OPENER=xdg-open
 export LESS=-JMQRSi
 
 # XDG standard environment variables
@@ -19,7 +21,6 @@ export XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/s
 export XDG_CONFIG_HOME=~/.config
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CACHE_HOME=~/.cache
-
 export XDG_DESKTOP_DIR=~/Desktop
 export XDG_DOWNLOAD_DIR=~/Downloads
 export XDG_DOCUMENTS_DIR=~/Documents
@@ -28,6 +29,7 @@ export XDG_PICTURES_DIR=~/Pictures
 export XDG_VIDEOS_DIR=~/Videos
 export XDG_TEMPLATES_DIR=~/Templates
 export XDG_PUBLICSHARE_DIR=~/Public
+export XDG_CACHE_HOME=~/.cache
 
 export DOTFILESSYNC_CONFIG=$HOME/.config/dotfiles/dotfiles-sync.json
 export DOTFILESSYNC_DIR=$HOME/.config/dotfiles
