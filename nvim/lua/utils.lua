@@ -10,3 +10,19 @@ function _G.put(...)
 	print(table.concat(objects, "\n"))
 	return ...
 end
+
+local async = require("plenary.async")
+
+local packer_sync = function()
+	async.run(function()
+		vim.notify.async("Syncing packer.", "info", {
+			title = "Packer",
+		})
+	end)
+	local snap_shot_time = os.date("!%Y-%m-%dT%TZ")
+	vim.cmd("PackerSnapshot " .. snap_shot_time)
+	vim.cmd("PackerSync")
+end
+
+vim.keymap.set("n", "<leader>ps", function() packer_sync() end)
+
