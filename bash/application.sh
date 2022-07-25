@@ -13,7 +13,11 @@ export PATH=$PATH:/usr/local/bin/spark/bin/
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin # macOS
 export PATH=$HOME/dotnet-previews:$PATH
 export GOPATH=$HOME/Documents/projects/go
+export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
+
+
 
 export ASPNETCORE_ENVIRONMENT=Development
 export ASPNETCORE_Kestrel__Certificates__Default__Path=~/.certificates/localhost.pfx
