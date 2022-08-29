@@ -37,5 +37,6 @@ function spark_stop
 {
     spark_master_stop
     spark_worker_stop
+    sleep 1
     jps
 }
