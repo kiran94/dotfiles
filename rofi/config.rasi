@@ -1,0 +1,11 @@
+/** Basic config file **/
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus";
+  dpi: 200;
+  modi: "window,run,drun";
+  font: "JetBrainsMono Nerd Font Mono 12";
+
+
+}
