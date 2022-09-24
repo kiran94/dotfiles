@@ -49,7 +49,8 @@ packer.startup(function()
     use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
     use 'ray-x/lsp_signature.nvim'
-    use 'williamboman/nvim-lsp-installer'
+    use {"williamboman/mason.nvim"}
+    use {'williamboman/mason-lspconfig.nvim'}
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use { 'hrsh7th/cmp-nvim-lua', ft = 'lua' }

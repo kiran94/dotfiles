@@ -2,12 +2,13 @@ local options = {}
 
 local nvim_lsp      = require('lspconfig')
 local lsp_signature = require('lsp_signature')
-local lsp_installer = require('nvim-lsp-installer')
 local cmp           = require('cmp')
 local cmp_nvim_lsp  = require('cmp_nvim_lsp')
 local lsp_kind      = require('lspkind')
 local lsp_colors    = require("lsp-colors")
 local schemastore   = require('schemastore')
+local mason         = require('mason')
+local mason_lsp     = require('mason-lspconfig')
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
@@ -78,7 +79,6 @@ lsp_signature.setup({
     hint_prefix = "",
     use_lspaga  = lspsaga_installed,
     hint_enable = false,
-    -- bind = true,
     handler_opts = {
         border = "rounded"
     }
@@ -92,7 +92,6 @@ local on_attach = function(client, bufnr)
     -- If you decide to switch back then comment these lines
     client.resolved_capabilities.document_formatting = false
     client.resolved_capabilities.document_range_formatting = false
-
 end
 
 local t = function(str)
@@ -105,66 +104,80 @@ local check_back_space = function()
 end
 
 options.config = function()
-    --------------------------------
-    -- LSP
-    --------------------------------
-    lsp_installer.on_server_ready(function(server)
-        local opts = {
-            on_attach = on_attach,
-            capabilities = capabilities
+
+    mason.setup()
+    mason_lsp.setup({
+        ensure_installed = { "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls" }
+    })
+
+    -- LSP Import Name to Language Server name can be found in:
+    -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
+    require("lspconfig").pylsp.setup {
+        capabilities = capabilities,
+        settings = {
+            pylsp = {
+                plugins = {
+                    -- note: these are now managed in ./null-ls.lua
+                    flake8      = { enabled = false },
+                    pycodestyle = { enabled = false },
+                    pyflakes    = { enabled = false },
+                    yapf        = { enabled = false },
+                    pylint      = { enabled = false },
+                    mccabe      = { enabled = false },
+                }
+            }
         }
+    }
 
-        if server.name == "sumneko_lua" then
-            opts.settings = {
-                Lua = {
-                    runtime = {
-                        version = "LuaJIT",
-                        path = runtime_path
-                    },
-                    diagnostics = {
-                        globals = {'vim', 'use', 'use_rocks'},
-                    },
-                    workspace = {
-                        library = vim.api.nvim_get_runtime_file("", true)
-                    },
-                    telemetry = {
-                        enable = false,
-                    }
+    require("lspconfig").sumneko_lua.setup {
+        capabilities = capabilities,
+        settings = {
+            Lua = {
+                runtime = {
+                    version = "LuaJIT",
+                    path = runtime_path
+                },
+                diagnostics = {
+                    globals = {'vim', 'use', 'use_rocks'},
+                },
+                workspace = {
+                    library = vim.api.nvim_get_runtime_file("", true)
+                },
+                telemetry = {
+                    enable = false,
                 }
             }
-        elseif server.name == "jsonls" then
-            opts.settings = {
-                json = {
-                    -- Catalog: https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json
-                    schemas = schemastore.json.schemas()
-                }
-            }
-        elseif server.name == "pylsp" then
-            opts.settings = {
-                pylsp = {
-                    plugins = {
-                        -- NOTE: these are now managed in ./null-ls.lua
-                        flake8      = { enabled = false },
-                        pycodestyle = { enabled = false },
-                        pyflakes    = { enabled = false },
-                        yapf        = { enabled = false },
-                        pylint      = { enabled = false },
-                        mccabe      = { enabled = false },
-                    }
-                }
-            }
-        elseif server.name == "pyright" then
-            opts.settings = {
-                python = {
-                    analysis = {
-                        typeCheckingMode = "off"
-                    }
-                }
-            }
-        end
+        }
+    }
 
-        server:setup(opts)
-    end)
+    require("lspconfig").pyright.setup{
+        capabilities = capabilities,
+        python = {
+            analysis = {
+                typeCheckingMode = "off"
+            }
+        }
+    }
+    require("lspconfig").jsonls.setup {
+        capabilities = capabilities,
+        json = {
+            -- Catalog: https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json
+            schemas = schemastore.json.schemas()
+        }
+    }
+
+    require('lspconfig').yamlls.setup {
+      capabilities = capabilities,
+      settings = {
+        yaml = {
+          schemas = schemastore.json.schemas(),
+        },
+      }
+    }
+
+    require'lspconfig'.gopls.setup{
+      capabilities = capabilities,
+    }
 
     --------------------------------
     -- COMPLETION
