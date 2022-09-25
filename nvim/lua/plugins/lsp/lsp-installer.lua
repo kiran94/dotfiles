@@ -165,9 +165,12 @@ options.config = function()
     require("lspconfig").jsonls.setup {
         capabilities = capabilities,
         on_attach = on_attach,
-        json = {
-            -- Catalog: https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json
-            schemas = schemastore.json.schemas()
+        settings = {
+            json = {
+                -- Catalog: https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json
+                schemas = schemastore.json.schemas(),
+                validate = { enable = true }
+            }
         }
     }
 
