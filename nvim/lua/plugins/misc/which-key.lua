@@ -140,7 +140,8 @@ end
 -- nnoremap <silent> L <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 -- nnoremap <silent> K <cmd>Lspsaga hover_doc<CR>
 vim.cmd [[
-  nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+  " nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+  nnoremap <silent> K <cmd>Lspsaga hover_doc<CR>
   nnoremap <silent> L <cmd>Lspsaga show_line_diagnostics<CR>
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
