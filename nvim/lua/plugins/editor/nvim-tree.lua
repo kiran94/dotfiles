@@ -39,7 +39,6 @@ options.config = function()
       },
       view = {
         width       = 40,        -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
-        height      = 30,     -- height of the window, can be either a number (columns) or a string in `%`, for top or bottom side placement
         side        = 'right',   -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
         mappings = {
           -- custom only false will merge the list with the default mappings
