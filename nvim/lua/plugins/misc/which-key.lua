@@ -109,11 +109,9 @@ options.config = function()
             },
             t = {
                 name = "+test",
-                n    = {cmd('UltestNearest'), "test nearest"},
-                l    = {cmd('UltestLast'), "test last"},
-                d    = {cmd('UltestDebugNearest'), "debug nearest test"},
-                a    = {cmd('Ultest'), "all tests"},
-                o    = {cmd('UltestOutput'), "test output"},
+                n    = {cmd('lua require("neotest").run.run()'), "test nearest"},
+                d    = {cmd('require("neotest").run.run({strategy = "dap"})'), "debug nearest test"},
+                a    = {cmd('require("neotest").run.run(vim.fn.expand("%"))'), "all current file tests"},
             },
             m = {
                 name = "+modify",

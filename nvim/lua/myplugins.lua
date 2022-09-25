@@ -12,7 +12,7 @@ packer.startup(function()
     use { 'nvim-lualine/lualine.nvim',           config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
     use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
     use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config, event = "BufWinEnter" }
-    use { 'chentoast/marks.nvim',                  config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
+    use { 'chentoast/marks.nvim',                config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
     use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
@@ -21,7 +21,8 @@ packer.startup(function()
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter", cmd = {"Neogen"} }
     use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
-    use { 'rcarriga/vim-ultest',                 config = require'plugins/editor/ultest'.config, requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    use { "nvim-neotest/neotest",                config = require'plugins/editor/ultest'.config, requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" } }
+    use { 'nvim-neotest/neotest-python' }
     use { 'kiran94/maim.nvim',                   config = function() require('maim').setup() end }
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
