@@ -20,6 +20,7 @@ options.config = function()
 				"**/.mypy_cache/*",
 				"__pycache__/*",
 				".pytest_cache/*",
+                "vendor/*"
 			},
 		},
 	})
