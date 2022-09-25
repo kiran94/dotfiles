@@ -156,9 +156,11 @@ options.config = function()
     require("lspconfig").pyright.setup{
         capabilities = capabilities,
         on_attach = on_attach,
-        python = {
-            analysis = {
-                typeCheckingMode = "off"
+        settings = {
+            python = {
+                analysis = {
+                    typeCheckingMode = "off"
+                }
             }
         }
     }
