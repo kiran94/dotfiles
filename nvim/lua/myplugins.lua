@@ -27,7 +27,7 @@ packer.startup(function()
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
-    use { 'nkakouros-original/numbers.nvim',     config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
+    -- use { 'nkakouros-original/numbers.nvim',     config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     use { 'akinsho/git-conflict.nvim',           config = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
     use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
