@@ -114,6 +114,7 @@ options.config = function()
     -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
     require("lspconfig").pylsp.setup {
         capabilities = capabilities,
+        on_attach = on_attach,
         settings = {
             pylsp = {
                 plugins = {
@@ -131,6 +132,7 @@ options.config = function()
 
     require("lspconfig").sumneko_lua.setup {
         capabilities = capabilities,
+        on_attach = on_attach,
         settings = {
             Lua = {
                 runtime = {
@@ -152,6 +154,7 @@ options.config = function()
 
     require("lspconfig").pyright.setup{
         capabilities = capabilities,
+        on_attach = on_attach,
         python = {
             analysis = {
                 typeCheckingMode = "off"
@@ -160,6 +163,7 @@ options.config = function()
     }
     require("lspconfig").jsonls.setup {
         capabilities = capabilities,
+        on_attach = on_attach,
         json = {
             -- Catalog: https://github.com/SchemaStore/schemastore/blob/master/src/api/json/catalog.json
             schemas = schemastore.json.schemas()
@@ -168,6 +172,7 @@ options.config = function()
 
     require('lspconfig').yamlls.setup {
       capabilities = capabilities,
+      on_attach = on_attach,
       settings = {
         yaml = {
           schemas = schemastore.json.schemas(),
@@ -176,6 +181,7 @@ options.config = function()
     }
 
     require'lspconfig'.gopls.setup{
+      on_attach = on_attach,
       capabilities = capabilities,
     }
 
