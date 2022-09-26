@@ -208,3 +208,5 @@ sudo apt purge drawing*
 sudo apt purge gnome-screenshot
 
 sudo apt autoremove
+
+git@github.com:ronniedroid/getnf.git
