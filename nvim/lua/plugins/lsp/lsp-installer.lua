@@ -114,7 +114,7 @@ options.config = function()
 
     mason.setup()
     mason_lsp.setup({
-        ensure_installed = { "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls" }
+        ensure_installed = { "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls" }
     })
 
     -- LSP Import Name to Language Server name can be found in:
@@ -195,6 +195,17 @@ options.config = function()
     require'lspconfig'.gopls.setup{
       on_attach = on_attach,
       capabilities = capabilities,
+    }
+
+    require('lspconfig').terraformls.setup{
+        on_attach = function(client, buffernr)
+            on_attach(client, buffernr)
+
+            local ok, treesitter_tf_doc = pcall(require, 'treesitter-terraform-doc')
+            if ok then
+                treesitter_tf_doc.setup({command_name = "TerraformDoc"})
+            end
+        end
     }
 
     --------------------------------

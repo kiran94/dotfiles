@@ -73,6 +73,7 @@ packer.startup(function()
     use { "folke/trouble.nvim",              config = require'plugins/lsp/trouble'.config, requires = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" }
     use { "ThePrimeagen/refactoring.nvim",   config = require'plugins/lsp/refactoring'.config, requires = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" }
     use { "RRethy/vim-illuminate"}
+    use { 'Afourcat/treesitter-terraform-doc.nvim' }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 
 
