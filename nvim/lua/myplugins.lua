@@ -62,6 +62,7 @@ packer.startup(function()
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/cmp-calc'
     use 'hrsh7th/cmp-emoji'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use { 'davidsierradz/cmp-conventionalcommits', ft = 'gitcommit' }
     use 'rafamadriz/friendly-snippets'
     use 'folke/lsp-colors.nvim'

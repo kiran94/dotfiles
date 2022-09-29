@@ -26,6 +26,9 @@ vim.diagnostic.config({
 	underline        = false,
 	signs            = true,
 	update_in_insert = true,
+    float = {
+        border = "rounded"
+    }
 })
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
@@ -75,15 +78,17 @@ lsp_kind.init{
 }
 
 
-local lspsaga_installed, _ = pcall(require, 'lspsaga')
-lsp_signature.setup({
-    hint_prefix = "",
-    use_lspaga  = lspsaga_installed,
-    hint_enable = false,
-    handler_opts = {
-        border = "rounded"
-    }
-})
+
+-- NOTE: Disabled for cmp-nvim-lsp-signature-help
+-- local lspsaga_installed, _ = pcall(require, 'lspsaga')
+-- lsp_signature.setup({
+--     hint_prefix = "",
+--     use_lspaga  = lspsaga_installed,
+--     hint_enable = false,
+--     handler_opts = {
+--         border = "rounded"
+--     }
+-- })
 
 local on_attach = function(client, bufnr)
     -- lsp_signature.on_attach(client, bufnr)
@@ -208,6 +213,7 @@ options.config = function()
             { name = 'spell',      max_item_count = 5},
             { name = 'calc',       max_item_count = 5},
             { name = 'emoji',      max_item_count = 5},
+            { name = 'nvim_lsp_signature_help' }
         }),
         snippet = {
             expand = function(args)
