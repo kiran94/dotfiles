@@ -86,7 +86,8 @@ lsp_signature.setup({
 })
 
 local on_attach = function(client, bufnr)
-    lsp_signature.on_attach(client, bufnr)
+    -- lsp_signature.on_attach(client, bufnr)
+    require("illuminate").on_attach(client)
 
     -- NOTE: This is being disabled
     -- because null-ls is handling the formatting
