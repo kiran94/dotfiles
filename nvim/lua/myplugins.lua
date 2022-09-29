@@ -16,6 +16,7 @@ packer.startup(function()
     use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
     use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
     use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
     use { "ur4ltz/surround.nvim",                config = require'plugins/editor/surround'.config, event = "BufWinEnter" }
     use { 'akinsho/bufferline.nvim',             config = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
     use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter", cmd = {"Neogen"} }

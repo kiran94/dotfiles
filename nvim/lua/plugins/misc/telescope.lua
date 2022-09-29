@@ -20,8 +20,11 @@ options.config = function()
 				"**/.mypy_cache/*",
 				"__pycache__/*",
 				".pytest_cache/*",
-                "vendor/*"
+				"vendor/*",
 			},
+		},
+		extensions = {
+			["ui-select"] = { require("telescope.themes").get_dropdown({}) },
 		},
 	})
 
@@ -35,6 +38,8 @@ options.config = function()
 	if neoclipInstalled then
 		telescope.load_extension("neoclip")
 	end
+
+	telescope.load_extension("ui-select")
 end
 
 return options
