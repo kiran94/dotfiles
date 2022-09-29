@@ -294,16 +294,17 @@ options.config = function()
     })
 
     -- Cmd Completion
-    -- NOTE: This breaks tab completion in command
     cmp.setup.cmdline(':', {
-      sources = cmp.config.sources(
-          { { name = 'path',    max_item_count = 5 } }
-          -- { { name = 'cmdline', max_item_count = 20 } }
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = cmp.config.sources({
+          { name = 'cmdline', max_item_count = 20 }
+        }
       )
   })
 
    -- Cmd Completion (Search)
     cmp.setup.cmdline('/', {
+     mapping = cmp.mapping.preset.cmdline(),
      sources = {
           { name = 'buffer', max_item_count = 5 }
         }
