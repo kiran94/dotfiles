@@ -117,6 +117,9 @@ options.config = function()
         ensure_installed = { "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls" }
     })
 
+    -- TODO: Refactor the below code via setup_handlers
+    -- mason_lsp.setup_handlers()
+
     -- LSP Import Name to Language Server name can be found in:
     -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
     require("lspconfig").pylsp.setup {
