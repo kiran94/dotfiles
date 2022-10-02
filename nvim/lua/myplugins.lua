@@ -74,6 +74,7 @@ packer.startup(function()
     use { "ThePrimeagen/refactoring.nvim",   config = require'plugins/lsp/refactoring'.config, requires = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" }
     use { "RRethy/vim-illuminate"}
     use { 'Afourcat/treesitter-terraform-doc.nvim' }
+    use { 'j-hui/fidget.nvim' }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 
 

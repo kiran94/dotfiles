@@ -9,6 +9,7 @@ local lsp_colors    = require("lsp-colors")
 local schemastore   = require('schemastore')
 local mason         = require('mason')
 local mason_lsp     = require('mason-lspconfig')
+local lsp_progress = require('fidget')
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
@@ -49,6 +50,7 @@ capabilities.textDocument.codeAction = {
         }
     }
 }
+
 cmp_nvim_lsp.update_capabilities(capabilities)
 
 lsp_kind.init{
@@ -320,6 +322,10 @@ options.config = function()
       Information = "#0db9d7",
       Hint        = "#10B981"
     })
+
+    lsp_progress.setup{}
 end
+
+
 
 return options
