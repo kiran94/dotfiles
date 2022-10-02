@@ -99,8 +99,13 @@ local on_attach = function(client, bufnr)
     -- NOTE: This is being disabled
     -- because null-ls is handling the formatting
     -- If you decide to switch back then comment these lines
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
+    -- if vim.fn.has "nvim-0.7" then
+    --     client.resolved_capabilities.document_formatting = false
+    --     client.resolved_capabilities.document_range_formatting = false
+    -- end
+
+    -- 0.8 Allow null-ls to handle formatting
+    client.server_capabilities.documentFormattingProvider = false
 end
 
 local t = function(str)
