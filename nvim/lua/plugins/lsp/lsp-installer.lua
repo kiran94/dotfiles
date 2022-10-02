@@ -9,7 +9,8 @@ local lsp_colors    = require("lsp-colors")
 local schemastore   = require('schemastore')
 local mason         = require('mason')
 local mason_lsp     = require('mason-lspconfig')
-local lsp_progress = require('fidget')
+local lsp_progress  = require('fidget')
+local navic         = require("nvim-navic")
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
@@ -96,7 +97,11 @@ local on_attach = function(client, bufnr)
     -- lsp_signature.on_attach(client, bufnr)
     require("illuminate").on_attach(client)
 
-    -- NOTE: This is being disabled
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
+    end
+
+    -- NOTE: <= 0.7 This is being disabled
     -- because null-ls is handling the formatting
     -- If you decide to switch back then comment these lines
     -- if vim.fn.has "nvim-0.7" then
