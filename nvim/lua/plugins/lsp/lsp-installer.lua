@@ -126,7 +126,12 @@ options.config = function()
 
     mason.setup()
     mason_lsp.setup({
-        ensure_installed = { "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls" }
+        ensure_installed = {
+            -- LSPs
+            "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls", "bash-language-server",
+            -- DAPS
+            "debugpy", "delve"
+        }
     })
 
     -- TODO: Refactor the below code via setup_handlers

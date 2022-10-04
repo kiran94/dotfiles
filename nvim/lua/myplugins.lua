@@ -78,6 +78,11 @@ packer.startup(function()
     use { "SmiteshP/nvim-navic", config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig" }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 
+    -- DAP
+    use { 'mfussenegger/nvim-dap'}
+    use { 'rcarriga/nvim-dap-ui', requires = {"mfussenegger/nvim-dap"} }
+    use { 'leoluz/nvim-dap-go', requires = {"mfussenegger/nvim-dap"} }
+    use { 'theHamsta/nvim-dap-virtual-text', requires = {"mfussenegger/nvim-dap"} }
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
@@ -95,6 +100,8 @@ end)
 
 require'plugins/lsp/lsp-installer'.config()
 require'plugins/lsp/treesitter'.config()
+require'plugins/lsp/dap'
+
 
 -- Automatically Compile Packer when this file changes
 vim.cmd[[
