@@ -122,3 +122,11 @@ hi IncSearch ctermbg=black ctermfg=white
 hi Visual ctermbg=yellow ctermfg=black
 hi SignColumn ctermbg=black
 hi Title ctermbg=black
+
+" Cursor Settings
+" Change the type of cursor depending on mode
+" https://stackoverflow.com/a/70135079
+
+let &t_SI.="\e[5 q" " SI = INSERT mode
+let &t_SR.="\e[4 q" " SR = REPLACE mode
+let &t_EI.="\e[1 q" " EI = NORMAL mode (ELSE)
