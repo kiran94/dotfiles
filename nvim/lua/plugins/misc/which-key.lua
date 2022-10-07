@@ -56,6 +56,16 @@ options.config = function()
             m    = {cmd("marks"), "marks"},
             mt   = {cmd("SignatureToggleSigns"), "toggle marks"},
         },
+        f = {
+            name = '+find',
+            f    = { function() require('telescope.builtin').find_files(require('telescope.themes').get_ivy({hidden=true})) end,      "Find Files" },
+            t    = { function() require('telescope.builtin').treesitter(require('telescope.themes').get_ivy({hidden=true})) end,      "Tresitter" },
+            g    = { function() require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({hidden=true})) end,       "Grep" },
+            c    = { function() require('telescope.builtin').git_commits(require('telescope.themes').get_ivy({hidden=true})) end,     "Git Commits" },
+            r    = { function() require('telescope.builtin').command_history(require('telescope.themes').get_ivy({hidden=true})) end, "Command History" },
+            b    = { function() require('telescope.builtin').buffers(require('telescope.themes').get_ivy({hidden=true})) end,         "Buffers" },
+            h    = { function() require('telescope.builtin').help_tags(require('telescope.themes').get_ivy({hidden=true})) end,       "Help Tags" },
+        },
         -- Special
         z = {
             name  = "+special",
