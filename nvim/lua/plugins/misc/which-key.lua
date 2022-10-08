@@ -137,8 +137,33 @@ options.config = function()
         -- Go
         g = {
             name = "+go",
-            d    = {cmd("lua vim.lsp.buf.definition()"), "definition"},
-            D    = {cmd("lua vim.lsp.buf.declaration()"), "declaration"}
+            d = {cmd("lua vim.lsp.buf.definition()"), "definition"},
+            D = {cmd("lua vim.lsp.buf.declaration()"), "declaration"},
+            r = {cmd("lua vim.lsp.buf.references()"), "references"},
+        },
+        -- Debug
+        d = {
+            name = "+hello",
+            b = { cmd("lua require'dap'.toggle_breakpoint()"), "Toggle Breakpoint" },
+            B = { cmd("lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))"), "Conditional Breakpoint" },
+            c = { cmd("lua require'dap'.continue()"), "Continue" },
+            C = { cmd("lua require'dap'.run_to_cursor()"), "Run To Cursor" },
+            i = { cmd("lua require'dap'.step_into()"), "Step Into" },
+            n = { cmd("lua require'dap'.step_over()"), "Step Over (Next)" },
+            u = { cmd("lua require'dap'.step_out()"), "Step Out" },
+            p = { cmd("lua require'dap'.pause()"), "Pause" },
+            r = { cmd("lua require'dap'.repl.toggle()"), "Toggle Repl" },
+            s = { cmd("lua require'dap'.continue()"), "Start" },
+            -- q = { cmd("lua require'dap'.close()"), "Quit" },
+            U = { cmd("lua require'dapui'.toggle()"), "Toggle UI" },
+            q = { ":DapTerminate", "Terminate" },
+            -- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+            -- d = { cmd("lu>a require'dap'.disconnect()"), "Disconnect" },
+            -- g = { cmd("lua require'dap'.session()"), "Get Session" },
+            z = {
+                name= "+special",
+                gt = { cmd("lua require('dap-go').debug_test()"), "Debug Go Test" }
+            }
         }
     }
 
