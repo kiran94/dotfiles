@@ -146,6 +146,7 @@ options.config = function()
             name = "+hello",
             b = { cmd("lua require'dap'.toggle_breakpoint()"), "Toggle Breakpoint" },
             B = { cmd("lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))"), "Conditional Breakpoint" },
+            l = { cmd("lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))"), "Log Point"},
             c = { cmd("lua require'dap'.continue()"), "Continue" },
             C = { cmd("lua require'dap'.run_to_cursor()"), "Run To Cursor" },
             i = { cmd("lua require'dap'.step_into()"), "Step Into" },
