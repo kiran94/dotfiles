@@ -75,7 +75,7 @@ packer.startup(function()
     use { "RRethy/vim-illuminate"}
     use { 'Afourcat/treesitter-terraform-doc.nvim' }
     use { 'j-hui/fidget.nvim' }
-    use { "SmiteshP/nvim-navic", config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig" }
+    use { "SmiteshP/nvim-navic", config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"}
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 
     -- DAP
@@ -83,6 +83,8 @@ packer.startup(function()
     use { 'rcarriga/nvim-dap-ui', requires = {"mfussenegger/nvim-dap"} }
     use { 'leoluz/nvim-dap-go', requires = {"mfussenegger/nvim-dap"} }
     use { 'theHamsta/nvim-dap-virtual-text', requires = {"mfussenegger/nvim-dap"} }
+    -- use { 'mfussenegger/nvim-dap-python', requires = {'mfussenegger/nvim-dap'} }
+
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
