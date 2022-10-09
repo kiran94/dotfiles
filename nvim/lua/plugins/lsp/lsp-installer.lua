@@ -132,7 +132,8 @@ options.config = function()
             "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls", "bash-language-server",
             -- DAPS
             "debugpy", "delve"
-        }
+        },
+        automatic_installation = true
     })
 
     -- TODO: Refactor the below code via setup_handlers
