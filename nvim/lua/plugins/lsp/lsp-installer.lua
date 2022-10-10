@@ -131,7 +131,9 @@ options.config = function()
             -- LSPs
             "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls", "bash-language-server",
             -- DAPS
-            "debugpy", "delve"
+            "debugpy", "delve",
+            -- LINTER & FORMATTING
+            "flake8", "isort", "autopep8", "goimports", "gofmt", "staticcheck", "stylua", "clang-format", "jq"
         },
         automatic_installation = true
     })
