@@ -11,28 +11,12 @@ end
 --------------------------------
 -- ADAPTERS and CONFIGURATION
 --------------------------------
-
 local mason_install_directory = vim.fn.stdpath("data") .. "/mason/" .. "bin/"
+local mason_registry = require("mason-registry")
 
-local dap_python_ok, dap_python = pcall(require, "dap-python")
-if dap_python_ok then
-    -- NOTE: this is not working
-	-- local p = vim.fn.stdpath("data") .. '/mason/packages/debugpy/venv/bin/python3'
-	-- local mason_registry = require("mason-registry")
-	-- local adapter_python_path = '$XDG_DATA_HOME/nvim/mason/packages/debugpy/venv/bin/python3'
-
-	-- dap_python.setup("python3")
-	-- dap_python.test_runner = "pytest"
-	--
- --    dap.set_log_level('TRACE')
-else
-	dap.adapters.python = { type = "executable", command = mason_install_directory .. "debugpy-adapter" }
-end
-
-local dap_go_ok, dap_go = pcall(require, "dap-go")
-if dap_go_ok then
-	dap_go.setup()
-end
+require('plugins.lsp.dap-python').setup(dap, mason_install_directory)
+require('plugins.lsp.dap-bash').setup(dap, mason_install_directory)
+require('plugins.lsp.dap-go').setup()
 
 -- print(' ****** CONFIGURATIONS *******')
 -- print(vim.inspect.inspect(dap.configurations))
@@ -115,8 +99,8 @@ end
 vim.fn.sign_define("DapBreakpoint",          { text = "🛑", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 vim.fn.sign_define("DapBreakpointCondition", { text = "💊", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 vim.fn.sign_define("DapLogPoint",            { text = "📝", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
-vim.fn.sign_define("DapBreakpointRejected",  { text = "",  texthl = "DiagnosticSignError", linehl = "", numhl = "" })
-vim.fn.sign_define("DapStopped",             { text = "→",  texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpointRejected",  { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped",             { text = "→", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
 --------------------------------
 -- Events
