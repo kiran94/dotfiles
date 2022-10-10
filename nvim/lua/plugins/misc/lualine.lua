@@ -51,6 +51,15 @@ options.config = function()
         return ""
     end
 
+    local dap_status = function ()
+        local ok, dap = pcall(require, "dap")
+        if not ok then
+            return
+        end
+
+        return dap.status()
+    end
+
     require "lualine".setup {
         options = {
             icons_enabled        = true,
@@ -67,7 +76,7 @@ options.config = function()
         sections = {
             lualine_a = {"mode"},
             lualine_b = {"branch", "diff"},
-            lualine_c = {"filename", "diagnostics"},
+            lualine_c = {"filename", "diagnostics", dap_status},
             lualine_x = {python_env, "encoding", "fileformat", "filetype", lsp_active},
             lualine_y = {"progress"},
             lualine_z = {"location"}
