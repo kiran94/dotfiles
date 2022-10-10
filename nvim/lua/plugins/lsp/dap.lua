@@ -14,9 +14,9 @@ end
 local mason_install_directory = vim.fn.stdpath("data") .. "/mason/" .. "bin/"
 local mason_registry = require("mason-registry")
 
-require('plugins.lsp.dap-python').setup(dap, mason_install_directory)
-require('plugins.lsp.dap-bash').setup(dap, mason_install_directory)
-require('plugins.lsp.dap-go').setup()
+require("plugins.lsp.dap-python").setup(dap, mason_install_directory)
+require("plugins.lsp.dap-bash").setup(dap, mason_install_directory)
+require("plugins.lsp.dap-go").setup()
 
 -- print(' ****** CONFIGURATIONS *******')
 -- print(vim.inspect.inspect(dap.configurations))
@@ -96,11 +96,11 @@ end
 --------------------------------
 -- Signs
 --------------------------------
-vim.fn.sign_define("DapBreakpoint",          { text = "🛑", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpoint", { text = "🛑", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 vim.fn.sign_define("DapBreakpointCondition", { text = "💊", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
-vim.fn.sign_define("DapLogPoint",            { text = "📝", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
-vim.fn.sign_define("DapBreakpointRejected",  { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
-vim.fn.sign_define("DapStopped",             { text = "→", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+vim.fn.sign_define("DapLogPoint", { text = "📝", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+vim.fn.sign_define("DapBreakpointRejected", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "→", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
 --------------------------------
 -- Events
