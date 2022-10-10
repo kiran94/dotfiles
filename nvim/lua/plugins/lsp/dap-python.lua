@@ -1,7 +1,6 @@
 local M = {}
 
 M.setup = function(dap, install_directory)
-
 	local dap_python_ok, dap_python = pcall(require, "dap-python")
 	if dap_python_ok then
 		-- WARN: this is not working
@@ -10,8 +9,16 @@ M.setup = function(dap, install_directory)
 		dap_python.test_runner = "pytest"
 	else
 		dap.adapters.python = { type = "executable", command = install_directory .. "debugpy-adapter" }
-	end
 
+		dap.configurations.python = {}
+		table.insert(dap.configurations.python, {
+			type = "python",
+			request = "launch",
+			name = "python-script",
+			program = "${file}",
+			console = "internalConsole",
+		})
+	end
 end
 
 return M
