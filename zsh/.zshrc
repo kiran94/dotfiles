@@ -20,4 +20,6 @@ HIST_IGNORE_DUPS=true
 HIST_IGNORE_ALL_DUPS=true
 HIST_IGNORE_SPACE=true
 
+zstyle ':completion:*' menu select
+
 export UPDATE_ZSH_DAYS=7
