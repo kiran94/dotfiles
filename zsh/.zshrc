@@ -1,7 +1,6 @@
 source $HOME/.bashrc
 source ~/.config/dotfiles/zsh/antigen.zsh
 
-antigen bundle git
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
