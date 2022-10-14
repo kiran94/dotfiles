@@ -25,6 +25,8 @@ options.config = function()
 			-- Others
 			formatting.terraform_fmt,
 			formatting.clang_format,
+			formatting.yamlfmt,
+			diagnostics.yamllint,
 
 			-- JavaScript
 			-- formatting.eslint,

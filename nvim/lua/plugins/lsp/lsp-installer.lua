@@ -133,7 +133,7 @@ options.config = function()
             -- DAPS
             "debugpy", "delve",
             -- LINTER & FORMATTING
-            "flake8", "isort", "autopep8", "goimports", "gofmt", "staticcheck", "stylua", "clang-format", "jq"
+            "flake8", "isort", "autopep8", "goimports", "gofmt", "staticcheck", "stylua", "clang-format", "jq" ,"yamllint", "yamlfmt"
         },
         automatic_installation = true
     })
