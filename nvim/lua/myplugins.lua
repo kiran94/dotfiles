@@ -28,9 +28,9 @@ packer.startup(function()
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
-    -- use { 'nkakouros-original/numbers.nvim',     config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
+    -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     use { 'akinsho/git-conflict.nvim',           config = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
-    use { 'nvim-treesitter/nvim-treesitter',     run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter',     config = require'plugins/lsp/treesitter'.config, run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
     use { 'sindrets/diffview.nvim',              requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
     use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
@@ -48,7 +48,7 @@ packer.startup(function()
 --   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
 
     -- LSP
-    use 'neovim/nvim-lspconfig'
+    use {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config() }
     use 'onsails/lspkind-nvim'
     use 'ray-x/lsp_signature.nvim'
     use {"williamboman/mason.nvim"}
@@ -100,10 +100,7 @@ packer.startup(function()
     -- use { 'ChristianChiarulli/vim-solidity',  ft = {'solidity', 'sol' }}
 end)
 
-require'plugins/lsp/lsp-installer'.config()
-require'plugins/lsp/treesitter'.config()
 require'plugins/lsp/dap'
-
 
 -- Automatically Compile Packer when this file changes
 vim.cmd[[
