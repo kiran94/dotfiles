@@ -4,7 +4,6 @@
 
 local set = vim.opt
 set.encoding       = "utf-8"
-set.spell          = false               -- no spelling, use lsp for this
 set.number         = true
 set.relativenumber = false                -- add line numbers and enable relative
 set.splitbelow     = true                -- split down with :split
@@ -40,7 +39,7 @@ set.report         = 0                   -- always report the number of lines ya
 set.shortmess      = "a"
 set.cmdheight      = 1
 set.updatetime     = 300
-set.spell          = false
+set.spell          = false               -- no spelling, use lsp for this
 set.spelllang      = { 'en_gb' }
 set.virtualedit    = "block"
 
