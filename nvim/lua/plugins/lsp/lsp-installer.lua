@@ -129,7 +129,7 @@ options.config = function()
     mason_lsp.setup({
         ensure_installed = {
             -- LSPs
-            "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls", "bash-language-server",
+            "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls", "bash-language-server", "dockerfile-language-server",
             -- DAPS
             "debugpy", "delve",
             -- LINTER & FORMATTING
@@ -231,6 +231,11 @@ options.config = function()
                 treesitter_tf_doc.setup({command_name = "TerraformDoc"})
             end
         end
+    }
+
+    require'lspconfig'.dockerls.setup{
+      on_attach = on_attach,
+      capabilities = capabilities,
     }
 
     --------------------------------
