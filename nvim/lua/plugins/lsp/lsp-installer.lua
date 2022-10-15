@@ -189,6 +189,7 @@ options.config = function()
         settings = {
             python = {
                 analysis = {
+                    -- https://github.com/microsoft/pyright/blob/main/docs/configuration.md
                     typeCheckingMode = "off"
                 }
             }
