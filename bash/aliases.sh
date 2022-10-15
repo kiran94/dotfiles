@@ -18,6 +18,7 @@ alias ..="cd .."
 
 alias g="git"
 alias gs='git status'
+alias gp='git push'
 alias gpull='git pull'
 
 alias ls='ls -h --color=auto --group-directories-first'
