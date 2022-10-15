@@ -52,7 +52,7 @@ capabilities.textDocument.codeAction = {
     }
 }
 
-cmp_nvim_lsp.update_capabilities(capabilities)
+cmp_nvim_lsp.default_capabilities(capabilities)
 
 lsp_kind.init{
     mode = 'symbol_text',
