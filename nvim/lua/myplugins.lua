@@ -24,6 +24,9 @@ packer.startup(function()
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
     use { "nvim-neotest/neotest",                config = require'plugins/editor/ultest'.config, requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" } }
     use { 'nvim-neotest/neotest-python' }
+    use { 'nvim-neotest/neotest-go' }
+    use { 'nvim-neotest/neotest-plenary' }
+
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }

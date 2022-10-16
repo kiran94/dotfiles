@@ -120,8 +120,9 @@ options.config = function()
             t = {
                 name = "+test",
                 n    = {cmd('lua require("neotest").run.run()'), "test nearest"},
-                d    = {cmd('require("neotest").run.run({strategy = "dap"})'), "debug nearest test"},
-                a    = {cmd('require("neotest").run.run(vim.fn.expand("%"))'), "all current file tests"},
+                d    = {cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug nearest test"},
+                a    = {cmd('lua require("neotest").run.run(vim.fn.expand("%"))'), "all current file tests"},
+                s    = {cmd('lua require("neotest").summary.toggle()'), "summary"},
             },
             m = {
                 name = "+modify",
@@ -132,7 +133,7 @@ options.config = function()
         e = {
             name = "+explorer",
             e    = {":NvimTreeToggle<CR>", "file explorer"},
-            t    = {cmd('UltestSummary'), "test explorer"},
+            t    = {cmd('lua require("neotest").summary.toggle()'), "summary"},
         },
         -- Go
         g = {
@@ -158,6 +159,7 @@ options.config = function()
             -- q = { cmd("lua require'dap'.close()"), "Quit" },
             U = { cmd("lua require'dapui'.toggle()"), "Toggle UI" },
             q = { ":DapTerminate<CR>", "Terminate" },
+            t    = {cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug test"},
             -- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
             -- d = { cmd("lu>a require'dap'.disconnect()"), "Disconnect" },
             -- g = { cmd("lua require'dap'.session()"), "Get Session" },
