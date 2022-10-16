@@ -24,7 +24,6 @@ packer.startup(function()
     use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
     use { "nvim-neotest/neotest",                config = require'plugins/editor/ultest'.config, requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" } }
     use { 'nvim-neotest/neotest-python' }
-    use { 'kiran94/maim.nvim',                   config = function() require('maim').setup() end }
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
@@ -85,6 +84,8 @@ packer.startup(function()
     use { 'theHamsta/nvim-dap-virtual-text', requires = {"mfussenegger/nvim-dap"} }
     -- use { 'mfussenegger/nvim-dap-python', requires = {'mfussenegger/nvim-dap'} }
 
+    use { 'kiran94/s3edit.nvim', config = function() require('s3edit').setup() end}
+    use { 'kiran94/maim.nvim',   config = function() require('maim').setup() end }
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
