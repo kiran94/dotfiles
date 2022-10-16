@@ -4,6 +4,7 @@ options.config = function()
 	local null_ls = require("null-ls")
 	local formatting = null_ls.builtins.formatting
 	local diagnostics = null_ls.builtins.diagnostics
+	local actions = null_ls.builtins.code_actions
 
 	null_ls.setup({
 		sources = {
@@ -27,6 +28,7 @@ options.config = function()
 			formatting.clang_format,
 			formatting.yamlfmt,
 			diagnostics.yamllint,
+			actions.refactoring,
 
 			-- JavaScript
 			-- formatting.eslint,
