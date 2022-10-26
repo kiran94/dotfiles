@@ -46,6 +46,7 @@ options.config = function()
             ["+"] = {cmd("vsplit"), "vertical split"},
             ["-"] = {cmd("split"), "split"},
             ["m"] = {cmd("FocusMaximise"), "maximize"},
+            ["t"] = {cmd("FocusToggle"), "toggle"},
             ["="] = {"<C-W>=", "balance"}
         },
         -- Buffer Management

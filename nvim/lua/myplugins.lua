@@ -43,9 +43,9 @@ packer.startup(function()
     use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
     use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
     use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
-    use {'stevearc/dressing.nvim',               config = require'plugins/misc/dressing'.config }
-    use {'gpanders/editorconfig.nvim'}
-    -- use { 'beauwilliams/focus.nvim',          config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
+    use { 'stevearc/dressing.nvim',              config = require'plugins/misc/dressing'.config }
+    use { 'gpanders/editorconfig.nvim'}
+    use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     -- use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
 
