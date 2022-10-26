@@ -2,7 +2,8 @@
 	email = kiran_patel94@hotmail.com
 	name = kiran94
 [core]
-	editor = nvim
+    editor = nvim
+    ; pager = delta
 [log]
     date = relative
 [pager]
@@ -11,4 +12,47 @@
 [init]
 	defaultBranch = main
 [pull]
-	rebase = false
+    rebase = false
+[color]
+    ui = true
+[color "diff"]
+  meta = 11
+  frag = magenta bold
+  commit = yellow bold
+  whitespace = red reverse
+  ; func = black bold
+  ; old = red bold
+  ; new = green bold
+[diff]
+    tool = vimdiff
+# faster git server communications
+# https://git-scm.com/docs/protocol-v2
+[protocol]
+    version = 2
+; Force GitHub to use SSH
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+; [interactive]
+;     diffFilter = delta --color-only --features=interactive
+; [color "diff-highlight"]
+;   oldNormal = red bold
+;   oldHighlight = red bold 52
+;   newNormal = green bold
+;   newHighlight = green bold 22
+; [delta]
+;     features = decorations
+;     line-numbers = true
+;     navigate = false
+; [delta "interactive"]
+;     keep-plus-minus-markers = false
+; [delta "decorations"]
+    ; commit-decoration-style = blue ol
+    ; commit-style = raw
+    ; file-style = omit
+    ; hunk-header-decoration-style = blue box
+    ; hunk-header-file-style = red
+    ; hunk-header-line-number-style = "#067a00"
+    ; hunk-header-style = file line-number syntax
+
+    ; plus-style = bold syntax "#002800"
+    ; minus-style=white bold "#8b0000"
