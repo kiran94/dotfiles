@@ -129,14 +129,21 @@ options.config = function()
     mason_lsp.setup({
         ensure_installed = {
             -- LSPs
-            "sumneko_lua", "pylsp", "json-lsp", "yaml-language-server", "gopls", "terraformls", "bash-language-server", "dockerfile-language-server",
+            "sumneko_lua", "pylsp", "gopls", "terraformls",
+            -- "json-lsp", "yaml-language-server" "bash-language-server", "dockerfile-language-server",
             -- DAPS
-            "debugpy", "delve",
+            -- "debugpy", "delve",
             -- LINTER & FORMATTING
-            "flake8", "isort", "autopep8", "goimports", "gofmt", "staticcheck", "stylua", "clang-format", "jq" ,"yamllint", "yamlfmt"
+            -- "flake8", "isort", "autopep8", "goimports", "gofmt", "staticcheck", "stylua", "clang-format", "jq" ,"yamllint", "yamlfmt"
         },
         automatic_installation = true
     })
+
+
+-- [mason-lspconfig.nvim] Server "json-lsp" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
+-- [mason-lspconfig.nvim] Server "yaml-language-server" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
+-- [mason-lspconfig.nvim] Server "bash-language-server" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
+-- [mason-lspconfig.nvim] Server "dockerfile-language-server" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
 
     -- TODO: Refactor the below code via setup_handlers
     -- mason_lsp.setup_handlers()
