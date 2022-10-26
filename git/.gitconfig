@@ -56,3 +56,5 @@
 
     ; plus-style = bold syntax "#002800"
     ; minus-style=white bold "#8b0000"
+; Reference:
+; https://github.com/mrjones2014/dotfiles/blob/master/.config/git/config#L25
