@@ -118,8 +118,13 @@ options.config = function()
             g = {
                 name = "+git",
                 l = {cmd("Gitsigns toggle_linehl"), "line diff"},
-                d = {cmd("DiffviewOpen"), "diff view"},
                 b = {cmd("Gitsigns blame_line"), "blame line"},
+                d = {
+                    name = "+diff",
+                    o    = {cmd("DiffviewOpen"), "diff open"},
+                    c    = {cmd("DiffviewClose"), "diff close"},
+                    r    = {cmd("DiffviewRefresh"), "diff refresh"},
+                },
             },
             t = {
                 name = "+test",
