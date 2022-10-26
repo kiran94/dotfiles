@@ -26,11 +26,8 @@ packer.startup(function()
     use { 'nvim-neotest/neotest-python' }
     use { 'nvim-neotest/neotest-go' }
     use { 'nvim-neotest/neotest-plenary' }
-
-    use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
     use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
-    -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     use { 'akinsho/git-conflict.nvim',           config = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
     use { 'nvim-treesitter/nvim-treesitter',     config = require'plugins/lsp/treesitter'.config, run = ':TSUpdate' }
     use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
@@ -46,8 +43,11 @@ packer.startup(function()
     use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
     use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
     use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
-    use 'gpanders/editorconfig.nvim'
---   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
+    use {'stevearc/dressing.nvim',               config = require'plugins/misc/dressing'.config }
+    use {'gpanders/editorconfig.nvim'}
+    -- use { 'beauwilliams/focus.nvim',          config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
+    -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
+    -- use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
 
     -- LSP
     use {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config() }
