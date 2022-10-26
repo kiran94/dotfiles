@@ -13,4 +13,6 @@ vim.cmd [[highlight Search guibg=Yellow guifg=Black gui=NONE]]
 vim.cmd [[highlight Visual guifg=Black guibg=Orange gui=none]]
 vim.cmd [[highlight LspSagaCodeActionContent guifg=White gui=none]]
 vim.cmd [[highlight ScrollView guibg=Gray gui=none]]
+vim.cmd [[highlight LspInlayHint guifg=#3a3a3a guibg=none]]
+
 -- vim.cmd[[hi Pmenu guibg=Black guifg=White gui=NONE]]

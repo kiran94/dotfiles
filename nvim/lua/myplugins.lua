@@ -78,6 +78,7 @@ packer.startup(function()
     use { 'Afourcat/treesitter-terraform-doc.nvim' }
     use { 'j-hui/fidget.nvim' }
     use { "SmiteshP/nvim-navic", config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"}
+    use { 'lvimuser/lsp-inlayhints.nvim' }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
 
     -- DAP

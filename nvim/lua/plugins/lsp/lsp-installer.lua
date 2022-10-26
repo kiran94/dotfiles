@@ -11,6 +11,7 @@ local mason         = require('mason')
 local mason_lsp     = require('mason-lspconfig')
 local lsp_progress  = require('fidget')
 local navic         = require("nvim-navic")
+local inlayhints    = require("lsp-inlayhints")
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
@@ -95,7 +96,8 @@ lsp_kind.init{
 
 local on_attach = function(client, bufnr)
     -- lsp_signature.on_attach(client, bufnr)
-    require("illuminate").on_attach(client)
+    require("illuminate").on_attach(client, bufnr)
+    inlayhints.on_attach(client, bufnr)
 
     if client.server_capabilities.documentSymbolProvider then
         navic.attach(client, bufnr)
@@ -138,6 +140,7 @@ options.config = function()
         },
         automatic_installation = true
     })
+    inlayhints.setup()
 
 
 -- [mason-lspconfig.nvim] Server "json-lsp" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
@@ -185,6 +188,9 @@ options.config = function()
                 },
                 telemetry = {
                     enable = false,
+                },
+                hint = {
+                    enable = true,
                 }
             }
         }
@@ -227,6 +233,18 @@ options.config = function()
     require'lspconfig'.gopls.setup{
       on_attach = on_attach,
       capabilities = capabilities,
+      settings = {
+        gopls = {
+            hints = {
+                assignVariableTypes    = true,
+                compositeLiteralFields = true,
+                functionTypeParameters = true,
+                rangeVariableTypes     = false,
+                parameterNames         = false,
+                constantValues         = false,
+            },
+        },
+      },
     }
 
     require('lspconfig').terraformls.setup{
