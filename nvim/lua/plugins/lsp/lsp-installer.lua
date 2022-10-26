@@ -175,6 +175,7 @@ options.config = function()
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
+            -- https://github.com/sumneko/lua-language-server/wiki/Configuration-File
             Lua = {
                 runtime = {
                     version = "LuaJIT",
