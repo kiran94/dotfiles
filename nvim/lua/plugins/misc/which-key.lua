@@ -90,6 +90,7 @@ options.config = function()
                 b = {cmd('VBox'), "create box or line"},
                 p = {cmd('Glow'), "preview"},
                 s = {':MaimMarkdown<space>', "screenshot"},
+                e = {function() _G.edit_cell() end, "edit cell"},
             },
             z = {cmd("ZenMode"), "zen mode"},
             t = {cmd(":new term://zsh"), 'terminal' },
