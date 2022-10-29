@@ -48,6 +48,7 @@ packer.startup(function()
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     -- use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
+    -- use { "folke/noice.nvim", config = require'./plugins/misc/noice'.config, requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }, }
 
     -- LSP
     use {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config() }
