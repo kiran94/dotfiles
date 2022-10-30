@@ -33,14 +33,14 @@ options.config = function()
         return msg
     end
 
-    -- Get Python Environment
-    local python_env = function()
-        if vim.bo.filetype ~= "python" then
-            return ""
-        end
+		local virtual_env = os.getenv("VIRTUAL_ENV")
+		local conda_env = os.getenv("CONDA_DEFAULT_ENV")
 
-        local virtual_env = os.getenv("VIRTUAL_ENV")
-        local conda_env = os.getenv("CONDA_DEFAULT_ENV")
+		-- Normalize the path
+        -- e.g /home/user/projects/.venv => ~/projects/.env
+		local user = os.getenv("USER")
+		local home_path = "/home/" .. user
+        virtual_env = virtual_env:gsub(home_path, "~")
 
         if virtual_env ~= nil then
             return virtual_env
