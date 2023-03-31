@@ -46,8 +46,8 @@ packer.startup(function()
     use { 'stevearc/dressing.nvim',              config = require'plugins/misc/dressing'.config }
     use { 'gpanders/editorconfig.nvim'}
     use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
+    use { "iamcco/markdown-preview.nvim",        config = require'plugins/misc/markdown-preview'.config, run = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } }
     -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
-    -- use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", config = require'plugins/misc/markdown-preview', ft = { "markdown" } }
     -- use { "folke/noice.nvim", config = require'./plugins/misc/noice'.config, requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }, }
 
     -- LSP
