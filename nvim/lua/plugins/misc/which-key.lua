@@ -89,6 +89,7 @@ options.config = function()
                 g = {cmd('GenTocGFM'), "create markdown toc"},
                 b = {cmd('VBox'), "create box or line"},
                 p = {cmd('Glow'), "preview"},
+                x = {cmd('MarkdownPreviewToggle'), "preview browser"},
                 s = {':MaimMarkdown<space>', "screenshot"},
                 e = {function() _G.edit_cell() end, "edit cell"},
             },
