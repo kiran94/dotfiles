@@ -156,7 +156,7 @@ options.config = function()
         },
         -- Debug
         d = {
-            name = "+hello",
+            name = "+debug",
             b = { cmd("lua require'dap'.toggle_breakpoint()"), "Toggle Breakpoint" },
             B = { cmd("lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))"), "Conditional Breakpoint" },
             l = { cmd("lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))"), "Log Point"},
