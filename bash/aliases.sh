@@ -56,10 +56,10 @@ export SPARK_HOME=/opt/spark
 export SPARK_HOST="spark://$(hostname):7077"
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 export PYSPARK_PYTHON=/usr/bin/python3
-alias spark_master_start=/opt/spark/sbin/start-master.sh
-alias spark_master_stop=/opt/spark/sbin/stop-master.sh
-alias spark_worker_start="/opt/spark/sbin/start-worker.sh $SPARK_HOST --cores 2 --memory 2G"
-alias spark_worker_stop=/opt/spark/sbin/stop-worker.sh
+alias spark_master_start=$SPARK_HOME/sbin/start-master.sh
+alias spark_master_stop=$SPARK_HOME/sbin/stop-master.sh
+alias spark_worker_start="$SPARK_HOME/sbin/start-worker.sh $SPARK_HOST --cores 2 --memory 2G"
+alias spark_worker_stop=$SPARK_HOME/sbin/stop-worker.sh
 
 alias bluetooth=blueberry
 alias wifi=nm-connection-editor
