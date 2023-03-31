@@ -69,3 +69,12 @@ function speed_test
     echo "Running Speed Test and saving in" $SAVE_LOC
     speedtest --json >> $SAVE_LOC
 }
+
+# Check to see if the bucket name is available in AWS S3
+# https://www.reddit.com/r/aws/comments/v940zq/command_to_check_aws_s3_bucket_name_availability/
+# Usage: check_s3_bucket my_bucket
+# If it returns something then the bucket exists
+function check_s3_bucket
+{
+    curl -sI https://$1.s3.amazonaws.com | grep bucket-region
+}
