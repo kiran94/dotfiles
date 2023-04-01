@@ -55,7 +55,7 @@ options.config = function()
             t    = {cmd("tabnew"), "tab new"},
             r    = {cmd("reg"), "registers"},
             m    = {cmd("marks"), "marks"},
-            mt   = {cmd("SignatureToggleSigns"), "toggle marks"},
+            mt   = {cmd("MarksToggleSigns"), "toggle marks"},
         },
         f = {
             name = '+fuzzy',
