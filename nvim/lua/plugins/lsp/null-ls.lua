@@ -35,6 +35,9 @@ options.config = function()
 			-- formatting.prettier,
 			-- formatting.json_tool,
 			formatting.jq,
+
+			-- Rust
+			formatting.rustfmt,
 		},
 	})
 end

@@ -131,7 +131,7 @@ options.config = function()
     mason_lsp.setup({
         ensure_installed = {
             -- LSPs
-            "lua_ls", "pylsp", "gopls", "terraformls",
+            "lua_ls", "pylsp", "gopls", "terraformls"
             -- "json-lsp", "yaml-language-server" "bash-language-server", "dockerfile-language-server",
             -- DAPS
             -- "debugpy", "delve",
@@ -262,6 +262,19 @@ options.config = function()
     require'lspconfig'.dockerls.setup{
       on_attach = on_attach,
       capabilities = capabilities,
+    }
+
+    require'lspconfig'.rust_analyzer.setup{
+      on_attach = on_attach,
+      capabilities = capabilities,
+      -- https://rust-analyzer.github.io/manual.html#configuration
+      settings = {
+        ['rust-analyzer'] = {
+          diagnostics = {
+            enable = true;
+          }
+        }
+      }
     }
 
     --------------------------------
