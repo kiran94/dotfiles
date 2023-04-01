@@ -49,3 +49,7 @@ function spark_stop
 
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
+
+
+# Rust
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
