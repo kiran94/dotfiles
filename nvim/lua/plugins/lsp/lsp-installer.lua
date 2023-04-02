@@ -131,8 +131,7 @@ options.config = function()
     mason_lsp.setup({
         ensure_installed = {
             -- LSPs
-            "lua_ls", "pylsp", "gopls", "terraformls"
-            -- "json-lsp", "yaml-language-server" "bash-language-server", "dockerfile-language-server",
+            "lua_ls", "pylsp", "gopls", "terraformls", "bashls", "yamlls", "jsonls", "dockerls", "docker_compose_language_service"
             -- DAPS
             -- "debugpy", "delve",
             -- LINTER & FORMATTING
@@ -259,11 +258,6 @@ options.config = function()
         end
     }
 
-    require'lspconfig'.dockerls.setup{
-      on_attach = on_attach,
-      capabilities = capabilities,
-    }
-
     require'lspconfig'.rust_analyzer.setup{
       on_attach = on_attach,
       capabilities = capabilities,
@@ -276,6 +270,11 @@ options.config = function()
         }
       }
     }
+
+    require'lspconfig'.dockerls.setup{ on_attach = on_attach, capabilities = capabilities }
+    require'lspconfig'.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
+    require'lspconfig'.bashls.setup{ on_attach = on_attach, capabilities = capabilities }
+    require'lspconfig'.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }
 
     --------------------------------
     -- COMPLETION
