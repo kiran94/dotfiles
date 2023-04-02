@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#######################################
 # Transforms a key,value pair delimited input
 # with quotes and commas
 #
@@ -16,12 +17,15 @@
 #
 # Usage:
 # cat test.txt | token_to_json
+#######################################
 function token_to_json
 {
     awk -F: '{ print "\x27"$1"\x27" "\x3a" "\x27"$2"\x27" "\x2c" }'
 }
 
+#######################################
 # Quickly Reference Git Conventional Commits
+#######################################
 function git_conventions {
 cat << EOF
 type(scope): description
@@ -47,8 +51,10 @@ or appends a ! after the type/scope
 EOF
 }
 
+#######################################
 # Traverses to the Root Directory of a Git Repository.
 # If a repository cannot be found then stop at the $HOME directory
+#######################################
 function githome
 {
     CURRENT=$(pwd)
@@ -63,6 +69,9 @@ function githome
     done
 }
 
+#######################################
+# Runs a Speed Test and saves into a location
+#######################################
 function speed_test
 {
     SAVE_LOC=$HOME/Dropbox/Data/Broadband/data.jsonl
@@ -70,10 +79,12 @@ function speed_test
     speedtest --json >> $SAVE_LOC
 }
 
+#######################################
 # Check to see if the bucket name is available in AWS S3
 # https://www.reddit.com/r/aws/comments/v940zq/command_to_check_aws_s3_bucket_name_availability/
 # Usage: check_s3_bucket my_bucket
 # If it returns something then the bucket exists
+#######################################
 function check_s3_bucket
 {
     curl -sI https://$1.s3.amazonaws.com | grep bucket-region
