@@ -99,3 +99,11 @@ function gitignore
     curl -s "https://www.toptal.com/developers/gitignore/api/list?format=json" | jq -r 'keys[]' | fzf | xargs -I _ curl -sL https://www.toptal.com/developers/gitignore/api/_ >> .gitignore
     echo "Added!"
 }
+
+#######################################
+# Sources the .env file in the current directory as environment variables
+#######################################
+function source_dotenv
+{
+    cat .env | awk 'NF > 0' | awk '{print "export " $0}' >> ._temp_env && source ._temp_env && rm ._temp_env
+}
