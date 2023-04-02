@@ -131,28 +131,42 @@ options.config = function()
     mason_lsp.setup({
         ensure_installed = {
             -- LSPs
-            "lua_ls", "pylsp", "gopls", "terraformls", "bashls", "yamlls", "jsonls", "dockerls", "docker_compose_language_service"
-            -- DAPS
-            -- "debugpy", "delve",
+            "lua_ls",
+            "pylsp",
+            "gopls",
+            "terraformls",
+            "bashls",
+            "yamlls",
+            "jsonls",
+            "dockerls",
+            "docker_compose_language_service",
             -- LINTER & FORMATTING
-            -- "flake8", "isort", "autopep8", "goimports", "gofmt", "staticcheck", "stylua", "clang-format", "jq" ,"yamllint", "yamlfmt"
+            -- "flake8",
+            -- "isort",
+            -- "autopep8",
+            -- "goimports",
+            -- "gofmt",
+            -- "staticcheck",
+            -- "stylua",
+            -- "clang-format",
+            -- "jq" ,
+            -- "yamllint",
+            -- "yamlfmt",
+            -- DAPS
+            -- "debugpy",
+            -- "delve",
         },
         automatic_installation = true
     })
     inlayhints.setup()
 
 
--- [mason-lspconfig.nvim] Server "json-lsp" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
--- [mason-lspconfig.nvim] Server "yaml-language-server" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
--- [mason-lspconfig.nvim] Server "bash-language-server" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
--- [mason-lspconfig.nvim] Server "dockerfile-language-server" is not a valid entry in ensure_installed. Make sure to only provide lspconfig server names.
-
     -- TODO: Refactor the below code via setup_handlers
     -- mason_lsp.setup_handlers()
 
     -- LSP Import Name to Language Server name can be found in:
     -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
-    require("lspconfig").pylsp.setup {
+    nvim_lsp.pylsp.setup {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -170,7 +184,7 @@ options.config = function()
         }
     }
 
-    require("lspconfig").lua_ls.setup {
+    nvim_lsp.lua_ls.setup {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -196,7 +210,7 @@ options.config = function()
         }
     }
 
-    require("lspconfig").pyright.setup{
+    nvim_lsp.pyright.setup{
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -208,7 +222,8 @@ options.config = function()
             }
         }
     }
-    require("lspconfig").jsonls.setup {
+
+    nvim_lsp.jsonls.setup {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -220,7 +235,7 @@ options.config = function()
         }
     }
 
-    require('lspconfig').yamlls.setup {
+    nvim_lsp.yamlls.setup {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = {
@@ -230,7 +245,7 @@ options.config = function()
       }
     }
 
-    require'lspconfig'.gopls.setup{
+    nvim_lsp.gopls.setup{
       on_attach = on_attach,
       capabilities = capabilities,
       settings = {
@@ -247,7 +262,7 @@ options.config = function()
       },
     }
 
-    require('lspconfig').terraformls.setup{
+    nvim_lsp.terraformls.setup{
         on_attach = function(client, buffernr)
             on_attach(client, buffernr)
 
@@ -258,7 +273,7 @@ options.config = function()
         end
     }
 
-    require'lspconfig'.rust_analyzer.setup{
+    nvim_lsp.rust_analyzer.setup{
       on_attach = on_attach,
       capabilities = capabilities,
       -- https://rust-analyzer.github.io/manual.html#configuration
@@ -271,10 +286,10 @@ options.config = function()
       }
     }
 
-    require'lspconfig'.dockerls.setup{ on_attach = on_attach, capabilities = capabilities }
-    require'lspconfig'.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
-    require'lspconfig'.bashls.setup{ on_attach = on_attach, capabilities = capabilities }
-    require'lspconfig'.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.bashls.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.dockerls.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
 
     --------------------------------
     -- COMPLETION
