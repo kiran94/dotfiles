@@ -21,6 +21,7 @@ options.config = function()
 				"__pycache__/*",
 				".pytest_cache/*",
 				"vendor/*",
+				"**/*.zip",
 			},
 		},
 		extensions = {
