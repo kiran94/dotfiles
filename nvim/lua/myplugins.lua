@@ -3,50 +3,51 @@ local packer = require('packer')
 packer.startup(function()
     use 'wbthomason/packer.nvim'
 
-    use { 'goolord/alpha-nvim',                  config = require'plugins/misc/dashboard'.config, requires = { 'kyazdani42/nvim-web-devicons' } }
-    use { 'lewis6991/gitsigns.nvim',             config = require'plugins/editor/gitsigns'.config, requires = { 'nvim-lua/plenary.nvim' }, event = "BufWinEnter" }
-    use { 'folke/which-key.nvim',                config = require'plugins/misc/which-key'.config, keys = '<leader>' }
-    use { 'windwp/nvim-autopairs',               config = require'plugins/editor/nvim-autopairs'.config, event = "BufWinEnter" }
-    use { 'ethanholz/nvim-lastplace',            config = require'plugins/misc/nvim-lastplace'.config }
-    use { 'ahmedkhalf/project.nvim',             config = require'plugins/misc/project'.config, event = "BufWinEnter" }
-    use { 'nvim-lualine/lualine.nvim',           config = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-    use { 'folke/todo-comments.nvim',            config = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
-    use { 'numToStr/Comment.nvim',               config = require'plugins/editor/comment'.config, event = "BufWinEnter" }
-    use { 'chentoast/marks.nvim',                config = require'plugins/editor/marks'.config, event = "BufWinEnter"}
-    use { 'norcalli/nvim-colorizer.lua',         config = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
-    use { 'kyazdani42/nvim-tree.lua',            config = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
-    use { 'nvim-telescope/telescope.nvim',       config = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
+    use { 'goolord/alpha-nvim',                       config   = require'plugins/misc/dashboard'.config, requires = { 'kyazdani42/nvim-web-devicons' } }
+    use { 'lewis6991/gitsigns.nvim',                  config   = require'plugins/editor/gitsigns'.config, requires = { 'nvim-lua/plenary.nvim' }, event = "BufWinEnter" }
+    use { 'folke/which-key.nvim',                     config   = require'plugins/misc/which-key'.config, keys = '<leader>' }
+    use { 'windwp/nvim-autopairs',                    config   = require'plugins/editor/nvim-autopairs'.config, event = "BufWinEnter" }
+    use { 'ethanholz/nvim-lastplace',                 config   = require'plugins/misc/nvim-lastplace'.config }
+    use { 'ahmedkhalf/project.nvim',                  config   = require'plugins/misc/project'.config, event = "BufWinEnter" }
+    use { 'nvim-lualine/lualine.nvim',                config   = require'plugins/misc/lualine'.config, requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+    use { 'folke/todo-comments.nvim',                 config   = require'plugins/editor/todo-comments'.config, requires = {"nvim-lua/plenary.nvim" }, event = "BufWinEnter"}
+    use { 'numToStr/Comment.nvim',                    config   = require'plugins/editor/comment'.config, event = "BufWinEnter" }
+    use { 'chentoast/marks.nvim',                     config   = require'plugins/editor/marks'.config, event = "BufWinEnter"}
+    use { 'norcalli/nvim-colorizer.lua',              config   = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} }
+    use { 'kyazdani42/nvim-tree.lua',                 config   = require'plugins/editor/nvim-tree'.config, requires = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} }
+    use { 'nvim-telescope/telescope.nvim',            config   = require'plugins/misc/telescope'.config, requires = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
-    use { "ur4ltz/surround.nvim",                config = require'plugins/editor/surround'.config, event = "BufWinEnter" }
-    use { 'akinsho/bufferline.nvim',             config = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
-    use { 'danymat/neogen',                      config = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter", cmd = {"Neogen"} }
-    use { 'lukas-reineke/indent-blankline.nvim', config = require'plugins/editor/indent-blankline'.config }
-    use { 'mzlogin/vim-markdown-toc',            config = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
-    use { "nvim-neotest/neotest",                config = require'plugins/editor/ultest'.config, requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" } }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { "ur4ltz/surround.nvim",                     config   = require'plugins/editor/surround'.config, event = "BufWinEnter" }
+    use { 'akinsho/bufferline.nvim',                  config   = require'plugins/misc/bufferline'.config, event = "BufWinEnter" }
+    use { 'danymat/neogen',                           config   = require'plugins/editor/neogen'.config, requires = "nvim-treesitter/nvim-treesitter", cmd = {"Neogen"} }
+    use { 'lukas-reineke/indent-blankline.nvim',      config   = require'plugins/editor/indent-blankline'.config }
+    use { 'mzlogin/vim-markdown-toc',                 config   = require'plugins/misc/markdown-toc'.config, cmd = { "GenTocGFM"} }
+    use { "nvim-neotest/neotest",                     config   = require'plugins/editor/ultest'.config, requires = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter", "antoinemadec/FixCursorHold.nvim" } }
     use { 'nvim-neotest/neotest-python' }
     use { 'nvim-neotest/neotest-go' }
     use { 'nvim-neotest/neotest-plenary' }
-    use { 'rcarriga/nvim-notify',                config = require'plugins/misc/notify'.config, event = "BufWinEnter" }
-    use { 'kevinhwang91/nvim-hlslens',           config = require'plugins/editor/hlslens'.config }
-    use { 'akinsho/git-conflict.nvim',           config = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
-    use { 'nvim-treesitter/nvim-treesitter',     config = require'plugins/lsp/treesitter'.config, run = ':TSUpdate' }
-    use { 'nvim-treesitter/playground',          requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
-    use { 'sindrets/diffview.nvim',              requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
-    use { 'jbyuki/venn.nvim',                    cmd = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
-    use { 'ellisonleao/glow.nvim',               cmd = {'Glow', 'GlowInstall'} }
-    use { 'folke/zen-mode.nvim',                 cmd = { "ZenMode" } }
-    use { 'junegunn/vim-easy-align',             cmd = { "EasyAlign" } }
-    use { 'tweekmonster/startuptime.vim',        cmd = {"StartupTime"} }
-    use { 'gyim/vim-boxdraw',                    ft = 'markdown'}
-    use { 'ntpeters/vim-better-whitespace',      event = "BufWinEnter" }
-    use { 'inside/vim-search-pulse',             event = "BufWinEnter" }
-    use { 'dstein64/nvim-scrollview',            event = "BufWinEnter" }
-    use { 'mizlan/iswap.nvim',                   event = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
-    use { 'folke/twilight.nvim',                 event = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
-    use { 'stevearc/dressing.nvim',              config = require'plugins/misc/dressing'.config }
+    use { 'rcarriga/nvim-notify',                     config   = require'plugins/misc/notify'.config, event = "BufWinEnter" }
+    use { 'kevinhwang91/nvim-hlslens',                config   = require'plugins/editor/hlslens'.config }
+    use { 'akinsho/git-conflict.nvim',                config   = require'plugins/misc/git_conflict'.config, event = "BufWinEnter" }
+    use { 'nvim-treesitter/nvim-treesitter',          config   = require'plugins/lsp/treesitter'.config, run = ':TSUpdate' }
+    use { 'nvim-treesitter/playground',               requires = {'nvim-treesitter/nvim-treesitter'}, cmd = {"TSPlaygroundToggle"} }
+    use { 'sindrets/diffview.nvim',                   requires = 'nvim-lua/plenary.nvim', cmd = { "DiffviewOpen" } }
+    use { 'jbyuki/venn.nvim',                         cmd      = {'VBox', 'VBoxD', 'VBoxDO', 'VBoxH', 'VBoxHO', 'VBoxO'} }
+    use { 'ellisonleao/glow.nvim',                    cmd      = {'Glow', 'GlowInstall'} }
+    use { 'folke/zen-mode.nvim',                      cmd      = { "ZenMode" } }
+    use { 'junegunn/vim-easy-align',                  cmd      = { "EasyAlign" } }
+    use { 'tweekmonster/startuptime.vim',             cmd      = {"StartupTime"} }
+    use { 'gyim/vim-boxdraw',                         ft       = 'markdown'}
+    use { 'ntpeters/vim-better-whitespace',           event    = "BufWinEnter" }
+    use { 'inside/vim-search-pulse',                  event    = "BufWinEnter" }
+    use { 'dstein64/nvim-scrollview',                 event    = "BufWinEnter" }
+    use { 'mizlan/iswap.nvim',                        event    = "BufWinEnter", requires = "nvim-treesitter/nvim-treesitter" }
+    use { 'folke/twilight.nvim',                      event    = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
+    use { 'stevearc/dressing.nvim',                   config   = require'plugins/misc/dressing'.config }
     use { 'gpanders/editorconfig.nvim'}
-    use { 'beauwilliams/focus.nvim',             config = require'plugins/editor/focus'.config, event = "BufWinEnter" }
-    use { "iamcco/markdown-preview.nvim",        config = require'plugins/misc/markdown-preview'.config, run = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } }
+    use { 'beauwilliams/focus.nvim',                  config   = require'plugins/editor/focus'.config, event = "BufWinEnter" }
+    use { "iamcco/markdown-preview.nvim",             config   = require'plugins/misc/markdown-preview'.config, run = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } }
     -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
     -- use { "folke/noice.nvim", config = require'./plugins/misc/noice'.config, requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }, }
 
