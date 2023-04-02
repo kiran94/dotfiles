@@ -48,8 +48,6 @@ packer.startup(function()
     use { 'gpanders/editorconfig.nvim'}
     use { 'beauwilliams/focus.nvim',                  config   = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { "iamcco/markdown-preview.nvim",             config   = require'plugins/misc/markdown-preview'.config, run = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } }
-    -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
-    -- use { "folke/noice.nvim", config = require'./plugins/misc/noice'.config, requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }, }
 
     -- LSP
     use {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config() }
@@ -105,6 +103,8 @@ packer.startup(function()
     -- use { "AckslD/nvim-neoclip.lua",          config = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
     -- use { 'mhartington/formatter.nvim',       config = require'plugins/editor/formatter'.config }
     -- use { 'ChristianChiarulli/vim-solidity',  ft = {'solidity', 'sol' }}
+    -- use { 'nkakouros-original/numbers.nvim',  config = require'plugins/editor/numbers'.config, event = "BufWinEnter" }
+    -- use { "folke/noice.nvim", config = require'./plugins/misc/noice'.config, requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify", }, }
 end)
 
 require'plugins/lsp/dap'
