@@ -78,3 +78,13 @@ function check_s3_bucket
 {
     curl -sI https://$1.s3.amazonaws.com | grep bucket-region
 }
+
+#######################################
+# Provides an interactive input of possible gitignore files
+# Once choosen, adds to the current .gitignore file
+#######################################
+function gitignore
+{
+    curl -s "https://www.toptal.com/developers/gitignore/api/list?format=json" | jq -r 'keys[]' | fzf | xargs -I _ curl -sL https://www.toptal.com/developers/gitignore/api/_ >> .gitignore
+    echo "Added!"
+}
