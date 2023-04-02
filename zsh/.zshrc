@@ -22,8 +22,17 @@ bindkey '^j' jq-complete
 # Highlight selection when tab completing
 zstyle ':completion:*' menu select
 
+# Edit the command on the current prompt
+# https://unix.stackexchange.com/a/34251
+# https://nuclearsquid.com/writings/edit-long-commands/
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
+# History Options
 HIST_IGNORE_DUPS=true
 HIST_IGNORE_ALL_DUPS=true
 HIST_IGNORE_SPACE=true
 
+# Update Options
 export UPDATE_ZSH_DAYS=7
