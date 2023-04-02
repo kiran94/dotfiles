@@ -12,6 +12,7 @@ options.config = function()
 			formatting.autopep8,
 			formatting.isort,
 			diagnostics.flake8,
+			-- diagnostics.pyproject_flake8,
 
 			-- Go
 			formatting.gofmt,
