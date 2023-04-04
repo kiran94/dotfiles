@@ -51,6 +51,7 @@ alias f='fzf | xargs nvim'
 alias fhistory='history | fzf'
 alias fenv='env | fzf'
 alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf | xargs nvim"
+alias co='git checkout $(git branch | fzf)'
 
 export SPARK_HOME=/opt/spark
 export SPARK_HOST="spark://$(hostname):7077"
