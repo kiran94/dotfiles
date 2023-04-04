@@ -45,6 +45,7 @@ alias vpn='expressvpn status'
 alias system='inxi -Fxzc0'
 alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
 alias bat='batcat'
+alias fd='fdfind'
 
 # Fuzzy
 alias f='fzf | xargs nvim'
