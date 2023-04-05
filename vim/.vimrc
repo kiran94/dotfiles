@@ -83,15 +83,15 @@ nnoremap <leader>wl <C-W>l<CR>
 nnoremap <leader>wk <C-W>k<CR>
 
 " mock block selections
-xnoremap K :move '<-2<CR>gv-gv 
-xnoremap J :move '>+1<CR>gv-gv 
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
 " explorer
 nnoremap <leader>ee :Lexplore<CR>
 
 " Required for ALT key mapping to work
-" in some terminals 
-" https://stackoverflow.com/a/10216459 
+" in some terminals
+" https://stackoverflow.com/a/10216459
 let c='a'
 while c <= 'z'
   exec "set <A-".c.">=\e".c
