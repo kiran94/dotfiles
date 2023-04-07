@@ -41,11 +41,12 @@ alias gdb="gdb -q"
 alias debug="cgdb"
 alias csharp='csharprepl'
 alias tf='terraform'
-alias vpn='expressvpn status'
 alias system='inxi -Fxzc0'
 alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
-alias bat='batcat'
-alias fd='fdfind'
+
+[ -f /usr/bin/expressvpn ] && alias vpn='expressvpn status'
+[ -f /usr/bin/batcat ] && alias bat='batcat'
+[ -f /usr/bin/fdfind ] && alias fd='fdfind'
 
 # Fuzzy
 alias f='fzf | xargs nvim'
