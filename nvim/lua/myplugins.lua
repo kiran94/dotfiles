@@ -49,8 +49,15 @@ packer.startup(function()
     use { 'beauwilliams/focus.nvim',                  config   = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { "iamcco/markdown-preview.nvim",             config   = require'plugins/misc/markdown-preview'.config, run = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } }
 
+    -- COLOR SCHEMES
+    use {'Mofiqul/vscode.nvim'}
+    -- use {'tomasiser/vim-code-dark' }
+    -- use {'rose-pine/neovim',}
+    -- use {'lighthaus-theme/vim-lighthaus'}
+    -- use {'projekt0n/github-nvim-theme'}
+    -- use {'folke/tokyonight.nvim'}
+
     -- LSP
-    use {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config() }
     use 'onsails/lspkind-nvim'
     use 'ray-x/lsp_signature.nvim'
     use {"williamboman/mason.nvim"}
@@ -80,6 +87,7 @@ packer.startup(function()
     use { "SmiteshP/nvim-navic", config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"}
     use { 'lvimuser/lsp-inlayhints.nvim' }
     -- use { 'weilbith/nvim-code-action-menu',  config = require'plugins/lsp/code-action'.config, cmd="CodeActionMenu" }
+    use {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config() }
 
     -- DAP
     use { 'mfussenegger/nvim-dap'}
@@ -90,14 +98,6 @@ packer.startup(function()
 
     use { 'kiran94/s3edit.nvim', config = function() require('s3edit').setup() end}
     use { 'kiran94/maim.nvim',   config = function() require('maim').setup() end }
-
-    -- COLOR SCHEMES
-    use {'Mofiqul/vscode.nvim'}
-    -- use {'tomasiser/vim-code-dark' }
-    -- use {'rose-pine/neovim',}
-    -- use {'lighthaus-theme/vim-lighthaus'}
-    -- use {'projekt0n/github-nvim-theme'}
-    -- use {'folke/tokyonight.nvim'}
 
     -- OLD
     -- use { "AckslD/nvim-neoclip.lua",          config = require'plugins/misc/neoclip'.config, requires = { 'nvim-telescope/telescope.nvim'} }
