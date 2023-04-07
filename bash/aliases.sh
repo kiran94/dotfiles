@@ -21,7 +21,7 @@ alias gs='git status'
 alias gp='git push'
 alias gpull='git pull'
 
-alias ls='ls -h --color=auto --group-directories-first'
+alias ls='ls -h --color=auto'
 alias ll='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
