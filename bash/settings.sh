@@ -6,7 +6,7 @@
 # Default Apps
 export EDITOR=nvim
 export VISUAL=nvim
-export BROWSER=brave
+export BROWSER=brave-browser
 export TERMINAL=alacritty
 export VIDEO=vlc
 export PAGER=less
