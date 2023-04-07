@@ -40,17 +40,29 @@ function spark_stop
     jps
 }
 
-## Pyenv
+#######################################
+## Python Version Manager
+#
+# NOTE:
+# Use fpyenv to install a version
+# pyenv versions
+# pyenv local <version>
+#######################################
 
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=$PATH:$PYENV_ROOT/bin
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
+#######################################
 ## Node Version Manager
+#######################################
 
 export NVS_HOME="$HOME/.nvs"
 [ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
-
 
 # Rust
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
