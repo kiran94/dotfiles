@@ -1,15 +1,18 @@
 local options = {}
 
+
+-- 2023-04-15T11:54:10  WARN [NvimTree] unknown option: open_on_setup | [NvimTree] unknown option: ignore_ft_on_setup | see :help nvim-tree-setup for available configuration o
+
 options.config = function()
 
     require'nvim-tree'.setup {
       disable_netrw      = true,  -- disables netrw completely
       hijack_netrw       = true,  -- hijack netrw window on startup
-      open_on_setup      = false, -- open the tree when running this setup function
+      -- open_on_setup      = false, -- open the tree when running this setup function
       open_on_tab        = true,  -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
       hijack_cursor      = true,  -- hijack the cursor in the tree to put it at the start of the filename
       update_cwd         = true,  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
-      ignore_ft_on_setup = {},    -- will not open on setup if the filetype is in this list
+      -- ignore_ft_on_setup = {},    -- will not open on setup if the filetype is in this list
       renderer = {
         indent_markers = {
           enable = true,
