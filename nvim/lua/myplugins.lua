@@ -46,8 +46,15 @@ packer.startup(function()
     use { 'folke/twilight.nvim',                      event    = "BufWinEnter", requires = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config }
     use { 'stevearc/dressing.nvim',                   config   = require'plugins/misc/dressing'.config }
     use { 'gpanders/editorconfig.nvim'}
-    use { 'beauwilliams/focus.nvim',                  config   = require'plugins/editor/focus'.config, event = "BufWinEnter" }
+    -- use { 'beauwilliams/focus.nvim',                  config   = require'plugins/editor/focus'.config, event = "BufWinEnter" }
     use { "iamcco/markdown-preview.nvim",             config   = require'plugins/misc/markdown-preview'.config, run = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } }
+
+    use {
+        'Bryley/neoai.nvim',
+        requires = { "MunifTanjim/nui.nvim", },
+        config = function() require("neoai").setup() end,
+    }
+
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
