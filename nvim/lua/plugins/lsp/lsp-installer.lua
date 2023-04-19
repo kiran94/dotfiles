@@ -95,7 +95,6 @@ lsp_kind.init{
 -- })
 
 local on_attach = function(client, bufnr)
-    -- lsp_signature.on_attach(client, bufnr)
     require("illuminate").on_attach(client, bufnr)
     inlayhints.on_attach(client, bufnr)
 
