@@ -55,6 +55,16 @@ packer.startup(function()
         config = function() require("neoai").setup() end,
     }
 
+    -- use { 'joechrisellis/lsp-format-modifications.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+
+    -- https://github.com/Bryley/neoai.nvim/issues/13
+    -- use { 'beauwilliams/focus.nvim', config = function() require("focus").setup({}) end, event = "BufWinEnter" }
+
+    -- use { 'VonHeikemen/fine-cmdline.nvim', requires = { {'MunifTanjim/nui.nvim'} }, config = function()
+    --     require('fine-cmdline').setup({})
+    --     vim.api.nvim_set_keymap('n', '<CR>', '<cmd>FineCmdline<CR>', {noremap = true})
+    -- end}
+
 
     -- COLOR SCHEMES
     use {'Mofiqul/vscode.nvim'}
