@@ -48,6 +48,7 @@ alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
 [ -f /usr/bin/batcat ] && alias bat='batcat'
 [ -f /usr/bin/fdfind ] && alias fd='fdfind'
 [ -f $HOME/.cargo/bin/hyperfine ] && alias hf='hyperfine'
+[ -f $HOME/.cargo/bin/lsd ] && alias ls='lsd'
 
 
 # Fuzzy
