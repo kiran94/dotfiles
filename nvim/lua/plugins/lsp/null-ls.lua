@@ -9,10 +9,12 @@ options.config = function()
 	null_ls.setup({
 		sources = {
 			-- Python
-			formatting.autopep8,
-			formatting.isort,
-			diagnostics.flake8,
+			-- formatting.autopep8,
+			-- formatting.isort,
+			-- diagnostics.flake8,
 			-- diagnostics.pyproject_flake8,
+			diagnostics.ruff,
+			formatting.ruff,
 
 			-- Go
 			formatting.gofmt,
