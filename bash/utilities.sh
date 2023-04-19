@@ -107,3 +107,12 @@ function source_dotenv
 {
     cat .env | awk 'NF > 0' | awk '{print "export " $0}' >> ._temp_env && source ._temp_env && rm ._temp_env
 }
+
+#######################################
+# Sources a python virtual environment from the local directory
+#######################################
+function source_pyenv
+{
+    [ -f .venv/bin/activate ] && source .venv/bin/activate
+    [ -f .env/bin/activate ] && source .env/bin/activate
+}
