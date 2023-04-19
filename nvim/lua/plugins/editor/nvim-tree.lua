@@ -1,8 +1,5 @@
 local options = {}
 
-
--- 2023-04-15T11:54:10  WARN [NvimTree] unknown option: open_on_setup | [NvimTree] unknown option: ignore_ft_on_setup | see :help nvim-tree-setup for available configuration o
-
 options.config = function()
 
     require'nvim-tree'.setup {
