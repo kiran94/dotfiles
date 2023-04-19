@@ -139,6 +139,8 @@ options.config = function()
             "jsonls",
             "dockerls",
             "docker_compose_language_service",
+            "clangd",
+            "cmake"
             -- LINTER & FORMATTING
             -- "flake8",
             -- "isort",
@@ -289,6 +291,8 @@ options.config = function()
     nvim_lsp.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.dockerls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" } }
+    nvim_lsp.cmake.setup{ on_attach = on_attach, capabilities = capabilities }
 
     --------------------------------
     -- COMPLETION
