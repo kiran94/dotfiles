@@ -44,12 +44,12 @@ alias tf='terraform'
 alias system='inxi -Fxzc0'
 alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
 
-[ -f /usr/bin/expressvpn ] && alias vpn='expressvpn status'
 [ -f /usr/bin/batcat ] && alias bat='batcat'
 [ -f /usr/bin/fdfind ] && alias fd='fdfind'
-[ -f $HOME/.cargo/bin/hyperfine ] && alias hf='hyperfine'
-[ -f $HOME/.cargo/bin/lsd ] && alias ls='lsd'
 
+[ -x "$(command -v expressvpn)" ] && alias vpn='expressvpn status'
+[ -x "$(command -v hyperfine)" ] && alias hf='hyperfine'
+[ -x "$(command -v lsd)" ] && alias ls='lsd'
 
 # Fuzzy
 alias f='fzf | xargs nvim'
