@@ -49,7 +49,7 @@ options.config = function()
 			"luadoc",
 			"luap",
 			"make",
-			-- "markdown",
+			"markdown",
 			"markdown_inline",
 			"nix",
 			"passwd",
