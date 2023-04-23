@@ -43,6 +43,7 @@ alias csharp='csharprepl'
 alias tf='terraform'
 alias system='inxi -Fxzc0'
 alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
+alias copy="xclip -selection clipboard"
 
 [ -f /usr/bin/batcat ] && alias bat='batcat'
 [ -f /usr/bin/fdfind ] && alias fd='fdfind'
