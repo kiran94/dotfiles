@@ -1,6 +1,6 @@
 require("colors")
 require("general")
 require("keymappings")
-require("myplugins")
+require("mypackerplugins")
 require("utils")
 
