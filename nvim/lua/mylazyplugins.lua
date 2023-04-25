@@ -91,13 +91,11 @@ require("lazy").setup({
     -- LSP
     -------------------
 
-    {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config, event="BufWinEnter", dependencies = {
+    {'neovim/nvim-lspconfig', config = require'plugins/lsp/lsp-installer'.config, lazy=false, dependencies = {
         "onsails/lspkind-nvim",
         "ray-x/lsp_signature.nvim",
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
-
-        -- TODO: Move CMP into it's own config
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-nvim-lua", -- ft = lua
@@ -110,7 +108,6 @@ require("lazy").setup({
         "hrsh7th/cmp-emoji",
         "hrsh7th/cmp-nvim-lsp-signature-help",
         "davidsierradz/cmp-conventionalcommits", -- ft = gitcommit
-
         "rafamadriz/friendly-snippets",
         "folke/lsp-colors.nvim",
         "b0o/SchemaStore.nvim",
