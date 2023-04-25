@@ -1,130 +1,130 @@
 local options = {}
 
-local nvim_lsp      = require('lspconfig')
-local lsp_signature = require('lsp_signature')
-local cmp           = require('cmp')
-local cmp_nvim_lsp  = require('cmp_nvim_lsp')
-local lsp_kind      = require('lspkind')
-local lsp_colors    = require("lsp-colors")
-local schemastore   = require('schemastore')
-local mason         = require('mason')
-local mason_lsp     = require('mason-lspconfig')
-local lsp_progress  = require('fidget')
-local navic         = require("nvim-navic")
-local inlayhints    = require("lsp-inlayhints")
+options.config = function()
 
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-table.insert(runtime_path, "~/.local/share/nvim/site/pack/packer/start/packer.nvim/lua")
+    local nvim_lsp      = require('lspconfig')
+    local lsp_signature = require('lsp_signature')
+    local cmp           = require('cmp')
+    local cmp_nvim_lsp  = require('cmp_nvim_lsp')
+    local lsp_kind      = require('lspkind')
+    local lsp_colors    = require("lsp-colors")
+    local schemastore   = require('schemastore')
+    local mason         = require('mason')
+    local mason_lsp     = require('mason-lspconfig')
+    local lsp_progress  = require('fidget')
+    local navic         = require("nvim-navic")
+    local inlayhints    = require("lsp-inlayhints")
 
-vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
-vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="DiagnosticSignError"  })
-vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
-vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="DiagnosticSignInformation"  })
-vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
+    local runtime_path = vim.split(package.path, ';')
+    table.insert(runtime_path, "lua/?.lua")
+    table.insert(runtime_path, "lua/?/init.lua")
+    table.insert(runtime_path, "~/.local/share/nvim/site/pack/packer/start/packer.nvim/lua")
 
-vim.diagnostic.config({
-	virtual_text     = false,
-	underline        = false,
-	signs            = true,
-	update_in_insert = true,
-    float = {
-        border = "rounded"
-    }
-})
+    vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
+    vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="DiagnosticSignError"  })
+    vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
+    vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="DiagnosticSignInformation"  })
+    vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
+    vim.diagnostic.config({
+        virtual_text     = false,
+        underline        = false,
+        signs            = true,
+        update_in_insert = true,
+        float = {
+            border = "rounded"
+        }
+    })
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = false;
-capabilities.textDocument.codeAction = {
-    dynamicRegistration = true,
-    codeActionLiteralSupport = {
-        codeActionKind = {
-            valueSet = (function()
-                local res = vim.tbl_values(vim.lsp.protocol.CodeActionKind)
-                table.sort(res)
-                return res
-            end)()
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
+
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = false;
+    capabilities.textDocument.codeAction = {
+        dynamicRegistration = true,
+        codeActionLiteralSupport = {
+            codeActionKind = {
+                valueSet = (function()
+                    local res = vim.tbl_values(vim.lsp.protocol.CodeActionKind)
+                    table.sort(res)
+                    return res
+                end)()
+            }
         }
     }
-}
 
-cmp_nvim_lsp.default_capabilities(capabilities)
+    cmp_nvim_lsp.default_capabilities(capabilities)
 
-lsp_kind.init{
-    mode = 'symbol_text',
-    symbol_map = {
-        Text        = "",
-        Method      = "ƒ",
-        Function    = "ﬦ",
-        Constructor = "",
-        Variable    = "",
-        Class       = "",
-        Interface   = "ﰮ",
-        Module      = "",
-        Property    = "",
-        Unit        = "",
-        Value       = "",
-        Enum        = "了",
-        Keyword     = "",
-        Snippet     = "﬌",
-        Color       = "",
-        File        = "",
-        Folder      = "",
-        EnumMember  = "",
-        Constant    = "",
-        Struct      = "",
+    lsp_kind.init{
+        mode = 'symbol_text',
+        symbol_map = {
+            Text        = "",
+            Method      = "ƒ",
+            Function    = "ﬦ",
+            Constructor = "",
+            Variable    = "",
+            Class       = "",
+            Interface   = "ﰮ",
+            Module      = "",
+            Property    = "",
+            Unit        = "",
+            Value       = "",
+            Enum        = "了",
+            Keyword     = "",
+            Snippet     = "﬌",
+            Color       = "",
+            File        = "",
+            Folder      = "",
+            EnumMember  = "",
+            Constant    = "",
+            Struct      = "",
+        }
     }
-}
 
 
 
--- NOTE: Disabled for cmp-nvim-lsp-signature-help
--- local lspsaga_installed, _ = pcall(require, 'lspsaga')
--- lsp_signature.setup({
---     hint_prefix = "",
---     use_lspaga  = lspsaga_installed,
---     hint_enable = false,
---     handler_opts = {
---         border = "rounded"
---     }
--- })
+    -- NOTE: Disabled for cmp-nvim-lsp-signature-help
+    -- local lspsaga_installed, _ = pcall(require, 'lspsaga')
+    -- lsp_signature.setup({
+    --     hint_prefix = "",
+    --     use_lspaga  = lspsaga_installed,
+    --     hint_enable = false,
+    --     handler_opts = {
+    --         border = "rounded"
+    --     }
+    -- })
 
-local on_attach = function(client, bufnr)
-    require("illuminate").on_attach(client, bufnr)
-    inlayhints.on_attach(client, bufnr)
+    local on_attach = function(client, bufnr)
+        require("illuminate").on_attach(client, bufnr)
+        inlayhints.on_attach(client, bufnr)
 
-    if client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
+        if client.server_capabilities.documentSymbolProvider then
+            navic.attach(client, bufnr)
+        end
+
+        -- NOTE: <= 0.7 This is being disabled
+        -- because null-ls is handling the formatting
+        -- If you decide to switch back then comment these lines
+        -- if vim.fn.has "nvim-0.7" then
+        --     client.resolved_capabilities.document_formatting = false
+        --     client.resolved_capabilities.document_range_formatting = false
+        -- end
+
+        -- 0.8 Allow null-ls to handle formatting
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
     end
 
-    -- NOTE: <= 0.7 This is being disabled
-    -- because null-ls is handling the formatting
-    -- If you decide to switch back then comment these lines
-    -- if vim.fn.has "nvim-0.7" then
-    --     client.resolved_capabilities.document_formatting = false
-    --     client.resolved_capabilities.document_range_formatting = false
-    -- end
+    local t = function(str)
+        return vim.api.nvim_replace_termcodes(str, true, true, true)
+    end
 
-    -- 0.8 Allow null-ls to handle formatting
-    client.server_capabilities.documentFormattingProvider = false
-    client.server_capabilities.documentRangeFormattingProvider = false
-end
-
-local t = function(str)
-    return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = vim.fn.col '.' - 1
-    return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s' ~= nil
-end
-
-options.config = function()
+    local check_back_space = function()
+        local col = vim.fn.col '.' - 1
+        return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s' ~= nil
+    end
 
     mason.setup()
     mason_lsp.setup({
