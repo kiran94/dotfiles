@@ -293,9 +293,10 @@ options.config = function()
     nvim_lsp.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.dockerls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" } }
     nvim_lsp.cmake.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.csharp_ls.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
 
     --------------------------------
 
