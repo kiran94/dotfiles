@@ -24,7 +24,14 @@
   ; old = red bold
   ; new = green bold
 [diff]
-    tool = vimdiff
+    ; tool = vimdiff
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
 # faster git server communications
 # https://git-scm.com/docs/protocol-v2
 [protocol]
