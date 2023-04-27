@@ -11,7 +11,7 @@ antigen bundle reegnz/jq-zsh-plugin
 
 antigen apply
 
-eval "$(starship init zsh)"
+[ -f /usr/bin/starship ] && eval "$(starship init zsh)"
 
 # Enable Vim Mode
 bindkey '^R' history-incremental-search-backward
