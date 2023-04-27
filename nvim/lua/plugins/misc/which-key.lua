@@ -76,12 +76,9 @@ options.config = function()
             name  = "+special",
             ["#"] = {cmd("ColorizerToggle"), "color toggle"},
             p = {
-                name = "+packer",
-                s    = {cmd("PackerSync"), "packer sync"},
-                i    = {cmd("PackerInstall"), "packer install"},
-                c    = {cmd("PackerCompile") .. cmd("echo 'compiled!'"), "packer compile"},
-                r    = {cmd("PackerClean"), "packer clean"},
-                x    = {cmd("lua require('packer').snapshot()"), "packer snapshot"}
+                name = "+package",
+                s    = {cmd("Lazy sync"), "sync"},
+                r    = {cmd("Lazy clean"), "clean"},
             },
             m = {
                 name = '+markdown',
