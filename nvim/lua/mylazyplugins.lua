@@ -58,7 +58,6 @@ require("lazy").setup({
     { 'mizlan/iswap.nvim',                         event    = "BufWinEnter", dependencies = "nvim-treesitter/nvim-treesitter" },
     { 'folke/twilight.nvim',                       event    = "BufWinEnter", dependencies = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zen'.twilight_config },
     { 'stevearc/dressing.nvim',                    config   = require'plugins/misc/dressing'.config },
-    { 'gpanders/editorconfig.nvim'},
     -- { 'beauwilliams/focus.nvim',                config   = require'plugins/editor/focus'.config, event = "BufWinEnter" },
     { "iamcco/markdown-preview.nvim",              config   = require'plugins/misc/markdown-preview'.config, build = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } },
     { 'Bryley/neoai.nvim',                         config = function() require("neoai").setup() end, dependencies = { "MunifTanjim/nui.nvim", } },
