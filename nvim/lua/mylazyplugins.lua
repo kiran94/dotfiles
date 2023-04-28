@@ -83,8 +83,8 @@ require("lazy").setup({
     -- use {'projekt0n/github-nvim-theme'}
     -- use {'folke/tokyonight.nvim'}
 
-    { 'kiran94/s3edit.nvim', config = function() require('s3edit').setup() end},
-    { 'kiran94/maim.nvim',   config = function() require('maim').setup() end },
+    { 'kiran94/s3edit.nvim', config = function() require('s3edit').setup() end, cmd = "S3Edit"},
+    { 'kiran94/maim.nvim',   config = function() require('maim').setup() end, cmd = {"Maim", "MaimMarkdown"} },
 
     --------------------
     -- LSP
