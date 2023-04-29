@@ -123,11 +123,6 @@ require("lazy").setup({
     {"SmiteshP/nvim-navic",             config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"},
     -- { 'joechrisellis/lsp-format-modifications.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
 
-    { 'VonHeikemen/fine-cmdline.nvim', dependencies = { {'MunifTanjim/nui.nvim'} }, config = function()
-        require('fine-cmdline').setup({})
-        vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
-    end},
-
     --------------------
     -- DAP
     -------------------
