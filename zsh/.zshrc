@@ -8,6 +8,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle agkozak/zsh-z
 antigen bundle reegnz/jq-zsh-plugin
+antigen bundle MichaelAquilina/zsh-auto-notify
 
 antigen apply
 
@@ -36,3 +37,21 @@ HIST_IGNORE_SPACE=true
 
 # Update Options
 export UPDATE_ZSH_DAYS=7
+
+# Ignore these commands for long-running notifications
+export AUTO_NOTIFY_IGNORE=(
+    'vim'
+    'nvim'
+    'less'
+    'more'
+    'man'
+    'tig'
+    'watch'
+    'git add'
+    'git commit'
+    'top'
+    'htop'
+    'ssh'
+    'nano'
+    'jupyter'
+)
