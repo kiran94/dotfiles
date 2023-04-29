@@ -19,8 +19,8 @@ end
 -- :call mkdp#util#install()
 --]]
 options.config = function()
-	local browser = get_browser()
-	vim.cmd([[let g:mkdp_browser = browser]])
+	-- local browser = get_browser()
+	-- vim.cmd([[let g:mkdp_browser = browser]])
 end
 
 return options
