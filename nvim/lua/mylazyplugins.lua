@@ -76,7 +76,7 @@ require("lazy").setup({
      -- { 'beauwilliams/focus.nvim', config = function() require("focus").setup({}) end, event = "BufWinEnter" },
 
     -- COLOR SCHEMES
-    {'Mofiqul/vscode.nvim', lazy=false},
+    {'Mofiqul/vscode.nvim'},
     -- use {'tomasiser/vim-code-dark' }
     -- use {'rose-pine/neovim',}
     -- use {'lighthaus-theme/vim-lighthaus'}
