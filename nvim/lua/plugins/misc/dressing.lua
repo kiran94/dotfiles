@@ -4,9 +4,11 @@ M.config = function()
 	require("dressing").setup({
 		input = {
 			enabled = true,
-			insert_only = false,
 			start_in_insert = false,
-			mapping = false,
+			win_options = {
+				winblend = 0,
+				wrap = true,
+			},
 		},
 		select = {
 			enabled = false,
