@@ -49,9 +49,11 @@ export AUTO_NOTIFY_IGNORE=(
     'watch'
     'git add'
     'git commit'
+    'git diff'
     'top'
     'htop'
     'ssh'
     'nano'
-    'jupyter'
+    'jupyter',
+    "fg"
 )
