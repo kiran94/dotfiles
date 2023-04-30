@@ -85,6 +85,14 @@ require("lazy").setup({
 
     { 'kiran94/s3edit.nvim', config = function() require('s3edit').setup() end, cmd = "S3Edit"},
     { 'kiran94/maim.nvim',   config = function() require('maim').setup() end, cmd = {"Maim", "MaimMarkdown"} },
+    {
+        'kiran94/edit-markdown-table.nvim',
+        config = function()
+            require('edit-markdown-table').setup()
+        end,
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        cmd = "EditMarkdownTable",
+    },
 
     --------------------
     -- LSP
@@ -119,7 +127,7 @@ require("lazy").setup({
     {"jose-elias-alvarez/null-ls.nvim", config = require"plugins/lsp/null-ls".config, dependencies = "nvim-lua/plenary.nvim"},
     {"tami5/lspsaga.nvim",              config = require"plugins/lsp/lspsaga".config, dependencies = "neovim/nvim-lspconfig", cmd = "Lspsaga" },
     {"folke/trouble.nvim",              config = require"plugins/lsp/trouble".config, dependencies = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" },
-    {"ThePrimeagen/refactoring.nvim",   config = require"plugins/lsp/refactoring".config, requires = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" },
+    {"ThePrimeagen/refactoring.nvim",   config = require"plugins/lsp/refactoring".config, dependencies = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" },
     {"SmiteshP/nvim-navic",             config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"},
     -- { 'joechrisellis/lsp-format-modifications.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
 
