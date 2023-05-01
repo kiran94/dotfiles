@@ -44,6 +44,8 @@ export AUTO_NOTIFY_IGNORE=(
     'nvim'
     'less'
     'more'
+    'cat'
+    'bat'
     'man'
     'tig'
     'watch'
@@ -55,5 +57,7 @@ export AUTO_NOTIFY_IGNORE=(
     'ssh'
     'nano'
     'jupyter',
-    "fg"
+    "fg",
+    "vd",
+    "ipython"
 )
