@@ -116,3 +116,12 @@ function source_pyenv
     [ -f .venv/bin/activate ] && source .venv/bin/activate
     [ -f .env/bin/activate ] && source .env/bin/activate
 }
+
+#######################################
+# Check GitHub API Rate Limits
+#######################################
+function github_rate_limit
+{
+    curl -sH "Authorization: token $GITHUB_TOKEN" -X GET https://api.github.com/rate_limit | bat --language json
+}
+
