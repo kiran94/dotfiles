@@ -59,5 +59,6 @@ export AUTO_NOTIFY_IGNORE=(
     'jupyter',
     "fg",
     "vd",
-    "ipython"
+    "ipython",
+    "poetry shell"
 )
