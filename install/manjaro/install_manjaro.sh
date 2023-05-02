@@ -76,6 +76,7 @@ sudo pacman -S slock
 sudo pacman -S lxsession
 sudo pacman -S redshift
 sudo pacman -S pulseaudio-bluetooth
+sudo pacman -S noto-fonts-emoji
 
 
 
