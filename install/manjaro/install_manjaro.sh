@@ -78,6 +78,8 @@ sudo pacman -S redshift
 sudo pacman -S pulseaudio-bluetooth
 sudo pacman -S noto-fonts-emoji
 
+# https://wiki.cachyos.org/en/home/first-steps
+# sudo systemctl enable --now fstrim.timer
 
 
 
