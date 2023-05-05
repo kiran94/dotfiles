@@ -226,6 +226,14 @@ options.config = function()
         }
     }
 
+    nvim_lsp.ruff_lsp.setup{
+      init_options = {
+        settings = {
+          args = {},
+        }
+      }
+    }
+
     nvim_lsp.jsonls.setup {
         capabilities = capabilities,
         on_attach = on_attach,

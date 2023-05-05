@@ -13,7 +13,7 @@ options.config = function()
 			-- formatting.isort,
 			-- diagnostics.flake8,
 			-- diagnostics.pyproject_flake8,
-			diagnostics.ruff,
+			-- diagnostics.ruff,
 			formatting.ruff,
 
 			-- Go
