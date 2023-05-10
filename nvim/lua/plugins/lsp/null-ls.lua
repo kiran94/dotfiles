@@ -43,6 +43,16 @@ options.config = function()
 			-- Rust
 			formatting.rustfmt,
 		},
+		on_attach = function()
+			-- NOTE: This is duplicated with lsp-installer
+			vim.diagnostic.config({
+				virtual_text = false,
+				underline = false,
+				signs = true,
+				update_in_insert = true,
+				float = { border = "rounded" },
+			})
+		end,
 	})
 end
 
