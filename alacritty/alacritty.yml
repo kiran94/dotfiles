@@ -33,26 +33,26 @@ scrolling:
 font:
   size: 11.0
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono NF
     # family: CaskaydiaCove Nerd Font
     # family: JetBrainsMono Nerd Font
     # family: SpaceMono Nerd Font
-    style: Regular
+    # style: Regular
   bold:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     # family: CaskaydiaCove Nerd Font
     # family: JetBrains Mono
-    # style: Bold
+    style: Bold
   italic:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     # family: CaskaydiaCove Nerd Font
     # family: JetBrains Mono
-    # style: Italic
+    style: Italic
   bold_italic:
-    family: JetBrainsMono Nerd Font Mono
+    family: JetBrainsMono NF
     # family: CaskaydiaCove Nerd Font
     # family: JetBrains Mono
-    # style: Bold Italic
+    style: Bold Italic
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
