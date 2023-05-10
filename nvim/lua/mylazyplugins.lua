@@ -125,7 +125,7 @@ require("lazy").setup({
     } },
 
     {"jose-elias-alvarez/null-ls.nvim", config = require"plugins/lsp/null-ls".config, dependencies = "nvim-lua/plenary.nvim"},
-    {"tami5/lspsaga.nvim",              config = require"plugins/lsp/lspsaga".config, dependencies = "neovim/nvim-lspconfig", cmd = "Lspsaga" },
+    {"nvimdev/lspsaga.nvim",            config = require"plugins/lsp/lspsaga".config, dependencies = "neovim/nvim-lspconfig", cmd = "Lspsaga" },
     {"folke/trouble.nvim",              config = require"plugins/lsp/trouble".config, dependencies = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" },
     {"ThePrimeagen/refactoring.nvim",   config = require"plugins/lsp/refactoring".config, dependencies = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" },
     {"SmiteshP/nvim-navic",             config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"},
