@@ -125,3 +125,28 @@ function github_rate_limit
     curl -sH "Authorization: token $GITHUB_TOKEN" -X GET https://api.github.com/rate_limit | bat --language json
 }
 
+
+#######################################
+# Creates a quick tmux popup with a python interpreter.
+#######################################
+function python_popup
+{
+    if [ -x "$(command -v ptpython)" ]; then
+        tmux display-popup -e PATH=$PATH -w 75% -h 75% ptpython
+        return
+    elif [ -x "$(command -v ipython)" ]; then
+        tmux display-popup -e PATH=$PATH -w 75% -h 75% ipython
+        return
+    elif [ -x "$(command -v bpython)" ]; then
+        tmux display-popup -e PATH=$PATH -w 75% -h 75% bpython
+        return
+    elif [ -x "$(command -v python3)" ]; then
+        tmux display-popup -e PATH=$PATH -w 75% -h 75% python3
+        return
+    elif [ -x "$(command -v python)" ]; then
+        tmux display-popup -e PATH=$PATH -w 75% -h 75% python
+        return
+    else
+        tmux display-message "No suitable Python interpreter found."
+    fi
+}
