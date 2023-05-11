@@ -60,6 +60,7 @@ alias fenv='env | fzf'
 alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf | xargs nvim"
 alias co='git checkout $(git branch | fzf)'
 alias fpyenv='pyenv install -v $(pyenv install --list | rg "\s+[0-9\.]+(-dev)?$" | sort | tac | fzf)'
+alias gist='gh gist edit $(gh gist list | fzf | awk "{print $1}")'
 
 export SPARK_HOME=/opt/spark
 export SPARK_HOST="spark://$(hostname):7077"
@@ -72,6 +73,8 @@ alias spark_worker_stop=$SPARK_HOME/sbin/stop-worker.sh
 
 alias bluetooth=blueberry
 alias wifi=nm-connection-editor
+
+alias todo="gh gist edit b0c78a6039b826da81dad0d81021626c"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
