@@ -9,6 +9,7 @@
 [pager]
     stash = false
     branch = false
+    grep = false
 [init]
 	defaultBranch = main
 [pull]
