@@ -34,13 +34,13 @@ export DOTFILESSYNC_CONFIG=$HOME/.config/dotfiles/dotfiles-sync.json
 export DOTFILESSYNC_DIR=$HOME/.config/dotfiles
 
 # Number of commands help in memory during bash session
-HISTSIZE=5000
+HISTSIZE=1000000
 # History Size
 HISTFILESIZE=1000000
 # Ignore both spaces and duplicates
 HISTCONTROL=ignoreboth
 # Add DateTime in History
-#HISTTIMEFORMAT="%F %T "
+HISTTIMEFORMAT="%F %T "
 
 # Append to history instead of overwriting, useful for multiple sessions at the same time.
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s histappend

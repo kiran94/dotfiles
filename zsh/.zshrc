@@ -44,9 +44,10 @@ zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
 # History Options
-HIST_IGNORE_DUPS=true
-HIST_IGNORE_ALL_DUPS=true
-HIST_IGNORE_SPACE=true
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt appendhistory
 
 # Update Options
 export UPDATE_ZSH_DAYS=7
