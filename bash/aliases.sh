@@ -74,7 +74,7 @@ alias spark_worker_stop=$SPARK_HOME/sbin/stop-worker.sh
 alias bluetooth=blueberry
 alias wifi=nm-connection-editor
 
-alias todo="gh gist edit b0c78a6039b826da81dad0d81021626c"
+alias todo="GITHUB_TOKEN='' gh gist edit b0c78a6039b826da81dad0d81021626c"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
