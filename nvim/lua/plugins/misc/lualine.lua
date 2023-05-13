@@ -40,12 +40,24 @@ options.config = function()
 
 		local virtual_env = os.getenv("VIRTUAL_ENV")
 		local conda_env = os.getenv("CONDA_DEFAULT_ENV")
+		local poetry_active = os.getenv("POETRY_ACTIVE") == "1"
 
 		-- Normalize the path
 		-- e.g /home/user/projects/.venv => ~/projects/.env
 		local user = os.getenv("USER")
 		local home_path = "/home/" .. user
 		virtual_env = virtual_env:gsub(home_path, "~")
+
+		-- Poetry Paths can be very long
+		-- e.g ~/.cache/pypoetry/virtualenvs/prfiesta-aI_TvpME-py3.11
+		-- so we have some special handling
+		if poetry_active then
+			local virtual_env = string.match(virtual_env, "[^/]+$")
+			local pos = string.find(virtual_env, "-") -- find the position of the first occurrence of "-"
+			local virtual_env = string.sub(virtual_env, 1, pos - 1) -- extract the substring before "-"
+
+			return virtual_env .. " (poetry)"
+		end
 
 		if virtual_env ~= nil then
 			return virtual_env
