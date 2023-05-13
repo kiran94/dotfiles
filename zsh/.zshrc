@@ -73,5 +73,6 @@ export AUTO_NOTIFY_IGNORE=(
     "fg",
     "vd",
     "ipython",
-    "poetry shell"
+    "poetry shell",
+    "gh gist edit",
 )
