@@ -1,24 +1,37 @@
 source $HOME/.bashrc
-source ~/.config/dotfiles/zsh/antigen.zsh
 
-antigen bundle command-not-found
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle ael-code/zsh-colored-man-pages
-antigen bundle agkozak/zsh-z
-antigen bundle reegnz/jq-zsh-plugin
-antigen bundle MichaelAquilina/zsh-auto-notify
+#####################
+# ZAP
+#####################
 
-antigen apply
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+
+plug zsh-users/zsh-syntax-highlighting
+plug zsh-users/zsh-autosuggestions
+plug zsh-users/zsh-completions
+plug ael-code/zsh-colored-man-pages
+plug agkozak/zsh-z
+plug MichaelAquilina/zsh-auto-notify
+
+#####################
+# PROMPT
+#####################
 
 [ -f /usr/bin/starship ] && eval "$(starship init zsh)"
+
+#####################
+# SETTINGS
+#####################
 
 # Enable Vim Mode
 bindkey '^R' history-incremental-search-backward
 
 # Remap JQ completion helper
 bindkey '^j' jq-complete
+
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
 
 # Highlight selection when tab completing
 zstyle ':completion:*' menu select
