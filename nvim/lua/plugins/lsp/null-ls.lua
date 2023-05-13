@@ -30,6 +30,7 @@ options.config = function()
 			formatting.terraform_fmt,
 			formatting.yamlfmt,
 			formatting.csharpier,
+			formatting.beautysh,
 			diagnostics.yamllint,
 			actions.refactoring,
 			formatting.clang_format.with({ filetypes = { "c", "cpp", "java", "cuda", "proto" } }),

@@ -12,4 +12,3 @@
 
 # Type directory name to cd
 [ "${BASH_VERSINFO:-0}" -ge 4 ] && shopt -s autocd
-

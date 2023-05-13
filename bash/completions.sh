@@ -8,4 +8,3 @@
 
 # Zsh
 # [ -n "$ZSH_VERSION" ] && eval "$(gh completion -s zsh)"
-

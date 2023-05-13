@@ -27,7 +27,7 @@ function token_to_json
 # Quickly Reference Git Conventional Commits
 #######################################
 function git_conventions {
-cat << EOF
+    cat << EOF
 type(scope): description
 
 feat:          addition of some new features
