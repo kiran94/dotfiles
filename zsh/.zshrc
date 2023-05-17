@@ -34,7 +34,7 @@ autoload -Uz compinit
 compinit
 
 # Highlight selection when tab completing
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu yes select
 
 # Edit the command on the current prompt
 # https://unix.stackexchange.com/a/34251
