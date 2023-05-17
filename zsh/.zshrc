@@ -52,6 +52,7 @@ setopt appendhistory
 # Update Options
 export UPDATE_ZSH_DAYS=7
 
+export AUTO_NOTIFY_THRESHOLD=180 # seconds
 # Ignore these commands for long-running notifications
 export AUTO_NOTIFY_IGNORE=(
     'vim'
