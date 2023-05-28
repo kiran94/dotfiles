@@ -134,13 +134,16 @@ require("lazy").setup({
     --------------------
     -- DAP
     -------------------
-    { "mfussenegger/nvim-dap", },
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
-    { "leoluz/nvim-dap-go", dependencies = {"mfussenegger/nvim-dap"} },
-    { "theHamsta/nvim-dap-virtual-text", dependencies = {"mfussenegger/nvim-dap"} },
-    -- { 'mfussenegger/nvim-dap-python', dependencies = {'mfussenegger/nvim-dap'} },
-    -- require'plugins/lsp/dap'
-
+    {
+        "mfussenegger/nvim-dap",
+        config = function() require'plugins/lsp/dap' end,
+        dependencies = {
+         "rcarriga/nvim-dap-ui",
+         "leoluz/nvim-dap-go",
+         "theHamsta/nvim-dap-virtual-text",
+         'mfussenegger/nvim-dap-python'
+        }
+    },
 
     --------------------
     -- OLD
