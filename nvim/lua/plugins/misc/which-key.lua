@@ -186,12 +186,12 @@ end
 -- Lsp Mappings
 vim.cmd [[
 
-  " nnoremap <silent> L <cmd>lua vim.diagnostic.open_float()<CR>
-  " nnoremap <silent> K <cmd>Lspsaga hover_doc<CR>
+  nnoremap <silent> L <cmd>lua vim.diagnostic.open_float()<CR>
+  nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 
-  " nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-  nnoremap <silent> K <cmd>Lspsaga hover_doc<CR>
-  nnoremap <silent> L <cmd>Lspsaga show_line_diagnostics ++unfocus<CR>
+  " nnoremap <silent> K <cmd>Lspsaga hover_doc<CR>
+  " nnoremap <silent> L <cmd>Lspsaga show_line_diagnostics ++unfocus<CR>
+
   nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
   nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
   nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
