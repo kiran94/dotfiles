@@ -32,6 +32,7 @@ export XDG_CACHE_HOME=~/.cache
 
 export DOTFILESSYNC_CONFIG=$HOME/.config/dotfiles/dotfiles-sync.json
 export DOTFILESSYNC_DIR=$HOME/.config/dotfiles
+export PRE_COMMIT_COLOR=never
 
 # Number of commands help in memory during bash session
 HISTSIZE=1000000
