@@ -43,16 +43,38 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
-# History Options
+#####################
+# HISTORY OPTIONS
+#####################
+
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
+
 setopt appendhistory
+setopt bang_hist
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt hist_verify
+setopt inc_append_history
+setopt NO_hist_beep
+setopt NO_share_history
 
 # Update Options
 export UPDATE_ZSH_DAYS=7
 
+#####################
+# AUTO_NOTIFY
+#####################
+
 export AUTO_NOTIFY_THRESHOLD=180 # seconds
+
 # Ignore these commands for long-running notifications
 export AUTO_NOTIFY_IGNORE=(
     'vim'
