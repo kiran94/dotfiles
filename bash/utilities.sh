@@ -150,3 +150,33 @@ function python_popup
         tmux display-message "No suitable Python interpreter found."
     fi
 }
+
+#######################################
+# Deletes git branches locally which have already been merged in remote
+#######################################
+function git_branch_local_prune
+{
+    # mark all local branches here the remote branch bas been deleted
+    git remote update --prune
+
+    echo "***************************"
+    tput setaf 1
+
+    git branch -vv | grep ": gone]" | awk '{ printf "%-64s %-10s\n", substr($1, 1, 64), $2 }'
+
+    tput sgr0
+    echo "***************************"
+
+    echo "🪓 Delete these branches? (Y/N)"
+
+    read input
+
+    if [[ $input == "Y" || $input == "y" ]]; then
+        git branch -vv | grep ": gone]" | awk '{print $1}' | xargs git branch -D
+    fi
+}
+
+function git_large_file_sizes
+{
+    git ls-tree -r HEAD -l | sort -nk4 | awk '{print $1, $2, $3, ($4 / 1024 / 1024)"MB", $5}'
+}
