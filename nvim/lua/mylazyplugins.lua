@@ -83,16 +83,9 @@ require("lazy").setup({
     -- use {'projekt0n/github-nvim-theme'}
     -- use {'folke/tokyonight.nvim'}
 
-    { 'kiran94/s3edit.nvim', config = function() require('s3edit').setup() end, cmd = "S3Edit"},
-    { 'kiran94/maim.nvim',   config = function() require('maim').setup() end, cmd = {"Maim", "MaimMarkdown"} },
-    {
-        'kiran94/edit-markdown-table.nvim',
-        config = function()
-            require('edit-markdown-table').setup()
-        end,
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-        cmd = "EditMarkdownTable",
-    },
+    { 'kiran94/s3edit.nvim', config = true, cmd = "S3Edit"},
+    { 'kiran94/maim.nvim',   config = true, cmd = {"Maim", "MaimMarkdown"} },
+    { 'kiran94/edit-markdown-table.nvim', config = true, dependencies = { "nvim-treesitter/nvim-treesitter" }, cmd = "EditMarkdownTable", },
 
     --------------------
     -- LSP
