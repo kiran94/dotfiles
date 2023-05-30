@@ -178,6 +178,9 @@ function git_branch_local_prune
     fi
 }
 
+#######################################
+# View large files within a GitHub Repository
+#######################################
 function git_large_file_sizes
 {
     git ls-tree -r HEAD -l | sort -nk4 | awk '{print $1, $2, $3, ($4 / 1024 / 1024)"MB", $5}'
