@@ -157,7 +157,9 @@ function python_popup
 function git_branch_local_prune
 {
     # mark all local branches here the remote branch bas been deleted
+    echo "Pruning local branches that were removed from remote"
     git remote update --prune
+    echo "***************************"
 
     echo "***************************"
     tput setaf 1
