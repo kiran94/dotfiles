@@ -54,14 +54,14 @@ require("lazy").setup({
     { 'gyim/vim-boxdraw',                          ft       = 'markdown'},
     { 'ntpeters/vim-better-whitespace',            event    = "BufWinEnter" },
     { 'inside/vim-search-pulse',                   event    = "BufWinEnter" },
-    { 'dstein64/nvim-scrollview',                  event    = "BufWinEnter" },
+    { 'dstein64/nvim-scrollview',                  event    = "BufWinEnter", config = require'plugins/misc/scrollview'.config },
     { 'mizlan/iswap.nvim',                         event    = "BufWinEnter", dependencies = "nvim-treesitter/nvim-treesitter" },
     -- { 'folke/twilight.nvim',                    event    = "BufWinEnter", dependencies = {"nvim-treesitter/nvim-treesitter", "folke/zen-mode.nvim"}, config = require'plugins/misc/zenmode'.twilight_config },
     { 'stevearc/dressing.nvim',                    config   = require'plugins/misc/dressing'.config },
     { 'beauwilliams/focus.nvim',                   config   = require'plugins/editor/focus'.config, event = "BufWinEnter" },
     { "iamcco/markdown-preview.nvim",              config   = require'plugins/misc/markdown-preview'.config, build = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } },
     { 'Bryley/neoai.nvim',                         config = function() require("neoai").setup() end, dependencies = { "MunifTanjim/nui.nvim", } },
-
+    -- { 'Bekaboo/dropbar.nvim' },
     { "nvim-neotest/neotest", config = require'plugins/editor/ultest'.config, event="BufWinEnter", dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
