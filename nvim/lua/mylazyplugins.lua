@@ -61,6 +61,20 @@ require("lazy").setup({
     { 'beauwilliams/focus.nvim',                   config   = require'plugins/editor/focus'.config, event = "BufWinEnter" },
     { "iamcco/markdown-preview.nvim",              config   = require'plugins/misc/markdown-preview'.config, build = function() vim.fn["mkdp#util#install"]() end, ft = { "markdown" } },
     { 'Bryley/neoai.nvim',                         config = function() require("neoai").setup() end, dependencies = { "MunifTanjim/nui.nvim", } },
+    { "ray-x/go.nvim",
+        config = function()
+            require("go").setup({
+                lsp_inlay_hints = {
+                    enable = false -- already have this from lsp
+                },
+            })
+        end,
+        dependencies = { "ray-x/guihua.lua", "neovim/nvim-lspconfig", "nvim-treesitter/nvim-treesitter", },
+        event = {"CmdlineEnter"},
+        ft = {"go", 'gomod'},
+        build = ':lua require("go.install").update_all_sync()'
+    },
+
     -- { 'Bekaboo/dropbar.nvim' },
     { "nvim-neotest/neotest", config = require'plugins/editor/ultest'.config, event="BufWinEnter", dependencies = {
             "nvim-lua/plenary.nvim",
