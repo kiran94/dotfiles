@@ -127,7 +127,7 @@ require("lazy").setup({
         "b0o/SchemaStore.nvim",
         "RRethy/vim-illuminate",
         'Afourcat/treesitter-terraform-doc.nvim',
-        'j-hui/fidget.nvim',
+        {'j-hui/fidget.nvim', tag = "legacy" }, -- https://github.com/j-hui/fidget.nvim/issues/133
         'lvimuser/lsp-inlayhints.nvim',
     } },
 
