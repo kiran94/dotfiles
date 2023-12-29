@@ -1,0 +1,98 @@
+live_config_reload = true
+working_directory = "~"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#666666"
+blue = "#81a2be"
+cyan = "#54ced6"
+green = "#9ec400"
+magenta = "#b77ee0"
+red = "#ff3334"
+white = "#ffffff"
+yellow = "#f0c674"
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "#1d1f21"
+
+[colors.normal]
+black = "#1d1f21"
+blue = "#81a2be"
+cyan = "#70c0ba"
+green = "#b5bd68"
+magenta = "#b294bb"
+red = "#cc6666"
+white = "#373b41"
+yellow = "#e6c547"
+
+[colors.primary]
+background = "#1d1f21"
+foreground = "#c5c8c6"
+
+[cursor]
+unfocused_hollow = true
+vi_mode_style = "Beam"
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+TERMINAL = "alacritty"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "JetBrainsMono NF"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono NF"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "JetBrainsMono NF"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono NF"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+decorations = "none"
+dynamic_padding = false
+dynamic_title = false
+opacity = 0.98
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 140
+lines = 38
+
+[window.padding]
+x = 0
+y = 0
+
+[window.position]
+x = 10
+y = 10
