@@ -78,7 +78,7 @@ args = ["--login"]
 program = "/bin/zsh"
 
 [window]
-decorations = "none"
+decorations = "full"
 dynamic_padding = false
 dynamic_title = false
 opacity = 0.98

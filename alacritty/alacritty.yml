@@ -23,7 +23,7 @@ window:
     x: 0
     y: 0
   dynamic_padding: false
-  decorations: none
+  decorations: full
   startup_mode: Windowed
   dynamic_title: false
   opacity: 0.98
