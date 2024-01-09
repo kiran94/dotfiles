@@ -141,7 +141,7 @@ options.config = function()
         -- Explorer
         e = {
             name = "+explorer",
-            e    = {":NvimTreeToggle<CR>", "file explorer"},
+            e    = {":Neotree right toggle<CR>", "file explorer"},
             t    = {cmd('lua require("neotest").summary.toggle()'), "summary"},
         },
         -- Go

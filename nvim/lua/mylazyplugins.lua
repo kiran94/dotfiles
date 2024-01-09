@@ -31,7 +31,7 @@ require("lazy").setup({
     { 'numToStr/Comment.nvim',                     config   = require'plugins/editor/comment'.config, event = "BufWinEnter" },
     { 'chentoast/marks.nvim',                      config   = require'plugins/editor/marks'.config, event = "BufWinEnter"},
     { 'norcalli/nvim-colorizer.lua',               config   = require'plugins/editor/colorizer'.config, cmd = {'ColorizerToggle'} },
-    { 'kyazdani42/nvim-tree.lua',                  config   = require'plugins/editor/nvim-tree'.config, dependencies = { 'kyazdani42/nvim-web-devicons'}, cmd = {"NvimTreeToggle"} },
+    { "nvim-neo-tree/neo-tree.nvim",               config = require'plugins/editor/neo-tree'.config, branch = "v3.x", dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim", }, cmd = 'Neotree' },
     { 'nvim-telescope/telescope.nvim',             config   = require'plugins/misc/telescope'.config, dependencies = { {'nvim-lua/plenary.nvim'} }, event = "BufWinEnter" },
     { 'nvim-telescope/telescope-ui-select.nvim' },
     { 'nvim-telescope/telescope-fzf-native.nvim',  build = 'make' },
