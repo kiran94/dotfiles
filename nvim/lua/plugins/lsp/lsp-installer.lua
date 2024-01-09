@@ -328,7 +328,7 @@ options.config = function()
             { name = 'nvim_lsp',   max_item_count = 10},
             { name = 'nvim_lua',   max_item_count = 25},
             { name = 'buffer',     max_item_count = 5},
-            { name = 'vsnip',      max_item_count = 10},
+            { name = 'luasnip',      max_item_count = 10},
             { name = 'treesitter', max_item_count = 5},
             { name = 'path',       max_item_count = 5},
             { name = 'spell',      max_item_count = 5},
@@ -338,7 +338,7 @@ options.config = function()
         }),
         snippet = {
             expand = function(args)
-                vim.fn["vsnip#anonymous"](args.body)
+                require'luasnip'.lsp_expand(args.body)
             end
         },
         window = {
@@ -378,7 +378,7 @@ options.config = function()
                    path       = "ﱮ",
                    buffer     = "﬘",
                    zsh        = "",
-                   vsnip      = "",
+                   luasnip    = "",
                    spell      = "暈",
                 }
 
@@ -389,7 +389,7 @@ options.config = function()
                    path       = "[PATH]",
                    buffer     = "[BUFF]",
                    zsh        = "[ZSH]",
-                   vsnip      = "[SNIP]",
+                   luasnip     = "[SNIP]",
                    spell      = "[SPELL]",
                 }
 

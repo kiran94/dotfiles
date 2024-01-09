@@ -116,8 +116,6 @@ require("lazy").setup({
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
-        "hrsh7th/cmp-vsnip",
-        "hrsh7th/vim-vsnip",
         "hrsh7th/cmp-calc",
         "hrsh7th/cmp-emoji",
         "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -129,8 +127,15 @@ require("lazy").setup({
         'Afourcat/treesitter-terraform-doc.nvim',
         {'j-hui/fidget.nvim', tag = "legacy" }, -- https://github.com/j-hui/fidget.nvim/issues/133
         'lvimuser/lsp-inlayhints.nvim',
+        {
+            "L3MON4D3/LuaSnip",
+            version = "v2.*",
+            build = "make install_jsregexp",
+            dependencies = {'saadparwaiz1/cmp_luasnip'},
+            config = require'plugins/lsp/luasnip'.config,
+            event = 'VeryLazy'
+        },
     } },
-
     {"nvimtools/none-ls.nvim", config = require"plugins/lsp/null-ls".config, dependencies = "nvim-lua/plenary.nvim"},
     {"nvimdev/lspsaga.nvim",            config = require"plugins/lsp/lspsaga".config, dependencies = "neovim/nvim-lspconfig", cmd = "Lspsaga" },
     {"folke/trouble.nvim",              config = require"plugins/lsp/trouble".config, dependencies = "kyazdani42/nvim-web-devicons", cmd = "TroubleToggle" },
