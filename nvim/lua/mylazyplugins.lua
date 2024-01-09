@@ -120,7 +120,6 @@ require("lazy").setup({
         "hrsh7th/cmp-emoji",
         "hrsh7th/cmp-nvim-lsp-signature-help",
         "davidsierradz/cmp-conventionalcommits", -- ft = gitcommit
-        "rafamadriz/friendly-snippets",
         "folke/lsp-colors.nvim",
         "b0o/SchemaStore.nvim",
         "RRethy/vim-illuminate",
@@ -131,7 +130,10 @@ require("lazy").setup({
             "L3MON4D3/LuaSnip",
             version = "v2.*",
             build = "make install_jsregexp",
-            dependencies = {'saadparwaiz1/cmp_luasnip'},
+            dependencies = {
+                'saadparwaiz1/cmp_luasnip',
+                'rafamadriz/friendly-snippets'
+            },
             config = require'plugins/lsp/luasnip'.config,
             event = 'VeryLazy'
         },
