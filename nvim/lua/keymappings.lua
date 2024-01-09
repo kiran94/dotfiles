@@ -73,22 +73,8 @@ vim.keymap.set('n', '<M-H>', function() telescope().help_tags(telescope_theme())
 -- SNIPPETS
 --------------------------
 
--- expand
-vim.cmd [[imap <expr> <CR>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>']]
-vim.cmd [[smap <expr> <CR>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>']]
-
--- expand or jump
-vim.cmd [[imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>']]
-vim.cmd [[smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>']]
-
--- jump forward or backward
-vim.cmd [[imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>']]
-vim.cmd [[smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>']]
-vim.cmd [[imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']]
-vim.cmd [[smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']]
--- Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
--- See https://github.com/hrsh7th/vim-vsnip/pull/50
-vim.cmd [[nmap s <Plug>(vsnip-select-text)]]
-vim.cmd [[xmap s <Plug>(vsnip-select-text)]]
-vim.cmd [[nmap S <Plug>(vsnip-cut-text)]]
-vim.cmd [[xmap S <Plug>(vsnip-cut-text)]]
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+vim.api.nvim_set_keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+vim.api.nvim_set_keymap("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+vim.api.nvim_set_keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
