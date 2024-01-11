@@ -80,6 +80,7 @@ options.config = function()
             EnumMember  = "",
             Constant    = "",
             Struct      = "",
+            copilot     = "",
         }
     }
 
@@ -328,12 +329,13 @@ options.config = function()
             { name = 'nvim_lsp',   max_item_count = 10},
             { name = 'nvim_lua',   max_item_count = 25},
             { name = 'buffer',     max_item_count = 5},
-            { name = 'luasnip',      max_item_count = 10},
+            { name = 'luasnip',    max_item_count = 10},
             { name = 'treesitter', max_item_count = 5},
             { name = 'path',       max_item_count = 5},
             { name = 'spell',      max_item_count = 5},
             { name = 'calc',       max_item_count = 5},
             { name = 'emoji',      max_item_count = 5},
+            { name = "copilot",    max_item_count = 5},
             { name = 'nvim_lsp_signature_help' }
         }),
         snippet = {
@@ -380,6 +382,7 @@ options.config = function()
                    zsh        = "",
                    luasnip    = "",
                    spell      = "暈",
+                   copilot    = "",
                 }
 
                 local menu_literal = {
@@ -389,8 +392,9 @@ options.config = function()
                    path       = "[PATH]",
                    buffer     = "[BUFF]",
                    zsh        = "[ZSH]",
-                   luasnip     = "[SNIP]",
+                   luasnip    = "[SNIP]",
                    spell      = "[SPELL]",
+                   copilot    = "[GITHUB]",
                 }
 
                 vim_item.kind = string.format("%s %s", lsp_kind.presets.default[vim_item.kind], vim_item.kind)

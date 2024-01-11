@@ -102,6 +102,7 @@ require("lazy").setup({
     { 'kiran94/maim.nvim',   config = true, cmd = {"Maim", "MaimMarkdown"} },
     { 'kiran94/edit-markdown-table.nvim', config = true, dependencies = { "nvim-treesitter/nvim-treesitter" }, cmd = "EditMarkdownTable", },
 
+
     --------------------
     -- LSP
     -------------------
@@ -145,6 +146,18 @@ require("lazy").setup({
     {"ThePrimeagen/refactoring.nvim",   config = require"plugins/lsp/refactoring".config, dependencies = { {"nvim-lua/plenary.nvim"}, {"nvim-treesitter/nvim-treesitter"} }, event = "BufWinEnter" },
     {"SmiteshP/nvim-navic",             config = require'plugins/lsp/navic'.config, requires = "neovim/nvim-lspconfig"},
     -- { 'joechrisellis/lsp-format-modifications.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+
+    {
+        "zbirenbaum/copilot.lua",
+        config = require'plugins/lsp/copilot'.config,
+        cmd='Copilot',
+        event='InsertEnter',
+        dependencies = {
+            'AndreM222/copilot-lualine',
+            'zbirenbaum/copilot-cmp'
+        }
+    },
+
 
     --------------------
     -- DAP
