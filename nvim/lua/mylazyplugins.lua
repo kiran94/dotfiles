@@ -76,7 +76,8 @@ require("lazy").setup({
     },
 
     -- { 'Bekaboo/dropbar.nvim' },
-    { "nvim-neotest/neotest", config = require'plugins/editor/ultest'.config, event="BufWinEnter", dependencies = {
+    {
+        "nvim-neotest/neotest", config = require'plugins/editor/ultest'.config, event="BufWinEnter", dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
             "antoinemadec/FixCursorHold.nvim",
