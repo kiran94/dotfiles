@@ -16,6 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 
 --------------------
 -- PLUGINS
+-- This is structured like
+-- https://github.com/folke/lazy.nvim#-structuring-your-plugins
 -------------------
 require('lazy').setup('plugins')
 
