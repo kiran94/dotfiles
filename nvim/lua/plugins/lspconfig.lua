@@ -24,17 +24,6 @@ return {
 		{ "j-hui/fidget.nvim", tag = "legacy" }, -- https://github.com/j-hui/fidget.nvim/issues/133
 		"lvimuser/lsp-inlayhints.nvim",
 		{
-			"L3MON4D3/LuaSnip",
-			version = "v2.*",
-			build = "make install_jsregexp",
-			dependencies = {
-				"saadparwaiz1/cmp_luasnip",
-				"rafamadriz/friendly-snippets",
-			},
-			config = require("plugins/lsp/luasnip").config,
-			event = "VeryLazy",
-		},
-		{
 			"SmiteshP/nvim-navic",
 			config = require("plugins/lsp/navic").config,
 			requires = "neovim/nvim-lspconfig",
