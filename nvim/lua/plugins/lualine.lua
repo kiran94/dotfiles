@@ -1,7 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {
-		{ "kyazdani42/nvim-web-devicons", lazy = true },
+		{ "nvim-tree/nvim-web-devicons", lazy = true },
 	},
 	config = function()
 		-- Gets the Active LSP

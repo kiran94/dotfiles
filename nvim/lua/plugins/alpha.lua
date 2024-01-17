@@ -18,5 +18,5 @@ return {
 
 		alpha.setup(theme.opts)
 	end,
-	dependencies = { "kyazdani42/nvim-web-devicons" },
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 }

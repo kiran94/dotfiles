@@ -1,6 +1,6 @@
 return {
 	"folke/trouble.nvim",
-	dependencies = "kyazdani42/nvim-web-devicons",
+	dependencies = "nvim-tree/nvim-web-devicons",
 	cmd = "TroubleToggle",
 	opts = {
 		position = "bottom", -- position of the list can be: bottom, top, left, right
