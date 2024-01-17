@@ -23,10 +23,6 @@ return {
 		"Afourcat/treesitter-terraform-doc.nvim",
 		{ "j-hui/fidget.nvim", tag = "legacy" }, -- https://github.com/j-hui/fidget.nvim/issues/133
 		"lvimuser/lsp-inlayhints.nvim",
-		{
-			"SmiteshP/nvim-navic",
-			config = require("plugins/lsp/navic").config,
-			requires = "neovim/nvim-lspconfig",
-		},
+		"SmiteshP/nvim-navic",
 	},
 }
