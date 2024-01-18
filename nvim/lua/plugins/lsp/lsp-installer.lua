@@ -6,7 +6,6 @@ options.config = function()
     local lsp_signature = require('lsp_signature')
     local cmp_nvim_lsp  = require('cmp_nvim_lsp')
     local lsp_kind      = require('lspkind')
-    local lsp_colors    = require("lsp-colors")
     local schemastore   = require('schemastore')
     local lsp_progress  = require('fidget')
     local navic         = require("nvim-navic")
@@ -256,15 +255,6 @@ options.config = function()
     nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.csharp_ls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
-
-
-    -- Colors
-    lsp_colors.setup({
-      Error       = "#db4b4b",
-      Warning     = "#e0af68",
-      Information = "#0db9d7",
-      Hint        = "#10B981"
-    })
 
     lsp_progress.setup{}
 end

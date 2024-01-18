@@ -17,7 +17,6 @@ return {
 		"hrsh7th/cmp-emoji",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"davidsierradz/cmp-conventionalcommits", -- ft = gitcommit
-		"folke/lsp-colors.nvim",
 		"b0o/SchemaStore.nvim",
 		"RRethy/vim-illuminate",
 		"Afourcat/treesitter-terraform-doc.nvim",
