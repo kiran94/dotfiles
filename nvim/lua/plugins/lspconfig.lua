@@ -4,7 +4,6 @@ return {
 	lazy = false,
 	dependencies = {
 		"onsails/lspkind-nvim",
-		"ray-x/lsp_signature.nvim",
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"hrsh7th/nvim-cmp",

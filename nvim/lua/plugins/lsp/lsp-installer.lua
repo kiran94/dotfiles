@@ -3,7 +3,6 @@ local options = {}
 options.config = function()
 
     local nvim_lsp      = require('lspconfig')
-    local lsp_signature = require('lsp_signature')
     local cmp_nvim_lsp  = require('cmp_nvim_lsp')
     local schemastore   = require('schemastore')
     local navic         = require("nvim-navic")
