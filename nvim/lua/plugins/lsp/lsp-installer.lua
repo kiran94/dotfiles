@@ -9,8 +9,6 @@ options.config = function()
     local lsp_kind      = require('lspkind')
     local lsp_colors    = require("lsp-colors")
     local schemastore   = require('schemastore')
-    local mason         = require('mason')
-    local mason_lsp     = require('mason-lspconfig')
     local lsp_progress  = require('fidget')
     local navic         = require("nvim-navic")
     local inlayhints    = require("lsp-inlayhints")
@@ -127,45 +125,7 @@ options.config = function()
         return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s' ~= nil
     end
 
-    mason.setup()
-    mason_lsp.setup({
-        ensure_installed = {
-            -- LSPs
-            "lua_ls",
-            "pylsp",
-            "gopls",
-            "terraformls",
-            "bashls",
-            "yamlls",
-            "jsonls",
-            "dockerls",
-            "docker_compose_language_service",
-            "clangd",
-            "cmake",
-            "taplo"
-            -- LINTER & FORMATTING
-            -- "flake8",
-            -- "isort",
-            -- "autopep8",
-            -- "goimports",
-            -- "gofmt",
-            -- "staticcheck",
-            -- "stylua",
-            -- "clang-format",
-            -- "jq" ,
-            -- "yamllint",
-            -- "yamlfmt",
-            -- DAPS
-            -- "debugpy",
-            -- "delve",
-        },
-        automatic_installation = true
-    })
     inlayhints.setup()
-
-
-    -- TODO: Refactor the below code via setup_handlers
-    -- mason_lsp.setup_handlers()
 
     -- LSP Import Name to Language Server name can be found in:
     -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
