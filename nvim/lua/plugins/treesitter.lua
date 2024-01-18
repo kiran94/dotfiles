@@ -69,6 +69,7 @@ return {
 			"yaml",
 		},
 		ignore_install = {}, -- List of parsers to ignore installing
+		sync_install = true,
 		highlight = {
 			enable = true, -- false will disable the whole extension
 			disable = {}, -- list of language that will be disabled
