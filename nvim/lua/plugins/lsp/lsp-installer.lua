@@ -5,7 +5,6 @@ options.config = function()
     local nvim_lsp      = require('lspconfig')
     local lsp_signature = require('lsp_signature')
     local cmp_nvim_lsp  = require('cmp_nvim_lsp')
-    local lsp_kind      = require('lspkind')
     local schemastore   = require('schemastore')
     local navic         = require("nvim-navic")
     local inlayhints    = require("lsp-inlayhints")
@@ -52,32 +51,6 @@ options.config = function()
 
     cmp_nvim_lsp.default_capabilities(capabilities)
 
-    lsp_kind.init{
-        mode = 'symbol_text',
-        symbol_map = {
-            Text        = "",
-            Method      = "ƒ",
-            Function    = "ﬦ",
-            Constructor = "",
-            Variable    = "",
-            Class       = "",
-            Interface   = "ﰮ",
-            Module      = "",
-            Property    = "",
-            Unit        = "",
-            Value       = "",
-            Enum        = "了",
-            Keyword     = "",
-            Snippet     = "﬌",
-            Color       = "",
-            File        = "",
-            Folder      = "",
-            EnumMember  = "",
-            Constant    = "",
-            Struct      = "",
-            copilot     = "",
-        }
-    }
 
     local on_attach = function(client, bufnr)
         require("illuminate").on_attach(client, bufnr)
