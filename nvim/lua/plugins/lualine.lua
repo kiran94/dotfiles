@@ -2,6 +2,7 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {
 		{ "nvim-tree/nvim-web-devicons", lazy = true },
+		"linrongbin16/lsp-progress.nvim",
 	},
 	config = function()
 		-- Gets the Active LSP
@@ -96,7 +97,15 @@ return {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff" },
 				lualine_c = { "filename", "diagnostics", dap_status },
-				lualine_x = { "copilot", python_env, "encoding", "fileformat", "filetype", lsp_active },
+				lualine_x = {
+					require("lsp-progress").progress,
+					"copilot",
+					python_env,
+					"encoding",
+					"fileformat",
+					"filetype",
+					lsp_active,
+				},
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},
