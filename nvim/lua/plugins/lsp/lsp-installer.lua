@@ -7,7 +7,6 @@ options.config = function()
     local cmp_nvim_lsp  = require('cmp_nvim_lsp')
     local lsp_kind      = require('lspkind')
     local schemastore   = require('schemastore')
-    local lsp_progress  = require('fidget')
     local navic         = require("nvim-navic")
     local inlayhints    = require("lsp-inlayhints")
 
@@ -255,10 +254,6 @@ options.config = function()
     nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.csharp_ls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
-
-    lsp_progress.setup{}
 end
-
-
 
 return options
