@@ -11,9 +11,9 @@ function _G.put(...)
 	return ...
 end
 
-local async = require("plenary.async")
 
 local packer_sync = function()
+    local async = require("plenary.async")
 	async.run(function()
 		vim.notify.async("Syncing packer.", "info", {
 			title = "Packer",

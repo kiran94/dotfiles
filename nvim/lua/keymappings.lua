@@ -58,23 +58,3 @@ vim.cmd [[nnoremap <M-h>    :vertical resize +10<CR>]]
 
 -- when in terminal node, esc to go from insert to normal mode
 vim.cmd [[tnoremap <Esc> <C-\><C-N>]]
-
---------------------------
--- TELESCOPE
---------------------------
-local function telescope() return require('telescope.builtin') end
-local function telescope_theme() return require('telescope.themes').get_ivy({hidden=true}) end
-
-vim.keymap.set('n', '<M-p>', function() telescope().find_files(telescope_theme()) end)
-vim.keymap.set('n', '<M-/>', function() telescope().live_grep(telescope_theme()) end)
-vim.keymap.set('n', '<M-H>', function() telescope().help_tags(telescope_theme()) end)
-
---------------------------
--- SNIPPETS
---------------------------
-
-local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-vim.api.nvim_set_keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-vim.api.nvim_set_keymap("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
-vim.api.nvim_set_keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
