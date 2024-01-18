@@ -59,15 +59,7 @@ options.config = function()
             navic.attach(client, bufnr)
         end
 
-        -- NOTE: <= 0.7 This is being disabled
-        -- because null-ls is handling the formatting
-        -- If you decide to switch back then comment these lines
-        -- if vim.fn.has "nvim-0.7" then
-        --     client.resolved_capabilities.document_formatting = false
-        --     client.resolved_capabilities.document_range_formatting = false
-        -- end
-
-        -- 0.8 Allow null-ls to handle formatting
+        -- Allow null-ls to handle formatting
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
     end
