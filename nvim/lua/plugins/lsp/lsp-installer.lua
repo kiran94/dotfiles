@@ -218,6 +218,7 @@ options.config = function()
     nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.csharp_ls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
+    nvim_lsp.marksman.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
 end
 
 return options

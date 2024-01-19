@@ -15,6 +15,7 @@ return {
 			"clangd",
 			"cmake",
 			"taplo",
+			"marksman",
 			-- LINTER & FORMATTING
 			-- "flake8",
 			-- "isort",
