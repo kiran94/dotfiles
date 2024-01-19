@@ -28,6 +28,7 @@ return {
 			-- "jq" ,
 			-- "yamllint",
 			-- "yamlfmt",
+			-- "cspell",
 			-- DAPS
 			-- "debugpy",
 			-- "delve",

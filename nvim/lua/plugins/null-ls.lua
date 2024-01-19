@@ -36,6 +36,9 @@ return {
 				actions.refactoring,
 				formatting.clang_format.with({ filetypes = { "c", "cpp", "java", "cuda", "proto" } }),
 
+				diagnostics.cspell.with({ filetypes = { "markdown", "text" } }),
+				actions.cspell.with({ filetypes = { "markdown", "text" } }),
+
 				-- JavaScript
 				-- formatting.eslint,
 				-- formatting.prettier,
