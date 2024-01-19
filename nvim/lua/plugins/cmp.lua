@@ -9,7 +9,7 @@ return {
 		"hrsh7th/cmp-calc",
 		"hrsh7th/cmp-emoji",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
-		"davidsierradz/cmp-conventionalcommits", -- ft = gitcommit
+		{ "davidsierradz/cmp-conventionalcommits", ft = "gitcommit" },
 		"L3MON4D3/LuaSnip",
 		"onsails/lspkind-nvim",
 		"lukas-reineke/cmp-under-comparator",
