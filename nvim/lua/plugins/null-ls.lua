@@ -21,7 +21,9 @@ return {
 				formatting.gofmt,
 				formatting.goimports,
 				-- formatting.golines,
+				actions.gomodifytags,
 				diagnostics.staticcheck,
+				actions.staticcheck,
 
 				-- Lua
 				-- formatting.lua_format,
