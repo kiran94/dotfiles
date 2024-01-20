@@ -12,6 +12,7 @@ plug zsh-users/zsh-completions
 plug ael-code/zsh-colored-man-pages
 plug agkozak/zsh-z
 plug MichaelAquilina/zsh-auto-notify
+plug Aloxaf/fzf-tab
 
 #####################
 # PROMPT
