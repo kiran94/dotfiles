@@ -23,7 +23,6 @@ return {
 				-- formatting.golines,
 				actions.gomodifytags,
 				diagnostics.staticcheck,
-				actions.staticcheck,
 
 				-- Lua
 				-- formatting.lua_format,
