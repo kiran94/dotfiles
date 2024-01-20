@@ -18,6 +18,7 @@ plug MichaelAquilina/zsh-auto-notify
 #####################
 
 [ -f /usr/bin/starship ] && eval "$(starship init zsh)"
+[ -f /opt/homebrew/bin/starship ] && eval "$(starship init zsh)"
 
 #####################
 # SETTINGS
