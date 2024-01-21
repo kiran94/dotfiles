@@ -190,6 +190,7 @@ return {
 			e = {
 				name = "+explorer",
 				e = { ":Neotree right toggle<CR>", "file explorer" },
+				o = { ":Oil<CR>", "oil" },
 				t = { cmd('lua require("neotest").summary.toggle()'), "summary" },
 			},
 			-- Go
