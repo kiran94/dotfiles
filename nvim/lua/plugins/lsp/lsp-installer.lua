@@ -7,6 +7,7 @@ options.config = function()
     local schemastore   = require('schemastore')
     local navic         = require("nvim-navic")
     local inlayhints    = require("lsp-inlayhints")
+    local mason_registry = require("mason-registry")
 
     local runtime_path = vim.split(package.path, ';')
     table.insert(runtime_path, "lua/?.lua")
@@ -216,9 +217,22 @@ options.config = function()
     nvim_lsp.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.cmake.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.csharp_ls.setup{ on_attach = on_attach, capabilities = capabilities }
+    nvim_lsp.marksman.setup{ on_attach = on_attach, capabilities = capabilities, }
     nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
-    nvim_lsp.marksman.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
+
+    if mason_registry.is_installed("omnisharp") then
+        local omnisharp_path = mason_registry.get_package("omnisharp"):get_install_path()
+
+        nvim_lsp.omnisharp.setup{
+            on_attach = on_attach,
+            capabilities = capabilities,
+            handlers = {
+                ["textDocument/definition"] = require('omnisharp_extended').handler,
+            },
+            cmd = { omnisharp_path .. '/omnisharp', '--languageserver' , '--hostPID', tostring(vim.fn.getpid()), '--loglevel', 'ERROR' },
+        }
+    end
+
 end
 
 return options
