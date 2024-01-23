@@ -20,8 +20,6 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
 export ASPNETCORE_ENVIRONMENT=Development
-export ASPNETCORE_Kestrel__Certificates__Default__Path=~/.certificates/localhost.pfx
-export ASPNETCORE_Kestrel__Certificates__Default__Password=Password123
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export DOTNET_NOLOGO=1
 export PYSPARK_DRIVER_PYTHON=ptpython
