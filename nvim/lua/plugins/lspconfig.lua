@@ -21,5 +21,6 @@ return {
 		"Afourcat/treesitter-terraform-doc.nvim",
 		"lvimuser/lsp-inlayhints.nvim",
 		"SmiteshP/nvim-navic",
+		{"Hoffs/omnisharp-extended-lsp.nvim", ft = 'cs'},
 	},
 }
