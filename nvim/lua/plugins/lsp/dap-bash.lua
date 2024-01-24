@@ -1,7 +1,8 @@
 local M = {}
 
-M.setup = function(dap, install_directory)
+M.setup = function(_, install_directory)
     local mason_registry = require("mason-registry")
+    local dap = require("dap")
 
 	if mason_registry.is_installed("bash-debug-adapter") then
 		dap.adapters.sh = {
