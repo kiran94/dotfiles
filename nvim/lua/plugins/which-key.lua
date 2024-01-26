@@ -221,7 +221,7 @@ return {
 				r = { cmd("lua require'dap'.repl.toggle()"), "Toggle Repl" },
 				s = { cmd("lua require'dap'.continue()"), "Start" },
 				-- q = { cmd("lua require'dap'.close()"), "Quit" },
-				U = { cmd("lua require'dapui'.toggle()"), "Toggle UI" },
+				U = { cmd("lua require'dapui'.toggle({reset: true})"), "Toggle UI" },
 				q = { ":DapTerminate<CR>", "Terminate" },
 				t = { cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug test" },
 				-- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
