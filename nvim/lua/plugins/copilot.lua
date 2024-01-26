@@ -9,8 +9,14 @@ return {
 	config = function()
 		require("copilot").setup({
 			-- Disabled because we are using copilot cmp
-			suggestion = { enabled = false },
-			panel = { enabled = false },
+			suggestion = {
+				enabled = true,
+				auto_trigger = false,
+			},
+			panel = {
+				enabled = true,
+				auto_refresh = true,
+			},
 		})
 
 		require("copilot_cmp").setup()
