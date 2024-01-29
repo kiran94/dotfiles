@@ -113,6 +113,14 @@ return {
 						"S3",
 					},
 				},
+				["#"] = {
+					function()
+						require("telescope.builtin").colorscheme(
+							require("telescope.themes").get_ivy({ hidden = false })
+						)
+					end,
+					"Colorschemes",
+				},
 			},
 			-- Special
 			z = {
