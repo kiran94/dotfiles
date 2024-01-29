@@ -33,6 +33,11 @@ return {
 			extensions = {
 				["ui-select"] = { require("telescope.themes").get_dropdown({}) },
 			},
+			pickers = {
+				colorscheme = {
+					enable_preview = true,
+				},
+			},
 		})
 
 		-- EXTENSIONS
