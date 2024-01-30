@@ -27,6 +27,19 @@ local function list_files_recursively(path, output, excluded_extensions)
 	return output
 end
 
+local function dotnet_build()
+	local handle = io.popen("dotnet build --nologo -v m")
+	if handle == nil then
+		print("handle is nil")
+		return
+	end
+
+	local result = handle:read("*a")
+	handle:close()
+
+	vim.notify(result, vim.log.levels.INFO)
+end
+
 M.setup = function()
 	local dap = require("dap")
 	local reg = require("mason-registry")
@@ -54,6 +67,8 @@ M.setup = function()
 			name = "Launch",
 			request = "launch",
 			program = function()
+				dotnet_build()
+
 				local output = {}
 				list_files_recursively(vim.fn.getcwd() .. "/bin/Debug/", output, { "json", "pdb" })
 
