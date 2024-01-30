@@ -232,7 +232,7 @@ return {
 				-- q = { cmd("lua require'dap'.close()"), "Quit" },
 				U = { cmd("lua require'dapui'.toggle({reset = true})"), "Toggle UI" },
 				q = { ":DapTerminate<CR>", "Terminate" },
-				t = { cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug test" },
+				t = { cmd('lua require("neotest").run.run({strategy = "dap"})'), "Debug Test" },
 				-- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
 				-- d = { cmd("lu>a require'dap'.disconnect()"), "Disconnect" },
 				-- g = { cmd("lua require'dap'.session()"), "Get Session" },
