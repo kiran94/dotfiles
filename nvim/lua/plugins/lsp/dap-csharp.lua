@@ -55,7 +55,7 @@ M.setup = function()
 			request = "launch",
 			program = function()
 				local output = {}
-				list_files_recursively(vim.fn.getcwd() .. "/bin/Debug/", output, { ".json", ".pdb" })
+				list_files_recursively(vim.fn.getcwd() .. "/bin/Debug/", output, { "json", "pdb" })
 
 				local to_debug_index = vim.fn.inputlist(output)
 				local to_debug = output[to_debug_index]
