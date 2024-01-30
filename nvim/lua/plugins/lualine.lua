@@ -77,7 +77,13 @@ return {
 				return
 			end
 
-			return dap.status()
+			local status = dap.status()
+
+			if status ~= "" then
+				return " " .. status
+			else
+				return ""
+			end
 		end
 
 		require("lualine").setup({
