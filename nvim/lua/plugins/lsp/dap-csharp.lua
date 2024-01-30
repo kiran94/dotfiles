@@ -57,12 +57,18 @@ M.setup = function()
 				local output = {}
 				list_files_recursively(vim.fn.getcwd() .. "/bin/Debug/", output, { "json", "pdb" })
 
-				local to_debug_index = vim.fn.inputlist(output)
-				local to_debug = output[to_debug_index]
+				if #output == 0 then
+					vim.notify("No files found in bin/Debug", vim.log.levels.WARN)
+					return
+				end
 
-				vim.notify("Debugging:" .. to_debug, vim.log.levels.DEBUG)
+				-- if there is only one file then just use it without asking
+				if #output == 1 then
+					return output[1]
+				end
 
-				return to_debug
+				-- NOTE: Lua is 1 based indexing
+				return output[vim.fn.inputlist(output)]
 			end,
 		},
 	}
