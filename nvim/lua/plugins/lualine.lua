@@ -46,10 +46,12 @@ return {
 			local poetry_active = os.getenv("POETRY_ACTIVE") == "1"
 
 			-- Normalize the path
-			-- e.g /home/user/projects/.venv => ~/projects/.env
-			local user = os.getenv("USER")
-			local home_path = "/home/" .. user
-			virtual_env = virtual_env:gsub(home_path, "~")
+			-- e.g /home/user/projects/.venv => ~/projects/.venv
+			if virtual_env ~= nil then
+				local user = os.getenv("USER")
+				virtual_env = virtual_env:gsub("/home/" .. user, "~") -- Linux
+				virtual_env = virtual_env:gsub("/Users/" .. user, "~") -- MacOS
+			end
 
 			-- Poetry Paths can be very long
 			-- e.g ~/.cache/pypoetry/virtualenvs/prfiesta-aI_TvpME-py3.11
