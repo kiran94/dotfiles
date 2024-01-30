@@ -16,6 +16,7 @@ return {
 		require("plugins.lsp.dap-python").setup(plugin, mason_install_directory)
 		require("plugins.lsp.dap-bash").setup(plugin, mason_install_directory)
 		require("plugins.lsp.dap-go").setup()
+		require("plugins.lsp.dap-csharp").setup()
 
 		require("dap.ext.vscode").load_launchjs(nil, nil)
 
