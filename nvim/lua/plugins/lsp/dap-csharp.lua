@@ -4,6 +4,7 @@ local function list_files_recursively(path, output, excluded_extensions)
 	output = output or {}
 	excluded_extensions = excluded_extensions or {}
 	local files = vim.fn.globpath(path, "*", true, true)
+	local _, _, last_dir = string.find(vim.fn.getcwd(), "/([^/]+)$")
 
 	for _, file in ipairs(files) do
 		local stat = vim.loop.fs_stat(file)
@@ -18,7 +19,19 @@ local function list_files_recursively(path, output, excluded_extensions)
 				elseif table.contains(excluded_extensions, ext) then
 					vim.notify(file .. " excluded", vim.log.levels.DEBUG)
 				else
-					table.insert(output, file)
+					-- get the current file name
+					local file_name = vim.fn.fnamemodify(file, ":t")
+
+					-- split the file name by '.'
+					local parts = {}
+					for part in file_name:gmatch("[^.]+") do
+						table.insert(parts, part)
+					end
+
+					-- check the executable is the same as the parent directory path
+					if last_dir == parts[1] then
+						table.insert(output, file)
+					end
 				end
 			end
 		end
