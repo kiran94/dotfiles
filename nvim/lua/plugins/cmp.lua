@@ -13,6 +13,7 @@ return {
 		"L3MON4D3/LuaSnip",
 		"onsails/lspkind-nvim",
 		"lukas-reineke/cmp-under-comparator",
+		"rcarriga/cmp-dap",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -29,6 +30,9 @@ return {
 
 		-- Editor Completion
 		cmp.setup({
+			enabled = function()
+				return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
+			end,
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp", max_item_count = 10 },
 				{ name = "nvim_lua", max_item_count = 25 },
@@ -141,6 +145,13 @@ return {
 			mapping = cmp.mapping.preset.cmdline(),
 			sources = {
 				{ name = "buffer", max_item_count = 5 },
+			},
+		})
+
+		-- Dap Completion
+		cmp.setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
+			sources = {
+				{ name = "dap" },
 			},
 		})
 	end,
