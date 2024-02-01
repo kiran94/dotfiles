@@ -182,17 +182,17 @@ return {
 						r = { cmd("DiffviewRefresh"), "diff refresh" },
 					},
 				},
-				t = {
-					name = "+test",
-					n = { cmd('lua require("neotest").run.run()'), "test nearest" },
-					d = { cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug nearest test" },
-					a = { cmd('lua require("neotest").run.run(vim.fn.expand("%"))'), "all current file tests" },
-					s = { cmd('lua require("neotest").summary.toggle()'), "summary" },
-				},
 				m = {
 					name = "+modify",
 					s = { cmd("ISwap"), "swap" },
 				},
+			},
+			t = {
+				name = "+test",
+				n = { cmd('lua require("neotest").run.run()'), "test nearest" },
+				d = { cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug nearest test" },
+				a = { cmd('lua require("neotest").run.run(vim.fn.expand("%"))'), "all current file tests" },
+				s = { cmd('lua require("neotest").summary.toggle()'), "test summary" },
 			},
 			-- Explorer
 			e = {
@@ -236,10 +236,6 @@ return {
 				-- b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
 				-- d = { cmd("lu>a require'dap'.disconnect()"), "Disconnect" },
 				-- g = { cmd("lua require'dap'.session()"), "Get Session" },
-				z = {
-					name = "+special",
-					gt = { cmd("lua require('dap-go').debug_test()"), "Debug Go Test" },
-				},
 			},
 		}
 
