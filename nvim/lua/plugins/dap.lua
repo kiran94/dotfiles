@@ -1,12 +1,13 @@
 return {
 	"mfussenegger/nvim-dap",
+	event = "VeryLazy",
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 		"leoluz/nvim-dap-go",
 		"theHamsta/nvim-dap-virtual-text",
 		"mfussenegger/nvim-dap-python",
 	},
-    opts = {},
+	opts = {},
 	config = function(plugin, opts)
 		--------------------------------
 		-- ADAPTERS and CONFIGURATION

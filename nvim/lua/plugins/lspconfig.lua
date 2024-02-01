@@ -1,7 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = require("plugins/lsp/lsp-installer").config,
-	lazy = false,
+	event = "VeryLazy",
 	dependencies = {
 		"onsails/lspkind-nvim",
 		"williamboman/mason.nvim",
@@ -21,6 +21,6 @@ return {
 		"Afourcat/treesitter-terraform-doc.nvim",
 		"lvimuser/lsp-inlayhints.nvim",
 		"SmiteshP/nvim-navic",
-		{"Hoffs/omnisharp-extended-lsp.nvim", ft = 'cs'},
+		{ "Hoffs/omnisharp-extended-lsp.nvim", ft = "cs" },
 	},
 }

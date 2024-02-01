@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason-lspconfig.nvim",
+	event = "VeryLazy",
 	opts = {
 		ensure_installed = {
 			-- LSPs
