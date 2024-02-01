@@ -200,7 +200,7 @@ return {
 				e = { ":Neotree right toggle<CR>", "file explorer" },
 				s = { ":AerialToggle!<CR>", "symbols" },
 				o = { ":Oil<CR>", "oil" },
-				t = { cmd('lua require("neotest").summary.toggle()'), "summary" },
+				t = { cmd('lua require("neotest").summary.toggle()'), "test summary" },
 			},
 			-- Go
 			g = {
