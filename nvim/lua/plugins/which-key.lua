@@ -190,6 +190,7 @@ return {
 			t = {
 				name = "+test",
 				n = { cmd('lua require("neotest").run.run()'), "test nearest" },
+				t = { cmd('lua require("neotest").run.run()'), "test nearest" },
 				d = { cmd('lua require("neotest").run.run({strategy = "dap"})'), "debug nearest test" },
 				a = { cmd('lua require("neotest").run.run(vim.fn.expand("%"))'), "all current file tests" },
 				s = { cmd('lua require("neotest").summary.toggle()'), "test summary" },
