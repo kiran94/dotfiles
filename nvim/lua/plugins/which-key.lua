@@ -202,6 +202,7 @@ return {
 				s = { ":AerialToggle!<CR>", "symbols" },
 				o = { ":Oil<CR>", "oil" },
 				t = { cmd('lua require("neotest").summary.toggle()'), "test summary" },
+				p = { cmd("Lazy"), "Package Manager" },
 			},
 			-- Go
 			g = {
