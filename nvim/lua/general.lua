@@ -75,12 +75,3 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     vim.cmd "set formatoptions-=cro"
   end,
 })
-
--- Open Browser with gx
-local os = vim.loop.os_uname().sysname
-
-if os == "Linux" then
-	vim.cmd([[nmap <silent>gx :!xdg-open <c-r><c-a><CR>]])
-elseif os == "Darwin" then
-	vim.cmd([[nmap <silent>gx :!open <c-r><c-a><CR>]])
-end
