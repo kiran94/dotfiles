@@ -8,6 +8,7 @@ return {
 	event = "BufWinEnter",
 	config = function()
 		local telescope = require("telescope")
+		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
 			prompt_position = "bottom",
@@ -28,6 +29,10 @@ return {
 					".pytest_cache/*",
 					"vendor/*",
 					"**/*.zip",
+				},
+				mappings = {
+					i = { ["<c-q>"] = trouble.open_with_trouble },
+					n = { ["<c-q>"] = trouble.open_with_trouble },
 				},
 			},
 			extensions = {
