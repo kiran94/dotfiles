@@ -130,6 +130,7 @@ return {
 					name = "+package",
 					s = { cmd("Lazy sync"), "sync" },
 					r = { cmd("Lazy clean"), "clean" },
+					o = { cmd("Lazy"), "open" },
 				},
 				m = {
 					name = "+markdown",
