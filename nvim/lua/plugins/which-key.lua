@@ -204,6 +204,7 @@ return {
 				o = { ":Oil<CR>", "oil" },
 				t = { cmd('lua require("neotest").summary.toggle()'), "test summary" },
 				p = { cmd("Lazy"), "Package Manager" },
+				d = { cmd("Trouble"), "Diagnostics" },
 			},
 			-- Go
 			g = {
