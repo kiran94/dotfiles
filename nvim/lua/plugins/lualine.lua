@@ -88,6 +88,22 @@ return {
 			end
 		end
 
+		local notebook_status = function()
+			local ok, molten = pcall(require, "molten.status")
+			if not ok then
+				return ""
+			end
+
+			local status = molten.initialized()
+			local kernels = molten.kernels()
+
+			if status == "" then
+				return ""
+			end
+
+			return "📓" -- .. " " .. kernels
+		end
+
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
@@ -106,6 +122,7 @@ return {
 				lualine_b = { "branch", "diff" },
 				lualine_c = { "filename", "diagnostics", dap_status },
 				lualine_x = {
+					notebook_status,
 					require("lsp-progress").progress,
 					"copilot",
 					python_env,
