@@ -241,6 +241,13 @@ return {
 				-- d = { cmd("lu>a require'dap'.disconnect()"), "Disconnect" },
 				-- g = { cmd("lua require'dap'.session()"), "Get Session" },
 			},
+			n = {
+				name = "+notebook",
+				i = { cmd("MoltenInit"), "Initialize" },
+				x = { cmd("MoltenEvaluateLine"), "Execute Line" },
+				b = { cmd("MoltenOpenInBrowser"), "Open In Browser" },
+				["?"] = { cmd("MoltenInfo"), "Re-evaluate Cell" },
+			},
 		}
 
 		whichkey.setup(setupOpts)

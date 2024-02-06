@@ -75,3 +75,8 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     vim.cmd "set formatoptions-=cro"
   end,
 })
+
+-- Add lua 5.1 packages
+-- Example: https://github.com/3rd/image.nvim?tab=readme-ov-file#requirements
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"

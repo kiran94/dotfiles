@@ -185,3 +185,16 @@ function git_large_file_sizes
 {
     git ls-tree -r HEAD -l | sort -nk4 | awk '{print $1, $2, $3, ($4 / 1024 / 1024)"MB", $5}'
 }
+
+#######################################
+# Creates a Python Notebook Kernel for the given directory / project
+# This is useful for Jupyter Notebooks
+# https://github.com/benlubas/molten-nvim/blob/main/docs/Virtual-Environments.md#install-the-kernel-in-a-project-virtual-environment
+# Kernels are stored in ~/.local/share/jupyter/kernels
+# Defaults to the current directory
+#######################################
+function jupyter_create_project_kernel
+{
+    NAME="${1:-$(basename $(pwd))}"
+    python -m ipykernel install --user --name $NAME
+}
