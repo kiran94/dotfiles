@@ -27,4 +27,38 @@ return {
 	dependencies = {
 		"mfussenegger/nvim-dap",
 	},
+	opts = {
+		layouts = {
+			{
+				elements = {
+					"scopes",
+				},
+				size = 0.2, -- columns
+				position = "left",
+			},
+			{
+				elements = {
+					"console",
+				},
+				size = 0.1, -- 25% of total lines
+				position = "bottom",
+			},
+			{
+				elements = {
+					"repl",
+				},
+				size = 0.2, -- 25% of total lines
+				position = "bottom",
+			},
+			{
+				elements = {
+					"breakpoints",
+					"stacks",
+					"watches",
+				},
+				size = 0.2, -- columns
+				position = "right",
+			},
+		},
+	},
 }
