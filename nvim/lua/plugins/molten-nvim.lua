@@ -20,6 +20,7 @@ return {
 			"jupytext",
 		})
 
+		-- May need to do an additional Lazy build
 	end,
 	init = function()
 		vim.g.molten_wrap_output = true
