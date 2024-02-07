@@ -7,6 +7,7 @@ return {
 	},
 	event = "BufEnter *.ipynb",
 	build = function()
+		vim.cmd("UpdateRemotePlugins")
 		vim.fn.install_neovim_python_package({
 			"pynvim",
 			"jupyter_client",
@@ -19,7 +20,6 @@ return {
 			"jupytext",
 		})
 
-		vim.cmd("UpdateRemotePlugins")
 	end,
 	init = function()
 		vim.g.molten_wrap_output = true
