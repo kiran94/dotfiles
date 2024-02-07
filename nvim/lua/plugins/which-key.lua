@@ -172,20 +172,20 @@ return {
 					n = { cmd("Lspsaga rename"), "rename" },
 					r = { cmd("lua vim.lsp.buf.references()"), "references" },
 				},
-				g = {
-					name = "+git",
-					l = { cmd("Gitsigns toggle_linehl"), "line diff" },
-					b = { cmd("Gitsigns blame_line"), "blame line" },
-					d = {
-						name = "+diff",
-						o = { cmd("DiffviewOpen"), "diff open" },
-						c = { cmd("DiffviewClose"), "diff close" },
-						r = { cmd("DiffviewRefresh"), "diff refresh" },
-					},
-				},
 				m = {
 					name = "+modify",
 					s = { cmd("ISwap"), "swap" },
+				},
+			},
+			s = {
+				name = "+source control (git)",
+				l = { cmd("Gitsigns toggle_linehl"), "line diff" },
+				b = { cmd("Gitsigns blame_line"), "blame line" },
+				d = {
+					name = "+diff",
+					o = { cmd("DiffviewOpen"), "diff open" },
+					c = { cmd("DiffviewClose"), "diff close" },
+					r = { cmd("DiffviewRefresh"), "diff refresh" },
 				},
 			},
 			t = {
