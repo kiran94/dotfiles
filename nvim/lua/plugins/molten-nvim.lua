@@ -7,9 +7,7 @@ return {
 	},
 	event = "BufEnter *.ipynb",
 	build = function()
-		vim.cmd("UpdateRemotePlugins")
-
-		_G.install_neovim_python_package({
+		vim.fn.install_neovim_python_package({
 			"pynvim",
 			"jupyter_client",
 			"cairosvg",
@@ -20,6 +18,8 @@ return {
 			"ipykernel",
 			"jupytext",
 		})
+
+		vim.cmd("UpdateRemotePlugins")
 	end,
 	init = function()
 		vim.g.molten_wrap_output = true

@@ -39,7 +39,7 @@ function _G.ensure_neovim_venv_exists()
 	return venv_dir
 end
 
-function _G.install_neovim_python_package(packages)
+vim.fn.install_neovim_python_package = function(packages)
 	local venv_dir = _G.ensure_neovim_venv_exists()
 
     local package_list = _G.join_strings(packages, " ")
