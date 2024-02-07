@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("focus").setup()
 
-		local ignore_filetypes = { "neo-tree", "neotest-summary", "aerial" }
+		local ignore_filetypes = { "neo-tree", "neotest-summary", "aerial", "DiffviewFiles" }
 		local ignore_buftypes = { "nofile", "prompt", "popup" }
 
 		local augroup = vim.api.nvim_create_augroup("FocusDisable", { clear = true })
