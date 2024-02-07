@@ -181,6 +181,12 @@ return {
 				name = "+source control (git)",
 				l = { cmd("Gitsigns toggle_linehl"), "line diff" },
 				b = { cmd("Gitsigns blame_line"), "blame line" },
+				p = { cmd("GitLink"), "copy permalink" },
+				o = {
+					name = "+open",
+					o = { cmd("GitLink!"), "open permalink" },
+					b = { cmd("GitLink! blame"), "open blame" },
+				},
 				d = {
 					name = "+diff",
 					o = { cmd("DiffviewOpen"), "diff open" },
