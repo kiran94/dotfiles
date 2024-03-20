@@ -11,7 +11,7 @@ return {
 			-- Disabled because we are using copilot cmp
 			suggestion = {
 				enabled = true,
-				auto_trigger = false,
+				auto_trigger = true,
 			},
 			panel = {
 				enabled = true,

@@ -43,7 +43,7 @@ return {
 				{ name = "spell", max_item_count = 5 },
 				{ name = "calc", max_item_count = 5 },
 				{ name = "emoji", max_item_count = 5 },
-				{ name = "copilot", max_item_count = 5 },
+				{ name = "copilot", max_item_count = 5, enabled = false },
 				{ name = "nvim_lsp_signature_help" },
 			}),
 			snippet = {
