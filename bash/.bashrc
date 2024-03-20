@@ -43,6 +43,9 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then source /etc/profile.d/vte.sh; fi # U
 # https://starship.rs/
 [ -f /usr/local/bin/starship ] && [ $SHELL = "/usr/bin/bash" ] && eval "$(starship init bash)"
 
+# Tmuxifier
+[ -f ~/.tmux/plugins/tmuxifier/bin/tmuxifier ] && eval "$(tmuxifier init -)"
+
 # Neofetch
 [ -z "${TERM_PROGRAM}" ] && [ -f /usr/bin/neofetch ] && neofetch
 

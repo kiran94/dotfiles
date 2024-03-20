@@ -4,6 +4,9 @@
 [ -n "$ZSH_VERSION" ] && [ -n "$DOTFILES_DEBUG" ] && echo "$0"
 
 # Path
+export GOPATH=$HOME/Documents/projects/go
+export GOBIN=$GOPATH/bin
+
 export PATH=$PATH:$HOME/.dotnet/tools/
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.yarn/bin
@@ -12,10 +15,9 @@ export PATH=$PATH:$HOME/.nix-profile/bin
 export PATH=$PATH:$HOME/.nvs/node/19.5.0/x64/bin
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 export PATH=$PATH:$HOME/dotnet-previews
+export PATH=$PATH:$HOME/.tmux/plugins/tmuxifier/bin
 export PATH=$PATH:/usr/local/bin/spark/bin/
 export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.9/bin # macOS
-export GOPATH=$HOME/Documents/projects/go
-export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
