@@ -9,6 +9,7 @@ return {
 		"nvim-neotest/neotest-go",
 		"nvim-neotest/neotest-plenary",
 		"Issafalcon/neotest-dotnet",
+		"nvim-neotest/nvim-nio",
 	},
 	config = function()
 		require("neotest").setup({
@@ -16,7 +17,7 @@ return {
 				require("neotest-python")({ dap = { justMyCode = false } }),
 				require("neotest-go"),
 				require("neotest-plenary"),
-				require("neotest-dotnet")({ dap = { justMyCode = false }}),
+				require("neotest-dotnet")({ dap = { justMyCode = false } }),
 			},
 			quickfix = {
 				enabled = false,

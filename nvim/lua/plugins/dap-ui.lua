@@ -26,6 +26,7 @@ return {
 	end,
 	dependencies = {
 		"mfussenegger/nvim-dap",
+		"nvim-neotest/nvim-nio",
 	},
 	opts = {
 		layouts = {
