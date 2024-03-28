@@ -164,7 +164,7 @@ return {
 				-- a = {cmd("CodeActionMenu"), "action"},
 				a = { cmd("Lspsaga code_action"), "action" },
 				-- f = {cmd("Format"), "format"},
-				f = { cmd("lua vim.lsp.buf.format({ async = true })"), "format" },
+				-- f = { cmd("lua vim.lsp.buf.format({ async = true })"), "format" },
 				d = { cmd("Neogen"), "generate docs" },
 				r = {
 					name = "+refactor",
