@@ -62,6 +62,11 @@ alias co='git checkout $(git branch | fzf)'
 alias fpyenv='pyenv install -v $(pyenv install --list | rg "\s+[0-9\.]+(-dev)?$" | sort | tac | fzf)'
 alias gist='gh gist edit $(gh gist list | fzf | awk "{print $1}")'
 
+# Tmuxifier
+alias tx='tmuxifier'
+alias txs='tmuxifier s $(tmuxifier list-sessions | fzf)'
+alias txw='tmuxifier w $(tmuxifier list-windows | fzf)'
+
 export SPARK_HOME=/opt/spark
 export SPARK_HOST="spark://$(hostname):7077"
 export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
