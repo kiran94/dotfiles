@@ -25,7 +25,7 @@ return {
 			lint.linters_by_ft.python = { "flake8" }
 		end
 
-		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+		vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
 			callback = function()
 				require("lint").try_lint()
 			end,
