@@ -3,7 +3,6 @@ return {
 	event = "VeryLazy",
 	opts = {
 		ensure_installed = {
-			-- LSPs
 			"lua_ls",
 			"pylsp",
 			"gopls",
@@ -17,22 +16,6 @@ return {
 			"cmake",
 			"taplo",
 			"marksman",
-			-- LINTER & FORMATTING
-			-- "flake8",
-			-- "isort",
-			-- "autopep8",
-			-- "goimports",
-			-- "gofmt",
-			-- "staticcheck",
-			-- "stylua",
-			-- "clang-format",
-			-- "jq" ,
-			-- "yamllint",
-			-- "yamlfmt",
-			-- "cspell",
-			-- DAPS
-			-- "debugpy",
-			-- "delve",
 		},
 
 		-- TODO: Refactor the below code via setup_handlers
