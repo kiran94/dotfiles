@@ -30,7 +30,7 @@ return {
 			sql = { "sqlfluff" },
 			python = function(bufnr)
 				if require("conform").get_formatter_info("ruff_format", bufnr).available then
-					return { "ruff_format" }
+					return { "ruff_format", "ruff_fix" }
 				elseif require("conform").get_formatter_info("black", bufnr).available then
 					return { "black" }
 				else
