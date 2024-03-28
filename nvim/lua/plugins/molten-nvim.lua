@@ -1,6 +1,7 @@
 return {
 	"benlubas/molten-nvim",
 	version = "^1.0.0",
+	enabled = false,
 	dependencies = {
 		"3rd/image.nvim",
 		"GCBallesteros/jupytext.nvim",
