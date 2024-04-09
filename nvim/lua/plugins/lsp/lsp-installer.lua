@@ -77,7 +77,7 @@ options.config = function()
         settings = {
             pylsp = {
                 plugins = {
-                    -- note: these are now managed in ./null-ls.lua
+                    -- note: these are now managed in ./null-ls.lua / conform.nvim / nvim-lint
                     flake8      = { enabled = false },
                     pycodestyle = { enabled = false },
                     pyflakes    = { enabled = false },
@@ -88,6 +88,8 @@ options.config = function()
             }
         }
     }
+
+    -- nvim_lsp.pylyzer.setup{}
 
     nvim_lsp.lua_ls.setup {
         capabilities = capabilities,
@@ -116,18 +118,18 @@ options.config = function()
         }
     }
 
-    nvim_lsp.pyright.setup{
-        capabilities = capabilities,
-        on_attach = on_attach,
-        settings = {
-            python = {
-                analysis = {
-                    -- https://github.com/microsoft/pyright/blob/main/docs/configuration.md
-                    typeCheckingMode = "off"
-                }
-            }
-        }
-    }
+    -- nvim_lsp.pyright.setup{
+    --     capabilities = capabilities,
+    --     on_attach = on_attach,
+    --     settings = {
+    --         python = {
+    --             analysis = {
+    --                 -- https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+    --                 typeCheckingMode = "off"
+    --             }
+    --         }
+    --     }
+    -- }
 
     -- nvim_lsp.ruff_lsp.setup{
     --   init_options = {
