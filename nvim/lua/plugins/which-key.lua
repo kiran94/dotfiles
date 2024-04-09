@@ -205,7 +205,7 @@ return {
 			-- Explorer
 			e = {
 				name = "+explorer",
-				e = { ":Neotree right toggle<CR>", "file explorer" },
+				e = { ":Neotree right reveal toggle<CR>", "file explorer" },
 				s = { ":AerialToggle!<CR>", "symbols" },
 				o = { ":Oil<CR>", "oil" },
 				t = { cmd('lua require("neotest").summary.toggle()'), "test summary" },
