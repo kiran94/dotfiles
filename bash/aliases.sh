@@ -18,6 +18,7 @@ alias ..="cd .."
 
 alias g="git"
 alias gs='git status'
+alias gco='git checkout'
 alias gp='git push'
 alias gpull='git pull'
 
