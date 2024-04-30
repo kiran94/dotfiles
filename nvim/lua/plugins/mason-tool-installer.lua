@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 	},
+	event = "VeryLazy",
 	opts = {
 		ensure_installed = {
 			"jsonlint",
@@ -23,4 +24,7 @@ return {
 		auto_update = false,
 		run_on_start = true,
 	},
+    build = function()
+        vim.cmd("MasonToolsInstall")
+    end,
 }
