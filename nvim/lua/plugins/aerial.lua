@@ -1,5 +1,6 @@
 return {
 	"stevearc/aerial.nvim",
+	event = "VeryLazy",
 	opts = {
 		on_attach = function(bufnr)
 			-- Jump forwards/backwards with '{' and '}'
