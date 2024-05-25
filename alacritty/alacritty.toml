@@ -3,33 +3,61 @@ live_config_reload = true
 [colors]
 draw_bold_text_with_bright_colors = true
 
-[colors.bright]
-black = "#666666"
-blue = "#81a2be"
-cyan = "#54ced6"
-green = "#9ec400"
-magenta = "#b77ee0"
-red = "#ff3334"
-white = "#ffffff"
-yellow = "#f0c674"
+# [colors.bright]
+# black = "#666666"
+# blue = "#81a2be"
+# cyan = "#54ced6"
+# green = "#9ec400"
+# magenta = "#b77ee0"
+# red = "#ff3334"
+# white = "#ffffff"
+# yellow = "#f0c674"
+#
+# [colors.cursor]
+# cursor = "#ffffff"
+# text = "#1d1f21"
+#
+# [colors.normal]
+# black = "#1d1f21"
+# blue = "#81a2be"
+# cyan = "#70c0ba"
+# green = "#b5bd68"
+# magenta = "#b294bb"
+# red = "#cc6666"
+# white = "#373b41"
+# yellow = "#e6c547"
+#
+# [colors.primary]
+# background = "#1d1f21"
+# foreground = "#c5c8c6"
 
-[colors.cursor]
-cursor = "#ffffff"
-text = "#1d1f21"
+# TOKYO NIGHT
+
+[colors.bright]
+black = "#444b6a"
+blue = "#7da6ff"
+cyan = "#0db9d7"
+green = "#b9f27c"
+magenta = "#bb9af7"
+red = "#ff7a93"
+white = "#acb0d0"
+yellow = "#ff9e64"
 
 [colors.normal]
-black = "#1d1f21"
-blue = "#81a2be"
-cyan = "#70c0ba"
-green = "#b5bd68"
-magenta = "#b294bb"
-red = "#cc6666"
-white = "#373b41"
-yellow = "#e6c547"
+black = "#32344a"
+blue = "#7aa2f7"
+cyan = "#449dab"
+green = "#9ece6a"
+magenta = "#ad8ee6"
+red = "#f7768e"
+white = "#787c99"
+yellow = "#e0af68"
 
 [colors.primary]
-background = "#1d1f21"
-foreground = "#c5c8c6"
+background = "#1a1b26"
+foreground = "#a9b1d6"
+
+####
 
 [cursor]
 unfocused_hollow = true
