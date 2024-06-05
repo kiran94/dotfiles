@@ -200,18 +200,18 @@ options.config = function()
         end
     }
 
-    nvim_lsp.rust_analyzer.setup{
-      on_attach = on_attach,
-      capabilities = capabilities,
-      -- https://rust-analyzer.github.io/manual.html#configuration
-      settings = {
-        ['rust-analyzer'] = {
-          diagnostics = {
-            enable = true;
-          }
-        }
-      }
-    }
+    -- nvim_lsp.rust_analyzer.setup{
+    --   on_attach = on_attach,
+    --   capabilities = capabilities,
+    --   -- https://rust-analyzer.github.io/manual.html#configuration
+    --   settings = {
+    --     ['rust-analyzer'] = {
+    --       diagnostics = {
+    --         enable = true;
+    --       }
+    --     }
+    --   }
+    -- }
 
     nvim_lsp.bashls.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }

@@ -20,11 +20,12 @@ return {
 			"csharpier",
 			"delve",
 			"debugpy",
+			"codelldb",
 		},
 		auto_update = false,
 		run_on_start = true,
 	},
-    build = function()
-        vim.cmd("MasonToolsInstall")
-    end,
+	build = function()
+		vim.cmd("MasonToolsInstall")
+	end,
 }
