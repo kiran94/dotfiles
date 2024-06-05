@@ -10,6 +10,7 @@ return {
 		"nvim-neotest/neotest-plenary",
 		"Issafalcon/neotest-dotnet",
 		"nvim-neotest/nvim-nio",
+		"rouge8/neotest-rust",
 	},
 	config = function()
 		require("neotest").setup({
@@ -18,6 +19,7 @@ return {
 				require("neotest-go"),
 				require("neotest-plenary"),
 				require("neotest-dotnet")({ dap = { justMyCode = false } }),
+				require("neotest-rust"),
 			},
 			quickfix = {
 				enabled = false,
