@@ -8,7 +8,7 @@ return {
 	event = "BufWinEnter",
 	config = function()
 		local telescope = require("telescope")
-		local trouble = require("trouble.providers.telescope")
+		local trouble = require("trouble.sources.telescope")
 
 		telescope.setup({
 			prompt_position = "bottom",
@@ -31,8 +31,8 @@ return {
 					"**/*.zip",
 				},
 				mappings = {
-					i = { ["<c-q>"] = trouble.open_with_trouble },
-					n = { ["<c-q>"] = trouble.open_with_trouble },
+					i = { ["<c-q>"] = trouble.open },
+					n = { ["<c-q>"] = trouble.open },
 				},
 			},
 			extensions = {
