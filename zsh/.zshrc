@@ -49,11 +49,13 @@ bindkey "^X^E" edit-command-line
 # HISTORY OPTIONS
 #####################
 
+source <(fzf --zsh)
+
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-
 setopt appendhistory
+
 setopt bang_hist
 setopt extended_history
 setopt hist_expire_dups_first
