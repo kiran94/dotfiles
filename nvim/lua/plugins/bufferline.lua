@@ -14,6 +14,7 @@ return {
 			offsets = { { filetype = "NvimTree", text = "EXPLORER", text_align = "center" } },
 			show_tab_indicators = true,
 			show_close_icon = false,
+			always_show_bufferline = false,
 		},
 		highlights = {
 			fill = {
