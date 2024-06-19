@@ -1,7 +1,7 @@
 return {
 	"3rd/image.nvim",
-    enabled = false,
-    event = "VeryLazy",
+	enabled = false,
+	event = "VeryLazy",
 	opts = {
 		backend = "ueberzug",
 	},
