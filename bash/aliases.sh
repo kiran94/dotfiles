@@ -67,8 +67,8 @@ alias ts='tmux switch -t $(tmux list-sessions | awk "{print \$1}" | tr -d ':' | 
 
 # Tmuxifier
 alias tx='tmuxifier'
-alias txs='tmuxifier s $(tmuxifier list-sessions | fzf)'
-alias txw='tmuxifier w $(tmuxifier list-windows | fzf)'
+alias txs='tmuxifier s $(tmuxifier list-sessions | fzf --tmux 90%)'
+alias txw='tmuxifier w $(tmuxifier list-windows | fzf --tmux 90%)'
 
 export SPARK_HOME=/opt/spark
 export SPARK_HOST="spark://$(hostname):7077"
