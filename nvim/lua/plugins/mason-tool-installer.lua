@@ -21,6 +21,7 @@ return {
 			"delve",
 			"debugpy",
 			"codelldb",
+			"hyprls",
 		},
 		auto_update = false,
 		run_on_start = true,

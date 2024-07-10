@@ -220,6 +220,7 @@ options.config = function()
     nvim_lsp.cmake.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
     nvim_lsp.marksman.setup{ on_attach = on_attach, capabilities = capabilities, }
+    require'lspconfig'.hyprls.setup{}
     nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
 
     if mason_registry.is_installed("omnisharp") then
