@@ -18,16 +18,15 @@
 # Usage:
 # cat test.txt | token_to_json
 #######################################
-function token_to_json
-{
-    awk -F: '{ print "\x27"$1"\x27" "\x3a" "\x27"$2"\x27" "\x2c" }'
+function token_to_json {
+	awk -F: '{ print "\x27"$1"\x27" "\x3a" "\x27"$2"\x27" "\x2c" }'
 }
 
 #######################################
 # Quickly Reference Git Conventional Commits
 #######################################
 function git_conventions {
-    cat << EOF
+	cat <<EOF
 type(scope): description
 
 feat:          addition of some new features
@@ -55,28 +54,25 @@ EOF
 # Traverses to the Root Directory of a Git Repository.
 # If a repository cannot be found then stop at the $HOME directory
 #######################################
-function githome
-{
-    CURRENT=$(pwd)
-    while [[ "$CURRENT" != "$HOME" ]]
-    do
-        if [ -d .git ]; then
-            break
-        fi
+function githome {
+	CURRENT=$(pwd)
+	while [[ "$CURRENT" != "$HOME" ]]; do
+		if [ -d .git ]; then
+			break
+		fi
 
-        cd ..
-        CURRENT=$(pwd)
-    done
+		cd ..
+		CURRENT=$(pwd)
+	done
 }
 
 #######################################
 # Runs a Speed Test and saves into a location
 #######################################
-function speed_test
-{
-    SAVE_LOC=$HOME/Dropbox/Data/Broadband/data.jsonl
-    echo "Running Speed Test and saving in" $SAVE_LOC
-    speedtest --json >> $SAVE_LOC
+function speed_test {
+	SAVE_LOC=$HOME/Dropbox/Data/Broadband/data.jsonl
+	echo "Running Speed Test and saving in" $SAVE_LOC
+	speedtest --json >>$SAVE_LOC
 }
 
 #######################################
@@ -85,105 +81,96 @@ function speed_test
 # Usage: check_s3_bucket my_bucket
 # If it returns something then the bucket exists
 #######################################
-function check_s3_bucket
-{
-    curl -sI https://$1.s3.amazonaws.com | grep bucket-region
+function check_s3_bucket {
+	curl -sI https://$1.s3.amazonaws.com | grep bucket-region
 }
 
 #######################################
 # Provides an interactive input of possible gitignore files
 # Once choosen, adds to the current .gitignore file
 #######################################
-function gitignore
-{
-    curl -s "https://www.toptal.com/developers/gitignore/api/list?format=json" | jq -r 'keys[]' | fzf | xargs -I _ curl -sL https://www.toptal.com/developers/gitignore/api/_ >> .gitignore
-    echo "Added!"
+function gitignore {
+	curl -s "https://www.toptal.com/developers/gitignore/api/list?format=json" | jq -r 'keys[]' | fzf | xargs -I _ curl -sL https://www.toptal.com/developers/gitignore/api/_ >>.gitignore
+	echo "Added!"
 }
 
 #######################################
 # Sources the .env file in the current directory as environment variables
 #######################################
-function source_dotenv
-{
-    cat .env | awk 'NF > 0' | awk '{print "export " $0}' >> ._temp_env && source ._temp_env && rm ._temp_env
+function source_dotenv {
+	cat .env | awk 'NF > 0' | awk '{print "export " $0}' >>._temp_env && source ._temp_env && rm ._temp_env
 }
 
 #######################################
 # Sources a python virtual environment from the local directory
 #######################################
-function source_pyenv
-{
-    [ -f .venv/bin/activate ] && source .venv/bin/activate
-    [ -f .env/bin/activate ] && source .env/bin/activate
+function source_pyenv {
+	[ -f .venv/bin/activate ] && source .venv/bin/activate
+	[ -f .env/bin/activate ] && source .env/bin/activate
 }
 
 #######################################
 # Check GitHub API Rate Limits
 #######################################
-function github_rate_limit
-{
-    curl -sH "Authorization: token $GITHUB_TOKEN" -X GET https://api.github.com/rate_limit | bat --language json
+function github_rate_limit {
+	curl -sH "Authorization: token $GITHUB_TOKEN" -X GET https://api.github.com/rate_limit | bat --language json
 }
-
 
 #######################################
 # Creates a quick tmux popup with a python interpreter.
 #######################################
-function python_popup
-{
-    if [ -x "$(command -v ptpython)" ]; then
-        tmux display-popup -e PATH=$PATH -w 75% -h 75% ptpython
-        return
-    elif [ -x "$(command -v ipython)" ]; then
-        tmux display-popup -e PATH=$PATH -w 75% -h 75% ipython
-        return
-    elif [ -x "$(command -v bpython)" ]; then
-        tmux display-popup -e PATH=$PATH -w 75% -h 75% bpython
-        return
-    elif [ -x "$(command -v python3)" ]; then
-        tmux display-popup -e PATH=$PATH -w 75% -h 75% python3
-        return
-    elif [ -x "$(command -v python)" ]; then
-        tmux display-popup -e PATH=$PATH -w 75% -h 75% python
-        return
-    else
-        tmux display-message "No suitable Python interpreter found."
-    fi
+function python_popup {
+	if [ -x "$(command -v ptpython)" ]; then
+		tmux display-popup -e PATH=$PATH -w 75% -h 75% ptpython
+		return
+	elif [ -x "$(command -v ipython)" ]; then
+		tmux display-popup -e PATH=$PATH -w 75% -h 75% ipython
+		return
+	elif [ -x "$(command -v bpython)" ]; then
+		tmux display-popup -e PATH=$PATH -w 75% -h 75% bpython
+		return
+	elif [ -x "$(command -v python3)" ]; then
+		tmux display-popup -e PATH=$PATH -w 75% -h 75% python3
+		return
+	elif [ -x "$(command -v python)" ]; then
+		tmux display-popup -e PATH=$PATH -w 75% -h 75% python
+		return
+	else
+		tmux display-message "No suitable Python interpreter found."
+	fi
 }
 
 #######################################
 # Deletes git branches locally which have already been merged in remote
 #######################################
-function git_branch_local_prune
-{
-    # mark all local branches here the remote branch bas been deleted
-    echo "Pruning local branches that were removed from remote"
-    git remote update --prune
-    echo "***************************"
+function git_branch_local_prune {
+	# mark all local branches here the remote branch bas been deleted
+	echo "Pruning local branches that were removed from remote"
+	git remote update --prune
+	echo "***************************"
 
-    echo "***************************"
-    tput setaf 1
+	echo "***************************"
+	tput setaf 1
 
-    git branch -vv | grep ": gone]" | awk '{ printf "%-64s %-10s\n", substr($1, 1, 64), $2 }'
+	git branch -vv | grep ": gone]" | awk '{ printf "%-64s %-10s\n", substr($1, 1, 64), $2 }'
 
-    tput sgr0
-    echo "***************************"
+	tput sgr0
+	echo "***************************"
 
-    echo "🪓 Delete these branches? (Y/N)"
+	echo "🪓 Delete these branches? (Y/N)"
 
-    read input
+	read input
 
-    if [[ $input == "Y" || $input == "y" ]]; then
-        git branch -vv | grep ": gone]" | awk '{print $1}' | xargs git branch -D
-    fi
+	if [[ $input == "Y" || $input == "y" ]]; then
+		git branch -vv | grep ": gone]" | awk '{print $1}' | xargs git branch -D
+	fi
 }
 
 #######################################
 # View large files within a GitHub Repository
 #######################################
-function git_large_file_sizes
-{
-    git ls-tree -r HEAD -l | sort -nk4 | awk '{print $1, $2, $3, ($4 / 1024 / 1024)"MB", $5}'
+function git_large_file_sizes {
+	git ls-tree -r HEAD -l | sort -nk4 | awk '{print $1, $2, $3, ($4 / 1024 / 1024)"MB", $5}'
 }
 
 #######################################
