@@ -63,6 +63,7 @@ alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf --tmux 90
 alias co='git checkout $(git branch | fzf --tmux 90%)'
 alias fpyenv='pyenv install -v $(pyenv install --list | rg "\s+[0-9\.]+(-dev)?$" | sort | tac | fzf)'
 alias gist='gh gist edit $(gh gist list | fzf | awk "{print $1}")'
+alias ts='tmux switch -t $(tmux list-sessions | awk "{print \$1}" | tr -d ':' | fzf --tmux)'
 
 # Tmuxifier
 alias tx='tmuxifier'
