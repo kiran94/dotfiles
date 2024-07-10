@@ -46,6 +46,7 @@ alias system='inxi -Fxzc0'
 alias notepad="nvim -c 'set wrap linebreak spell norelativenumber'"
 alias copy="xclip -selection clipboard"
 alias OLDPWD='cd $OLDPWD'
+alias tz='tz -q -m'
 
 [ -f /usr/bin/batcat ] && alias bat='batcat'
 [ -f /usr/bin/fdfind ] && alias fd='fdfind'
