@@ -180,8 +180,20 @@ function git_large_file_sizes {
 # Kernels are stored in ~/.local/share/jupyter/kernels
 # Defaults to the current directory
 #######################################
-function jupyter_create_project_kernel
-{
-    NAME="${1:-$(basename $(pwd))}"
-    python -m ipykernel install --user --name $NAME
+function jupyter_create_project_kernel {
+	NAME="${1:-$(basename $(pwd))}"
+	python -m ipykernel install --user --name "$NAME"
+}
+
+#######################################
+# Starts a Recording and Conversion to GIF
+# Arguments:
+#  $1: Filename
+#######################################
+function terminal_record() {
+	FILENAME=${1:-"recording"}
+
+	asciinema rec "$FILENAME"
+	agg "$FILENAME" "$FILENAME.gif"
+	rm "$FILENAME"
 }
