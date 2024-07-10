@@ -57,10 +57,10 @@ alias tz='tz -q -m'
 
 # Fuzzy
 alias f='fzf | xargs nvim'
-alias fhistory='history | fzf'
-alias fenv='env | fzf'
-alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf | xargs nvim"
-alias co='git checkout $(git branch | fzf)'
+alias fhistory='history | fzf --tmux 90%'
+alias fenv='env | fzf --tmux 90%'
+alias fdotfiles="find ~/.config/dotfiles -type f| grep -v '.git' | fzf --tmux 90% | xargs nvim"
+alias co='git checkout $(git branch | fzf --tmux 90%)'
 alias fpyenv='pyenv install -v $(pyenv install --list | rg "\s+[0-9\.]+(-dev)?$" | sort | tac | fzf)'
 alias gist='gh gist edit $(gh gist list | fzf | awk "{print $1}")'
 
