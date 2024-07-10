@@ -1,5 +1,6 @@
 vim.g.vscode_style = "dark"
-local colorscheme = "vscode"
+-- vim.o.background = "dark"
+local colorscheme = "github_dark_default"
 
 -- Safely attempt to set the colorscheme
 -- if not installed then just notify
