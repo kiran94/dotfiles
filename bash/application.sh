@@ -25,6 +25,7 @@ export ASPNETCORE_ENVIRONMENT=Development
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export DOTNET_NOLOGO=1
 export PYSPARK_DRIVER_PYTHON=ptpython
+export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 
 function spark_start
 {
