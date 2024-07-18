@@ -121,6 +121,7 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
 nnoremap <M-p> :CtrlP<CR>
+nnoremap <leader>ff :CtrlP<CR>
 set laststatus=2
 set timeout ttimeoutlen=50
 let g:ctrlp_working_path_mode = 'ra'
