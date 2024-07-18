@@ -107,17 +107,22 @@ endif
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
-Plug 'tomasiser/vim-code-dark'
+Plug 'jaredgorski/SpaceCamp'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " PLUGIN SETTINGS
-colorscheme codedark
+
+try
+  colorscheme spacecamp
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme default
+endtry
+
 nnoremap <M-p> :CtrlP<CR>
 set laststatus=2
 set timeout ttimeoutlen=50
-let g:lightline = { 'colorscheme': 'wombat'}
 let g:ctrlp_working_path_mode = 'ra'
 
 " Colors
