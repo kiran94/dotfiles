@@ -64,6 +64,7 @@ alias co='git checkout $(git branch | fzf --tmux 90%)'
 alias fpyenv='pyenv install -v $(pyenv install --list | rg "\s+[0-9\.]+(-dev)?$" | sort | tac | fzf)'
 alias gist='gh gist edit $(gh gist list | fzf | awk "{print $1}")'
 alias ts='tmux switch -t $(tmux list-sessions | awk "{print \$1}" | tr -d ':' | fzf --tmux)'
+alias fkub='aws eks update-kubeconfig --name $(aws eks list-clusters | jq ".clusters[]" -r | fzf --tmux)'
 
 # Tmuxifier
 alias tx='tmuxifier'
