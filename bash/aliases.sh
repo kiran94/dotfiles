@@ -65,6 +65,7 @@ alias fpyenv='pyenv install -v $(pyenv install --list | rg "\s+[0-9\.]+(-dev)?$"
 alias gist='gh gist edit $(gh gist list | fzf | awk "{print $1}")'
 alias ts='tmux switch -t $(tmux list-sessions | awk "{print \$1}" | tr -d ':' | fzf --tmux)'
 alias fkub='aws eks update-kubeconfig --name $(aws eks list-clusters | jq ".clusters[]" -r | fzf --tmux)'
+alias furl='tmux capture-pane -J -p | grep -oE "(https?):\/\/.*[^>]" | fzf --tmux | xargs xdg-open'
 
 # Tmuxifier
 alias tx='tmuxifier'
