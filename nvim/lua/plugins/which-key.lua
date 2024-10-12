@@ -1,6 +1,7 @@
 return {
 	"folke/which-key.nvim",
 	keys = "<leader>",
+	version = "v2.1.0",
 	config = function()
 		local whichkey = require("which-key")
 		local function cmd(command)
