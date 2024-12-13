@@ -6,12 +6,17 @@
 # Default Apps
 export EDITOR=nvim
 export VISUAL=nvim
-export BROWSER=brave
 export TERMINAL=alacritty
 export VIDEO=vlc
 export PAGER=less
 export OPENER=xdg-open
 export LESS=-JMQRSi
+
+if [ -e /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome ]; then
+    export BROWSER="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+else
+    export BROWSER=brave
+fi
 
 # XDG standard environment variables
 # https://github.com/adrg/xdg#default-locations
