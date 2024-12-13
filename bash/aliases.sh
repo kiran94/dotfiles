@@ -69,8 +69,8 @@ alias furl='tmux capture-pane -J -p | grep -oE "(https?):\/\/.*[^>]" | fzf --tmu
 
 # Tmuxifier
 alias tx='tmuxifier'
-alias txs='tmuxifier s $(tmuxifier list-sessions | fzf --tmux 90%)'
-alias txw='tmuxifier w $(tmuxifier list-windows | fzf --tmux 90%)'
+alias txs='tmuxifier s $(tmuxifier list-sessions | fzf --tmux 50%)'
+alias txw='tmuxifier w $(tmuxifier list-windows | fzf --tmux 50%)'
 
 export SPARK_HOME=/opt/spark
 export SPARK_HOST="spark://$(hostname):7077"
