@@ -1,6 +1,7 @@
 return {
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
+		enabled = false,
 		opts = {
 			show_help = "yes", -- Show help text for CopilotChatInPlace, default: yes
 			disable_extra_info = "yes", -- Disable extra information (e.g: system prompt) in the response.
