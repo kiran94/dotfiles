@@ -104,3 +104,5 @@ export AUTO_NOTIFY_IGNORE=(
     "poetry shell",
     "gh gist edit",
 )
+
+[ -s "/opt/homebrew/Caskroom/nvs/1.7.1/nvs-1.7.1/nvs.sh" ] && . "/opt/homebrew/Caskroom/nvs/1.7.1/nvs-1.7.1/nvs.sh"
