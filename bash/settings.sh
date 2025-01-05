@@ -13,7 +13,7 @@ export OPENER=xdg-open
 export LESS=-JMQRSi
 
 if [ -e /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome ]; then
-    export BROWSER="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    export BROWSER='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 else
     export BROWSER=brave
 fi
