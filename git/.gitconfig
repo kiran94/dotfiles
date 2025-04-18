@@ -40,8 +40,8 @@
 [protocol]
     version = 2
 ; Force GitHub to use SSH
-[url "git@github.com:"]
-  insteadOf = https://github.com/
+; [url "git@github.com:"]
+;   insteadOf = https://github.com/
 ; [interactive]
 ;     diffFilter = delta --color-only --features=interactive
 ; [color "diff-highlight"]
