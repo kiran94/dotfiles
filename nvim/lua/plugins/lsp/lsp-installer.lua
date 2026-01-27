@@ -2,7 +2,6 @@ local options = {}
 
 options.config = function()
 
-    local nvim_lsp      = require('lspconfig')
     local cmp_nvim_lsp  = require('cmp_nvim_lsp')
     local schemastore   = require('schemastore')
     local navic         = require("nvim-navic")
@@ -71,7 +70,7 @@ options.config = function()
 
     -- LSP Import Name to Language Server name can be found in:
     -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
-    nvim_lsp.pylsp.setup {
+    vim.lsp.config('pylsp', {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -87,11 +86,11 @@ options.config = function()
                 }
             }
         }
-    }
+    })
 
     -- nvim_lsp.pylyzer.setup{}
 
-    nvim_lsp.lua_ls.setup {
+    vim.lsp.config('lua_ls', {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -116,7 +115,7 @@ options.config = function()
                 }
             }
         }
-    }
+    })
 
     -- nvim_lsp.pyright.setup{
     --     capabilities = capabilities,
@@ -139,7 +138,7 @@ options.config = function()
     --   }
     -- }
 
-    nvim_lsp.jsonls.setup {
+    vim.lsp.config('jsonls', {
         capabilities = capabilities,
         on_attach = on_attach,
         settings = {
@@ -149,9 +148,9 @@ options.config = function()
                 validate = { enable = true }
             }
         }
-    }
+    })
 
-    nvim_lsp.yamlls.setup {
+    vim.lsp.config('yamlls', {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = {
@@ -159,9 +158,9 @@ options.config = function()
           schemas = schemastore.json.schemas(),
         },
       }
-    }
+    })
 
-    nvim_lsp.gopls.setup{
+    vim.lsp.config('gopls', {
       on_attach = on_attach,
       capabilities = capabilities,
       settings = {
@@ -187,9 +186,9 @@ options.config = function()
             },
         },
       },
-    }
+    })
 
-    nvim_lsp.terraformls.setup{
+    vim.lsp.config('terraformls', {
         on_attach = function(client, buffernr)
             on_attach(client, buffernr)
 
@@ -198,7 +197,7 @@ options.config = function()
                 treesitter_tf_doc.setup({command_name = "TerraformDoc"})
             end
         end
-    }
+    })
 
     -- nvim_lsp.rust_analyzer.setup{
     --   on_attach = on_attach,
@@ -213,28 +212,28 @@ options.config = function()
     --   }
     -- }
 
-    nvim_lsp.bashls.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.yamlls.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.dockerls.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.docker_compose_language_service.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.cmake.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.taplo.setup{ on_attach = on_attach, capabilities = capabilities }
-    nvim_lsp.marksman.setup{ on_attach = on_attach, capabilities = capabilities, }
-    require'lspconfig'.hyprls.setup{}
-    nvim_lsp.clangd.setup{ on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, }
-    nvim_lsp.denols.setup{}
+    vim.lsp.config('bashls', { on_attach = on_attach, capabilities = capabilities })
+    vim.lsp.config('yamlls', { on_attach = on_attach, capabilities = capabilities })
+    vim.lsp.config('dockerls', { on_attach = on_attach, capabilities = capabilities })
+    vim.lsp.config('docker_compose_language_service', { on_attach = on_attach, capabilities = capabilities })
+    vim.lsp.config('cmake', { on_attach = on_attach, capabilities = capabilities })
+    vim.lsp.config('taplo', { on_attach = on_attach, capabilities = capabilities })
+    vim.lsp.config('marksman', { on_attach = on_attach, capabilities = capabilities, })
+    vim.lsp.config('hyprls', {})
+    vim.lsp.config('clangd', { on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, })
+    vim.lsp.config('denols', {})
 
     if mason_registry.is_installed("omnisharp") then
         local omnisharp_path = mason_registry.get_package("omnisharp"):get_install_path()
 
-        nvim_lsp.omnisharp.setup{
+        vim.lsp.config('omnisharp', {
             on_attach = on_attach,
             capabilities = capabilities,
             handlers = {
                 ["textDocument/definition"] = require('omnisharp_extended').handler,
             },
             cmd = { omnisharp_path .. '/omnisharp', '--languageserver' , '--hostPID', tostring(vim.fn.getpid()), '--loglevel', 'ERROR' },
-        }
+        })
     end
 
 end

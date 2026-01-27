@@ -9,7 +9,7 @@ return {
 		local lsp_active = function()
 			local msg = "🔌"
 			local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-			local clients = vim.lsp.get_active_clients()
+			local clients = vim.lsp.get_clients()
 
 			-- If there are no clients then just return
 			if next(clients) == nil then

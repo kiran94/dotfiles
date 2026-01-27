@@ -8,7 +8,7 @@ return {
 				return sign .. " " .. table.concat(client_messages, " ")
 			end
 
-			if #vim.lsp.get_active_clients() > 0 then
+			if #vim.lsp.get_clients() > 0 then
 				return sign
 			end
 
