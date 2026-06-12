@@ -148,7 +148,7 @@ return {
 						"edit cell",
 					},
 				},
-				z = { cmd("ZenMode"), "zen mode" },
+				z = { cmd("lua Snacks.zen()"), "zen mode" },
 				t = { cmd(":new term://zsh"), "terminal" },
 				d = { cmd("TroubleToggle"), "diagnostics" },
 			},

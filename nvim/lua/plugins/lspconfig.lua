@@ -17,17 +17,6 @@ return {
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"davidsierradz/cmp-conventionalcommits", -- ft = gitcommit
 		"b0o/SchemaStore.nvim",
-		{
-			"RRethy/vim-illuminate",
-			config = function()
-				require("illuminate").configure({
-					providers = {
-						"lsp",
-						"regex",
-					},
-				})
-			end,
-		},
 		"Afourcat/treesitter-terraform-doc.nvim",
 		"SmiteshP/nvim-navic",
 		{ "Hoffs/omnisharp-extended-lsp.nvim", ft = "cs" },
