@@ -1,6 +1,10 @@
 return {
 	"ThePrimeagen/refactoring.nvim",
-	dependencies = { { "nvim-lua/plenary.nvim" }, { "nvim-treesitter/nvim-treesitter" } },
+	dependencies = {
+		"lewis6991/async.nvim",
+		"nvim-lua/plenary.nvim",
+		"nvim-treesitter/nvim-treesitter",
+	},
 	event = "BufWinEnter",
 	config = function()
 		require("refactoring").setup({})

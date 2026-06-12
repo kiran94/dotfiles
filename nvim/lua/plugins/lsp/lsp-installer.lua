@@ -5,7 +5,6 @@ options.config = function()
     local cmp_nvim_lsp  = require('cmp_nvim_lsp')
     local schemastore   = require('schemastore')
     local navic         = require("nvim-navic")
-    local inlayhints    = require("lsp-inlayhints")
     local mason_registry = require("mason-registry")
 
     local runtime_path = vim.split(package.path, ';')
@@ -13,26 +12,35 @@ options.config = function()
     table.insert(runtime_path, "lua/?/init.lua")
     table.insert(runtime_path, "~/.local/share/nvim/site/pack/packer/start/packer.nvim/lua")
 
-    vim.lsp.set_log_level(vim.lsp.log_levels.ERROR)
-    vim.fn.sign_define("DiagnosticSignError",       { text = "", texthl="DiagnosticSignError"  })
-    vim.fn.sign_define("DiagnosticSignWarn",        { text = "", texthl="DiagnosticSignWarn"  })
-    vim.fn.sign_define("DiagnosticSignInformation", { text = "", texthl="DiagnosticSignInformation"  })
-    vim.fn.sign_define("DiagnosticSignHint",        { text = "", texthl="DiagnosticSignHint"  })
-
+    vim.lsp.log.set_level(vim.lsp.log_levels.ERROR)
     vim.diagnostic.config({
         virtual_text     = false,
         underline        = false,
-        signs            = true,
+        signs            = {
+            text = {
+                [vim.diagnostic.severity.ERROR] = "",
+                [vim.diagnostic.severity.WARN]  = "",
+                [vim.diagnostic.severity.INFO]  = "",
+                [vim.diagnostic.severity.HINT]  = "",
+            },
+        },
         update_in_insert = true,
         float = {
             border = "rounded"
         }
     })
 
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
+    local function with_handler_config(handler, handler_config)
+        return function(err, result, ctx, config)
+            return handler(err, result, ctx, vim.tbl_deep_extend("force", config or {}, handler_config))
+        end
+    end
 
+    vim.lsp.handlers["textDocument/hover"] = with_handler_config(vim.lsp.handlers.hover, { border = "rounded" })
+    vim.lsp.handlers["textDocument/signatureHelp"] = with_handler_config(
+        vim.lsp.handlers.signature_help,
+        { border = "rounded" }
+    )
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = false;
     capabilities.textDocument.codeAction = {
@@ -52,8 +60,9 @@ options.config = function()
 
 
     local on_attach = function(client, bufnr)
-        require("illuminate").on_attach(client, bufnr)
-        inlayhints.on_attach(client, bufnr)
+        if client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
+            vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+        end
 
         if client.server_capabilities.documentSymbolProvider then
             navic.attach(client, bufnr)
@@ -63,10 +72,6 @@ options.config = function()
         client.server_capabilities.documentFormattingProvider = false
         client.server_capabilities.documentRangeFormattingProvider = false
     end
-
-
-
-    inlayhints.setup()
 
     -- LSP Import Name to Language Server name can be found in:
     -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md

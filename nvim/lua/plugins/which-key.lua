@@ -280,8 +280,8 @@ return {
       nnoremap <silent> L <cmd>Lspsaga show_line_diagnostics ++unfocus<CR>
 
       nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-      nnoremap <silent> ] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-      nnoremap <silent> [ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+      nnoremap <silent> ] <cmd>lua vim.diagnostic.jump({ count = 1 })<CR>
+      nnoremap <silent> [ <cmd>lua vim.diagnostic.jump({ count = -1 })<CR>
 
       vnoremap <silent> <leader>zmt :EasyAlign*<Bar><CR>
       vnoremap <silent> <leader>zmb :VBox<CR>

@@ -14,8 +14,6 @@ return {
 		--------------------------------
 		local mason_install_directory = vim.fn.stdpath("data") .. "/mason/" .. "bin/"
 
-		require("dap.ext.vscode").load_launchjs()
-
 		require("plugins.lsp.dap-python").setup(plugin, mason_install_directory)
 		require("plugins.lsp.dap-bash").setup(plugin, mason_install_directory)
 		require("plugins.lsp.dap-go").setup()

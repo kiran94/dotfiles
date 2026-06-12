@@ -7,7 +7,7 @@ local function list_files_recursively(path, output, excluded_extensions)
 	local _, _, last_dir = string.find(vim.fn.getcwd(), "/([^/]+)$")
 
 	for _, file in ipairs(files) do
-		local stat = vim.loop.fs_stat(file)
+		local stat = vim.uv.fs_stat(file)
 		if stat then
 			if stat.type == "directory" then
 				list_files_recursively(file, output, excluded_extensions)
