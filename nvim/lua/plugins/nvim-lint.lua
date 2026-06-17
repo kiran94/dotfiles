@@ -25,6 +25,18 @@ return {
 			lint.linters_by_ft.python = { "flake8" }
 		end
 
+		if has_bin("eslint_d") then
+			lint.linters_by_ft.javascript = { "eslint_d" }
+			lint.linters_by_ft.javascriptreact = { "eslint_d" }
+			lint.linters_by_ft.typescript = { "eslint_d" }
+			lint.linters_by_ft.typescriptreact = { "eslint_d" }
+		elseif has_bin("eslint") then
+			lint.linters_by_ft.javascript = { "eslint" }
+			lint.linters_by_ft.javascriptreact = { "eslint" }
+			lint.linters_by_ft.typescript = { "eslint" }
+			lint.linters_by_ft.typescriptreact = { "eslint" }
+		end
+
 		vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
 			callback = function()
 				require("lint").try_lint()

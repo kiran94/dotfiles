@@ -226,7 +226,7 @@ options.config = function()
     vim.lsp.config('marksman', { on_attach = on_attach, capabilities = capabilities, })
     vim.lsp.config('hyprls', {})
     vim.lsp.config('clangd', { on_attach = on_attach, capabilities = { offsetEncoding = "utf-8" }, })
-    vim.lsp.config('denols', {})
+    vim.lsp.config('ts_ls', { on_attach = on_attach, capabilities = capabilities })
 
     if mason_registry.is_installed("omnisharp") then
         local omnisharp_path = mason_registry.get_package("omnisharp"):get_install_path()

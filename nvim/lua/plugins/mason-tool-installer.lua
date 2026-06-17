@@ -23,6 +23,8 @@ return {
 			"codelldb",
 			"hyprls",
 			"goimports",
+			"eslint_d",
+			"prettier",
 		},
 		auto_update = false,
 		run_on_start = true,

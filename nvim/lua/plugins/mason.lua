@@ -16,7 +16,7 @@ return {
 			"cmake",
 			"taplo",
 			"marksman",
-			"denols",
+			"ts_ls",
 		},
 
 		-- TODO: Refactor the below code via setup_handlers
