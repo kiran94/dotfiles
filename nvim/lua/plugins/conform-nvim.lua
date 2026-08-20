@@ -15,7 +15,7 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
-			go = { "goimports", "gofmt" },
+			go = { "gofmt" },
 			terraform = { "terraform_fmt" },
 			yaml = { "yamlfmt" },
 			cs = { "csharpier" },
@@ -42,5 +42,10 @@ return {
 				end
 			end,
 		},
+		format_on_save = function(bufnr)
+			if vim.bo[bufnr].filetype == "go" then
+				return { timeout_ms = 1000 }
+			end
+		end,
 	},
 }
