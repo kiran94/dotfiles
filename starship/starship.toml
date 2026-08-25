@@ -43,7 +43,6 @@ $env_var\
 $crystal\
 $lua\
 $aws\
-$gcloud\
 $openstack\
 $terraform\
 ${custom.expressvpn}\
