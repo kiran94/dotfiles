@@ -30,4 +30,21 @@ ln -vnsf $DOTFILESSYNC_DIR/neofetch/config.conf ~/.config/neofetch/config.conf
 ln -vnsf $DOTFILESSYNC_DIR/conda/.condarc ~/.condarc
 ln -vnsf $DOTFILESSYNC_DIR/ptpython/config.py ~/.config/ptpython/config.py
 
+case "$(uname -s)" in
+    Darwin)
+        VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
+        ;;
+    Linux)
+        VSCODE_USER_DIR="$HOME/.config/Code/User"
+        ;;
+esac
 
+if [ -n "$VSCODE_USER_DIR" ]; then
+    mkdir -p "$VSCODE_USER_DIR"
+    ln -vnsf "$DOTFILESSYNC_DIR/vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
+fi
+
+# CODEX
+mkdir -p ~/.codex
+ln -vnsf "$DOTFILESSYNC_DIR"/codex/AGENTS.md ~/.codex/AGENTS.md
+ln -vnsf "$DOTFILESSYNC_DIR"/codex/skills ~/.codex/skills
