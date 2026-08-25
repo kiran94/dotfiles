@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travel Weather Check"
+  short_description: "Weather tables for travel itineraries"
+  default_prompt: "Use $travel-weather-check to add a Weather table to this itinerary note."

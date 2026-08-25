@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Change Log"
+  short_description: "Summarize branch changes for PR notes"
+  default_prompt: "Use $pr-change-log to summarize the current branch compared to origin/main."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travel TODO Finder"
+  short_description: "Find TODOs from the Travel Notes"
+  default_prompt: "Use $travel-todo-finder to list TODOs in the provided travel notes."

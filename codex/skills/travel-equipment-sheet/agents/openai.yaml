@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travel Equipment Sheet"
+  short_description: "Extract travel gear and fees into Sheets"
+  default_prompt: "Use $travel-equipment-sheet to extract equipment and fee info from these travel notes into a spreadsheet."
