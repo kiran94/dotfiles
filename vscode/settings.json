@@ -64,9 +64,6 @@
   "git.mergeEditor": false,
   "git.openRepositoryInParentFolders": "never",
 
-  // [http]
-  "http.proxyStrictSSL": false,
-
   // [markdown]
   "markdown.editor.pasteUrlAsFormattedLink.enabled": "never",
 
