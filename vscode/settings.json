@@ -1,4 +1,10 @@
 {
+  // Native settings
+
+  // [language overrides]
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
@@ -8,27 +14,15 @@
   "[sql]": {
     "editor.defaultFormatter": "adpyke.vscode-sql-formatter",
   },
-  "cSpell.diagnosticLevel": "Hint",
-  "cSpell.enabled": true,
-  "cSpell.language": "en-GB",
-  "cSpell.maxDuplicateProblems": 1,
-  "cSpell.maxNumberOfProblems": 10,
-  "cSpell.userWords": ["genai", "vectorstores"],
-  "coverage-gutters.coverageFileNames": [
-    "lcov.info",
-    "cov.xml",
-    "coverage.xml",
-    "jacoco.xml",
-    "coverage.cobertura.xml",
-  ],
-  "coverage-gutters.showGutterCoverage": true,
-  "coverage-gutters.showLineCoverage": true,
+
+  // [editor]
   "editor.bracketPairColorization.enabled": false,
   "editor.codeLens": true,
   "editor.cursorStyle": "line",
   "editor.fontFamily": "JetbrainsMono NF",
   "editor.fontLigatures": true,
   "editor.guides.bracketPairs": false,
+  "editor.inlineSuggest.enabled": false,
   "editor.insertSpaces": true,
   "editor.lineNumbers": "on",
   "editor.minimap.enabled": false,
@@ -38,9 +32,13 @@
   "editor.tabSize": 4,
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
+
+  // [explorer]
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 9,
+
+  // [files]
   "files.associations": {
     "*.pyproj": "xml",
     "*.schema": "ini",
@@ -61,71 +59,33 @@
     "dist": true,
   },
   "files.trimTrailingWhitespace": false,
+
+  // [git]
   "git.mergeEditor": false,
   "git.openRepositoryInParentFolders": "never",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-  },
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-  },
-  "gitlens.keymap": "none",
-  "gitlens.views.commits.avatars": true,
-  "gitlens.views.commits.pullRequests.enabled": false,
-  "gitlens.views.commits.pullRequests.showForBranches": false,
-  "gitlens.views.commits.showBranchComparison": false,
-  "gitlens.views.fileHistory.avatars": true,
-  "go.coverOnSave": true,
-  "go.coverOnSingleTestFile": true,
-  "go.coverageOptions": "showUncoveredCodeOnly",
-  "go.inlayHints.assignVariableTypes": false,
-  "go.inlayHints.compositeLiteralFields": false, //true,
-  "go.inlayHints.compositeLiteralTypes": false, //true,
-  "go.inlayHints.constantValues": false,
-  "go.inlayHints.functionTypeParameters": false, //true,
-  "go.inlayHints.parameterNames": false, // true,
-  "go.inlayHints.rangeVariableTypes": false,
-  "go.toolsManagement.autoUpdate": true,
-  "gopls": {
-    "formatting.gofumpt": true,
 
-    "ui.codelenses": {
-      "gc_details": true,
-    },
-    "ui.diagnostic.staticcheck": true,
-    "hints": {
-      "compositeLiteralFields": true,
-      "constantValues": true,
-      "functionTypeParameters": true,
-      "parameterNames": true,
-      "ignoredError": true
-    },
-
-    "analyses": {
-      "nilness": true,
-      "unusedparams": true,
-      "unusedwrite": true,
-      "shadow": true
-    },
-
-    "completeFunctionCalls": true
-  },
+  // [http]
   "http.proxyStrictSSL": false,
+
+  // [markdown]
   "markdown.editor.pasteUrlAsFormattedLink.enabled": "never",
+
+  // [notebook]
   "notebook.cellExecutionTimeVerbosity": "verbose",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left",
   },
   "notebook.lineNumbers": "on",
+
+  // [remote]
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github",
+  ],
+
+  // [search]
   "search.collapseResults": "alwaysCollapse",
   "search.exclude": {
     "**/*.code-search": true,
@@ -135,6 +95,8 @@
     "**/obj/": true,
   },
   "search.useIgnoreFiles": true,
+
+  // [terminal]
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -149,7 +111,12 @@
       "path": "zsh",
     },
   },
+
+  // [window]
   "window.zoomLevel": 2,
+
+  // [workbench]
+  "workbench.browser.openLocalhostLinks": false,
   "workbench.commandPalette.history": 30,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
@@ -163,19 +130,86 @@
   "workbench.settings.editor": "json",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
-  "vue.server.hybridMode": "typeScriptPluginOnly",
-  "remote.defaultExtensionsIfInstalledLocally": [
-    "GitHub.copilot",
-    "GitHub.copilot-chat",
-    "GitHub.vscode-pull-request-github",
+
+  // Plugin settings
+
+  // [Code Spell Checker]
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.enabled": true,
+  "cSpell.language": "en-GB",
+  "cSpell.maxDuplicateProblems": 1,
+  "cSpell.maxNumberOfProblems": 10,
+  "cSpell.userWords": ["genai", "vectorstores"],
+
+  // [Coverage Gutters]
+  "coverage-gutters.coverageFileNames": [
+    "lcov.info",
+    "cov.xml",
+    "coverage.xml",
+    "jacoco.xml",
+    "coverage.cobertura.xml",
   ],
+  "coverage-gutters.showGutterCoverage": true,
+  "coverage-gutters.showLineCoverage": true,
+
+  // [GitHub Copilot]
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+  },
+
+  // [GitLens]
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+  },
+  "gitlens.keymap": "none",
+  "gitlens.views.commits.avatars": true,
+  "gitlens.views.commits.pullRequests.enabled": false,
+  "gitlens.views.commits.pullRequests.showForBranches": false,
+  "gitlens.views.commits.showBranchComparison": false,
+  "gitlens.views.fileHistory.avatars": true,
+
+  // [Go]
+  "go.coverOnSave": true,
+  "go.coverOnSingleTestFile": true,
+  "go.coverageOptions": "showUncoveredCodeOnly",
+  "go.inlayHints.assignVariableTypes": false,
+  "go.inlayHints.compositeLiteralFields": false, // true
+  "go.inlayHints.compositeLiteralTypes": false, // true
+  "go.inlayHints.constantValues": false,
+  "go.inlayHints.functionTypeParameters": false, // true
+  "go.inlayHints.parameterNames": false, // true
+  "go.inlayHints.rangeVariableTypes": false,
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "formatting.gofumpt": true,
+    "ui.codelenses": {
+      "gc_details": true,
+    },
+    "ui.diagnostic.staticcheck": true,
+    "hints": {
+      "compositeLiteralFields": true,
+      "constantValues": true,
+      "functionTypeParameters": true,
+      "ignoredError": true,
+      "parameterNames": true,
+    },
+    "analyses": {
+      "nilness": true,
+      "shadow": true,
+      "unusedparams": true,
+      "unusedwrite": true,
+    },
+    "completeFunctionCalls": true,
+  },
+
+  // [Python]
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-  "editor.inlineSuggest.enabled": false,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.browser.openLocalhostLinks": false
 }
