@@ -6,3 +6,4 @@ STARTUP_TIME*
 nvim/plugin/packer_compiled.lua
 
 fonts/
+codex/skills/.system/
