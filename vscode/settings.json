@@ -57,6 +57,8 @@
     "**/target": true,
     ".coverage": true,
     "dist": true,
+    "**/.go*": true,
+
   },
   "files.trimTrailingWhitespace": false,
 
