@@ -41,6 +41,18 @@ options.config = function()
         vim.lsp.handlers.signature_help,
         { border = "rounded" }
     )
+
+    vim.filetype.add({
+        filename = {
+            ['buf.yaml'] = 'buf-config',
+            ['buf.gen.yaml'] = 'buf-config',
+            ['buf.policy.yaml'] = 'buf-config',
+            ['buf.lock'] = 'buf-config',
+        },
+    })
+    vim.treesitter.language.register('yaml', 'buf-config')
+
+
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = false;
     capabilities.textDocument.codeAction = {
@@ -163,6 +175,11 @@ options.config = function()
           schemas = schemastore.json.schemas(),
         },
       }
+    })
+
+    vim.lsp.config('buf_ls', {
+        capabilities = capabilities,
+        on_attach = on_attach,
     })
 
     vim.lsp.config('gopls', {

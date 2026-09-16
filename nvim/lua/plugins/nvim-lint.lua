@@ -13,6 +13,7 @@ return {
 			sql = { "sqlfluff" },
 			sh = { "shellcheck" },
 			terraform = { "terraform_validate" },
+			proto = { "buf_lint" },
 		}
 
 		local function has_bin(bin)

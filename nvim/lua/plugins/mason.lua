@@ -10,6 +10,7 @@ return {
 			"bashls",
 			"yamlls",
 			"jsonls",
+			"buf_ls",
 			"dockerls",
 			"docker_compose_language_service",
 			"clangd",

@@ -24,7 +24,7 @@ return {
 			cpp = { "clang_format" },
 			java = { "clang_format" },
 			cuda = { "clang_format" },
-			proto = { "clang_format" },
+			proto = { "buf" },
 			javascript = { "prettier" },
 			javascriptreact = { "prettier" },
 			typescript = { "prettier" },
