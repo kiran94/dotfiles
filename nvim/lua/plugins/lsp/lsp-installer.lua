@@ -172,7 +172,13 @@ options.config = function()
       on_attach = on_attach,
       settings = {
         yaml = {
-          schemas = schemastore.json.schemas(),
+          schemaStore = { enable = false, url = "" },
+          schemas = vim.tbl_extend('force', schemastore.yaml.schemas(), {
+            kubernetes = {
+              '**/{k8s,kubernetes,manifests}/**/!(kustomization|values|Chart).{yaml,yml}',
+              '**/*.k8s.{yaml,yml}',
+            },
+          }),
         },
       }
     })
