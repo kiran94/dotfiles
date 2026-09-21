@@ -3,6 +3,7 @@
 * Prefer documented `make` targets for linting, testing, building, and local workflows. If a `Makefile` exists.
 * Branches should use convention e.g feat/<description>, fix/<description>
 * Branches should not have codex in the name
+* When providing review comments, declare them as plain text so I can annotate them whilst I work on them and send them back. I prefer this kind of feedback loop for reviewing code
 
 
 # Restricted Operations
