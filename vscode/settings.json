@@ -159,6 +159,12 @@
     "scminput": false,
   },
 
+  // [CHAT]
+  "chat.agentHost.codexAgent.enabled": true,
+  "chat.editor.codex.preferAgentHost": true,
+  "chat.agent.enabled": true,
+  "chat.tools.compressOutput.enabled": true,
+
   // [GitLens]
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
