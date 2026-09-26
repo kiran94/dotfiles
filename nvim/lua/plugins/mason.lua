@@ -9,6 +9,7 @@ return {
 			"terraformls",
 			"bashls",
 			"yamlls",
+			"helm_ls",
 			"jsonls",
 			"buf_ls",
 			"dockerls",

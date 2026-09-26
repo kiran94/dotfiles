@@ -30,6 +30,7 @@ return {
 			"gosum",
 			"graphql",
 			"hcl",
+			"helm",
 			"html",
 			"http",
 			"ini",

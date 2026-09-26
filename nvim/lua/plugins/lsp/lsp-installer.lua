@@ -169,6 +169,7 @@ options.config = function()
 
     vim.lsp.config('yamlls', {
       capabilities = capabilities,
+      filetypes = { 'yaml', 'yaml.docker-compose', 'yaml.gitlab' },
       on_attach = on_attach,
       settings = {
         yaml = {
@@ -181,6 +182,18 @@ options.config = function()
           }),
         },
       }
+    })
+
+    vim.lsp.config('helm_ls', {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        ['helm-ls'] = {
+          yamlls = {
+            path = 'yaml-language-server',
+          },
+        },
+      },
     })
 
     vim.lsp.config('buf_ls', {
@@ -241,7 +254,6 @@ options.config = function()
     -- }
 
     vim.lsp.config('bashls', { on_attach = on_attach, capabilities = capabilities })
-    vim.lsp.config('yamlls', { on_attach = on_attach, capabilities = capabilities })
     vim.lsp.config('dockerls', { on_attach = on_attach, capabilities = capabilities })
     vim.lsp.config('docker_compose_language_service', { on_attach = on_attach, capabilities = capabilities })
     vim.lsp.config('cmake', { on_attach = on_attach, capabilities = capabilities })
