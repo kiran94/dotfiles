@@ -33,7 +33,6 @@ alias egrep='egrep --color=auto'
 alias ccat='highlight --out-format=ansi'
 alias vd='visidata'
 alias rediscli=iredis
-alias md='python -m rich.markdown'
 alias python='python3'
 alias ds='dotfiles sync'
 alias py='ptpython'
@@ -89,3 +88,7 @@ alias todo="GITHUB_TOKEN='' gh gist edit b0c78a6039b826da81dad0d81021626c"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Kubenetes
+alias k=kubectl
+alias kcleanuppods='kubectl delete pods --field-selector=status.phase==Succeeded'
