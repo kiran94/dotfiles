@@ -35,6 +35,13 @@ bindkey '^j' jq-complete
 autoload -Uz compinit
 compinit
 
+# Load kubectl completions through kubecolor and reuse them for its aliases
+if command -v kubecolor &>/dev/null; then
+    source <(kubecolor completion zsh)
+    compdef kubecolor=kubectl
+    compdef k=kubecolor
+fi
+
 # Highlight selection when tab completing
 zstyle ':completion:*' menu yes select
 
