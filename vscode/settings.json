@@ -225,4 +225,6 @@
 
   // [Python]
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "docker.lsp.experimental.scout.criticalHighVulnerabilities": false,
+  "docker.extension.enableComposeLanguageServer": false,
 }
