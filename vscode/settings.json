@@ -60,7 +60,9 @@
     "**/.go*": true,
 
   },
-  "files.trimTrailingWhitespace": false,
+  // "files.trimTrailingWhitespace": false,
+  // "files.insertFinalNewline": true,
+  // "files.trimFinalNewlines": true,
 
   // [git]
   "git.mergeEditor": false,
