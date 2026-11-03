@@ -90,5 +90,13 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Kubenetes
-alias k=kubectl
+
+if command -v kubecolor &>/dev/null; then
+    alias k=kubecolor
+else
+    alias k=kubectl
+fi
+
 alias kcleanuppods='kubectl delete pods --field-selector=status.phase==Succeeded'
+
+alias mkube=minikube
