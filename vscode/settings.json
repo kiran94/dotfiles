@@ -207,13 +207,13 @@
       "gc_details": true,
     },
     "ui.diagnostic.staticcheck": true,
-    "hints": {
-      "compositeLiteralFields": true,
-      "constantValues": true,
-      "functionTypeParameters": true,
-      "ignoredError": true,
-      "parameterNames": true,
-    },
+    // "hints": {
+    //   "compositeLiteralFields": true,
+    //   "constantValues": true,
+    //   "functionTypeParameters": true,
+    //   "ignoredError": true,
+    //   "parameterNames": true,
+    // },
     "analyses": {
       "nilness": true,
       "shadow": true,
