@@ -226,5 +226,8 @@
   // [Python]
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
   "docker.lsp.experimental.scout.criticalHighVulnerabilities": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   "docker.extension.enableComposeLanguageServer": false,
 }
