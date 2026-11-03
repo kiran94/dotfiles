@@ -251,4 +251,5 @@
     },
     "editor.tabSize": 2,
   },
+  "python.analysis.typeCheckingMode": "standard",
 }
