@@ -229,5 +229,26 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml",
+  ],
+  "redhat.telemetry.enabled": false,
   "docker.extension.enableComposeLanguageServer": false,
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.autoIndent": "full",
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "on",
+      "strings": "on",
+    },
+    "editor.tabSize": 2,
+  },
 }
