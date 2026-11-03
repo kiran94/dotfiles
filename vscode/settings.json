@@ -159,6 +159,11 @@
   "coverage-gutters.showGutterCoverage": true,
   "coverage-gutters.showLineCoverage": true,
 
+  // [Docker]
+  // Let Red Hat YAML handle Compose files to avoid duplicate completions, hovers, and syntax errors.
+  "docker.extension.enableComposeLanguageServer": false,
+  "docker.lsp.experimental.scout.criticalHighVulnerabilities": false,
+
   // [GitHub Copilot]
   "github.copilot.enable": {
     "*": false,
@@ -225,7 +230,6 @@
 
   // [Python]
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-  "docker.lsp.experimental.scout.criticalHighVulnerabilities": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
@@ -238,7 +242,6 @@
     "**/.forgejo/workflows/*.yaml",
   ],
   "redhat.telemetry.enabled": false,
-  "docker.extension.enableComposeLanguageServer": false,
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.autoIndent": "full",
